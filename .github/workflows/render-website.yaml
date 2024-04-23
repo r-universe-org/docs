@@ -109,7 +109,7 @@ jobs:
         id: netlify-deploy
         uses: nwtgck/actions-netlify@v2.0
         with:
-          publish-dir: './_book'
+          publish-dir: './docs'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message:
