@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "R-Universe Docs"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+  page-footer:
+    left:
+      - text: "© Licence MIT."
+    right:
+      - text: "An rOpenSci project"
+        href: https://ropensci.org/
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
