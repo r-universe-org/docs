@@ -1,0 +1,31 @@
+---
+title: "Search for packages"
+---
+
+You can search for packages via <https://r-universe.dev/search/> using keywords or author names.
+
+## Which packages get included in search?
+
+In r-universe, a given R package can be included in many different registries. To prevent duplicates, search only shows packages from the universes of the upstream github owners of the package, and not from third parties that have added a copy of the package to their registry.
+
+More specifically, search results include packages for which:
+
+ - The github owner is the same as the universe, for example packages under `https://jeroen.r-universe.dev` from GitHub user `https://github.com/jeroen/`. This also includes all CRAN packages.
+ - Alternatively: to opt-in packages for which the universe name is different from the GitHub owner, the package author must include the full `user.r-universe.dev` in the URL field of the DESCRIPTION file. For example, if the registry from `https://jeroen.r-universe.dev` has a package `https://github.com/elsewhere/mypkg`, but the URL field in the DESCRIPTION includes e.g. `https://jeroen.r-universe.dev` or `https://jeroen.r-universe.dev/mypkg`, then it also shows up in the search results.
+
+## How is the package-rank score calculated?
+
+The exact algorith is very much WIP and will change. Right now it is a combination of:
+
+ - Number of dependents (aka recursive reverse depenencies)
+ - Number of Github stars
+ - Number of unique contributors
+ - Commit activity over the last year
+
+The score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.
+
+## Why is a package sometimes listed twice?
+
+If a source package fails to build (which means something is very wrong) then you see a red “build failure” message.
+If there was a previous successful build, it is kept there as well for users to install.
+

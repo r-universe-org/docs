@@ -1,0 +1,23 @@
+---
+title: "Debug package builds"
+---
+
+## Is it possible to customize the package build process with custom options/tools/variables?
+
+No, that is not possible. 
+Think of R-universe more like your own mini-CRAN. 
+The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on r-universe.
+
+This is on purpose: we want to make sure that the packages deployed on r-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.
+
+## How to publish vignettes/articles which require custom software/tokens to render?
+
+The best solution is to precompute these vignettes on your local machine, see: [How to precompute package vignettes or pkgdown articles](https://ropensci.org/blog/2019/12/08/precompute-vignettes/)
+
+
+## Are packages on r-universe required to pass CMD check or meet other criteria?
+
+No. 
+R-universe is an open publishing system. 
+The system just builds and deploys R packages from git into personal cran-like repositories. 
+The owner of the universe is responsible for their own policies and quality control.

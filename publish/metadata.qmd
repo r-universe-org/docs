@@ -1,0 +1,40 @@
+---
+title: "Control the metadata"
+---
+
+## Individual (contributor, maintainer) metadata
+
+### How to link a maintainer email addresses to a username on r-universe
+
+We use the GitHub username that is associated with a given email address. 
+If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, everything just works. 
+If you use different email addresses, you can easily add additional email addresses in your [GitHub settings](https://github.com/settings/emails).
+
+Once you have validated your email address on GitHub, subsequent builds of R packages will be able to associate the package and contributions to your user account. 
+We collect statistics during the build process, so the changes will not become visible until the next build of each package.
+
+### My profile picture or contributor statistics do not show up
+
+Same as above. 
+If no picture shows up, you probably need to register the email address that you use as R package maintainer in your [GitHub settings](https://github.com/settings/emails), and wait for the package to be rebuilt.
+
+
+
+
+## Package metadata
+
+The first step towards making your package easier to find by search is to polish the Description and Details fields in DESCRIPTION.
+
+### How to add keyword labels to an R package?
+
+If the R package is hosted on GitHub you can add keywords by configuring [repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). 
+Alternatively, you can specify keywords in the `X-schema.org-keywords` field in your package `DESCRIPTION` file. 
+This field [is permitted on CRAN](https://cs.github.com/?q=org%3Acran+X-schema.org-keywords) as well.
+
+The build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like `c++` or `openmp`.
+
+### How to get a package logo shown in the packages tab
+
+We use the same conventions as pkgdown to find a logo for the package. 
+It either needs to be in one of the locations checked by `pkgdown:::find_logo()` (`man/figures/logo.png` and `man/figures/logo.svg`) or set as an opengraph image in your `_pkgdown.yml`.
+

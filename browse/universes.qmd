@@ -1,0 +1,24 @@
+---
+title: "Browsing work from a maintainer or organization"
+---
+
+Each user and organization in r-universe has a unique subdomain under r-universe.dev with a package repository from where packages can directly be installed. 
+For example, the packages and information from rOpenSci can be found on https://ropensci.r-universe.dev, and packages maintained by me are listed at https://jeroen.r-universe.dev (note how these two sets overlap).
+
+The top tabs allow you to explore different resources within universe. 
+The builds tab shows the current state of the repository: a table with the name and version of each package, including the commit date, author, and build status. 
+Clicking on the package name in the table sends you to the homepage of the package (more on this below), and the maintainer name links to the subdomain of that maintainer, listing other projects maintained by this person.
+
+The packages tab lists descriptive information from all packages in the repository, and the articles tab shows all documents (e.g. vignettes). 
+The contributors tab shows a chart with contributor statistics for the organization or maintainer.
+Clicking on the a bar in the chart sends you to this other universe where you can explore more work by this person.
+
+The same subdomain hosts the actual cran-like package repository for this user or organization. Hence in order to list or install packages from rOpenSci in R, you would use:
+
+```r
+# List available packages
+available.packages(repos = "https://ropensci.r-universe.dev")
+
+# Install a package
+install.packages("magick", repos = "https://ropensci.r-universe.dev")
+```

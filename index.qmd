@@ -1,0 +1,12 @@
+---
+title: "R-universe docs"
+comments: False
+---
+
+R-universe is 
+
+- an open and free marketplace for R packages!
+
+- an array of services to users and developers of R packages, with integrated measuring and monitoring tools to analyze the state and evolution of the ecosystem.
+
+This website is licensed under the [CC BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).

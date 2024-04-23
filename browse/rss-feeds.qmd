@@ -1,0 +1,39 @@
+---
+title: "RSS feeds of package updates"
+---
+
+The /feed.xml endpoint on any r-universe domain gives an RSS feed of recent R package updates in the repository:
+
+    https://ropensci.r-universe.dev/feed.xml
+    https://tidyverse.r-universe.dev/feed.xml
+    https://jeroen.r-universe.dev/feed.xml
+
+Each feed item contains the name and version of the updated R package, along with a timestamp and a link to the build log of the most recent commit. 
+The feed also contains some additional metadata such as the package description, and a list of the articles (vignettes) contained in the package.
+
+
+```{r, echo=FALSE, results='asis'}
+url <- "https://jeroen.r-universe.dev/feed.xml"
+xml <- xml2::read_xml(url)
+remove_space <- function(node) {
+  xml2::xml_text(node) <-
+    gsub("\\\n", " ", xml2::xml_text(node))
+}
+descs <- xml2::xml_find_all(xml, ".//description")
+purrr::walk(descs, remove_space)
+
+xml <- xml |> 
+  as.character()
+sprintf("
+  <details>
+  <summary>Example (%s)</summary>
+  %s
+</details>
+", url, xml) |> cat()
+```
+
+The dashboard for any universe also includes a link to this same URL, such that users can easily find and subscribe to your feed.
+
+
+
+

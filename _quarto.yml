@@ -1,0 +1,34 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "R-Universe Docs"
+  chapters:
+    - index.qmd
+    - part: Browse
+      chapters:
+        - browse/get-started.qmd
+        - browse/search.qmd
+        - browse/universes.qmd
+        - browse/packages.qmd
+        - browse/rss-feeds.qmd
+    - part: Install
+      chapters:
+        - install/binaries.qmd
+        - install/reproducibility.qmd
+    - part: Publish
+      chapters:
+        - publish/get-started.qmd
+        - publish/set-up.qmd
+        - publish/metadata.qmd
+        - publish/debug-build.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

@@ -1,0 +1,125 @@
+# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
+# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+name: render
+
+permissions:
+  contents: write
+  statuses: write
+  pull-requests: write
+
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    # Only restrict concurrency for non-PR jobs
+    concurrency:
+      group: render-${{ github.event_name != 'pull_request' || github.run_id }}
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      isExtPR: ${{ github.event.pull_request.head.repo.fork == true }}
+    steps:
+      - name: Configure Git user
+        run: |
+          git config --global user.name "$GITHUB_ACTOR"
+          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Install git-extras
+        run: |
+          git clone https://github.com/tj/git-extras.git
+          cd git-extras
+          git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
+          sudo make install
+
+      - uses: actions/checkout@v3
+
+      - name: Avoid noise in file metadata
+        run: |
+          git-utimes --newer
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: pre-release
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+          install-r: false
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+
+      - name: Render blog
+        run: quarto render
+
+      - name: Restore lychee cache
+        id: restore-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1
+        with:
+          fail: true
+          args: "docs --exclude-loopback --insecure --exclude-mail --exclude-path docs/site_libs --cache --max-cache-age 1d"
+
+      - name: "Read lychee's out.md"
+        if: failure()
+        id: lychee-output
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./lychee/out.md
+
+      - uses: mshick/add-pr-comment@v2
+        if: failure()
+        with:
+          message: ${{ steps.lychee-output.outputs.content }}
+
+      - name: Save lychee cache
+        uses: actions/cache/save@v4
+        if: success()
+        with:
+          path: .lycheecache
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
+
+      - name: Deploy to GitHub Pages
+        if: contains(env.isExtPR, 'false')
+        id: gh-pages-deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs
+
+      - name: Deploy to Netlify
+        if: contains(env.isExtPR, 'false')
+        id: netlify-deploy
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './docs'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message:
+            'Deploy from GHA: ${{ github.event.pull_request.title || github.event.head_commit.message }} (${{ github.sha }})'
+          # these all default to 'true'
+          enable-pull-request-comment: false
+          enable-commit-comment: false
+          # enable-commit-status: true
+          #o verwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
