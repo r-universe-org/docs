@@ -10,6 +10,9 @@ about:
   image: https://avatars.githubusercontent.com/u/70517862?s=200&v=4
   image-shape: rectangle
   links:
+    - icon: speedometer2
+      text: Dashboard
+      href: https://r-universe.dev
     - icon: github
       text: GitHub
       href: https://github.com/r-universe-orgs
