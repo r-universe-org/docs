@@ -15,7 +15,7 @@ about:
       href: https://r-universe.dev
     - icon: github
       text: GitHub
-      href: https://github.com/r-universe-orgs
+      href: https://github.com/r-universe-org
 ---
 
 :::{#about-rdbi}
