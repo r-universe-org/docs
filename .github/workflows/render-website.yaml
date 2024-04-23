@@ -13,6 +13,12 @@ on:
 
 name: render
 
+permissions:
+  contents: write
+  statuses: write
+  pull-requests: write
+
+
 jobs:
   render:
     runs-on: ubuntu-latest
