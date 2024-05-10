@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R-Universe Docs – Publishing and browsing R packages</title>
+<title>R-Universe Docs – Individual package information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,21 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,7 +68,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -77,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">R-Universe Docs</span>
     </a>
   </div>
@@ -88,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-developer-of-packages">    
         <li>
-    <a class="dropdown-item" href="./developers/get-started.html">
+    <a class="dropdown-item" href="../developers/get-started.html">
  <span class="dropdown-text">Start here</span></a>
   </li>  
         <li>
@@ -116,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-users-of-packages">    
         <li>
-    <a class="dropdown-item" href="./users/get-started.html">
+    <a class="dropdown-item" href="../users/get-started.html">
  <span class="dropdown-text">Start here</span></a>
   </li>  
         <li>
@@ -133,41 +134,65 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#package-information" id="toc-package-information" class="nav-link active" data-scroll-target="#package-information">Package information</a></li>
+  <li><a href="#all-the-documentation" id="toc-all-the-documentation" class="nav-link" data-scroll-target="#all-the-documentation">All the documentation</a></li>
+  <li><a href="#usage-and-development-activity" id="toc-usage-and-development-activity" class="nav-link" data-scroll-target="#usage-and-development-activity">Usage and development activity</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla column-page">
-  <img src="https://avatars.githubusercontent.com/u/70517862?s=200&amp;v=4" class="about-image
-  rectangle " style="width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Publishing and browsing R packages</h1>
+<h1 class="title">Individual package information</h1>
 </div>
-<div class="quarto-title-meta column-page">
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content column-page" id="quarto-document-content">
-<div id="about-rdbi">
-<p>An open and free marketplace for R packages!</p>
-<p>An array of services to users and developers of R packages, with integrated measuring and monitoring tools to analyze the state and evolution of the ecosystem.</p>
-</div>
+  
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://r-universe.dev" class="about-link" rel="" target="">
-    <i class="bi bi-speedometer2"></i>
-     <span class="about-link-text">Dashboard</span>
-  </a>
-  <a href="https://github.com/r-universe-org" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+</header>
+
+
+<p>Clicking on a package in search results or in a universe overview will lead you to homepage for that package. You can also link to this page directly via the url https://{owner}.r-universe.dev/{package}.</p>
+<p>These package pages are generated automatically and provide detailed information about each project, and all the information and resources to quickly install and try the package locally in R.</p>
+<section id="package-information" class="level2">
+<h2 class="anchored" data-anchor-id="package-information">Package information</h2>
+<p>The initial section of the homepage shows descriptive data and links to resources from this package, such as source/binary files, the package manual and NEWS file. Further down we show installation instructions to install the package in R. Installation is quick and easy because we provide pre-compiled binaries for Windows and MacOS, so no special tools or setup is required on the user machine.</p>
+<p>Here you can also find more information derived by the build system, such as which system libraries the package builds on, topics, and if the package is on CRAN. The badges underneath show statistics about the package, such as dependencies, reverse dependencies, and GitHub stars. Clicking on the ’exports’ badge will show all functions and datasets exported by the package, which link to the respective sections in the manual page. If specified, we also show how the package should be cited in papers.</p>
+</section>
+<section id="all-the-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="all-the-documentation">All the documentation</h2>
+<p>To let you start using packages as quickly as possible, r-universe renders all available documentation and presents this as clear and concisely as possible on the homepage.</p>
+<p>Most R packages have 3 forms of documentation: a readme file, a reference manual (help pages), and a number of articles (vignettes). These articles are often a good place to get started, and are listed on the package homepage right under the descriptives. From here you can view both the rendered html/pdf document, as well as the rmarkdown source file used to (re)produce the article.</p>
+<p>Further down the page you can see the content from the package readme. Most packages these days include a README.md file which can nicely be rendered into HTML.</p>
+<p>After the readme follows a section named “reference manual” containing a table with all the help pages. These link to the respective chapters in the html reference manual2, which provide the most extensive documentation for each function in the package, including descriptions, parameters, examples, etc. Screenshot of a chapter in the HTML reference manual for a package, showing descriptions, parameters, and examples for a function.</p>
+</section>
+<section id="usage-and-development-activity" class="level2">
+<h2 class="anchored" data-anchor-id="usage-and-development-activity">Usage and development activity</h2>
+<p>Besides familiarizing yourself with what the package does, you may be interested in who is working on it, who else is using it, and if it is still actively developed.</p>
+<p>The “development and contributors” section shows a bar chart with the number of commits per week for the last year, and who the main contributors are. Finally the section “usage by other packages” shows other packages on r-universe depending on this package, grouped by owner. This gives you some indication on how active the project is, and who are involved. Screenshot of recent development activity and users of a package.</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -188,6 +213,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
