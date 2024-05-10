@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -142,8 +176,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#package-information" id="toc-package-information" class="nav-link active" data-scroll-target="#package-information">Package information</a></li>
-  <li><a href="#all-the-documentation" id="toc-all-the-documentation" class="nav-link" data-scroll-target="#all-the-documentation">All the documentation</a></li>
+  <li><a href="#package-information" id="toc-package-information" class="nav-link active" data-scroll-target="#package-information">Package information</a>
+  <ul class="collapse">
+  <li><a href="#how-are-the-dependencies-dependents-calculated" id="toc-how-are-the-dependencies-dependents-calculated" class="nav-link" data-scroll-target="#how-are-the-dependencies-dependents-calculated">How are the dependencies / dependents calculated?</a></li>
+  </ul></li>
+  <li><a href="#all-the-documentation" id="toc-all-the-documentation" class="nav-link" data-scroll-target="#all-the-documentation">All the documentation</a>
+  <ul class="collapse">
+  <li><a href="#cran.dev-shortlinks" id="toc-cran.dev-shortlinks" class="nav-link" data-scroll-target="#cran.dev-shortlinks">cran.dev shortlinks</a></li>
+  </ul></li>
   <li><a href="#usage-and-development-activity" id="toc-usage-and-development-activity" class="nav-link" data-scroll-target="#usage-and-development-activity">Usage and development activity</a></li>
   </ul>
 </nav>
@@ -176,6 +216,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="package-information">Package information</h2>
 <p>The initial section of the homepage shows descriptive data and links to resources from this package, such as source/binary files, the package manual and NEWS file. Further down we show installation instructions to install the package in R. Installation is quick and easy because we provide pre-compiled binaries for Windows and MacOS, so no special tools or setup is required on the user machine.</p>
 <p>Here you can also find more information derived by the build system, such as which system libraries the package builds on, topics, and if the package is on CRAN. The badges underneath show statistics about the package, such as dependencies, reverse dependencies, and GitHub stars. Clicking on the ’exports’ badge will show all functions and datasets exported by the package, which link to the respective sections in the manual page. If specified, we also show how the package should be cited in papers.</p>
+<section id="how-are-the-dependencies-dependents-calculated" class="level3">
+<h3 class="anchored" data-anchor-id="how-are-the-dependencies-dependents-calculated">How are the dependencies / dependents calculated?</h3>
+<p>Both are calculated using transitive (recursive) strong dependencies, hence this includes both direct and indirect dependencies. Or in practical terms: other packages that need to be installed at minimum to be able to use the target package.</p>
+<p>At package build time, we use <code>tools::package_dependencies(pkg, recursive = TRUE)</code> to derive the list of hard dependencies and store this in the database. R-base packages are not included. The <code>dependencies</code> value is simply the size of this list. The <code>dependents</code> value is the opposite: this is the number of packages in R-universe which list the target package as one of its dependencies.</p>
+</section>
 </section>
 <section id="all-the-documentation" class="level2">
 <h2 class="anchored" data-anchor-id="all-the-documentation">All the documentation</h2>
@@ -183,6 +228,56 @@ ul.task-list li input[type="checkbox"] {
 <p>Most R packages have 3 forms of documentation: a readme file, a reference manual (help pages), and a number of articles (vignettes). These articles are often a good place to get started, and are listed on the package homepage right under the descriptives. From here you can view both the rendered html/pdf document, as well as the rmarkdown source file used to (re)produce the article.</p>
 <p>Further down the page you can see the content from the package readme. Most packages these days include a README.md file which can nicely be rendered into HTML.</p>
 <p>After the readme follows a section named “reference manual” containing a table with all the help pages. These link to the respective chapters in the html reference manual2, which provide the most extensive documentation for each function in the package, including descriptions, parameters, examples, etc. Screenshot of a chapter in the HTML reference manual for a package, showing descriptions, parameters, and examples for a function.</p>
+<section id="cran.dev-shortlinks" class="level3">
+<h3 class="anchored" data-anchor-id="cran.dev-shortlinks">cran.dev shortlinks</h3>
+<p>On r-universe you can find package repositories from many different organizations and maintainers. But sometimes you just want to lookup a particular CRAN package, without knowing the developer. The cran.dev shortlink service lets you navigate or link directly to the r-universe homepage and docs of any established CRAN package.</p>
+<p>The root domain <code>https://cran.dev/{package}</code> redirects to the primary homepage for a package:</p>
+<ul>
+<li>https://cran.dev/magick</li>
+<li>https://cran.dev/Matrix</li>
+<li>https://cran.dev/ggplot2</li>
+</ul>
+<p>The subdomain <code>https://docs.cran.dev/{package}</code> redirects to package manual page:</p>
+<ul>
+<li>https://docs.cran.dev/targets</li>
+<li>https://docs.cran.dev/MASS</li>
+<li>https://docs.cran.dev/Rcpp</li>
+</ul>
+<p>Finally the subdomain <code>https://api.cran.dev/{package}</code> does not redirect, but returns a JSON blob with links to the package versions and resources. For example:</p>
+<ul>
+<li>https://api.cran.dev/gert</li>
+</ul>
+<p>This shows the package page and maintainer for the gert package, and information on both the current CRAN release and development versions. Right now it returns:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"package"</span><span class="fu">:</span> <span class="st">"gert"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"maintainer"</span><span class="fu">:</span> <span class="st">"Jeroen Ooms &lt;jeroen@berkeley.edu&gt;"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"home"</span><span class="fu">:</span> <span class="st">"https://ropensci.r-universe.dev/gert"</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"release"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"version"</span><span class="fu">:</span> <span class="st">"1.9.2"</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"date"</span><span class="fu">:</span> <span class="st">"2023-06-30T08:43:26.000Z"</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"source"</span><span class="fu">:</span> <span class="st">"https://github.com/cran/gert"</span><span class="fu">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"repository"</span><span class="fu">:</span> <span class="st">"https://cloud.r-project.org"</span><span class="fu">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"docs"</span><span class="fu">:</span> <span class="st">"https://cran.r-universe.dev/gert/doc/manual.html"</span><span class="fu">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"api"</span><span class="fu">:</span> <span class="st">"https://cran.r-universe.dev/api/packages/gert"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"devel"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"version"</span><span class="fu">:</span> <span class="st">"1.9000"</span><span class="fu">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"date"</span><span class="fu">:</span> <span class="st">"2023-07-20T11:08:09.000Z"</span><span class="fu">,</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"source"</span><span class="fu">:</span> <span class="st">"https://github.com/r-lib/gert"</span><span class="fu">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"repository"</span><span class="fu">:</span> <span class="st">"https://ropensci.r-universe.dev"</span><span class="fu">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"docs"</span><span class="fu">:</span> <span class="st">"https://ropensci.r-universe.dev/gert/doc/manual.html"</span><span class="fu">,</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"api"</span><span class="fu">:</span> <span class="st">"https://ropensci.r-universe.dev/api/packages/gert"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can see the release and devel version of this package, with links to the respective sources, cranlike repository, manual, and package metadata.</p>
+<p>From the above it can be seen that the gert r-universe page is https://ropensci.r-universe.dev/gert and the r-universe <code>"repository"</code> from where to install the devel version of gert:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install 'devel' gert</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gert"</span>, <span class="at">repos =</span> <span class="st">"https://ropensci.r-universe.dev"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The <code>"api"</code> field shows the JSON url with all the information and metadata about this package:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Everything there is to know about devel gert</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>gert <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(<span class="st">'https://ropensci.r-universe.dev/api/packages/gert'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Note that not all packages have a <code>devel</code> version available. CRAN packages that are not found GitHub or GitLab or r-forge only have a <code>release</code> version, for example: https://api.cran.dev/MASS</p>
+</section>
 </section>
 <section id="usage-and-development-activity" class="level2">
 <h2 class="anchored" data-anchor-id="usage-and-development-activity">Usage and development activity</h2>
