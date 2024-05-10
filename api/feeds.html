@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R-Universe Docs – A catalogue of R packages</title>
+<title>R-Universe Docs – RSS feeds</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A catalogue of R packages</h1>
+<h1 class="title">RSS feeds</h1>
 </div>
 
 
@@ -162,27 +162,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>R-universe can be your entry point to many R packages. R-universe is a collection of universes, each of them featuring the packages of a team or individual.</p>
-<p>You can search packages, and assess them thanks to all information provided on universe and package pages. Find out more about the three levels of navigation in R-universe:</p>
-<ul>
-<li><a href="../search/index.html">searching the entire R ecosystem</a></li>
-<li><a href="../information/universes.html">browsing work from a maintainer or organization</a></li>
-<li><a href="../information/packages.html">individual package information</a></li>
-</ul>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>R-universe does not vet packages: it is an open publishing system. The system builds and deploys R packages from Git repositories into installation repositories. The owner of the universe is responsible for their own policies and quality control.</p>
-</div>
-</div>
-<p>With R-universe, you can also follow updates thanks to <a href="../api/feeds.html">RSS feeds</a>.</p>
+<p>Follow package updates: the /feed.xml endpoint on any r-universe domain now gives an RSS feed of recent R package updates in the repository:</p>
+<pre><code>https://ropensci.r-universe.dev/feed.xml
+https://tidyverse.r-universe.dev/feed.xml
+https://jeroen.r-universe.dev/feed.xml</code></pre>
+<p>Each feed item contains the name and version of the updated R package, along with a timestamp and a link to the build log of the most recent commit. The feed also contains some additional metadata such as the package description, and a list of the articles (vignettes) contained in the package.</p>
+<p>The dashboard for any universe also includes a link to this same URL, such that users can easily find and subscribe to your feed.</p>
 
 
 

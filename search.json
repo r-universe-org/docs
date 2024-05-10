@@ -25,7 +25,14 @@
     "href": "users/get-started.html",
     "title": "A catalogue of R packages",
     "section": "",
-    "text": "R-universe can be your entry point to many R packages. R-universe is a collection of universes, each of them featuring the packages of a team or individual.\nYou can search packages, and assess them thanks to all information provided on universe and package pages. Find out more about the three levels of navigation in R-universe:\n\nsearching the entire R ecosystem\nbrowsing work from a maintainer or organization\nindividual package information\n\n\n\n\n\n\n\nCaution\n\n\n\nR-universe does not vet packages: it is an open publishing system. The system builds and deploys R packages from Git repositories into installation repositories. The owner of the universe is responsible for their own policies and quality control.\n\n\nrss feeds of updates ropensci.org/blog/2021/11/24/runiverse-badges"
+    "text": "R-universe can be your entry point to many R packages. R-universe is a collection of universes, each of them featuring the packages of a team or individual.\nYou can search packages, and assess them thanks to all information provided on universe and package pages. Find out more about the three levels of navigation in R-universe:\n\nsearching the entire R ecosystem\nbrowsing work from a maintainer or organization\nindividual package information\n\n\n\n\n\n\n\nCaution\n\n\n\nR-universe does not vet packages: it is an open publishing system. The system builds and deploys R packages from Git repositories into installation repositories. The owner of the universe is responsible for their own policies and quality control.\n\n\nWith R-universe, you can also follow updates thanks to RSS feeds."
+  },
+  {
+    "objectID": "api/feeds.html",
+    "href": "api/feeds.html",
+    "title": "RSS feeds",
+    "section": "",
+    "text": "Follow package updates: the /feed.xml endpoint on any r-universe domain now gives an RSS feed of recent R package updates in the repository:\nhttps://ropensci.r-universe.dev/feed.xml\nhttps://tidyverse.r-universe.dev/feed.xml\nhttps://jeroen.r-universe.dev/feed.xml\nEach feed item contains the name and version of the updated R package, along with a timestamp and a link to the build log of the most recent commit. The feed also contains some additional metadata such as the package description, and a list of the articles (vignettes) contained in the package.\nThe dashboard for any universe also includes a link to this same URL, such that users can easily find and subscribe to your feed."
   },
   {
     "objectID": "search/index.html",
