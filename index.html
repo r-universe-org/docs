@@ -91,40 +91,48 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-browse" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Browse</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-browse">    
+        <li>
+    <a class="dropdown-item" href="./browse/get-started.html">
+ <span class="dropdown-text">A catalogue of R packages</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./browse/search.html">
+ <span class="dropdown-text">Search for packages</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./browse/universes.html">
+ <span class="dropdown-text">Browsing work from a maintainer or organization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./browse/packages.html">
+ <span class="dropdown-text">Individual package information</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./browse/rss-feeds.html">
+ <span class="dropdown-text">RSS feeds of package updates</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-publish" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Publish</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-publish">    
+        <li>
+    <a class="dropdown-item" href="./publish/get-started.html">
+ <span class="dropdown-text">Publish and advertise your packages</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="https://github.com/r-universe-org/help/discussions"> 
+<span class="menu-text">Bug reports, feature requests, questions</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-developer-of-packages" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Developer of packages</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-developer-of-packages">    
-        <li>
-    <a class="dropdown-item" href="./developers/get-started.html">
- <span class="dropdown-text">Start here</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://bugs.com">
- <span class="dropdown-text">Report a Bug</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-users-of-packages" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Users of packages</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-users-of-packages">    
-        <li>
-    <a class="dropdown-item" href="./users/get-started.html">
- <span class="dropdown-text">Start here</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://bugs.com">
- <span class="dropdown-text">Report a Bug</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -154,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</main> 
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> 
   <hr class="about-sep">
    <div class="about-links">
   <a href="https://r-universe.dev" class="about-link" rel="" target="">
