@@ -197,11 +197,22 @@
     ]
   },
   {
+    "objectID": "publish/get-started.html#more-inspiration",
+    "href": "publish/get-started.html#more-inspiration",
+    "title": "9  Why publish on R-universe",
+    "section": "9.3 More inspiration",
+    "text": "9.3 More inspiration\nRead or watch interviews of the series Meeting the stars of the R-Universe, that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+    ]
+  },
+  {
     "objectID": "publish/get-started.html#it-is-free",
     "href": "publish/get-started.html#it-is-free",
     "title": "9  Why publish on R-universe",
-    "section": "9.3 It is free!",
-    "text": "9.3 It is free!\nR-universe is provided free of charge.",
+    "section": "9.4 It is free!",
+    "text": "9.4 It is free!\nR-universe is provided free of charge.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
@@ -211,8 +222,8 @@
     "objectID": "publish/get-started.html#only-a-few-steps-for-set-up",
     "href": "publish/get-started.html#only-a-few-steps-for-set-up",
     "title": "9  Why publish on R-universe",
-    "section": "9.4 Only a few steps for set-up!",
-    "text": "9.4 Only a few steps for set-up!\nSee the set-up docs.",
+    "section": "9.5 Only a few steps for set-up!",
+    "text": "9.5 Only a few steps for set-up!\nSee the set-up docs.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
