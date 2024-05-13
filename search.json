@@ -67,11 +67,11 @@
     ]
   },
   {
-    "objectID": "publish/set-up.html#link-to-your-universe-from-other-websites",
-    "href": "publish/set-up.html#link-to-your-universe-from-other-websites",
+    "objectID": "publish/set-up.html#linking-to-your-universe-from-other-websites",
+    "href": "publish/set-up.html#linking-to-your-universe-from-other-websites",
     "title": "Set up your own universe",
-    "section": "Link to your universe from other websites",
-    "text": "Link to your universe from other websites\nFeel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.). You can use a rocket icon as icon.\nHugo Academic Theme: To display the rocket icon hyperlinked to your r-universe in your social icons below your photo add the following code to the social section of content/authors/admin/_index.md (or the _index.md file for the relevant author), replacing username with the relevant user or organisation name.\nsocial:\n- icon: rocket\n  icon_pack: fa\n  link: https://username.r-universe.dev/",
+    "section": "Linking to your universe from other websites",
+    "text": "Linking to your universe from other websites\nFeel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.). You can use a rocket icon as icon.\nHugo Academic Theme: To display the rocket icon hyperlinked to your r-universe in your social icons below your photo add the following code to the social section of content/authors/admin/_index.md (or the _index.md file for the relevant author), replacing username with the relevant user or organisation name.\nsocial:\n- icon: rocket\n  icon_pack: fa\n  link: https://username.r-universe.dev/",
     "crumbs": [
       "Set up your own universe"
     ]
