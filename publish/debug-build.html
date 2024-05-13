@@ -204,9 +204,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" id="toc-is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="nav-link active" data-scroll-target="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables">Is it possible to customize the package build process with custom options/tools/variables</a></li>
-  <li><a href="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render">How to publish vignettes/articles which require custom software/tokens to render</a></li>
-  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria">Are packages on r-universe required to pass CMD check or meet other criteria</a></li>
+  <li><a href="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" id="toc-is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="nav-link active" data-scroll-target="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables">Is it possible to customize the package build process with custom options/tools/variables?</a></li>
+  <li><a href="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render">How to publish vignettes/articles which require custom software/tokens to render?</a></li>
+  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria">Are packages on r-universe required to pass CMD check or meet other criteria?</a></li>
   </ul>
 </nav>
     </div>
@@ -233,16 +233,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="level2">
-<h2 class="anchored" data-anchor-id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables">Is it possible to customize the package build process with custom options/tools/variables</h2>
+<h2 class="anchored" data-anchor-id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables">Is it possible to customize the package build process with custom options/tools/variables?</h2>
 <p>No, that is not possible. Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on r-universe.</p>
 <p>This is on purpose: we want to make sure that the packages deployed on r-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.</p>
 </section>
 <section id="how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render">How to publish vignettes/articles which require custom software/tokens to render</h2>
+<h2 class="anchored" data-anchor-id="how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render">How to publish vignettes/articles which require custom software/tokens to render?</h2>
 <p>The best solution is to precompute these vignettes on your local machine, see: <a href="https://ropensci.org/blog/2019/12/08/precompute-vignettes/">How to precompute package vignettes or pkgdown articles</a></p>
 </section>
 <section id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria">Are packages on r-universe required to pass CMD check or meet other criteria</h2>
+<h2 class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria">Are packages on r-universe required to pass CMD check or meet other criteria?</h2>
 <p>No.&nbsp; R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.</p>
 
 

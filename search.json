@@ -290,8 +290,8 @@
     "objectID": "publish/debug-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
     "href": "publish/debug-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
     "title": "Debug package builds",
-    "section": "How to publish vignettes/articles which require custom software/tokens to render",
-    "text": "How to publish vignettes/articles which require custom software/tokens to render\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles",
+    "section": "How to publish vignettes/articles which require custom software/tokens to render?",
+    "text": "How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles",
     "crumbs": [
       "Debug package builds"
     ]
@@ -300,8 +300,8 @@
     "objectID": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "href": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "title": "Debug package builds",
-    "section": "Are packages on r-universe required to pass CMD check or meet other criteria",
-    "text": "Are packages on r-universe required to pass CMD check or meet other criteria\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
+    "section": "Are packages on r-universe required to pass CMD check or meet other criteria?",
+    "text": "Are packages on r-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
     "crumbs": [
       "Debug package builds"
     ]
