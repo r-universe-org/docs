@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -223,6 +257,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" id="toc-does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="nav-link active" data-scroll-target="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does r-universe archive old versions of packages? How does it work with renv?</a></li>
+  <li><a href="#repository-snapshots" id="toc-repository-snapshots" class="nav-link" data-scroll-target="#repository-snapshots"><span class="header-section-number">8.2</span> Repository snapshots</a>
+  <ul class="collapse">
+  <li><a href="#downloading-repository-snapshots" id="toc-downloading-repository-snapshots" class="nav-link" data-scroll-target="#downloading-repository-snapshots"><span class="header-section-number">8.2.1</span> Downloading repository snapshots</a></li>
+  <li><a href="#using-snapshots" id="toc-using-snapshots" class="nav-link" data-scroll-target="#using-snapshots"><span class="header-section-number">8.2.2</span> Using snapshots</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -251,8 +290,31 @@ ul.task-list li input[type="checkbox"] {
 <section id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does r-universe archive old versions of packages? How does it work with renv?</h2>
 <p>R-universe does not archive old versions of packages, but we have something better: we track the upstream git url and commit-id in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a></p>
+</section>
+<section id="repository-snapshots" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="repository-snapshots"><span class="header-section-number">8.2</span> Repository snapshots</h2>
+<section id="downloading-repository-snapshots" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="downloading-repository-snapshots"><span class="header-section-number">8.2.1</span> Downloading repository snapshots</h3>
+<p>The new snapshot API lets you download a full copy of any repository on R-universe. You can use such a snapshot to mirror the entire CRAN-like repository on your own servers, or for example to build a stable, validated release of your package suite.</p>
+<p>The API endpoint is <code>/api/snapshot</code> and has several options to filter content. By default it returns a zip file with all the packages, binaries, and documentation in your repository. If this is more than you need, there are parameters to include e.g.&nbsp;only binaries for certain platforms or certain versions of R, or to create a repository from a subset of the packages in your universe. Explore the parameters on the API tab of any universe, for example: <a href="https://ggseg.r-universe.dev/api" class="uri">https://ggseg.r-universe.dev/api</a>.</p>
+</section>
+<section id="using-snapshots" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="using-snapshots"><span class="header-section-number">8.2.2</span> Using snapshots</h3>
+<p>A CRAN-like R package repository is essentially a static directory of package files and indexes, with a specific naming structure. R-universe automatically builds and updates all these files based on a registry of packages and upstream git sources. But once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server!</p>
+<p>For example, you could create a github-action which regularly downloads a snapshot from r-universe to publish on github-pages. Here is a minimal example of such an action: https://github.com/jeroen/backup. Note how the action is vary fast: downloading and extracting te snapshot from r-universe only takes a few seconds. So this is easily something that could be done on demand, or automatically on a regular basis.</p>
+<p>You can also install packages in R directly from a local snapshot folder, by prefixing the path that you pass to <code>install.packages</code> with <code>file://</code> (Windows paths need to be normalized to look more unixy):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and extract the snapshot</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>curl<span class="sc">::</span><span class="fu">curl_download</span>(<span class="st">"https://jeroen.r-universe.dev/api/snapshot/zip?binaries=4.3"</span>, <span class="st">"snapshot.zip"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>snapshot <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">'jeroen'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(<span class="st">"snapshot.zip"</span>, <span class="at">exdir =</span> snapshot)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install packages from the local repository</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>prefix <span class="ot">&lt;-</span> <span class="fu">ifelse</span> (.Platform<span class="sc">$</span>OS.type <span class="sc">==</span> <span class="st">"windows"</span>, <span class="st">"file:///"</span>, <span class="st">"file://"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>repos <span class="ot">&lt;-</span> <span class="fu">paste0</span>(prefix, <span class="fu">normalizePath</span>(snapshot, <span class="st">"/"</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"V8"</span>, <span class="st">"mongolite"</span>), <span class="at">repos =</span> repos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
