@@ -25,7 +25,7 @@
     "href": "users/get-started.html",
     "title": "A catalogue of R packages",
     "section": "",
-    "text": "R-universe can be your entry point to many R packages. R-universe is a collection of universes, each of them featuring the packages of a team or individual.\nYou can search packages, and assess them thanks to all information provided on universe and package pages. Find out more about the three levels of navigation in R-universe:\n\nsearching the entire R ecosystem\nbrowsing work from a maintainer or organization\nindividual package information\n\n\n\n\n\n\n\nCaution\n\n\n\nR-universe does not vet packages: it is an open publishing system. The system builds and deploys R packages from Git repositories into installation repositories. The owner of the universe is responsible for their own policies and quality control.\n\n\nWith R-universe, you can also follow updates thanks to RSS feeds."
+    "text": "R-universe can be your entry point to many R packages. R-universe is a collection of universes, each of them featuring the packages of a team or individual.\nYou can search packages, and assess them thanks to all the information provided on universe and package pages. Find out more about the three levels of navigation in R-universe:\n\nsearching the entire R ecosystem\nbrowsing work from a maintainer or organization\nindividual package information\n\n\n\n\n\n\n\nCaution\n\n\n\nR-universe does not vet packages: it is an open publishing system. The system builds and deploys R packages from Git repositories into installation repositories. The owner of the universe is responsible for their own policies and quality control.\n\n\nWith R-universe, you can also follow updates thanks to RSS feeds."
   },
   {
     "objectID": "api/feeds.html",
