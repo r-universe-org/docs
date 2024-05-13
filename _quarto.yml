@@ -4,6 +4,10 @@ project:
 
 book:
   title: "R-Universe Docs"
+  reader-mode: true
+  site-url: https://docs.r-universe.dev/
+  repo-url: https://github.com/r-universe-org/hitchhikers-guide
+  repo-actions: [edit, issue]
   chapters:
     - index.qmd
     - part: Browse
