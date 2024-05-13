@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R-Universe Docs – 2&nbsp; A catalogue of R packages</title>
+<title>R-Universe Docs – 8&nbsp; Reproducibility</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../browse/search.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../publish/get-started.html" rel="next">
+<link href="../install/binaries.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse/get-started.html">Browse</a></li><li class="breadcrumb-item"><a href="../browse/get-started.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/reproducibility.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/get-started.html" class="sidebar-item-text sidebar-link active">
+  <a href="../browse/get-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></span></a>
   </div>
 </li>
@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../install/reproducibility.html" class="sidebar-item-text sidebar-link">
+  <a href="../install/reproducibility.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
@@ -217,15 +217,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" id="toc-does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="nav-link active" data-scroll-target="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does r-universe archive old versions of packages? How does it work with renv?</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse/get-started.html">Browse</a></li><li class="breadcrumb-item"><a href="../browse/get-started.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/reproducibility.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></h1>
 </div>
 
 
@@ -242,29 +248,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>R-universe can be your entry point to many R packages. R-universe is a collection of universes, each of them featuring the packages of a team or individual.</p>
-<p>You can search packages, and assess them thanks to all the information provided on universe and package pages. Find out more about the three levels of navigation in R-universe:</p>
-<ul>
-<li><a href="../browse/search.html">searching the entire R ecosystem</a></li>
-<li><a href="../browse/universes.html">browsing work from a maintainer or organization</a></li>
-<li><a href="../browse/packages.html">individual package information</a></li>
-</ul>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>R-universe does not vet packages: it is an open publishing system. The system builds and deploys R packages from Git repositories into installation repositories. The owner of the universe is responsible for their own policies and quality control.</p>
-</div>
-</div>
-<p>With R-universe, you can also follow updates thanks to <a href="../browse/rss-feeds.html">RSS feeds</a>.</p>
+<section id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does r-universe archive old versions of packages? How does it work with renv?</h2>
+<p>R-universe does not archive old versions of packages, but we have something better: we track the upstream git url and commit-id in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -689,13 +678,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="R-universe docs">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R-universe docs</span></span>
+      <a href="../install/binaries.html" class="pagination-link" aria-label="Binaries">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../browse/search.html" class="pagination-link" aria-label="Search for packages">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Search for packages</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../publish/get-started.html" class="pagination-link" aria-label="Why publish on R-universe">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R-Universe Docs – 2&nbsp; A catalogue of R packages</title>
+<title>R-Universe Docs – 7&nbsp; Binaries</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../browse/search.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../install/reproducibility.html" rel="next">
+<link href="../browse/rss-feeds.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse/get-started.html">Browse</a></li><li class="breadcrumb-item"><a href="../browse/get-started.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/binaries.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/get-started.html" class="sidebar-item-text sidebar-link active">
+  <a href="../browse/get-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></span></a>
   </div>
 </li>
@@ -165,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../install/binaries.html" class="sidebar-item-text sidebar-link">
+  <a href="../install/binaries.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></span></a>
   </div>
 </li>
@@ -217,15 +251,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#does-r-universe-have-linux-binaries" id="toc-does-r-universe-have-linux-binaries" class="nav-link active" data-scroll-target="#does-r-universe-have-linux-binaries"><span class="header-section-number">7.1</span> Does R-universe have Linux binaries?</a></li>
+  <li><a href="#how-to-use-webassembly-binaries" id="toc-how-to-use-webassembly-binaries" class="nav-link" data-scroll-target="#how-to-use-webassembly-binaries"><span class="header-section-number">7.2</span> How to use WebAssembly Binaries</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse/get-started.html">Browse</a></li><li class="breadcrumb-item"><a href="../browse/get-started.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/binaries.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></h1>
 </div>
 
 
@@ -242,29 +283,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>R-universe can be your entry point to many R packages. R-universe is a collection of universes, each of them featuring the packages of a team or individual.</p>
-<p>You can search packages, and assess them thanks to all the information provided on universe and package pages. Find out more about the three levels of navigation in R-universe:</p>
-<ul>
-<li><a href="../browse/search.html">searching the entire R ecosystem</a></li>
-<li><a href="../browse/universes.html">browsing work from a maintainer or organization</a></li>
-<li><a href="../browse/packages.html">individual package information</a></li>
-</ul>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>R-universe does not vet packages: it is an open publishing system. The system builds and deploys R packages from Git repositories into installation repositories. The owner of the universe is responsible for their own policies and quality control.</p>
-</div>
-</div>
-<p>With R-universe, you can also follow updates thanks to <a href="../browse/rss-feeds.html">RSS feeds</a>.</p>
+<section id="does-r-universe-have-linux-binaries" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="does-r-universe-have-linux-binaries"><span class="header-section-number">7.1</span> Does R-universe have Linux binaries?</h2>
+<p>Yes, but right now we only provide binaries for a single linux target: <code>r-release</code> on <code>ubuntu:latest</code>. This is the platform that the r-universe build system itself runs via the <a href="https://github.com/r-universe-org/base-image">base-image</a>, and we use these binaries when installing dependencies of a package.</p>
+<p>To use these binaries on Linux you need to add the corresponding repository to your <code>repos</code>. It is not needed to set a custom UserAgent. For example for the <code>jeroen</code> universe:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">linux =</span> <span class="st">'https://jeroen.r-universe.dev/bin/linux/noble/4.4/'</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">sources =</span> <span class="st">'https://jeroen.r-universe.dev'</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">cran =</span> <span class="st">'https://cloud.r-project.org'</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>See how <a href="https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16">this is done automatically in the base image</a> when an environment variable <code>MY_UNIVERSE</code> is set.</p>
+</section>
+<section id="how-to-use-webassembly-binaries" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="how-to-use-webassembly-binaries"><span class="header-section-number">7.2</span> How to use WebAssembly Binaries</h2>
+<p>We have experimental support for webassembly binaries! You should use the official <a href="https://repo.r-wasm.org">r-wasm repository</a> for dependencies. For example to install the dev version of dplyr:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'dplyr'</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://tidyverse.r-universe.dev'</span>, <span class="st">'https://repo.r-wasm.org'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -689,13 +726,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="R-universe docs">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R-universe docs</span></span>
+      <a href="../browse/rss-feeds.html" class="pagination-link" aria-label="RSS feeds of package updates">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">RSS feeds of package updates</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../browse/search.html" class="pagination-link" aria-label="Search for packages">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Search for packages</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../install/reproducibility.html" class="pagination-link" aria-label="Reproducibility">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R-Universe Docs – Debug package builds</title>
+<title>R-Universe Docs – 12&nbsp; Debug package builds</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,11 +41,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -72,128 +72,145 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">R-Universe Docs</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-browse" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Browse</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-browse">    
-        <li>
-    <a class="dropdown-item" href="../browse/get-started.html">
- <span class="dropdown-text">A catalogue of R packages</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../browse/search.html">
- <span class="dropdown-text">Search for packages</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../browse/universes.html">
- <span class="dropdown-text">Browsing work from a maintainer or organization</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../browse/packages.html">
- <span class="dropdown-text">Individual package information</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../browse/rss-feeds.html">
- <span class="dropdown-text">RSS feeds of package updates</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-publish" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Publish</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-publish">    
-        <li>
-    <a class="dropdown-item" href="../publish/get-started.html">
- <span class="dropdown-text">Why publish on R-universe</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../publish/set-up.html">
- <span class="dropdown-text">Set up your own universe</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../publish/metadata.html">
- <span class="dropdown-text">Control the metadata</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../publish/debug-build.html">
- <span class="dropdown-text">Debug package builds</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="https://github.com/r-universe-org/help/discussions"> 
-<span class="menu-text">Bug reports, feature requests, questions</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/debug-build.html">Debug package builds</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/debug-build.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debug package builds</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">R-Universe Docs</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Why publish on R-universe</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">R-universe docs</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Browse</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../browse/get-started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../browse/search.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Search for packages</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../browse/universes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Browsing work from a maintainer or organization</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../browse/packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Individual package information</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../browse/rss-feeds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">RSS feeds of package updates</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Install</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install/binaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install/reproducibility.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Publish</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/set-up.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Set up your own universe</span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/metadata.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Control the metadata</span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Control the metadata</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/debug-build.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Debug package builds</span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debug package builds</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -201,21 +218,21 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" id="toc-is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="nav-link active" data-scroll-target="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables">Is it possible to customize the package build process with custom options/tools/variables?</a></li>
-  <li><a href="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render">How to publish vignettes/articles which require custom software/tokens to render?</a></li>
-  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria">Are packages on r-universe required to pass CMD check or meet other criteria?</a></li>
+  <li><a href="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" id="toc-is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="nav-link active" data-scroll-target="#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables"><span class="header-section-number">12.1</span> Is it possible to customize the package build process with custom options/tools/variables?</a></li>
+  <li><a href="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render"><span class="header-section-number">12.2</span> How to publish vignettes/articles which require custom software/tokens to render?</a></li>
+  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">12.3</span> Are packages on r-universe required to pass CMD check or meet other criteria?</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/debug-build.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debug package builds</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Debug package builds</h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debug package builds</span></h1>
 </div>
 
 
@@ -232,23 +249,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="level2">
-<h2 class="anchored" data-anchor-id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables">Is it possible to customize the package build process with custom options/tools/variables?</h2>
+<section id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables"><span class="header-section-number">12.1</span> Is it possible to customize the package build process with custom options/tools/variables?</h2>
 <p>No, that is not possible. Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on r-universe.</p>
 <p>This is on purpose: we want to make sure that the packages deployed on r-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.</p>
 </section>
-<section id="how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render">How to publish vignettes/articles which require custom software/tokens to render?</h2>
+<section id="how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render"><span class="header-section-number">12.2</span> How to publish vignettes/articles which require custom software/tokens to render?</h2>
 <p>The best solution is to precompute these vignettes on your local machine, see: <a href="https://ropensci.org/blog/2019/12/08/precompute-vignettes/">How to precompute package vignettes or pkgdown articles</a></p>
 </section>
-<section id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria">Are packages on r-universe required to pass CMD check or meet other criteria?</h2>
+<section id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">12.3</span> Are packages on r-universe required to pass CMD check or meet other criteria?</h2>
 <p>No.&nbsp; R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -672,36 +689,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../publish/metadata.html" class="pagination-link" aria-label="Control the metadata">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Control the metadata</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Control the metadata</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
- © Licence MIT.
-  </li>  
-</ul>
-    </div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="https://ropensci.org/">
-<p>An rOpenSci project</p>
-</a>
-  </li>  
-</ul>
-    </div>
-  </div>
-</footer>
 
 
 
