@@ -56,9 +56,8 @@ From here you can view both the rendered html/pdf document, as well as the rmark
 Further down the page you can see the content from the package README. 
 Most packages these days include a README.md file which can nicely be rendered into HTML.
 
-After the readme follows a section named “reference manual” containing a table with all the help pages. 
-These link to the respective chapters in the html reference manual2, which provide the most extensive documentation for each function in the package, including descriptions, parameters, examples, etc.
-Screenshot of a chapter in the HTML reference manual for a package, showing descriptions, parameters, and examples for a function.
+After the README follows a section named “reference manual” containing a table with all the help pages. 
+These link to the respective chapters in the html reference manual, which provide the most extensive documentation for each function in the package, including descriptions, parameters, examples, etc.
 
 ### cran.dev shortlinks
 
