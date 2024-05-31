@@ -6,7 +6,8 @@ You can search for packages via <https://r-universe.dev/search/> using keywords 
 
 ## How is the package-rank score calculated?
 
-The exact algorith is very much WIP and will change. Right now it is a combination of:
+The exact algorithm is a work-in-progress and will change. 
+Right now it is a combination of:
 
  - Number of dependents (aka recursive reverse depenencies)
  - Number of Github stars
