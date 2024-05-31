@@ -376,8 +376,8 @@
     "objectID": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "href": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "title": "12  Debug package builds",
-    "section": "12.3 Are packages on r-universe required to pass CMD check or meet other criteria?",
-    "text": "12.3 Are packages on r-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
+    "section": "12.3 Are packages on R-universe required to pass CMD check or meet other criteria?",
+    "text": "12.3 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debug package builds</span>"
