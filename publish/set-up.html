@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#creating-your-personal-r-universe-subdomain" id="toc-creating-your-personal-r-universe-subdomain" class="nav-link active" data-scroll-target="#creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.1</span> Creating your personal r-universe subdomain</a>
+  <li><a href="#creating-your-personal-r-universe-subdomain" id="toc-creating-your-personal-r-universe-subdomain" class="nav-link active" data-scroll-target="#creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.1</span> Creating your personal R-universe subdomain</a>
   <ul class="collapse">
   <li><a href="#case-sensitivity" id="toc-case-sensitivity" class="nav-link" data-scroll-target="#case-sensitivity"><span class="header-section-number">10.1.1</span> Case-sensitivity</a></li>
   <li><a href="#how-much-github-is-compulsory" id="toc-how-much-github-is-compulsory" class="nav-link" data-scroll-target="#how-much-github-is-compulsory"><span class="header-section-number">10.1.2</span> How much GitHub is compulsory?</a></li>
@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>A few more details on each step below.</p>
 <section id="creating-your-personal-r-universe-subdomain" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.1</span> Creating your personal r-universe subdomain</h2>
+<h2 data-number="10.1" class="anchored" data-anchor-id="creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.1</span> Creating your personal R-universe subdomain</h2>
 <p>In R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.</p>
 <section id="case-sensitivity" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="case-sensitivity"><span class="header-section-number">10.1.1</span> Case-sensitivity</h3>
@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="populating-the-packages.json-registry-file" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="populating-the-packages.json-registry-file"><span class="header-section-number">10.2</span> Populating the packages.json registry file</h2>
-<p>In order to publish content on r-universe, you need to create a registry file called <a href="https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json">packages.json</a>, which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields <code>package</code> and <code>url</code> for each entry, for example:</p>
+<p>In order to publish content on R-universe, you need to create a registry file called <a href="https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json">packages.json</a>, which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields <code>package</code> and <code>url</code> for each entry, for example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"package"</span><span class="fu">:</span> <span class="st">"curl"</span><span class="fu">,</span></span>
@@ -345,11 +345,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="special-case-of-cran-packages" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="special-case-of-cran-packages"><span class="header-section-number">10.2.1</span> Special case of CRAN packages</h3>
-<p>When browsing the <a href="https://r-universe.dev/">r-universe homepage</a> you may notice that some major universes that contain many CRAN packages do not have a <code>packages.json</code> registry: When the r-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account. Ownership is determined by the presence of a link to a GitHub repository in the <code>URL</code> or <code>BugReports</code> field of a CRAN package. Our scraper scans all CRAN packages for GitHub links on a daily basis and stores results in the <a href="https://github.com/r-universe-org/cran-to-git">cran-to-git</a> database.</p>
+<p>When browsing the <a href="https://r-universe.dev/">R-universe homepage</a> you may notice that some major universes that contain many CRAN packages do not have a <code>packages.json</code> registry: When the R-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account. Ownership is determined by the presence of a link to a GitHub repository in the <code>URL</code> or <code>BugReports</code> field of a CRAN package. Our scraper scans all CRAN packages for GitHub links on a daily basis and stores results in the <a href="https://github.com/r-universe-org/cran-to-git">cran-to-git</a> database.</p>
 <p>These are effectively auto-generated registries, on which the build system will fall back if the user does not have a personal registry. As soon as the user creates a proper <code>universe</code> registry repository with the <code>packages.json</code> file, this will take precedence, and the build system will automatically switch over.</p>
 <section id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe" class="level4" data-number="10.2.1.1">
 <h4 data-number="10.2.1.1" class="anchored" data-anchor-id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe"><span class="header-section-number">10.2.1.1</span> How to prevent a CRAN/BioC package from automatically being indexed by R-universe</h4>
-<p>CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by r-universe. To prevent this, add a line to the package DESCRIPTION file with: <code>Config/runiverse/noindex: true</code> (Config/ field names are allowed on CRAN). The r-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from r-universe.</p>
+<p>CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: <code>Config/runiverse/noindex: true</code> (Config/ field names are allowed on CRAN). The r-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from r-universe.</p>
 </section>
 </section>
 <section id="tracking-custom-branches-or-releases" class="level3" data-number="10.2.2">

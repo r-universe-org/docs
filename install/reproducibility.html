@@ -265,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" id="toc-does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="nav-link active" data-scroll-target="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does r-universe archive old versions of packages? How does it work with renv?</a></li>
+  <li><a href="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" id="toc-does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="nav-link active" data-scroll-target="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does R-universe archive old versions of packages? How does it work with renv?</a></li>
   <li><a href="#repository-snapshots" id="toc-repository-snapshots" class="nav-link" data-scroll-target="#repository-snapshots"><span class="header-section-number">8.2</span> Repository snapshots</a>
   <ul class="collapse">
   <li><a href="#downloading-repository-snapshots" id="toc-downloading-repository-snapshots" class="nav-link" data-scroll-target="#downloading-repository-snapshots"><span class="header-section-number">8.2.1</span> Downloading repository snapshots</a></li>
@@ -297,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does r-universe archive old versions of packages? How does it work with renv?</h2>
+<h2 data-number="8.1" class="anchored" data-anchor-id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does R-universe archive old versions of packages? How does it work with renv?</h2>
 <p>R-universe does not archive old versions of packages, but we have something better: we track the upstream git url and commit-id in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a></p>
 </section>
 <section id="repository-snapshots" class="level2" data-number="8.2">
@@ -310,7 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="using-snapshots" class="level3" data-number="8.2.2">
 <h3 data-number="8.2.2" class="anchored" data-anchor-id="using-snapshots"><span class="header-section-number">8.2.2</span> Using snapshots</h3>
 <p>A CRAN-like R package repository is essentially a static directory of package files and indexes, with a specific naming structure. R-universe automatically builds and updates all these files based on a registry of packages and upstream git sources. But once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server!</p>
-<p>For example, you could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. Here is a minimal example of such an action: https://github.com/jeroen/backup. Note how the action is vary fast: downloading and extracting te snapshot from r-universe only takes a few seconds. So this is easily something that could be done on demand, or automatically on a regular basis.</p>
+<p>For example, you could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. Here is a minimal example of such an action: https://github.com/jeroen/backup. Note how the action is vary fast: downloading and extracting te snapshot from R-universe only takes a few seconds. So this is easily something that could be done on demand, or automatically on a regular basis.</p>
 <p>You can also install packages in R directly from a local snapshot folder, by prefixing the path that you pass to <code>install.packages</code> with <code>file://</code> (Windows paths need to be normalized to look more unixy):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and extract the snapshot</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>curl<span class="sc">::</span><span class="fu">curl_download</span>(<span class="st">"https://jeroen.r-universe.dev/api/snapshot/zip?binaries=4.3"</span>, <span class="st">"snapshot.zip"</span>)</span>
