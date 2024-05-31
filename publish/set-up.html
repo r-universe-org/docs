@@ -307,7 +307,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Creating a universe for your R packages can be done in a few steps:</p>
 <ol type="1">
-<li>Create a Git repository named (all lowercase) <code>&lt;your-username&gt;.r-universe.dev</code> on your GitHub account, containing a <code>packages.json</code> file which lists the Git repositories with R packages to include. For an organization at <code>github.com/ropensci</code> the repository is thus <code>github.com/ropensci/ropensci.r-universe.dev</code>; similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>.</li>
+<li>Create a Git repository named (all lowercase) <code>&lt;your-username&gt;.r-universe.dev</code> on your GitHub account, containing a <code>packages.json</code> file which lists the Git repositories with R packages to include.
+<ul>
+<li>For an organization at <code>github.com/ropensci</code> the repository is thus <code>github.com/ropensci/ropensci.r-universe.dev</code>;</li>
+<li>similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>.</li>
+</ul></li>
 <li>Install the <a href="https://github.com/apps/r-universe/installations/new">r-universe app</a> on this same GitHub account or organization for which you want to create the universe. Clicking on the <a href="https://github.com/apps/r-universe/installations/new">app link</a> will lead you to a page that asks “Where do you want to install R-universe?”.</li>
 <li>Wait for your packages to start appearing on <code>https://&lt;yourname&gt;.r-universe.dev</code> once they have finished building.</li>
 <li>Document how to install packages from R-universe in the docs of your packages.</li>
