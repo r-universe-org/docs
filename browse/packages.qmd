@@ -124,7 +124,7 @@ The `"api"` field shows the JSON url with all the information and metadata about
 gert <- jsonlite::fromJSON('https://ropensci.r-universe.dev/api/packages/gert')
 ```
 
-Note that not all packages have a `devel` version available. CRAN packages that are not found GitHub or GitLab or r-forge only have a `release` version, for example: https://api.cran.dev/MASS
+Note that not all packages have a `devel` version available. CRAN packages that are not found on GitHub or GitLab or R-forge only have a `release` version, for example: https://api.cran.dev/MASS
 
 ## Usage and development activity
 
