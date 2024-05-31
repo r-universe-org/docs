@@ -307,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Creating a universe for your R packages can be done in a few steps:</p>
 <ol type="1">
-<li>Create a git repository named (all lowercase) <your-username>.r-universe.dev on your GitHub account, containing a <code>packages.json</code> file which lists the git repositories with R packages to include. For an organization at <code>github.com/ropensci</code> the repository is thus <code>github.com/ropensci/ropensci.r-universe.dev</code>; similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>.</your-username></li>
+<li>Create a Git repository named (all lowercase) <your-username>.r-universe.dev on your GitHub account, containing a <code>packages.json</code> file which lists the git repositories with R packages to include. For an organization at <code>github.com/ropensci</code> the repository is thus <code>github.com/ropensci/ropensci.r-universe.dev</code>; similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>.</your-username></li>
 <li>Install the <a href="https://github.com/apps/r-universe/installations/new">r-universe app</a> on this same GitHub account or organization for which you want to create the universe. Clicking on the <a href="https://github.com/apps/r-universe/installations/new">app link</a> will lead you to a page that asks “Where do you want to install R-universe?”.</li>
 <li>Wait for your packages to start appearing on https://<yourname>.r-universe.dev once they have finished building.</yourname></li>
 <li>Document how to install packages from R-universe in the docs of your packages.</li>
@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="populating-the-packages.json-registry-file" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="populating-the-packages.json-registry-file"><span class="header-section-number">10.2</span> Populating the packages.json registry file</h2>
-<p>In order to publish content on r-universe, you need to create a registry file called <a href="https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json">packages.json</a>, which lists the git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields <code>package</code> and <code>url</code> for each entry, for example:</p>
+<p>In order to publish content on r-universe, you need to create a registry file called <a href="https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json">packages.json</a>, which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields <code>package</code> and <code>url</code> for each entry, for example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"package"</span><span class="fu">:</span> <span class="st">"curl"</span><span class="fu">,</span></span>

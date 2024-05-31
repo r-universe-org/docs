@@ -294,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="does-r-universe-have-linux-binaries" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="does-r-universe-have-linux-binaries"><span class="header-section-number">7.1</span> Does R-universe have Linux binaries?</h2>
-<p>Yes, but right now we only provide binaries for a single linux target: <code>r-release</code> on <code>ubuntu:latest</code>. This is the platform that the r-universe build system itself runs via the <a href="https://github.com/r-universe-org/base-image">base-image</a>, and we use these binaries when installing dependencies of a package.</p>
+<p>Yes, but right now we only provide binaries for a single linux target: <code>r-release</code> on <code>ubuntu:latest</code>. This is the platform that the R-universe build system itself runs via the <a href="https://github.com/r-universe-org/base-image">base-image</a>, and we use these binaries when installing dependencies of a package.</p>
 <p>To use these binaries on Linux you need to add the corresponding repository to your <code>repos</code>. It is not needed to set a custom UserAgent. For example for the <code>jeroen</code> universe:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">linux =</span> <span class="st">'https://jeroen.r-universe.dev/bin/linux/noble/4.4/'</span>,</span>
