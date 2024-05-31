@@ -300,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Clicking on a package in search results or in a universe overview will lead you to homepage for that package. You can also link to this page directly via the url https://{owner}.r-universe.dev/{package}.</p>
+<p>Clicking on a package in search results or in a universe overview will lead you to homepage for that package. You can also link to this page directly via the url <code>https://{owner}.r-universe.dev/{package}</code>.</p>
 <p>These package pages are generated automatically and provide detailed information about each project, and all the information and resources to quickly install and try the package locally in R.</p>
 <section id="package-information" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="package-information"><span class="header-section-number">5.1</span> Package information</h2>
@@ -335,19 +335,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>On R-universe you can find package repositories from many different organizations and maintainers. But sometimes you just want to lookup a particular CRAN package, without knowing the developer. The cran.dev shortlink service lets you navigate or link directly to the R-universe homepage and docs of any established CRAN package.</p>
 <p>The root domain <code>https://cran.dev/{package}</code> redirects to the primary homepage for a package:</p>
 <ul>
-<li>https://cran.dev/magick</li>
-<li>https://cran.dev/Matrix</li>
-<li>https://cran.dev/ggplot2</li>
+<li><a href="https://cran.dev/magick" class="uri">https://cran.dev/magick</a></li>
+<li><a href="https://cran.dev/Matrix" class="uri">https://cran.dev/Matrix</a></li>
+<li><a href="https://cran.dev/ggplot2" class="uri">https://cran.dev/ggplot2</a></li>
 </ul>
 <p>The subdomain <code>https://docs.cran.dev/{package}</code> redirects to package manual page:</p>
 <ul>
-<li>https://docs.cran.dev/targets</li>
-<li>https://docs.cran.dev/MASS</li>
-<li>https://docs.cran.dev/Rcpp</li>
+<li><a href="https://docs.cran.dev/targets" class="uri">https://docs.cran.dev/targets</a></li>
+<li><a href="https://docs.cran.dev/MASS" class="uri">https://docs.cran.dev/MASS</a></li>
+<li><a href="https://docs.cran.dev/Rcpp" class="uri">https://docs.cran.dev/Rcpp</a></li>
 </ul>
 <p>Finally the subdomain <code>https://api.cran.dev/{package}</code> does not redirect, but returns a JSON blob with links to the package versions and resources. For example:</p>
 <ul>
-<li>https://api.cran.dev/gert</li>
+<li><a href="https://api.cran.dev/gert" class="uri">https://api.cran.dev/gert</a></li>
 </ul>
 <p>This shows the package page and maintainer for the gert package, and information on both the current CRAN release and development versions. Right now it returns:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
@@ -372,13 +372,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We can see the release and devel version of this package, with links to the respective sources, cranlike repository, manual, and package metadata.</p>
-<p>From the above it can be seen that the gert R-universe page is https://ropensci.r-universe.dev/gert and the R-universe <code>"repository"</code> from where to install the devel version of gert:</p>
+<p>From the above it can be seen that the gert R-universe page is <a href="https://ropensci.r-universe.dev/gert" class="uri">https://ropensci.r-universe.dev/gert</a> and the R-universe <code>"repository"</code> from where to install the devel version of gert:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install 'devel' gert</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gert"</span>, <span class="at">repos =</span> <span class="st">"https://ropensci.r-universe.dev"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <code>"api"</code> field shows the JSON url with all the information and metadata about this package:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Everything there is to know about devel gert</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>gert <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(<span class="st">'https://ropensci.r-universe.dev/api/packages/gert'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Note that not all packages have a <code>devel</code> version available. CRAN packages that are not found GitHub or GitLab or r-forge only have a <code>release</code> version, for example: https://api.cran.dev/MASS</p>
+<p>Note that not all packages have a <code>devel</code> version available. CRAN packages that are not found GitHub or GitLab or r-forge only have a <code>release</code> version, for example: <a href="https://api.cran.dev/MASS" class="uri">https://api.cran.dev/MASS</a></p>
 </section>
 </section>
 <section id="usage-and-development-activity" class="level2" data-number="5.3">
