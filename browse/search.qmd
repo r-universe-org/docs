@@ -9,7 +9,7 @@ You can search for packages via <https://r-universe.dev/search/> using keywords 
 The exact algorithm is a work-in-progress and will change. 
 Right now it is a combination of:
 
- - Number of dependents (aka recursive reverse depenencies)
+ - Number of dependents (that is to say, recursive reverse dependencies)
  - Number of Github stars
  - Number of unique contributors
  - Commit activity over the last year
