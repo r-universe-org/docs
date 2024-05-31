@@ -12,7 +12,7 @@ This is on purpose: we want to make sure that the packages deployed on R-univers
 
 ## How to publish vignettes/articles which require custom software/tokens to render?
 
-The best solution is to precompute these vignettes on your local machine, see: [How to precompute package vignettes or pkgdown articles](https://ropensci.org/blog/2019/12/08/precompute-vignettes/)
+The best solution is to precompute these vignettes on your local machine, see: [How to precompute package vignettes or pkgdown articles](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
 
 
 ## Are packages on r-universe required to pass CMD check or meet other criteria?
