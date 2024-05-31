@@ -111,7 +111,7 @@ jsonlite::write_json(df, 'packages.json', pretty = TRUE)
 ```
 
 The `url` value __must be a public Git url__. 
-This is important; our build servers literally call `Git clone ${url}` on each of the entries. 
+This is important; our build servers literally call `git clone ${url}` on each of the entries. 
 The `package` field must match the name of the R package from the DESCRIPTION file under that url.
 If the R package does not live in the root of the Git repository, you also need to set the `subdir` field to the path of the R package root directory.
 
