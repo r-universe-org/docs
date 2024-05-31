@@ -11,7 +11,7 @@ Creating a universe for your R packages can be done in a few steps:
 
 A few more details on each step below.
 
-## Creating your personal r-universe subdomain
+## Creating your personal R-universe subdomain
 
 In R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. 
 The subdomains are tied to the GitHub account or organization with that name. 
@@ -29,7 +29,7 @@ If your R packages are hosted on another git service, such as Gitlab, or a unive
 
 ## Populating the packages.json registry file
 
-In order to publish content on r-universe, you need to create a registry file called [packages.json](https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json), which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields `package` and `url` for each entry, for example:
+In order to publish content on R-universe, you need to create a registry file called [packages.json](https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json), which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields `package` and `url` for each entry, for example:
 
 ```json
 [
@@ -51,8 +51,8 @@ In order to publish content on r-universe, you need to create a registry file ca
 
 ### Special case of CRAN packages
 
-When browsing the [r-universe homepage](https://r-universe.dev/) you may notice that some major universes that contain many CRAN packages do not have a `packages.json` registry:
-When the r-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account.
+When browsing the [R-universe homepage](https://r-universe.dev/) you may notice that some major universes that contain many CRAN packages do not have a `packages.json` registry:
+When the R-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account.
 Ownership is determined by the presence of a link to a GitHub repository in the `URL` or `BugReports` field of a CRAN package. 
 Our scraper scans all CRAN packages for GitHub links on a daily basis and stores results in the [cran-to-git](https://github.com/r-universe-org/cran-to-git) database.
 
@@ -62,7 +62,7 @@ As soon as the user creates a proper `universe` registry repository with the `pa
 
 #### How to prevent a CRAN/BioC package from automatically being indexed by R-universe
 
-CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by r-universe. To prevent this, add a line to the package DESCRIPTION file with: `Config/runiverse/noindex: true` (Config/ field names are allowed on CRAN). The r-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from r-universe.
+CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: `Config/runiverse/noindex: true` (Config/ field names are allowed on CRAN). The r-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from r-universe.
 
 
 ### Tracking custom branches or releases

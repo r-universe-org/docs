@@ -4,7 +4,7 @@ title: "Control the metadata"
 
 ## Individual (contributor, maintainer) metadata
 
-### How to link a maintainer email addresses to a username on r-universe
+### How to link a maintainer email addresses to a username on R-universe
 
 We use the GitHub username that is associated with a given email address. 
 If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, everything just works. 

@@ -2,7 +2,7 @@
 title: "Reproducibility"
 ---
 
-## Does r-universe archive old versions of packages? How does it work with renv?
+## Does R-universe archive old versions of packages? How does it work with renv?
 
 R-universe does not archive old versions of packages, but we have something better: we track the upstream git url and commit-id in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/) 
 
@@ -26,7 +26,7 @@ R-universe automatically builds and updates all these files based on a registry 
 But once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server!
 
 For example, you could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. 
-Here is a minimal example of such an action: https://github.com/jeroen/backup. Note how the action is vary fast: downloading and extracting te snapshot from r-universe only takes a few seconds. 
+Here is a minimal example of such an action: https://github.com/jeroen/backup. Note how the action is vary fast: downloading and extracting te snapshot from R-universe only takes a few seconds. 
 So this is easily something that could be done on demand, or automatically on a regular basis.
 
 You can also install packages in R directly from a local snapshot folder, by prefixing the path that you pass to `install.packages` with `file://` (Windows paths need to be normalized to look more unixy):

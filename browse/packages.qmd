@@ -24,7 +24,7 @@ Both are calculated using transitive (recursive) strong dependencies, hence this
 At package build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to derive the list of hard dependencies and store this in the database. R-base packages are not included. The `dependencies` value is simply the size of this list. The `dependents` value is the opposite: this is the number of packages in R-universe which list the target package as one of its dependencies.
 
 
-### How does r-universe analyze system dependencies (C/C++)
+### How does R-universe analyze system dependencies (C/C++)
 
 After the package has been installed, we use maketools to show external libraries that the package links to:
 
@@ -45,7 +45,7 @@ The maketools vignette explains this in more detail: [Automatically determine ru
 
 ## All the documentation
 
-To let you start using packages as quickly as possible, r-universe renders all available documentation and presents this as clear and concisely as possible on the homepage.
+To let you start using packages as quickly as possible, R-universe renders all available documentation and presents this as clear and concisely as possible on the homepage.
 
 Most R packages have 3 forms of documentation: a readme file, a reference manual (help pages), and a number of articles (vignettes). 
 These articles are often a good place to get started, and are listed on the package homepage right under the descriptives. 
@@ -60,9 +60,9 @@ Screenshot of a chapter in the HTML reference manual for a package, showing desc
 
 ### cran.dev shortlinks
 
-On r-universe you can find package repositories from many different organizations and maintainers.
+On R-universe you can find package repositories from many different organizations and maintainers.
 But sometimes you just want to lookup a particular CRAN package, without knowing the developer.
-The cran.dev shortlink service lets you navigate or link directly to the r-universe homepage and docs of any established CRAN package.
+The cran.dev shortlink service lets you navigate or link directly to the R-universe homepage and docs of any established CRAN package.
 
 
 The root domain `https://cran.dev/{package}` redirects to the primary homepage for a package:
@@ -109,7 +109,7 @@ This shows the package page and maintainer for the gert package, and information
 
 We can see the release and devel version of this package, with links to the respective sources, cranlike repository, manual, and package metadata.
 
-From the above it can be seen that the gert r-universe page is https://ropensci.r-universe.dev/gert and the r-universe `"repository"` from where to install the devel version of gert:
+From the above it can be seen that the gert R-universe page is https://ropensci.r-universe.dev/gert and the R-universe `"repository"` from where to install the devel version of gert:
 
 ```r
 # install 'devel' gert
@@ -130,6 +130,6 @@ Note that not all packages have a `devel` version available. CRAN packages that 
 Besides familiarizing yourself with what the package does, you may be interested in who is working on it, who else is using it, and if it is still actively developed.
 
 The “development and contributors” section shows a bar chart with the number of commits per week for the last year, and who the main contributors are. 
-Finally the section “usage by other packages” shows other packages on r-universe depending on this package, grouped by owner. 
+Finally the section “usage by other packages” shows other packages on R-universe depending on this package, grouped by owner. 
 This gives you some indication on how active the project is, and who are involved.
 Screenshot of recent development activity and users of a package.

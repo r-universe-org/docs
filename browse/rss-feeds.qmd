@@ -2,7 +2,7 @@
 title: "RSS feeds of package updates"
 ---
 
-The /feed.xml endpoint on any r-universe domain gives an RSS feed of recent R package updates in the repository:
+The /feed.xml endpoint on any R-universe domain gives an RSS feed of recent R package updates in the repository:
 
     https://ropensci.r-universe.dev/feed.xml
     https://tidyverse.r-universe.dev/feed.xml
