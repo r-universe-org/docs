@@ -158,7 +158,7 @@ install.packages('tinkr')
 ```
 
 To help package users, you can consider copying these instructions to your package README.md files. 
-And of course you can add an R-universe badge to your readme as well.
+And of course you can add an R-universe badge to the package README as well.
 
 The badge API is simply `/badges/<package>` which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:
 
