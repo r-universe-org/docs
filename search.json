@@ -366,7 +366,7 @@
     "href": "publish/debug-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
     "title": "12  Debug package builds",
     "section": "12.2 How to publish vignettes/articles which require custom software/tokens to render?",
-    "text": "12.2 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles",
+    "text": "12.2 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debug package builds</span>"
