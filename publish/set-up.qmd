@@ -64,7 +64,7 @@ As soon as the user creates a proper `universe` registry repository with the `pa
 
 #### How to prevent a CRAN/BioC package from automatically being indexed by R-universe
 
-CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: `Config/runiverse/noindex: true` (Config/ field names are allowed on CRAN). The r-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from r-universe.
+CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: `Config/runiverse/noindex: true` (Config/ field names are allowed on CRAN). The R-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from R-universe.
 
 
 ### Tracking custom branches or releases
@@ -128,7 +128,7 @@ Once you pushed your `packages.json` file to your new `universe` repository on G
 
 ## Waiting for the first build
 
-Once you installed the app, the system will automatically create your personal monorepo under the r-universe organization: `https://github.com/r-universe/<yourname>`. 
+Once you installed the app, the system will automatically create your personal monorepo under the R-universe organization: `https://github.com/r-universe/<yourname>`. 
 This is where the system keeps the full history of your packages.
 The actions tap of your monorepo is also where the building happens.
 
@@ -158,7 +158,7 @@ install.packages('tinkr')
 ```
 
 To help your users, you can consider copying these instructions to your package README.md files. 
-And of course you can add an r-universe badge to your readme as well.
+And of course you can add an R-universe badge to your readme as well.
 
 The badge API is simply `/badges/<package>` which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:
 
@@ -175,7 +175,7 @@ For example this would produce the following badge: <img style="margin-bottom:3p
 Feel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.).
 You can use a rocket icon as icon.
 
-**Hugo Academic Theme**: To display the rocket icon hyperlinked to your r-universe in your social icons below your photo add the following code to the social section of `content/authors/admin/_index.md` (or the `_index.md` file for the relevant author), replacing username with the relevant user or organisation name.
+**Hugo Academic Theme**: To display the rocket icon hyperlinked to your R-universe in your social icons below your photo add the following code to the social section of `content/authors/admin/_index.md` (or the `_index.md` file for the relevant author), replacing username with the relevant user or organisation name.
 
 ```yaml
 social:
