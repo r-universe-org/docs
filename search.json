@@ -25,18 +25,7 @@
     "href": "browse/search.html",
     "title": "3  Search for packages",
     "section": "",
-    "text": "3.1 Which packages get included in search?\nIn R-universe, a given R package can be included in many different registries. To prevent duplicates, search only shows packages from the universes of the upstream GitHub owners of the package, and not from third parties that have added a copy of the package to their registry.\nMore specifically, search results include packages for which:",
-    "crumbs": [
-      "Browse",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
-    ]
-  },
-  {
-    "objectID": "browse/search.html#which-packages-get-included-in-search",
-    "href": "browse/search.html#which-packages-get-included-in-search",
-    "title": "3  Search for packages",
-    "section": "",
-    "text": "The GitHub owner is the same as the universe, for example packages under https://jeroen.r-universe.dev from GitHub user https://github.com/jeroen/. This also includes all CRAN packages.\nAlternatively: to opt-in packages for which the universe name is different from the GitHub owner, the package author must include the full user.r-universe.dev in the URL field of the DESCRIPTION file. For example, if the registry from https://jeroen.r-universe.dev has a package https://github.com/elsewhere/mypkg, but the URL field in the DESCRIPTION includes e.g. https://jeroen.r-universe.dev or https://jeroen.r-universe.dev/mypkg, then it also shows up in the search results.",
+    "text": "3.1 How is the package-rank score calculated?\nThe exact algorith is very much WIP and will change. Right now it is a combination of:\nThe score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
@@ -46,8 +35,8 @@
     "objectID": "browse/search.html#how-is-the-package-rank-score-calculated",
     "href": "browse/search.html#how-is-the-package-rank-score-calculated",
     "title": "3  Search for packages",
-    "section": "3.2 How is the package-rank score calculated?",
-    "text": "3.2 How is the package-rank score calculated?\nThe exact algorith is very much WIP and will change. Right now it is a combination of:\n\nNumber of dependents (aka recursive reverse depenencies)\nNumber of Github stars\nNumber of unique contributors\nCommit activity over the last year\n\nThe score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.",
+    "section": "",
+    "text": "Number of dependents (aka recursive reverse depenencies)\nNumber of Github stars\nNumber of unique contributors\nCommit activity over the last year",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
@@ -57,8 +46,19 @@
     "objectID": "browse/search.html#why-is-a-package-sometimes-listed-twice",
     "href": "browse/search.html#why-is-a-package-sometimes-listed-twice",
     "title": "3  Search for packages",
-    "section": "3.3 Why is a package sometimes listed twice?",
-    "text": "3.3 Why is a package sometimes listed twice?\nIf a source package fails to build (which means something is very wrong) then you see a red “build failure” message. If there was a previous successful build, it is kept there as well for users to install.",
+    "section": "3.2 Why is a package sometimes listed twice?",
+    "text": "3.2 Why is a package sometimes listed twice?\nIf a source package fails to build (which means something is very wrong) then you see a red “build failure” message. If there was a previous successful build, it is kept there as well for users to install.",
+    "crumbs": [
+      "Browse",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
+    ]
+  },
+  {
+    "objectID": "browse/search.html#which-packages-get-included-in-search",
+    "href": "browse/search.html#which-packages-get-included-in-search",
+    "title": "3  Search for packages",
+    "section": "3.3 Which packages get included in search?",
+    "text": "3.3 Which packages get included in search?\nIn R-universe, a given R package can be included in many different registries. To prevent duplicates, search only shows packages from the universes of the upstream GitHub owners of the package, and not from third parties that have added a copy of the package to their registry.\nMore specifically, search results include packages for which:\n\nThe GitHub owner is the same as the universe, for example packages under https://jeroen.r-universe.dev from GitHub user https://github.com/jeroen/. This also includes all CRAN packages.\nAlternatively: to opt-in packages for which the universe name is different from the GitHub owner, the package author must include the full user.r-universe.dev in the URL field of the DESCRIPTION file. For example, if the registry from https://jeroen.r-universe.dev has a package https://github.com/elsewhere/mypkg, but the URL field in the DESCRIPTION includes e.g. https://jeroen.r-universe.dev or https://jeroen.r-universe.dev/mypkg, then it also shows up in the search results.",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"

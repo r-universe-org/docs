@@ -231,9 +231,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#which-packages-get-included-in-search" id="toc-which-packages-get-included-in-search" class="nav-link active" data-scroll-target="#which-packages-get-included-in-search"><span class="header-section-number">3.1</span> Which packages get included in search?</a></li>
-  <li><a href="#how-is-the-package-rank-score-calculated" id="toc-how-is-the-package-rank-score-calculated" class="nav-link" data-scroll-target="#how-is-the-package-rank-score-calculated"><span class="header-section-number">3.2</span> How is the package-rank score calculated?</a></li>
-  <li><a href="#why-is-a-package-sometimes-listed-twice" id="toc-why-is-a-package-sometimes-listed-twice" class="nav-link" data-scroll-target="#why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.3</span> Why is a package sometimes listed twice?</a></li>
+  <li><a href="#how-is-the-package-rank-score-calculated" id="toc-how-is-the-package-rank-score-calculated" class="nav-link active" data-scroll-target="#how-is-the-package-rank-score-calculated"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</a></li>
+  <li><a href="#why-is-a-package-sometimes-listed-twice" id="toc-why-is-a-package-sometimes-listed-twice" class="nav-link" data-scroll-target="#why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.2</span> Why is a package sometimes listed twice?</a></li>
+  <li><a href="#which-packages-get-included-in-search" id="toc-which-packages-get-included-in-search" class="nav-link" data-scroll-target="#which-packages-get-included-in-search"><span class="header-section-number">3.3</span> Which packages get included in search?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/search.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -260,17 +260,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>You can search for packages via <a href="https://r-universe.dev/search/" class="uri">https://r-universe.dev/search/</a> using keywords or author names.</p>
-<section id="which-packages-get-included-in-search" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="which-packages-get-included-in-search"><span class="header-section-number">3.1</span> Which packages get included in search?</h2>
-<p>In R-universe, a given R package can be included in many different registries. To prevent duplicates, search only shows packages from the universes of the upstream GitHub owners of the package, and not from third parties that have added a copy of the package to their registry.</p>
-<p>More specifically, search results include packages for which:</p>
-<ul>
-<li>The GitHub owner is the same as the universe, for example packages under <code>https://jeroen.r-universe.dev</code> from GitHub user <code>https://github.com/jeroen/</code>. This also includes all CRAN packages.</li>
-<li>Alternatively: to opt-in packages for which the universe name is different from the GitHub owner, the package author must include the full <code>user.r-universe.dev</code> in the URL field of the DESCRIPTION file. For example, if the registry from <code>https://jeroen.r-universe.dev</code> has a package <code>https://github.com/elsewhere/mypkg</code>, but the URL field in the DESCRIPTION includes e.g.&nbsp;<code>https://jeroen.r-universe.dev</code> or <code>https://jeroen.r-universe.dev/mypkg</code>, then it also shows up in the search results.</li>
-</ul>
-</section>
-<section id="how-is-the-package-rank-score-calculated" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="how-is-the-package-rank-score-calculated"><span class="header-section-number">3.2</span> How is the package-rank score calculated?</h2>
+<section id="how-is-the-package-rank-score-calculated" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="how-is-the-package-rank-score-calculated"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</h2>
 <p>The exact algorith is very much WIP and will change. Right now it is a combination of:</p>
 <ul>
 <li>Number of dependents (aka recursive reverse depenencies)</li>
@@ -280,9 +271,18 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>The score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.</p>
 </section>
-<section id="why-is-a-package-sometimes-listed-twice" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.3</span> Why is a package sometimes listed twice?</h2>
+<section id="why-is-a-package-sometimes-listed-twice" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.2</span> Why is a package sometimes listed twice?</h2>
 <p>If a source package fails to build (which means something is very wrong) then you see a red “build failure” message. If there was a previous successful build, it is kept there as well for users to install.</p>
+</section>
+<section id="which-packages-get-included-in-search" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="which-packages-get-included-in-search"><span class="header-section-number">3.3</span> Which packages get included in search?</h2>
+<p>In R-universe, a given R package can be included in many different registries. To prevent duplicates, search only shows packages from the universes of the upstream GitHub owners of the package, and not from third parties that have added a copy of the package to their registry.</p>
+<p>More specifically, search results include packages for which:</p>
+<ul>
+<li>The GitHub owner is the same as the universe, for example packages under <code>https://jeroen.r-universe.dev</code> from GitHub user <code>https://github.com/jeroen/</code>. This also includes all CRAN packages.</li>
+<li>Alternatively: to opt-in packages for which the universe name is different from the GitHub owner, the package author must include the full <code>user.r-universe.dev</code> in the URL field of the DESCRIPTION file. For example, if the registry from <code>https://jeroen.r-universe.dev</code> has a package <code>https://github.com/elsewhere/mypkg</code>, but the URL field in the DESCRIPTION includes e.g.&nbsp;<code>https://jeroen.r-universe.dev</code> or <code>https://jeroen.r-universe.dev/mypkg</code>, then it also shows up in the search results.</li>
+</ul>
 
 
 </section>
