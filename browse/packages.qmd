@@ -53,7 +53,7 @@ Most R packages have 3 forms of documentation: a README file, a reference manual
 These articles are often a good place to get started, and are listed on the package homepage right under the descriptives. 
 From here you can view both the rendered html/pdf document, as well as the rmarkdown source file used to (re)produce the article.
 
-Further down the page you can see the content from the package readme. 
+Further down the page you can see the content from the package README. 
 Most packages these days include a README.md file which can nicely be rendered into HTML.
 
 After the readme follows a section named “reference manual” containing a table with all the help pages. 
