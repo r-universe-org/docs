@@ -353,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>These are effectively auto-generated registries, on which the build system will fall back if the user does not have a personal registry. As soon as the user creates a proper <code>universe</code> registry repository with the <code>packages.json</code> file, this will take precedence, and the build system will automatically switch over.</p>
 <section id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe" class="level4" data-number="10.2.1.1">
 <h4 data-number="10.2.1.1" class="anchored" data-anchor-id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe"><span class="header-section-number">10.2.1.1</span> How to prevent a CRAN/BioC package from automatically being indexed by R-universe</h4>
-<p>CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: <code>Config/runiverse/noindex: true</code> (Config/ field names are allowed on CRAN). The r-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from r-universe.</p>
+<p>CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: <code>Config/runiverse/noindex: true</code> (Config/ field names are allowed on CRAN). The R-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from R-universe.</p>
 </section>
 </section>
 <section id="tracking-custom-branches-or-releases" class="level3" data-number="10.2.2">
@@ -401,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="waiting-for-the-first-build" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="waiting-for-the-first-build"><span class="header-section-number">10.4</span> Waiting for the first build</h2>
-<p>Once you installed the app, the system will automatically create your personal monorepo under the r-universe organization: <code>https://github.com/r-universe/&lt;yourname&gt;</code>. This is where the system keeps the full history of your packages. The actions tap of your monorepo is also where the building happens.</p>
+<p>Once you installed the app, the system will automatically create your personal monorepo under the R-universe organization: <code>https://github.com/r-universe/&lt;yourname&gt;</code>. This is where the system keeps the full history of your packages. The actions tap of your monorepo is also where the building happens.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://github.com/r-universe/maelle/actions"><img src="https://jeroen.github.io/runiverse2021/images/actions.png" class="img-fluid figure-img" alt="builds"></a></p>
@@ -433,7 +433,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install some packages</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tinkr'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>To help your users, you can consider copying these instructions to your package README.md files. And of course you can add an r-universe badge to your readme as well.</p>
+<p>To help your users, you can consider copying these instructions to your package README.md files. And of course you can add an R-universe badge to your readme as well.</p>
 <p>The badge API is simply <code>/badges/&lt;package&gt;</code> which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="al">![r-universe](https://r-lib.r-universe.dev/badges/cpp11)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For example this would produce the following badge: <img style="margin-bottom:3px;" src="https://r-lib.r-universe.dev/badges/cpp11"></p>
@@ -441,7 +441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="linking-to-your-universe-from-other-websites" class="level2" data-number="10.6">
 <h2 data-number="10.6" class="anchored" data-anchor-id="linking-to-your-universe-from-other-websites"><span class="header-section-number">10.6</span> Linking to your universe from other websites</h2>
 <p>Feel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.). You can use a rocket icon as icon.</p>
-<p><strong>Hugo Academic Theme</strong>: To display the rocket icon hyperlinked to your r-universe in your social icons below your photo add the following code to the social section of <code>content/authors/admin/_index.md</code> (or the <code>_index.md</code> file for the relevant author), replacing username with the relevant user or organisation name.</p>
+<p><strong>Hugo Academic Theme</strong>: To display the rocket icon hyperlinked to your R-universe in your social icons below your photo add the following code to the social section of <code>content/authors/admin/_index.md</code> (or the <code>_index.md</code> file for the relevant author), replacing username with the relevant user or organisation name.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">social</span><span class="kw">:</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> rocket</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">icon_pack</span><span class="kw">:</span><span class="at"> fa</span></span>
