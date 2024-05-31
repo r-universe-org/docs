@@ -4,7 +4,7 @@ title: "Set up your own universe"
 
 Creating a universe for your R packages can be done in a few steps:
 
-1. Create a Git repository named (all lowercase) `<your-username>.r-universe.dev` on your GitHub account, containing a `packages.json` file which lists the git repositories with R packages to include. For an organization at `github.com/ropensci` the repository is thus `github.com/ropensci/ropensci.r-universe.dev`; similarly for an user at `github.com/jeroen` the repository is `github.com/jeroen/jeroen.r-universe.dev`.
+1. Create a Git repository named (all lowercase) `<your-username>.r-universe.dev` on your GitHub account, containing a `packages.json` file which lists the Git repositories with R packages to include. For an organization at `github.com/ropensci` the repository is thus `github.com/ropensci/ropensci.r-universe.dev`; similarly for an user at `github.com/jeroen` the repository is `github.com/jeroen/jeroen.r-universe.dev`.
 1. Install the [r-universe app](https://github.com/apps/r-universe/installations/new) on this same GitHub account or organization for which you want to create the universe. Clicking on the [app link](https://github.com/apps/r-universe/installations/new) will lead you to a page that asks "Where do you want to install R-universe?".
 1. Wait for your packages to start appearing on `https://<yourname>.r-universe.dev` once they have finished building.
 1. Document how to install packages from R-universe in the docs of your packages.
