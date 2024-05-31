@@ -26,8 +26,8 @@ Domain names are by definition case-insensitive and lowercased.
 
 Hence, in order to start a universe you need a GitHub account. 
 However the R packages themselves do not necessarily need to exist under that same account. 
-They don’t even need to be on GitHub: they may be hosted on any public git server. 
-If your R packages are hosted on another git service, such as Gitlab, or a university git server, you can simply use a GitHub account only for publishing a `packages.json` registry for that username, without having to buy into the full GitHub platform.
+They don’t even need to be on GitHub: they may be hosted on any public Git server. 
+If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a `packages.json` registry for that username, without having to buy into the full GitHub platform.
 
 ## Populating the packages.json registry file
 
@@ -69,10 +69,10 @@ CRAN and BioConductor packages with a valid Git URL in the description are autom
 
 ### Tracking custom branches or releases
 
-By default, R-universe tracks and builds the default branch for each package git repository, for instance `master` or `main`. 
-It is possible to customize which git branch or tag to track by adding a `branch` field to the registry.
+By default, R-universe tracks and builds the default branch for each package Git repository, for instance `master` or `main`. 
+It is possible to customize which Git branch or tag to track by adding a `branch` field to the registry.
 
-The `branch` field can take the name of any git reference (either a branch or a tag). 
+The `branch` field can take the name of any Git reference (either a branch or a tag). 
 You can also set it to a special value `"*release"` which will automatically lookup the most recent GitHub release, using [the same syntax](https://cran.r-project.org/web/packages/remotes/vignettes/dependencies.html) as in remotes. 
 For example:
 
@@ -91,7 +91,7 @@ For example:
 ]
 ```
 
-If you want to use the default git branch, it is safest to omit the `branch` field. 
+If you want to use the default Git branch, it is safest to omit the `branch` field. 
 This way everything will keep working, even if the default branch gets another name at some point in the future.
 
 
@@ -110,15 +110,15 @@ df <- data.frame(
 jsonlite::write_json(df, 'packages.json', pretty = TRUE)
 ```
 
-The `url` value __must be a public git url__. 
-This is important; our build servers literally call `git clone ${url}` on each of the entries. 
+The `url` value __must be a public Git url__. 
+This is important; our build servers literally call `Git clone ${url}` on each of the entries. 
 The `package` field must match the name of the R package from the DESCRIPTION file under that url.
-If the R package does not live in the root of the git repository, you also need to set the `subdir` field to the path of the R package root directory.
+If the R package does not live in the root of the Git repository, you also need to set the `subdir` field to the path of the R package root directory.
 
 When creating a new universe, start by adding no more than a few packages. 
 You can easily add more packages later by updating your `packages.json` file.
 
-To publish your registry, create a git repository called `<yourname>.r-universe.dev` on your GitHub account and push your `packages.json` file. See for example: https://github.com/maelle/maelle.r-universe.dev.
+To publish your registry, create a Git repository called `<yourname>.r-universe.dev` on your GitHub account and push your `packages.json` file. See for example: https://github.com/maelle/maelle.r-universe.dev.
 
 ## Installing the GitHub app
 
@@ -139,7 +139,7 @@ After a while (usually no more than one hour), packages and articles that have c
 
 [![dashboard](https://jeroen.github.io/runiverse2021/images/maelledash.png)](https://maelle.r-universe.dev)
 
-The GitHub app requires very limited permissions, it only requests permission to *read and write commit statuses*. This means that the R-universe build system can post a green checkmark on your package git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.
+The GitHub app requires very limited permissions, it only requests permission to *read and write commit statuses*. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.
 
 [![success](https://jeroen.github.io/runiverse2021/images/commitstatus.png)](https://jeroen.github.io/runiverse2021/#54)
 
