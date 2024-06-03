@@ -1,0 +1,9 @@
+---
+title: Page Not Found
+---
+
+## Lost in space? 
+
+Use the table of contents,  or the search bar.
+
+![](404.jpg){fig-alt="Jeroen in a cosmonaut suit"}
