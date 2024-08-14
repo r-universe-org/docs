@@ -7,6 +7,7 @@ title: "Control the metadata / SEO"
 ### Basic information in DESCRIPTION
 
 The first step towards making your package easier to find by search is to polish those DESCRIPTION fields:
+
 - Description; 
 - Details;
 - URL by adding the R-universe URL. [Example](https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17)
