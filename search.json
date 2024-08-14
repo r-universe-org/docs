@@ -234,7 +234,18 @@
     "href": "publish/get-started.html#only-a-few-steps-for-set-up",
     "title": "9  Why publish on R-universe",
     "section": "9.5 Only a few steps for set-up!",
-    "text": "9.5 Only a few steps for set-up!\nSee the set-up docs.\nThis is too defensive, which is not necessary.\nMaybe just:",
+    "text": "9.5 Only a few steps for set-up!\nSee the set-up docs.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+    ]
+  },
+  {
+    "objectID": "publish/get-started.html#relation-to-other-networks",
+    "href": "publish/get-started.html#relation-to-other-networks",
+    "title": "9  Why publish on R-universe",
+    "section": "9.6 Relation to other networks",
+    "text": "9.6 Relation to other networks\nPackages on R-universe may also also exist on other networks, such as CRAN or BioConductor.\nNote that CRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
