@@ -1,5 +1,12 @@
 ---
 title: Page Not Found
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    include-in-header: "matomo.html"
+    from: markdown+autolink_bare_uris
 ---
 
 ## Lost in space? 
