@@ -2,7 +2,7 @@
 title: "Individual package information"
 ---
 
-Clicking on a package in search results or in a universe overview will lead you to homepage for that package. You can also link to this page directly via the url `https://{owner}.r-universe.dev/{package}`.
+Clicking on a package in search results or in a universe overview will lead you to the [homepage for that package](/browse/packages.html). You can also link to this page directly via the url `https://{owner}.r-universe.dev/{package}`.
 
 These package pages are generated automatically and provide detailed information about each project, and all the information and resources to quickly install and try the package locally in R.
 
