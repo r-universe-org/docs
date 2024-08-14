@@ -7,7 +7,7 @@ title: "Binaries"
 Yes, but right now we only provide binaries for a single linux target: `r-release` on `ubuntu:latest`. This is the platform that the R-universe build system itself runs via the [base-image](https://github.com/r-universe-org/base-image), and we use these binaries when installing dependencies of a package.
 
 
-To use these binaries on Linux you need to add the corresponding repository to your `repos`. It is not needed to set a custom UserAgent. For example for the `jeroen` universe:
+To use these binaries on Linux you need to add the corresponding repository to your `repos`. It is not needed to set a custom user agent. For example for the `jeroen` universe:
 
 ```r
 options(repos = c(
