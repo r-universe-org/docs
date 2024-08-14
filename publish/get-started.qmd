@@ -24,13 +24,7 @@ R-universe is provided free of charge.
 
 See the [set-up docs](/publish/set-up.html).
 
-
-
-This is too defensive, which is not necessary.
-
-Maybe just:
-
-# Relation to other networks
+## Relation to other networks
 
 Packages on R-universe may also also exist on other networks, such as CRAN or BioConductor.
 
