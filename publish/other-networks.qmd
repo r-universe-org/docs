@@ -1,0 +1,21 @@
+---
+title: "Relation to other networks"
+---
+
+## Relation to other networks
+
+Packages on R-universe may also also exist on other networks, such as CRAN or BioConductor.
+
+Note that CRAN is not meant to be the only CRAN-style package repository, as [explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote](https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8).
+
+## Can we use r-universe to host older versions of CRAN packages?
+
+This is possible, but be careful that it may not work as you expect. 
+R's `install.packages()` and `update.packages()` will always install the latest version of a package it can find in any of the available repos. 
+So the package may automatically get updated to the CRAN version on the end-user machine.
+
+## Can we use r-universe to host a fork of a CRAN package?
+
+This is possible but generally a bad idea. 
+Your package may automatically get overwritten by the CRAN version of the package the next time the user runs `install.packages()` or `update.packages()`. 
+Also note that other packages may depend on this package, and might not be compatible with your fork.
