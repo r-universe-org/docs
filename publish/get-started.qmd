@@ -24,10 +24,16 @@ R-universe is provided free of charge.
 
 See the [set-up docs](/publish/set-up.html).
 
-## It is not incompatible with CRAN
 
-You can choose to publish your package on both CRAN (official releases) 
-and R-universe (more continuous deployment),
-or to forego CRAN, and only rely on your organization's R-universe.
 
-CRAN is not meant to be the only CRAN-style package repository, as [explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote](https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8).
+This is too defensive, which is not necessary.
+
+Maybe just:
+
+# Relation to other networks
+
+Packages on R-universe may also also exist on other networks, such as CRAN or BioConductor.
+
+Note that CRAN is not meant to be the only CRAN-style package repository, as [explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote](https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8).
+
+
