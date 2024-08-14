@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "R-Universe Docs",
     "section": "",
-    "text": "R-universe is\n\nan open and free marketplace for R packages!\nan array of services to users and developers of R packages, with integrated measuring and monitoring tools to analyze the state and evolution of the ecosystem.\n\nFind out more context on the project page on the rOpenSci website.\nThis website is licensed under the CC BY-NC-ND 4.0 License.",
+    "text": "R-universe is\n\nan open and free marketplace for R packages!\nan array of services to users and developers of R packages, with integrated measuring and monitoring tools to analyze the state and evolution of the ecosystem.\n\nR-universe is a project started at rOpenSci. Find out more context on the project page on the rOpenSci website.\nThis website is licensed under the CC BY-NC-ND 4.0 License.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>R-universe docs</span>"
     ]
@@ -235,17 +235,6 @@
     "title": "9  Why publish on R-universe",
     "section": "9.5 Only a few steps for set-up!",
     "text": "9.5 Only a few steps for set-up!\nSee the set-up docs.",
-    "crumbs": [
-      "Publish",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
-    ]
-  },
-  {
-    "objectID": "publish/get-started.html#it-is-not-incompatible-with-cran",
-    "href": "publish/get-started.html#it-is-not-incompatible-with-cran",
-    "title": "9  Why publish on R-universe",
-    "section": "9.6 It is not incompatible with CRAN",
-    "text": "9.6 It is not incompatible with CRAN\nYou can choose to publish your package on both CRAN (official releases) and R-universe (more continuous deployment), or to forego CRAN, and only rely on your organization’s R-universe.\nCRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
