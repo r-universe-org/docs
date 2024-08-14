@@ -3,7 +3,7 @@ title: "Browsing work from a maintainer or organization"
 ---
 
 Each user and organization in R-universe has a unique subdomain under r-universe.dev with a package repository from where packages can directly be installed. 
-For example, the packages and information from rOpenSci can be found on https://ropensci.r-universe.dev, and packages maintained by me are listed at https://jeroen.r-universe.dev (note how these two sets overlap).
+For example, the packages and information from rOpenSci can be found on https://ropensci.r-universe.dev, and packages maintained by Jeroen Ooms are listed at https://jeroen.r-universe.dev (note how these two sets overlap).
 
 The top tabs allow you to explore different resources within universe. 
 The builds tab shows the current state of the repository: a table with the name and version of each package, including the commit date, author, and build status. 
