@@ -234,7 +234,7 @@
     "href": "publish/get-started.html#only-a-few-steps-for-set-up",
     "title": "9  Why publish on R-universe",
     "section": "9.5 Only a few steps for set-up!",
-    "text": "9.5 Only a few steps for set-up!\nSee the set-up docs.",
+    "text": "9.5 Only a few steps for set-up!\nSee the set-up docs.\nThis is too defensive, which is not necessary.\nMaybe just:",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
