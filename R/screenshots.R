@@ -95,17 +95,39 @@ purrr::walk(
 pkg_url <- "https://r-spatial.r-universe.dev/sf"
 fragments <- c("", "citation", "development", "readme", "manual", "users")
 screenshot_pkg <- function(fragment, pkg_url) {
-  if (fragment == "") {
-    url <- pkg_url
-  } else {
-    url <- sprintf("%s#%s", pkg_url, fragment)
+  b$Page$navigate(pkg_url)
+  Sys.sleep(4)
+
+  if (!nzchar(fragment)) {
+    screenshot(b, sprintf("pkg-%s.png", fragment))
+    return()
   }
-  b$Page$navigate(sprintf("%s%s", url, fragment))
-  Sys.sleep(2)
-  screenshot(b, sprintf("pkg-%s.png", fragment))
+
+  section <- b$DOM$querySelector(
+    b$DOM$getDocument()$root$nodeId,
+    sprintf("#%s", fragment)
+  )
+  quads <- b$DOM$getBoxModel(section$nodeId)
+  screenshot(
+    b,
+    sprintf("pkg-%s.png", fragment),
+    # are top and left inverted? it seems so!
+    cliprect = c(top = 0, left = quads$model$margin[[2]], width = 1920, height = 1080)
+  )
+
 }
 purrr::walk(fragments, screenshot_pkg, pkg_url = pkg_url)
 
-b$Page$navigate("https://r-spatial.r-universe.dev/sf/doc/manual.html#st_precision")
+b$Page$navigate("https://r-spatial.r-universe.dev/sf/doc/manual.html")
 Sys.sleep(4)
-screenshot(b, "pkg-function-doc.png")
+section <- b$DOM$querySelector(
+  b$DOM$getDocument()$root$nodeId,
+  "sprintf("#%s", fragment)"#st_precision
+)
+quads <- b$DOM$getBoxModel(section$nodeId)
+screenshot(
+  b,
+  "pkg-function-doc.png",
+  # are top and left inverted? it seems so!
+  cliprect = c(top = 0, left = quads$model$margin[[2]], width = 1920, height = 1080)
+)
