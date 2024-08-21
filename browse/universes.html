@@ -75,6 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -292,8 +295,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Each user and organization in R-universe has a unique subdomain under r-universe.dev with a package repository from where packages can directly be installed. For example, the packages and information from rOpenSci can be found on <a href="https://ropensci.r-universe.dev" class="uri">https://ropensci.r-universe.dev</a>, and packages maintained by Jeroen Ooms are listed at <a href="https://jeroen.r-universe.dev" class="uri">https://jeroen.r-universe.dev</a> (note how these two sets overlap).</p>
-<p>The top tabs allow you to explore different resources within universe. The builds tab shows the current state of the repository: a table with the name and version of each package, including the commit date, author, and build status. Clicking on the package name in the table sends you to the <a href="../browse/packages.html">homepage of the package</a>, and the maintainer name links to the subdomain of that maintainer, listing other projects maintained by this person.</p>
-<p>The packages tab lists descriptive information from all packages in the repository, and the articles tab shows all documents (e.g.&nbsp;vignettes). The contributors tab shows a chart with contributor statistics for the organization or maintainer. Clicking on the a bar in the chart sends you to this other universe where you can explore more work by this person.</p>
+<p>The top tabs allow you to explore different resources within universe.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/univ-builds.png" class="lightbox" data-gallery="univ" title="Builds tab of an universe"><img src="../img/univ-builds.png" class="img-fluid figure-img" alt="Builds tab of an universe, including a summary table of package versions and the status of latest builds on different OS."></a></p>
+<figcaption>Builds tab of an universe</figcaption>
+</figure>
+</div>
+<p>The builds tab shows the current state of the repository: a table with the name and version of each package, including the commit date, author, and build status. Clicking on the package name in the table sends you to the <a href="../browse/packages.html">homepage of the package</a>, and the maintainer name links to the subdomain of that maintainer, listing other projects maintained by this person.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/univ-packages.png" class="lightbox" data-gallery="univ" title="Packages tab of an universe"><img src="../img/univ-packages.png" class="img-fluid figure-img" alt="Packages tab of an universe, showing one summary card per package."></a></p>
+<figcaption>Packages tab of an universe</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/univ-articles.png" class="lightbox" data-gallery="univ" title="Articles tab of an universe"><img src="../img/univ-articles.png" class="img-fluid figure-img" alt="Articles tab of an universe, showing all vignettes."></a></p>
+<figcaption>Articles tab of an universe</figcaption>
+</figure>
+</div>
+<p>The packages tab lists descriptive information from all packages in the repository, and the articles tab shows all documents (e.g.&nbsp;vignettes).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/univ-contributors.png" class="lightbox" data-gallery="univ" title="Contributors tab of an universe"><img src="../img/univ-contributors.png" class="img-fluid figure-img" alt="Contributors tab of an universe, showing contribution activity per contributor."></a></p>
+<figcaption>Contributors tab of an universe</figcaption>
+</figure>
+</div>
+<p>The contributors tab shows a chart with contributor statistics for the organization or maintainer. Clicking on the a bar in the chart sends you to this other universe where you can explore more work by this person.</p>
 <p>The same subdomain hosts the actual cran-like package repository for this user or organization. Hence in order to list or install packages from rOpenSci in R, you would use:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List available packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">available.packages</span>(<span class="at">repos =</span> <span class="st">"https://ropensci.r-universe.dev"</span>)</span>
@@ -737,8 +766,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/universes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/universes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>
