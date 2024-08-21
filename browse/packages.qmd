@@ -56,6 +56,7 @@ To let you start using packages as quickly as possible, R-universe renders all a
 ![README of the sf package](../img/pkg-readme.png){group="pkg" fig-alt="README of the sf package."}
 
 ![Manual of the sf package](../img/pkg-manual.png){group="pkg" fig-alt="Manual of the sf package, displaying a list of all functions in the package, hyperlinked."}
+![Documentation of one function of the sf package](../img/pkg-function-doc.png){group="pkg" fig-alt="Documentation of one function of the sf package."}
 
 
 Most R packages have 3 forms of documentation: a README file, a reference manual (help pages), and a number of articles (vignettes). 
@@ -140,6 +141,7 @@ Note that not all packages have a `devel` version available. CRAN packages that 
 Besides familiarizing yourself with what the package does, you may be interested in who is working on it, who else is using it, and if it is still actively developed.
 
 ![Development information the sf package](../img/pkg-development.png){group="pkg" fig-alt="Development information the sf package"}
+![Reverse dependencies of the sf package](../img/pkg-users.png){group="pkg" fig-alt="Reverse dependencies of the sf package"}
 
 The “development and contributors” section shows a bar chart with the number of commits per week for the last year, and who the main contributors are. 
 Finally the section “usage by other packages” shows other packages on R-universe depending on this package, grouped by owner. 
