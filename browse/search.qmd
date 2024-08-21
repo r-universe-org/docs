@@ -3,6 +3,17 @@ title: "Search for packages"
 ---
 
 You can search for packages via <https://r-universe.dev/search/> using keywords or author names.
+The search bar includes an arrow-down button that allows to access the advanced search fields.
+
+![Search landing page](../img/search.png){group="search" fig-alt="Search landing page, with a search box"}
+
+![Search landing page, advanced fields](../img/search-advanced.png){group="search" fig-alt="Search landing page, displaying advanced search fields like author and keywords"}
+
+![Search results for '"missing-data"'](../img/search-missingData.png){group="search" fig-alt="Search results for 'missing-data'"}
+
+![Search results for 'author:jeroen json'](../img/search-authorJeroenJson.png){group="search" fig-alt="Search results for 'author:jeroen json'"}
+
+![Search results for 'exports:tojson'](../img/search-exportsTojson.png){group="search" fig-alt="Search results for 'exports:tojson'"}
 
 ## How is the package-rank score calculated?
 

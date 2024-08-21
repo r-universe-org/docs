@@ -28,7 +28,7 @@ book:
         - publish/metadata.qmd
         - publish/debug-build.qmd
         - publish/other-networks.qmd
-
+lightbox: true
 format:
   html:
     theme: cosmo
