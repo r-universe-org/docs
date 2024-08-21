@@ -174,12 +174,3 @@ For example this would produce the following badge: <img style="margin-bottom:3p
 
 Feel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.).
 You can use a rocket icon as icon.
-
-**Hugo Academic Theme**: To display the rocket icon hyperlinked to your R-universe in your social icons below your photo add the following code to the social section of `content/authors/admin/_index.md` (or the `_index.md` file for the relevant author), replacing username with the relevant user or organisation name.
-
-```yaml
-social:
-- icon: rocket
-  icon_pack: fa
-  link: https://username.r-universe.dev/
-```
