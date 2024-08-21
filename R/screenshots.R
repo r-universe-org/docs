@@ -81,6 +81,7 @@ screenshot(
 # work from an organization ----
 screenshot_org <- function(tab, url) {
   b$Page$navigate(sprintf("%s/%s/", url, tab))
+  if (tab == "contributors") Sys.sleep(10)
   Sys.sleep(2)
   screenshot(b, sprintf("univ-%s.png", tab))
 }
@@ -91,5 +92,20 @@ purrr::walk(
 )
 
 # about a package ----
+pkg_url <- "https://r-spatial.r-universe.dev/sf"
+fragments <- c("", "citation", "development", "readme", "manual", "users")
+screenshot_pkg <- function(fragment, pkg_url) {
+  if (fragment == "") {
+    url <- pkg_url
+  } else {
+    url <- sprintf("%s#%s", pkg_url, fragment)
+  }
+  b$Page$navigate(sprintf("%s%s", url, fragment))
+  Sys.sleep(2)
+  screenshot(b, sprintf("pkg-%s.png", fragment))
+}
+purrr::walk(fragments, screenshot_pkg, pkg_url = pkg_url)
 
-
+b$Page$navigate("https://r-spatial.r-universe.dev/sf/doc/manual.html#st_precision")
+Sys.sleep(4)
+screenshot(b, "pkg-function-doc.png")
