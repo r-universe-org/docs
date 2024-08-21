@@ -81,7 +81,7 @@ screenshot(
 # work from an organization ----
 screenshot_org <- function(tab, url) {
   b$Page$navigate(sprintf("%s/%s/", url, tab))
-  if (tab == "contributors") Sys.sleep(10)
+  if (tab == "contributors") Sys.sleep(20)
   Sys.sleep(2)
   screenshot(b, sprintf("univ-%s.png", tab))
 }
