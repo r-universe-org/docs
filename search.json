@@ -241,17 +241,6 @@
     ]
   },
   {
-    "objectID": "publish/get-started.html#relation-to-other-networks",
-    "href": "publish/get-started.html#relation-to-other-networks",
-    "title": "9  Why publish on R-universe",
-    "section": "9.6 Relation to other networks",
-    "text": "9.6 Relation to other networks\nPackages on R-universe may also also exist on other networks, such as CRAN or BioConductor.\nNote that CRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
-    "crumbs": [
-      "Publish",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
-    ]
-  },
-  {
     "objectID": "publish/set-up.html",
     "href": "publish/set-up.html",
     "title": "10  Set up your own universe",
@@ -392,6 +381,39 @@
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debug package builds</span>"
+    ]
+  },
+  {
+    "objectID": "publish/other-networks.html",
+    "href": "publish/other-networks.html",
+    "title": "13  Relation to other networks",
+    "section": "",
+    "text": "13.1 Relation to other networks\nPackages on R-universe may also also exist on other networks, such as CRAN or BioConductor.\nNote that CRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relation to other networks</span>"
+    ]
+  },
+  {
+    "objectID": "publish/other-networks.html#can-we-use-r-universe-to-host-older-versions-of-cran-packages",
+    "href": "publish/other-networks.html#can-we-use-r-universe-to-host-older-versions-of-cran-packages",
+    "title": "13  Relation to other networks",
+    "section": "13.2 Can we use r-universe to host older versions of CRAN packages?",
+    "text": "13.2 Can we use r-universe to host older versions of CRAN packages?\nThis is possible, but be careful that it may not work as you expect. R’s install.packages() and update.packages() will always install the latest version of a package it can find in any of the available repos. So the package may automatically get updated to the CRAN version on the end-user machine.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relation to other networks</span>"
+    ]
+  },
+  {
+    "objectID": "publish/other-networks.html#can-we-use-r-universe-to-host-a-fork-of-a-cran-package",
+    "href": "publish/other-networks.html#can-we-use-r-universe-to-host-a-fork-of-a-cran-package",
+    "title": "13  Relation to other networks",
+    "section": "13.3 Can we use r-universe to host a fork of a CRAN package?",
+    "text": "13.3 Can we use r-universe to host a fork of a CRAN package?\nThis is possible but generally a bad idea. Your package may automatically get overwritten by the CRAN version of the package the next time the user runs install.packages() or update.packages(). Also note that other packages may depend on this package, and might not be compatible with your fork.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Relation to other networks</span>"
     ]
   }
 ]
