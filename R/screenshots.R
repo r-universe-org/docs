@@ -122,7 +122,7 @@ b$Page$navigate("https://r-spatial.r-universe.dev/sf/doc/manual.html")
 Sys.sleep(4)
 section <- b$DOM$querySelector(
   b$DOM$getDocument()$root$nodeId,
-  "sprintf("#%s", fragment)"#st_precision
+  "#prefix_map"
 )
 quads <- b$DOM$getBoxModel(section$nodeId)
 screenshot(
