@@ -10,7 +10,7 @@ Creating your own, or your own organization's, R-universe creates a showcase of 
 
 ## Make your packages easy to install
 
-R-universe build binaries TODO add details
+R-universe builds [binaries for release versions of the most popular platforms](/install/binaries.html).
 
 ## More inspiration
 
