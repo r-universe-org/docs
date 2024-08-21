@@ -1,23 +1,43 @@
 library("chromote")
 
-screenshot <- function(b, path, selector, cliprect = NULL, expand = NULL) {
+screenshot <- function(b, path,
+                       selector = "html", cliprect = NULL,
+                       expand = NULL, height = NULL) {
+  img_path <- file.path("img", path)
+
   b$screenshot(
-    file.path("img", path),
+    img_path,
     selector = selector,
     delay = 2,
     cliprect = cliprect,
     expand = expand
   )
+
+  img <- magick::image_read(img_path)
+
+  if (!is.null(height)) {
+   img <- img |>
+    magick::image_crop(magick::geometry_area(height = height))
+
+  }
+
+  img |>
+    magick::image_shadow() |>
+    magick::image_write(img_path, quality = 100)
 }
 
+screen_width <- 1920
+screen_height <- 1080
+b <- ChromoteSession$new(height = screen_height, width = screen_width)
+
 # Landing page ----
-b <- ChromoteSession$new()
 b$Page$navigate("https://r-universe.dev/search/")
-screenshot(b, "search.png", selector = ".col.p-4")
+Sys.sleep(1)
+screenshot(b, "search.png")
 
 # Searching for something ----
 # https://gist.github.com/oganm/50a8020f718842aa3eee04dcfd57c198
-screenshot_search <- function(query) {
+screenshot_search <- function(query, screen_width) {
 b$Page$navigate("https://r-universe.dev/search/")
   Sys.sleep(2)
   search_box <- b$DOM$querySelector(b$DOM$getDocument()$root$nodeId, "#search-input")
@@ -26,13 +46,13 @@ b$Page$navigate("https://r-universe.dev/search/")
   Sys.sleep(2)
   screenshot(
     b, sprintf("search-%s.png", snakecase::to_lower_camel_case(query)),
-    selector = ".col.p-4",
-    cliprect = c(left = 0, top = 0, width = 1000, height = 1500)
+    height = height
   )
 }
 purrr::walk(
   c('"missing-data"', "author:jeroen json", "exports:tojson"),
-  screenshot_search
+  screenshot_search,
+  screen_width = screen_width
 )
 # Searching, advanced fields ----
 b$Page$navigate("https://r-universe.dev/search/")
@@ -66,4 +86,8 @@ screenshot(
   b, "search-advanced.png", selector = "#searchbox"
 )
 
+# work from an organization ----
+b$Page$navigate("https://ropensci.r-universe.dev/builds/")
+Sys.sleep(1)
+screenshot(b, "univ-builds.png", selector = ".col.p-4")
 
