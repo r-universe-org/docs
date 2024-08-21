@@ -201,7 +201,7 @@
     "href": "publish/get-started.html#make-your-packages-easy-to-install",
     "title": "9  Why publish on R-universe",
     "section": "9.2 Make your packages easy to install",
-    "text": "9.2 Make your packages easy to install\nR-universe build binaries TODO add details",
+    "text": "9.2 Make your packages easy to install\nR-universe builds binaries for release versions of the most popular platforms.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Why publish on R-universe</span>"
