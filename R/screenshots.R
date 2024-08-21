@@ -1,8 +1,9 @@
 library("chromote")
 
 screenshot <- function(b, path,
-                       selector = "html", cliprect = NULL,
-                       expand = NULL, height = NULL) {
+                       selector = "html",
+                       cliprect = c(top = 0, left = 0, width = 1920, height = 1080),
+                       expand = NULL) {
   img_path <- file.path("img", path)
 
   b$screenshot(
@@ -13,15 +14,7 @@ screenshot <- function(b, path,
     expand = expand
   )
 
-  img <- magick::image_read(img_path)
-
-  if (!is.null(height)) {
-   img <- img |>
-    magick::image_crop(magick::geometry_area(height = height))
-
-  }
-
-  img |>
+  magick::image_read(img_path) |>
     magick::image_shadow() |>
     magick::image_write(img_path, quality = 100)
 }
@@ -38,15 +31,14 @@ screenshot(b, "search.png")
 # Searching for something ----
 # https://gist.github.com/oganm/50a8020f718842aa3eee04dcfd57c198
 screenshot_search <- function(query, screen_width) {
-b$Page$navigate("https://r-universe.dev/search/")
+  b$Page$navigate("https://r-universe.dev/search/")
   Sys.sleep(2)
   search_box <- b$DOM$querySelector(b$DOM$getDocument()$root$nodeId, "#search-input")
   b$DOM$focus(search_box$nodeId)
   b$Input$insertText(text = query)
   Sys.sleep(2)
   screenshot(
-    b, sprintf("search-%s.png", snakecase::to_lower_camel_case(query)),
-    height = height
+    b, sprintf("search-%s.png", snakecase::to_lower_camel_case(query))
   )
 }
 purrr::walk(
@@ -83,11 +75,21 @@ b$Input$dispatchMouseEvent(
 )
 Sys.sleep(2)
 screenshot(
-  b, "search-advanced.png", selector = "#searchbox"
+  b, "search-advanced.png", selector = "#searchbox", expand = 20
 )
 
 # work from an organization ----
-b$Page$navigate("https://ropensci.r-universe.dev/builds/")
-Sys.sleep(1)
-screenshot(b, "univ-builds.png", selector = ".col.p-4")
+screenshot_org <- function(tab, url) {
+  b$Page$navigate(sprintf("%s/%s/", url, tab))
+  Sys.sleep(2)
+  screenshot(b, sprintf("univ-%s.png", tab))
+}
+purrr::walk(
+  c("builds", "packages", "articles", "contributors"),
+  screenshot_org,
+  url = "https://ropensci.r-universe.dev/"
+)
+
+# about a package ----
+
 
