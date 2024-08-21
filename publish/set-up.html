@@ -75,6 +75,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -400,7 +403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Once you pushed your <code>packages.json</code> file to your new <code>universe</code> repository on GitHub, the next step is to install the <a href="https://github.com/apps/r-universe/installations/new">R-universe GitHub app</a> on your account.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://jeroen.github.io/runiverse2021/#50"><img src="https://jeroen.github.io/runiverse2021/images/installapp.png" class="img-fluid figure-img" alt="ghapp"></a></p>
+<p><img src="https://jeroen.github.io/runiverse2021/images/installapp.png" class="img-fluid figure-img"></p>
 <figcaption>ghapp</figcaption>
 </figure>
 </div>
@@ -410,21 +413,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Once you installed the app, the system will automatically create your personal monorepo under the R-universe organization: <code>https://github.com/r-universe/&lt;yourname&gt;</code>. This is where the system keeps the full history of your packages. The actions tap of your monorepo is also where the building happens.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/r-universe/maelle/actions"><img src="https://jeroen.github.io/runiverse2021/images/actions.png" class="img-fluid figure-img" alt="builds"></a></p>
+<p><img src="https://jeroen.github.io/runiverse2021/images/actions.png" class="img-fluid figure-img"></p>
 <figcaption>builds</figcaption>
 </figure>
 </div>
 <p>After a while (usually no more than one hour), packages and articles that have completed building on all platforms will start appearing on your dashboard, and directly become available for installation by users.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://maelle.r-universe.dev"><img src="https://jeroen.github.io/runiverse2021/images/maelledash.png" class="img-fluid figure-img" alt="dashboard"></a></p>
+<p><img src="https://jeroen.github.io/runiverse2021/images/maelledash.png" class="img-fluid figure-img"></p>
 <figcaption>dashboard</figcaption>
 </figure>
 </div>
 <p>The GitHub app requires very limited permissions, it only requests permission to <em>read and write commit statuses</em>. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://jeroen.github.io/runiverse2021/#54"><img src="https://jeroen.github.io/runiverse2021/images/commitstatus.png" class="img-fluid figure-img" alt="success"></a></p>
+<p><img src="https://jeroen.github.io/runiverse2021/images/commitstatus.png" class="img-fluid figure-img"></p>
 <figcaption>success</figcaption>
 </figure>
 </div>
@@ -885,8 +888,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>

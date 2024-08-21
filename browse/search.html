@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -265,7 +268,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>You can search for packages via <a href="https://r-universe.dev/search/" class="uri">https://r-universe.dev/search/</a> using keywords or author names.</p>
+<p>You can search for packages via <a href="https://r-universe.dev/search/" class="uri">https://r-universe.dev/search/</a> using keywords or author names. The search bar includes an arrow-down button that allows to access the advanced search fields.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/search.png" class="lightbox" data-gallery="search" title="Search landing page"><img src="../img/search.png" class="img-fluid figure-img" alt="Search landing page, with a search box"></a></p>
+<figcaption>Search landing page</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/search-advanced.png" class="lightbox" data-gallery="search" title="Search landing page, advanced fields"><img src="../img/search-advanced.png" class="img-fluid figure-img" alt="Search landing page, displaying advanced search fields like author and keywords"></a></p>
+<figcaption>Search landing page, advanced fields</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/search-missingData.png" class="lightbox" data-gallery="search" title="Search results for ‘“missing-data”’"><img src="../img/search-missingData.png" class="img-fluid figure-img" alt="Search results for 'missing-data'"></a></p>
+<figcaption>Search results for ‘“missing-data”’</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/search-authorJeroenJson.png" class="lightbox" data-gallery="search" title="Search results for ‘author:jeroen json’"><img src="../img/search-authorJeroenJson.png" class="img-fluid figure-img" alt="Search results for 'author:jeroen json'"></a></p>
+<figcaption>Search results for ‘author:jeroen json’</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/search-exportsTojson.png" class="lightbox" data-gallery="search" title="Search results for ‘exports:tojson’"><img src="../img/search-exportsTojson.png" class="img-fluid figure-img" alt="Search results for 'exports:tojson'"></a></p>
+<figcaption>Search results for ‘exports:tojson’</figcaption>
+</figure>
+</div>
 <section id="how-is-the-package-rank-score-calculated" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="how-is-the-package-rank-score-calculated"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</h2>
 <p>The exact algorithm is a work-in-progress and will change. Right now it is a combination of:</p>
@@ -727,8 +760,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/search.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/search.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>
