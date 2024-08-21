@@ -27,6 +27,7 @@ book:
         - publish/set-up.qmd
         - publish/metadata.qmd
         - publish/debug-build.qmd
+        - publish/other-networks.qmd
 
 format:
   html:
