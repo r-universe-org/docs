@@ -111,7 +111,7 @@ screenshot_pkg <- function(fragment, pkg_url) {
   screenshot(
     b,
     sprintf("pkg-%s.png", fragment),
-    # are top and left inverted? it seems so!
+    # https://github.com/rstudio/chromote/issues/168
     cliprect = c(top = 0, left = quads$model$margin[[2]], width = 1920, height = 1080)
   )
 
