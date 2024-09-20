@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "R-Universe Docs",
     "section": "",
-    "text": "R-universe is rOpenSci’s platform for improving publication and discovery of research software in R.\nR-universe allows users and developers of R packages to…\n\nDiscover: R-universe provides a searchable catalogue for R software, articles, datasets, anywhere in the ecosystem. That catalogue is indexed and ranked using R specific features.\nLearn: R-universe serves rendered material and extensive background information to learn about a package and get started using it.\nPublish: R-universe is an open platform for running personal cran-like package repositories to make your work visible and accessible to a big audience, with or without CRAN.\nDevelop: R-universe provides a zero config development environment for continuous integration (identify upcoming breakage before the release), experimental R features, new platforms such as WebAssembly, etc.\n\nFind out more context on the project page on the rOpenSci website.\nThis website is licensed under the CC BY-NC-ND 4.0 License.",
+    "text": "R-universe is\n\nan open and free marketplace for R packages!\nan array of services to users and developers of R packages, with integrated measuring and monitoring tools to analyze the state and evolution of the ecosystem.\n\nR-universe is a project started at rOpenSci. Find out more context on the project page on the rOpenSci website.\nThis website is licensed under the CC BY-NC-ND 4.0 License.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>R-universe docs</span>"
     ]
@@ -355,7 +355,18 @@
     "href": "publish/debug-build.html",
     "title": "12  Debug package builds",
     "section": "",
-    "text": "12.1 Is it possible to customize the package build process with custom options/tools/variables?\nNo, that is not possible. Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.\nThis is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.",
+    "text": "12.1 Is it possible to customize the package build process with custom options/tools/variables?\nNo, that is not possible (apart from the next section about third-party system requirements). Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.\nThis is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debug package builds</span>"
+    ]
+  },
+  {
+    "objectID": "publish/debug-build.html#how-to-request-additional-third-party-system-requirements",
+    "href": "publish/debug-build.html#how-to-request-additional-third-party-system-requirements",
+    "title": "12  Debug package builds",
+    "section": "12.2 How to request additional third party system requirements",
+    "text": "12.2 How to request additional third party system requirements\nIf packages need a Linux library that does not yet exist on the server, either:\n\nSend a PR to add them to the base image, for reasonably small/common system dependencies.\nAlternatively: send a PR to https://github.com/rstudio/r-system-requirements that resolves the library based on what is in the package DESCRIPTION file under SystemRequirements.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debug package builds</span>"
@@ -365,8 +376,8 @@
     "objectID": "publish/debug-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
     "href": "publish/debug-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
     "title": "12  Debug package builds",
-    "section": "12.2 How to publish vignettes/articles which require custom software/tokens to render?",
-    "text": "12.2 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles.",
+    "section": "12.3 How to publish vignettes/articles which require custom software/tokens to render?",
+    "text": "12.3 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debug package builds</span>"
@@ -376,8 +387,8 @@
     "objectID": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "href": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "title": "12  Debug package builds",
-    "section": "12.3 Are packages on R-universe required to pass CMD check or meet other criteria?",
-    "text": "12.3 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
+    "section": "12.4 Are packages on R-universe required to pass CMD check or meet other criteria?",
+    "text": "12.4 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debug package builds</span>"
