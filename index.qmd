@@ -3,13 +3,17 @@ title: "R-universe docs"
 comments: False
 ---
 
-R-universe is 
+```{r}
+#| results: 'asis'
+#| echo: FALSE
 
-- an open and free marketplace for R packages!
+pitch <- readLines("https://raw.githubusercontent.com/ropensci/roweb3/refs/heads/main/content/r-universe/_index.md")
+  
+pitch <- pitch[(which(pitch == "+++")[2] + 1): length(pitch)]
+cat(pitch, sep = "\n")
 
-- an array of services to users and developers of R packages, with integrated measuring and monitoring tools to analyze the state and evolution of the ecosystem.
+```
 
-R-universe is a project started at rOpenSci.
 Find out more context on the [project page on the rOpenSci website](https://ropensci.org/r-universe). 
 
 This website is licensed under the [CC BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
