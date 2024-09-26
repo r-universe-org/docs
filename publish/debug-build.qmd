@@ -4,11 +4,19 @@ title: "Debug package builds"
 
 ## Is it possible to customize the package build process with custom options/tools/variables?
 
-No, that is not possible. 
+No, that is not possible (apart from the next section about third-party system requirements). 
 Think of R-universe more like your own mini-CRAN. 
 The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.
 
 This is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.
+
+## How to request additional third party system requirements
+
+If packages need a **Linux library** that does not yet exist on the server, either:
+
+ - Send a PR to add them to the [base image](https://github.com/r-universe-org/base-image), for reasonably small/common system dependencies.
+ 
+ - Alternatively: send a PR to https://github.com/rstudio/r-system-requirements that resolves the library based on what is in the package DESCRIPTION file under `SystemRequirements`.
 
 ## How to publish vignettes/articles which require custom software/tokens to render?
 
