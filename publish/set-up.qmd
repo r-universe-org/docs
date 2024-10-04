@@ -125,7 +125,13 @@ To publish your registry, create a Git repository called `<yourname>.r-universe.
 
 Once you pushed your `packages.json` file to your new `universe` repository on GitHub, the next step is to install the [R-universe GitHub app](https://github.com/apps/r-universe/installations/new) on your account.
 
-[![ghapp](https://jeroen.github.io/runiverse2021/images/installapp.png)](https://jeroen.github.io/runiverse2021/#50)
+The _"Read and write access to commit statuses"_ will enable R-universe to show commit status updates (green checkmark) to the repositories of your R packages if they are hosted under that GitHub account.
+
+We recommend to install the app for "All repositories" as you might later add more packages to your universe.
+
+![](https://jeroen.github.io/runiverse2021/images/installapp.png){fig-alt="Screenshot of the GitHub app showing a check mark for installation on 'All repositories'."}
+
+
 
 ## Waiting for the first build
 
