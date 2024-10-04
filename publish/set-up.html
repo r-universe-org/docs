@@ -319,14 +319,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="10.1" class="anchored" data-anchor-id="basic-steps"><span class="header-section-number">10.1</span> Basic steps</h2>
 <p>Creating a universe for your R packages can be done in a few steps described below. The further sections on this page give more details on each step.</p>
 <ol type="1">
-<li>Create a Git repository named (all lowercase) <code>&lt;your-username&gt;.r-universe.dev</code> on your GitHub account, containing a <code>packages.json</code> file which lists the Git repositories with R packages to include.
+<li><strong>Create a Git repository named (all lowercase) <code>&lt;your-username&gt;.r-universe.dev</code> on your GitHub account</strong>, containing a <code>packages.json</code> file which lists the Git repositories with R packages to include.
 <ul>
 <li>For an organization at <code>github.com/ropensci</code> the repository is thus <code>github.com/ropensci/ropensci.r-universe.dev</code>;</li>
 <li>similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>.</li>
 </ul></li>
-<li>Install the <a href="https://github.com/apps/r-universe/installations/new">r-universe app</a> on this same GitHub account or organization for which you want to create the universe. Clicking on the <a href="https://github.com/apps/r-universe/installations/new">app link</a> will lead you to a page that asks “Where do you want to install R-universe?”.</li>
-<li>Wait for your packages to start appearing on <code>https://&lt;yourname&gt;.r-universe.dev</code> once they have finished building.</li>
-<li>Document how to install packages from R-universe in the docs of your packages.</li>
+<li><strong>Install the <a href="https://github.com/apps/r-universe/installations/new">r-universe app</a> on this same GitHub account</strong> or organization for which you want to create the universe. Clicking on the <a href="https://github.com/apps/r-universe/installations/new">app link</a> will lead you to a page that asks “Where do you want to install R-universe?”.</li>
+<li><strong>Wait</strong> for your packages to start appearing on <code>https://&lt;yourname&gt;.r-universe.dev</code> once they have finished building.</li>
+<li><strong>Document</strong> how to install packages from R-universe in the docs of your packages.</li>
 </ol>
 </section>
 <section id="creating-your-personal-r-universe-subdomain" class="level2" data-number="10.2">
@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="how-much-github-is-compulsory" class="level3" data-number="10.2.2">
 <h3 data-number="10.2.2" class="anchored" data-anchor-id="how-much-github-is-compulsory"><span class="header-section-number">10.2.2</span> How much GitHub is compulsory?</h3>
-<p>Hence, in order to start a universe you need a GitHub account. However the R packages themselves do not necessarily need to exist under that same account. They don’t even need to be on GitHub: they may be hosted on any public Git server. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a <code>packages.json</code> registry for that username, without having to buy into the full GitHub platform.</p>
+<p>In order to start a universe you need a GitHub account as that is where the repository with your packages’ listing has to be hosted. However <strong>the R packages themselves do not necessarily need to exist under that same account</strong>. They <strong>don’t even need to be on GitHub</strong>: they may be hosted on <strong>any public Git server</strong>. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a <code>packages.json</code> registry for that username, without having to buy into the full GitHub platform.</p>
 </section>
 </section>
 <section id="populating-the-packages.json-registry-file" class="level2" data-number="10.3">
@@ -891,7 +891,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
