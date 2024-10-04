@@ -3,6 +3,7 @@ title: "Search for packages"
 ---
 
 You can search for packages via <https://r-universe.dev/search/> using keywords or author names.
+If you want to use an exact phrase like "weather data", you must use double quotes, not single quotes, around it.
 The search bar includes an arrow-down button that allows to access the advanced search fields.
 
 ![Search landing page](../img/search.png){group="search" fig-alt="Search landing page, with a search box"}
