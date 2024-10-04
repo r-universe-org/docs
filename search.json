@@ -25,7 +25,7 @@
     "href": "browse/search.html",
     "title": "3  Search for packages",
     "section": "",
-    "text": "3.1 How is the package-rank score calculated?\nThe exact algorithm is a work-in-progress and will change. At the time of writing it includes:\nYou can browse scores and metrics for all packages.\nWe plan to keep updating the algorithm as R-universe matures and better data becomes available.",
+    "text": "3.1 How is the package-rank score calculated?\nThe exact algorithm is a work-in-progress and will change. Right now it is a combination of:\nThe score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
@@ -36,7 +36,7 @@
     "href": "browse/search.html#how-is-the-package-rank-score-calculated",
     "title": "3  Search for packages",
     "section": "",
-    "text": "Number of dependents (that is to say, recursive reverse dependencies);\nNumber of stars on Github;\nNumber of unique contributors;\nCommit activity over the last year;\nDownloads per month from CRAN or Bioconductor mirrors;\nNumber of files on GitHub that mention ’library(pkgname)’.",
+    "text": "Number of dependents (that is to say, recursive reverse dependencies);\nNumber of Github stars;\nNumber of unique contributors;\nCommit activity over the last year.",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
