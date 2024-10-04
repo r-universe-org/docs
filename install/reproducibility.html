@@ -271,11 +271,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" id="toc-does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="nav-link active" data-scroll-target="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does R-universe archive old versions of packages? How does it work with renv?</a></li>
-  <li><a href="#snapshots" id="toc-snapshots" class="nav-link" data-scroll-target="#snapshots"><span class="header-section-number">8.2</span> Repository snapshots</a>
+  <li><a href="#repository-snapshots" id="toc-repository-snapshots" class="nav-link" data-scroll-target="#repository-snapshots"><span class="header-section-number">8.2</span> Repository snapshots</a>
   <ul class="collapse">
-  <li><a href="#what-is-a-snapshot-of-an-universe" id="toc-what-is-a-snapshot-of-an-universe" class="nav-link" data-scroll-target="#what-is-a-snapshot-of-an-universe"><span class="header-section-number">8.2.1</span> What is a snapshot of an universe?</a></li>
-  <li><a href="#downloading-repository-snapshots" id="toc-downloading-repository-snapshots" class="nav-link" data-scroll-target="#downloading-repository-snapshots"><span class="header-section-number">8.2.2</span> Downloading repository snapshots</a></li>
-  <li><a href="#using-snapshots" id="toc-using-snapshots" class="nav-link" data-scroll-target="#using-snapshots"><span class="header-section-number">8.2.3</span> Using snapshots</a></li>
+  <li><a href="#downloading-repository-snapshots" id="toc-downloading-repository-snapshots" class="nav-link" data-scroll-target="#downloading-repository-snapshots"><span class="header-section-number">8.2.1</span> Downloading repository snapshots</a></li>
+  <li><a href="#using-snapshots" id="toc-using-snapshots" class="nav-link" data-scroll-target="#using-snapshots"><span class="header-section-number">8.2.2</span> Using snapshots</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/reproducibility.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -304,28 +303,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does R-universe archive old versions of packages? How does it work with renv?</h2>
-<p>R-universe does not archive old versions of packages but <strong>we track the upstream git url and commit-id</strong> in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a>.</p>
-<p>Furthermore, <strong>you can archive fixed versions of an universe</strong> which you might use in production or for reproducibility, what we call <a href="#snapshots">repository snapshots</a>.</p>
+<p>R-universe does not archive old versions of packages, but we have something better: we track the upstream git url and commit-id in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a></p>
 </section>
-<section id="snapshots" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="snapshots"><span class="header-section-number">8.2</span> Repository snapshots</h2>
-<section id="what-is-a-snapshot-of-an-universe" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="what-is-a-snapshot-of-an-universe"><span class="header-section-number">8.2.1</span> What is a snapshot of an universe?</h3>
-<p>A snapshot is a standard layout of a few directories consisting of binaries and source packages as well as a few files that index everything. It is a <strong>directory of static files</strong> that you can host somewhere, and from which you can install <strong>fixed versions of packages</strong>.</p>
-</section>
-<section id="downloading-repository-snapshots" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="downloading-repository-snapshots"><span class="header-section-number">8.2.2</span> Downloading repository snapshots</h3>
+<section id="repository-snapshots" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="repository-snapshots"><span class="header-section-number">8.2</span> Repository snapshots</h2>
+<section id="downloading-repository-snapshots" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="downloading-repository-snapshots"><span class="header-section-number">8.2.1</span> Downloading repository snapshots</h3>
 <p>The new snapshot API lets you download a full copy of any repository on R-universe. You can use such a snapshot to mirror the entire CRAN-like repository on your own servers, or for example to build a stable, validated release of your package suite.</p>
 <p>The API endpoint is <code>/api/snapshot</code> and has several options to filter content. By default it returns a zip file with all the packages, binaries, and documentation in your repository. If this is more than you need, there are parameters to include e.g.&nbsp;only binaries for certain platforms or certain versions of R, or to create a repository from a subset of the packages in your universe. Explore the parameters on the API tab of any universe, for example: <a href="https://ggseg.r-universe.dev/api" class="uri">https://ggseg.r-universe.dev/api</a>.</p>
 </section>
-<section id="using-snapshots" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="using-snapshots"><span class="header-section-number">8.2.3</span> Using snapshots</h3>
-<p>A CRAN-like R package repository is essentially a static directory of package files and indexes, with a specific naming structure. R-universe automatically builds and updates all these files based on a registry of packages and upstream git sources. Once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server. For instance…</p>
-<ul>
-<li><p>An organization could host a mirror of their repository internally in their intranet. They could update the mirror every day, every month, etc.</p></li>
-<li><p>You could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. Here is a minimal example of such an action: <a href="https://github.com/jeroen/backup" class="uri">https://github.com/jeroen/backup</a>.</p></li>
-</ul>
-<p>Note how the aforementioned action is very fast: <strong>downloading and extracting the snapshot from R-universe only takes a few seconds</strong>. So this is easily something that could be done on demand, or automatically on a regular basis.</p>
+<section id="using-snapshots" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="using-snapshots"><span class="header-section-number">8.2.2</span> Using snapshots</h3>
+<p>A CRAN-like R package repository is essentially a static directory of package files and indexes, with a specific naming structure. R-universe automatically builds and updates all these files based on a registry of packages and upstream git sources. But once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server!</p>
+<p>For example, you could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. Here is a minimal example of such an action: <a href="https://github.com/jeroen/backup" class="uri">https://github.com/jeroen/backup</a>. Note how the action is vary fast: downloading and extracting the snapshot from R-universe only takes a few seconds. So this is easily something that could be done on demand, or automatically on a regular basis.</p>
 <p>You can also install packages in R directly from a local snapshot folder, by prefixing the path that you pass to <code>install.packages</code> with <code>file://</code> (Windows paths need to be normalized to look more unixy):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and extract the snapshot</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>curl<span class="sc">::</span><span class="fu">curl_download</span>(<span class="st">"https://jeroen.r-universe.dev/api/snapshot/zip?binaries=4.3"</span>, <span class="st">"snapshot.zip"</span>)</span>
