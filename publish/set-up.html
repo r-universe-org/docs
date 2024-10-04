@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.13">
+<meta name="generator" content="quarto-1.6.20">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-00bf958ef522f28af96e04c1431aad25.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-fe84f82f5e38f060328c04b2faf27c9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -274,21 +274,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#creating-your-personal-r-universe-subdomain" id="toc-creating-your-personal-r-universe-subdomain" class="nav-link active" data-scroll-target="#creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.1</span> Creating your personal R-universe subdomain</a>
+  <li><a href="#basic-steps" id="toc-basic-steps" class="nav-link active" data-scroll-target="#basic-steps"><span class="header-section-number">10.1</span> Basic steps</a></li>
+  <li><a href="#creating-your-personal-r-universe-subdomain" id="toc-creating-your-personal-r-universe-subdomain" class="nav-link" data-scroll-target="#creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.2</span> Creating your personal R-universe subdomain</a>
   <ul class="collapse">
-  <li><a href="#case-sensitivity" id="toc-case-sensitivity" class="nav-link" data-scroll-target="#case-sensitivity"><span class="header-section-number">10.1.1</span> Case-sensitivity</a></li>
-  <li><a href="#how-much-github-is-compulsory" id="toc-how-much-github-is-compulsory" class="nav-link" data-scroll-target="#how-much-github-is-compulsory"><span class="header-section-number">10.1.2</span> How much GitHub is compulsory?</a></li>
+  <li><a href="#case-sensitivity" id="toc-case-sensitivity" class="nav-link" data-scroll-target="#case-sensitivity"><span class="header-section-number">10.2.1</span> Case-sensitivity</a></li>
+  <li><a href="#how-much-github-is-compulsory" id="toc-how-much-github-is-compulsory" class="nav-link" data-scroll-target="#how-much-github-is-compulsory"><span class="header-section-number">10.2.2</span> How much GitHub is compulsory?</a></li>
   </ul></li>
-  <li><a href="#populating-the-packages.json-registry-file" id="toc-populating-the-packages.json-registry-file" class="nav-link" data-scroll-target="#populating-the-packages.json-registry-file"><span class="header-section-number">10.2</span> Populating the packages.json registry file</a>
+  <li><a href="#populating-the-packages.json-registry-file" id="toc-populating-the-packages.json-registry-file" class="nav-link" data-scroll-target="#populating-the-packages.json-registry-file"><span class="header-section-number">10.3</span> Populating the packages.json registry file</a>
   <ul class="collapse">
-  <li><a href="#special-case-of-cran-packages" id="toc-special-case-of-cran-packages" class="nav-link" data-scroll-target="#special-case-of-cran-packages"><span class="header-section-number">10.2.1</span> Special case of CRAN packages</a></li>
-  <li><a href="#tracking-custom-branches-or-releases" id="toc-tracking-custom-branches-or-releases" class="nav-link" data-scroll-target="#tracking-custom-branches-or-releases"><span class="header-section-number">10.2.2</span> Tracking custom branches or releases</a></li>
-  <li><a href="#hand-written-or-programmatically-created" id="toc-hand-written-or-programmatically-created" class="nav-link" data-scroll-target="#hand-written-or-programmatically-created"><span class="header-section-number">10.2.3</span> Hand-written or programmatically created</a></li>
+  <li><a href="#special-case-of-cran-packages" id="toc-special-case-of-cran-packages" class="nav-link" data-scroll-target="#special-case-of-cran-packages"><span class="header-section-number">10.3.1</span> Special case of CRAN packages</a></li>
+  <li><a href="#tracking-custom-branches-or-releases" id="toc-tracking-custom-branches-or-releases" class="nav-link" data-scroll-target="#tracking-custom-branches-or-releases"><span class="header-section-number">10.3.2</span> Tracking custom branches or releases</a></li>
+  <li><a href="#hand-written-or-programmatically-created" id="toc-hand-written-or-programmatically-created" class="nav-link" data-scroll-target="#hand-written-or-programmatically-created"><span class="header-section-number">10.3.3</span> Hand-written or programmatically created</a></li>
   </ul></li>
-  <li><a href="#installing-the-github-app" id="toc-installing-the-github-app" class="nav-link" data-scroll-target="#installing-the-github-app"><span class="header-section-number">10.3</span> Installing the GitHub app</a></li>
-  <li><a href="#waiting-for-the-first-build" id="toc-waiting-for-the-first-build" class="nav-link" data-scroll-target="#waiting-for-the-first-build"><span class="header-section-number">10.4</span> Waiting for the first build</a></li>
-  <li><a href="#adding-badges-and-user-instructions" id="toc-adding-badges-and-user-instructions" class="nav-link" data-scroll-target="#adding-badges-and-user-instructions"><span class="header-section-number">10.5</span> Adding badges and user instructions</a></li>
-  <li><a href="#linking-to-your-universe-from-other-websites" id="toc-linking-to-your-universe-from-other-websites" class="nav-link" data-scroll-target="#linking-to-your-universe-from-other-websites"><span class="header-section-number">10.6</span> Linking to your universe from other websites</a></li>
+  <li><a href="#installing-the-github-app" id="toc-installing-the-github-app" class="nav-link" data-scroll-target="#installing-the-github-app"><span class="header-section-number">10.4</span> Installing the GitHub app</a></li>
+  <li><a href="#waiting-for-the-first-build" id="toc-waiting-for-the-first-build" class="nav-link" data-scroll-target="#waiting-for-the-first-build"><span class="header-section-number">10.5</span> Waiting for the first build</a></li>
+  <li><a href="#adding-badges-and-user-instructions" id="toc-adding-badges-and-user-instructions" class="nav-link" data-scroll-target="#adding-badges-and-user-instructions"><span class="header-section-number">10.6</span> Adding badges and user instructions</a></li>
+  <li><a href="#linking-to-your-universe-from-other-websites" id="toc-linking-to-your-universe-from-other-websites" class="nav-link" data-scroll-target="#linking-to-your-universe-from-other-websites"><span class="header-section-number">10.7</span> Linking to your universe from other websites</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -314,7 +315,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Creating a universe for your R packages can be done in a few steps:</p>
+<section id="basic-steps" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="basic-steps"><span class="header-section-number">10.1</span> Basic steps</h2>
+<p>Creating a universe for your R packages can be done in a few steps described below. The further sections on this page give more details on each step.</p>
 <ol type="1">
 <li>Create a Git repository named (all lowercase) <code>&lt;your-username&gt;.r-universe.dev</code> on your GitHub account, containing a <code>packages.json</code> file which lists the Git repositories with R packages to include.
 <ul>
@@ -325,21 +328,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Wait for your packages to start appearing on <code>https://&lt;yourname&gt;.r-universe.dev</code> once they have finished building.</li>
 <li>Document how to install packages from R-universe in the docs of your packages.</li>
 </ol>
-<p>A few more details on each step below.</p>
-<section id="creating-your-personal-r-universe-subdomain" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.1</span> Creating your personal R-universe subdomain</h2>
+</section>
+<section id="creating-your-personal-r-universe-subdomain" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.2</span> Creating your personal R-universe subdomain</h2>
 <p>In R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.</p>
-<section id="case-sensitivity" class="level3" data-number="10.1.1">
-<h3 data-number="10.1.1" class="anchored" data-anchor-id="case-sensitivity"><span class="header-section-number">10.1.1</span> Case-sensitivity</h3>
+<section id="case-sensitivity" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="case-sensitivity"><span class="header-section-number">10.2.1</span> Case-sensitivity</h3>
 <p>Domain names are by definition case-insensitive and lowercased.</p>
 </section>
-<section id="how-much-github-is-compulsory" class="level3" data-number="10.1.2">
-<h3 data-number="10.1.2" class="anchored" data-anchor-id="how-much-github-is-compulsory"><span class="header-section-number">10.1.2</span> How much GitHub is compulsory?</h3>
+<section id="how-much-github-is-compulsory" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="how-much-github-is-compulsory"><span class="header-section-number">10.2.2</span> How much GitHub is compulsory?</h3>
 <p>Hence, in order to start a universe you need a GitHub account. However the R packages themselves do not necessarily need to exist under that same account. They don’t even need to be on GitHub: they may be hosted on any public Git server. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a <code>packages.json</code> registry for that username, without having to buy into the full GitHub platform.</p>
 </section>
 </section>
-<section id="populating-the-packages.json-registry-file" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="populating-the-packages.json-registry-file"><span class="header-section-number">10.2</span> Populating the packages.json registry file</h2>
+<section id="populating-the-packages.json-registry-file" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="populating-the-packages.json-registry-file"><span class="header-section-number">10.3</span> Populating the packages.json registry file</h2>
 <p>In order to publish content on R-universe, you need to create a registry file called <a href="https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json">packages.json</a>, which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields <code>package</code> and <code>url</code> for each entry, for example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
@@ -356,17 +359,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"subdir"</span><span class="fu">:</span> <span class="st">"pkg"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="special-case-of-cran-packages" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="special-case-of-cran-packages"><span class="header-section-number">10.2.1</span> Special case of CRAN packages</h3>
+<section id="special-case-of-cran-packages" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="special-case-of-cran-packages"><span class="header-section-number">10.3.1</span> Special case of CRAN packages</h3>
 <p>When browsing the <a href="https://r-universe.dev/">R-universe homepage</a> you may notice that some major universes that contain many CRAN packages do not have a <code>packages.json</code> registry: When the R-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account. Ownership is determined by the presence of a link to a GitHub repository in the <code>URL</code> or <code>BugReports</code> field of a CRAN package. Our scraper scans all CRAN packages for GitHub links on a daily basis and stores results in the <a href="https://github.com/r-universe-org/cran-to-git">cran-to-git</a> database.</p>
 <p>These are effectively auto-generated registries, on which the build system will fall back if the user does not have a personal registry. As soon as the user creates a proper <code>universe</code> registry repository with the <code>packages.json</code> file, this will take precedence, and the build system will automatically switch over.</p>
-<section id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe" class="level4" data-number="10.2.1.1">
-<h4 data-number="10.2.1.1" class="anchored" data-anchor-id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe"><span class="header-section-number">10.2.1.1</span> How to prevent a CRAN/BioC package from automatically being indexed by R-universe</h4>
+<section id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe" class="level4" data-number="10.3.1.1">
+<h4 data-number="10.3.1.1" class="anchored" data-anchor-id="how-to-prevent-a-cranbioc-package-from-automatically-being-indexed-by-r-universe"><span class="header-section-number">10.3.1.1</span> How to prevent a CRAN/BioC package from automatically being indexed by R-universe</h4>
 <p>CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: <code>Config/runiverse/noindex: true</code> (Config/ field names are allowed on CRAN). The R-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from R-universe.</p>
 </section>
 </section>
-<section id="tracking-custom-branches-or-releases" class="level3" data-number="10.2.2">
-<h3 data-number="10.2.2" class="anchored" data-anchor-id="tracking-custom-branches-or-releases"><span class="header-section-number">10.2.2</span> Tracking custom branches or releases</h3>
+<section id="tracking-custom-branches-or-releases" class="level3" data-number="10.3.2">
+<h3 data-number="10.3.2" class="anchored" data-anchor-id="tracking-custom-branches-or-releases"><span class="header-section-number">10.3.2</span> Tracking custom branches or releases</h3>
 <p>By default, R-universe tracks and builds the default branch for each package Git repository, for instance <code>master</code> or <code>main</code>. It is possible to customize which Git branch or tag to track by adding a <code>branch</code> field to the registry.</p>
 <p>The <code>branch</code> field can take the name of any Git reference (either a branch or a tag). You can also set it to a special value <code>"*release"</code> which will automatically lookup the most recent GitHub release, using <a href="https://cran.r-project.org/web/packages/remotes/vignettes/dependencies.html">the same syntax</a> as in remotes. For example:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
@@ -383,8 +386,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If you want to use the default Git branch, it is safest to omit the <code>branch</code> field. This way everything will keep working, even if the default branch gets another name at some point in the future.</p>
 </section>
-<section id="hand-written-or-programmatically-created" class="level3" data-number="10.2.3">
-<h3 data-number="10.2.3" class="anchored" data-anchor-id="hand-written-or-programmatically-created"><span class="header-section-number">10.2.3</span> Hand-written or programmatically created</h3>
+<section id="hand-written-or-programmatically-created" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="hand-written-or-programmatically-created"><span class="header-section-number">10.3.3</span> Hand-written or programmatically created</h3>
 <p>You can either hand-write this <code>packages.json</code> file, or programmatically create it using the tools of your choice. For example you can generate it in R from a data frame using jsonlite:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">package =</span> <span class="fu">c</span>(<span class="st">"curl"</span>, <span class="st">"pdftools"</span>, <span class="st">"stringdist"</span>),</span>
@@ -398,8 +401,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To publish your registry, create a Git repository called <code>&lt;yourname&gt;.r-universe.dev</code> on your GitHub account and push your <code>packages.json</code> file. See for example: <a href="https://github.com/maelle/maelle.r-universe.dev" class="uri">https://github.com/maelle/maelle.r-universe.dev</a>.</p>
 </section>
 </section>
-<section id="installing-the-github-app" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="installing-the-github-app"><span class="header-section-number">10.3</span> Installing the GitHub app</h2>
+<section id="installing-the-github-app" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="installing-the-github-app"><span class="header-section-number">10.4</span> Installing the GitHub app</h2>
 <p>Once you pushed your <code>packages.json</code> file to your new <code>universe</code> repository on GitHub, the next step is to install the <a href="https://github.com/apps/r-universe/installations/new">R-universe GitHub app</a> on your account.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -408,8 +411,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="waiting-for-the-first-build" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="waiting-for-the-first-build"><span class="header-section-number">10.4</span> Waiting for the first build</h2>
+<section id="waiting-for-the-first-build" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="waiting-for-the-first-build"><span class="header-section-number">10.5</span> Waiting for the first build</h2>
 <p>Once you installed the app, the system will automatically create your personal monorepo under the R-universe organization: <code>https://github.com/r-universe/&lt;yourname&gt;</code>. This is where the system keeps the full history of your packages. The actions tap of your monorepo is also where the building happens.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -432,8 +435,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="adding-badges-and-user-instructions" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="adding-badges-and-user-instructions"><span class="header-section-number">10.5</span> Adding badges and user instructions</h2>
+<section id="adding-badges-and-user-instructions" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="adding-badges-and-user-instructions"><span class="header-section-number">10.6</span> Adding badges and user instructions</h2>
 <p>Once your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable this universe</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
@@ -447,8 +450,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="al">![r-universe](https://r-lib.r-universe.dev/badges/cpp11)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For example this would produce the following badge: <img style="margin-bottom:3px;" src="https://r-lib.r-universe.dev/badges/cpp11"></p>
 </section>
-<section id="linking-to-your-universe-from-other-websites" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="linking-to-your-universe-from-other-websites"><span class="header-section-number">10.6</span> Linking to your universe from other websites</h2>
+<section id="linking-to-your-universe-from-other-websites" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="linking-to-your-universe-from-other-websites"><span class="header-section-number">10.7</span> Linking to your universe from other websites</h2>
 <p>Feel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.). You can use a rocket icon as icon.</p>
 
 
@@ -888,7 +891,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
