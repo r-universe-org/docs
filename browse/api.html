@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Why publish on R-universe – R-Universe Docs</title>
+<title>6&nbsp; Programmatic access (APIs) – R-Universe Docs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../publish/set-up.html" rel="next">
-<link href="../install/reproducibility.html" rel="prev">
+<link href="../browse/rss-feeds.html" rel="next">
+<link href="../browse/packages.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/get-started.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse/get-started.html">Browse</a></li><li class="breadcrumb-item"><a href="../browse/api.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -156,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/api.html" class="sidebar-item-text sidebar-link">
+  <a href="../browse/api.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></span></a>
   </div>
 </li>
@@ -202,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link active">
+  <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
   </div>
 </li>
@@ -242,20 +276,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#put-your-packages-and-yourself-on-the-map" id="toc-put-your-packages-and-yourself-on-the-map" class="nav-link active" data-scroll-target="#put-your-packages-and-yourself-on-the-map"><span class="header-section-number">10.1</span> Put your packages (and yourself) on the map</a></li>
-  <li><a href="#make-your-packages-easy-to-install" id="toc-make-your-packages-easy-to-install" class="nav-link" data-scroll-target="#make-your-packages-easy-to-install"><span class="header-section-number">10.2</span> Make your packages easy to install</a></li>
-  <li><a href="#more-inspiration" id="toc-more-inspiration" class="nav-link" data-scroll-target="#more-inspiration"><span class="header-section-number">10.3</span> More inspiration</a></li>
-  <li><a href="#it-is-free" id="toc-it-is-free" class="nav-link" data-scroll-target="#it-is-free"><span class="header-section-number">10.4</span> It is free!</a></li>
-  <li><a href="#only-a-few-steps-for-set-up" id="toc-only-a-few-steps-for-set-up" class="nav-link" data-scroll-target="#only-a-few-steps-for-set-up"><span class="header-section-number">10.5</span> Only a few steps for set-up!</a></li>
+  <li><a href="#universe-specific-apis" id="toc-universe-specific-apis" class="nav-link active" data-scroll-target="#universe-specific-apis"><span class="header-section-number">6.1</span> Universe-specific APIs</a>
+  <ul class="collapse">
+  <li><a href="#ls" id="toc-ls" class="nav-link" data-scroll-target="#ls"><span class="header-section-number">6.1.1</span> List of packages in an universe</a></li>
+  <li><a href="#information-of-all-packages-in-an-universe" id="toc-information-of-all-packages-in-an-universe" class="nav-link" data-scroll-target="#information-of-all-packages-in-an-universe"><span class="header-section-number">6.1.2</span> Information of all packages in an universe</a></li>
+  <li><a href="#information-on-a-single-package-in-an-universe" id="toc-information-on-a-single-package-in-an-universe" class="nav-link" data-scroll-target="#information-on-a-single-package-in-an-universe"><span class="header-section-number">6.1.3</span> Information on a single package in an universe</a></li>
+  <li><a href="#search-in-an-universe" id="toc-search-in-an-universe" class="nav-link" data-scroll-target="#search-in-an-universe"><span class="header-section-number">6.1.4</span> Search in an universe</a></li>
+  </ul></li>
+  <li><a href="#search-all-universes" id="toc-search-all-universes" class="nav-link" data-scroll-target="#search-all-universes"><span class="header-section-number">6.2</span> Search all universes</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/get-started.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/get-started.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse/get-started.html">Browse</a></li><li class="breadcrumb-item"><a href="../browse/api.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></h1>
 </div>
 
 
@@ -272,26 +309,392 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="put-your-packages-and-yourself-on-the-map" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="put-your-packages-and-yourself-on-the-map"><span class="header-section-number">10.1</span> Put your packages (and yourself) on the map</h2>
-<p>By registering your packages with R-universe, you make your packages easier to <a href="../browse/get-started.html">find and assess by users</a>.</p>
-<p>Creating your own, or your own organization’s, R-universe creates a showcase of expertise and interests.</p>
+<p>R-universe offers several APIs.</p>
+<section id="universe-specific-apis" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="universe-specific-apis"><span class="header-section-number">6.1</span> Universe-specific APIs</h2>
+<p>The URL of these APIs start with the universe URL. Here we will often use <code>https://jeroen.r-universe.dev</code> as an example but you can replace it with any universe URL.</p>
+<section id="ls" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="ls"><span class="header-section-number">6.1.1</span> List of packages in an universe</h3>
+<p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/ls</code></p>
+<p>Example</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://jeroen.r-universe.dev/api/ls"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 19
+ $ : chr "RAppArmor"
+ $ : chr "V8"
+ $ : chr "badgen"
+ $ : chr "base64"
+ $ : chr "bcrypt"
+ $ : chr "brotli"
+ $ : chr "curl"
+ $ : chr "gpg"
+ $ : chr "js"
+ $ : chr "jsonlite"
+ $ : chr "maketools"
+ $ : chr "mongolite"
+ $ : chr "openssl"
+ $ : chr "protolite"
+ $ : chr "rjade"
+ $ : chr "sys"
+ $ : chr "unix"
+ $ : chr "webp"
+ $ : chr "webutils"</code></pre>
+</div>
+</div>
 </section>
-<section id="make-your-packages-easy-to-install" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="make-your-packages-easy-to-install"><span class="header-section-number">10.2</span> Make your packages easy to install</h2>
-<p>R-universe builds <a href="../install/binaries.html">binaries for release versions of the most popular platforms</a>.</p>
+<section id="information-of-all-packages-in-an-universe" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="information-of-all-packages-in-an-universe"><span class="header-section-number">6.1.2</span> Information of all packages in an universe</h3>
+<p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/packages</code></p>
+<p>Parameters:</p>
+<ul>
+<li>limit: the number of results to return, by default a maximum of 100. You can use the <a href="#ls">ls endpoint</a> to determine the total number of packages in the universe and set that as a limit.</li>
+</ul>
+<p>Example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://jeroen.r-universe.dev/api/packages"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 71
+ $ Package         : chr "maketools"
+ $ Type            : chr "Package"
+ $ Title           : chr "Exploring and Testing the Toolchain and System Libraries"
+ $ Version         : chr "1.3.1"
+ $ Authors@R       : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\", \"cph\"), \nemail = \"jeroenooms@gmail.com\", comment ="| __truncated__
+ $ Description     : chr "Helper functions that interface with the system utilities\nto learn about the local build environment. Lets you"| __truncated__
+ $ License         : chr "MIT + file LICENSE"
+ $ URL             : chr "https://jeroen.r-universe.dev/maketools"
+ $ BugReports      : chr "https://github.com/jeroen/maketools/issues"
+ $ Encoding        : chr "UTF-8"
+ $ Roxygen         : chr "list(markdown = TRUE)"
+ $ RoxygenNote     : chr "7.3.1"
+ $ VignetteBuilder : chr "knitr"
+ $ Language        : chr "en-US"
+ $ Repository      : chr "https://jeroen.r-universe.dev"
+ $ RemoteUrl       : chr "https://github.com/jeroen/maketools"
+ $ RemoteRef       : chr "HEAD"
+ $ RemoteSha       : chr "d46f92ca8e11a85eece34ff72a0a50b5143d3636"
+ $ NeedsCompilation: chr "no"
+ $ Packaged        :List of 2
+ $ Author          : chr "Jeroen Ooms [aut, cre, cph] (&lt;https://orcid.org/0000-0002-4035-0289&gt;)"
+ $ Maintainer      : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ MD5sum          : chr "4aa09cc8b83c2b4b88b0b67db2b70d79"
+ $ _user           : chr "jeroen"
+ $ _type           : chr "src"
+ $ _file           : chr "maketools_1.3.1.tar.gz"
+ $ _fileid         : chr "4aa09cc8b83c2b4b88b0b67db2b70d79"
+ $ _filesize       : int 116190
+ $ _sha256         : chr "ce57279b0d05a336408bb81047cebadb3423f88ba0b95beb9c00402b960ca280"
+ $ _created        : chr "2024-10-03T19:13:37.000Z"
+ $ _published      : chr "2024-10-03T19:16:40.651Z"
+ $ _upstream       : chr "https://github.com/jeroen/maketools"
+ $ _commit         :List of 5
+ $ _maintainer     :List of 6
+ $ _distro         : chr "noble"
+ $ _host           : chr "GitHub-Actions"
+ $ _status         : chr "success"
+ $ _pkgdocs        : chr "skipped"
+ $ _winbinary      : chr "success"
+ $ _macbinary      : chr "success"
+ $ _wasmbinary     : chr "success"
+ $ _linuxdevel     : chr "success"
+ $ _windevel       : chr "success"
+ $ _buildurl       : chr "https://github.com/r-universe/jeroen/actions/runs/11168205390"
+ $ _registered     : logi TRUE
+ $ _dependencies   :List of 5
+ $ _owner          : chr "jeroen"
+ $ _selfowned      : logi TRUE
+ $ _usedby         : int 0
+ $ _updates        :List of 4
+ $ _tags           : list()
+ $ _stars          : int 14
+ $ _contributions  :List of 1
+ $ _userbio        :List of 4
+ $ _downloads      :List of 2
+ $ _devurl         : chr "https://github.com/jeroen/maketools"
+ $ _searchresults  : int 1
+ $ _assets         :List of 7
+ $ _homeurl        : chr "https://github.com/jeroen/maketools"
+ $ _realowner      : chr "jeroen"
+ $ _cranurl        : logi TRUE
+ $ _releases       :List of 7
+ $ _exports        :List of 23
+ $ _help           :List of 6
+ $ _rundeps        :List of 1
+ $ _vignettes      :List of 1
+ $ _score          : num 6.06
+ $ _indexed        : logi TRUE
+ $ _nocasepkg      : chr "maketools"
+ $ _universes      :List of 1
+ $ _binaries       :List of 9</code></pre>
+</div>
+</div>
 </section>
-<section id="more-inspiration" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="more-inspiration"><span class="header-section-number">10.3</span> More inspiration</h2>
-<p>Read or watch interviews of the series <a href="https://ropensci.org/blog/2023/11/06/r-universe-stars-finale/">Meeting the stars of the R-Universe</a>, that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.</p>
+<section id="information-on-a-single-package-in-an-universe" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="information-on-a-single-package-in-an-universe"><span class="header-section-number">6.1.3</span> Information on a single package in an universe</h3>
+<p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/packages/&lt;package&gt;</code></p>
+<p>Example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>v8 <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://jeroen.r-universe.dev/api/packages/V8"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(v8, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 77
+ $ Package           : chr "V8"
+ $ Type              : chr "Package"
+ $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
+ $ Version           : chr "5.0.1"
+ $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
+ $ Description       : chr "An R interface to V8 &lt;https://v8.dev&gt;: Google's open\nsource JavaScript and WebAssembly engine. This package ca"| __truncated__
+ $ License           : chr "MIT + file LICENSE"
+ $ URL               : chr "https://jeroen.r-universe.dev/V8"
+ $ BugReports        : chr "https://github.com/jeroen/v8/issues"
+ $ SystemRequirements: chr "V8 engine version 6+ is needed for ES6 and WASM\nsupport. On Linux you can build against libv8-dev (Debian) or\"| __truncated__
+ $ NeedsCompilation  : chr "yes"
+ $ VignetteBuilder   : chr "knitr"
+ $ RoxygenNote       : chr "7.3.1"
+ $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
+ $ Language          : chr "en-US"
+ $ Encoding          : chr "UTF-8"
+ $ Biarch            : chr "true"
+ $ Repository        : chr "https://jeroen.r-universe.dev"
+ $ RemoteUrl         : chr "https://github.com/jeroen/v8"
+ $ RemoteRef         : chr "HEAD"
+ $ RemoteSha         : chr "e3bfdc3518d7c03d53a85aaa2dc5147cee97cbc7"
+ $ Packaged          :List of 2
+ $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nJan Marvin Garbuszus [ctb]"
+ $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ MD5sum            : chr "99131c2d998e9e26109e1f68a70a4df1"
+ $ _user             : chr "jeroen"
+ $ _type             : chr "src"
+ $ _file             : chr "V8_5.0.1.tar.gz"
+ $ _fileid           : chr "99131c2d998e9e26109e1f68a70a4df1"
+ $ _filesize         : int 192373
+ $ _sha256           : chr "cf2c36b8c095463ec688f191bbca4bf137c69f4b0af61d93b29e218f3a90884b"
+ $ _created          : chr "2024-09-24T10:25:43.000Z"
+ $ _published        : chr "2024-09-25T15:11:03.987Z"
+ $ _upstream         : chr "https://github.com/jeroen/v8"
+ $ _commit           :List of 5
+ $ _maintainer       :List of 6
+ $ _distro           : chr "noble"
+ $ _host             : chr "GitHub-Actions"
+ $ _status           : chr "success"
+ $ _pkgdocs          : chr "skipped"
+ $ _winbinary        : chr "success"
+ $ _macbinary        : chr "success"
+ $ _wasmbinary       : chr "none"
+ $ _linuxdevel       : chr "success"
+ $ _windevel         : chr "success"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11011832224"
+ $ _registered       : logi TRUE
+ $ _dependencies     :List of 8
+ $ _owner            : chr "jeroen"
+ $ _selfowned        : logi TRUE
+ $ _usedby           : int 306
+ $ _updates          :List of 11
+ $ _tags             :List of 1
+ $ _topics           :List of 3
+ $ _stars            : int 199
+ $ _contributions    :List of 10
+ $ _userbio          :List of 4
+ $ _downloads        :List of 2
+ $ _mentions         : int 2
+ $ _devurl           : chr "https://github.com/jeroen/v8"
+ $ _searchresults    : int 486
+ $ _assets           :List of 11
+ $ _homeurl          : chr "https://github.com/jeroen/v8"
+ $ _realowner        : chr "jeroen"
+ $ _cranurl          : logi TRUE
+ $ _releases         :List of 49
+ $ _exports          :List of 6
+ $ _help             :List of 3
+ $ _readme           : chr "https://github.com/jeroen/v8/raw/HEAD/README.md"
+ $ _rundeps          :List of 3
+ $ _sysdeps          :List of 2
+ $ _vignettes        :List of 2
+ $ _score            : num 15.5
+ $ _indexed          : logi TRUE
+ $ _nocasepkg        : chr "v8"
+ $ _universes        :List of 1
+ $ _binaries         :List of 9</code></pre>
+</div>
+</div>
 </section>
-<section id="it-is-free" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="it-is-free"><span class="header-section-number">10.4</span> It is free!</h2>
-<p>R-universe is provided free of charge.</p>
+<section id="search-in-an-universe" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="search-in-an-universe"><span class="header-section-number">6.1.4</span> Search in an universe</h3>
+<p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/search</code> Parameters:</p>
+<ul>
+<li>q: the query string. You can use the <a href="../browse/search.html">advanced fields</a>.</li>
+<li>limit: the number of results to return, by default a maximum of 100 but you can
+<ul>
+<li>do a first request to determine the total number of hits <code>N</code>, returned in the response as the <code>total</code> field,</li>
+<li>then do a second request using <code>limit=N</code>.</li>
+</ul></li>
+</ul>
+<p>Example:</p>
+<p>How many packages in the rOpenSci universe depend on httr2?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://ropensci.r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_url_query</span>(<span class="at">q =</span> <span class="st">'needs:httr2'</span>) <span class="sc">|&gt;</span> <span class="co"># packages depending on {httr2}</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 5
+ $ results:List of 30
+ $ query  :List of 2
+ $ skip   : int 0
+ $ limit  : int 100
+ $ total  : int 30</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 30</code></pre>
+</div>
+</div>
 </section>
-<section id="only-a-few-steps-for-set-up" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="only-a-few-steps-for-set-up"><span class="header-section-number">10.5</span> Only a few steps for set-up!</h2>
-<p>See the <a href="../publish/set-up.html">set-up docs</a>.</p>
+</section>
+<section id="search-all-universes" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="search-all-universes"><span class="header-section-number">6.2</span> Search all universes</h2>
+<p>URL: <code>https://r-universe.dev/api/search</code> Parameters:</p>
+<ul>
+<li>q: the query string. You can use the <a href="../browse/search.html">advanced fields</a>.</li>
+<li>limit: the number of results to return, by default a maximum of 100 but you can
+<ul>
+<li>do a first request to determine the total number of hits <code>N</code>, returned in the response as the <code>total</code> field,</li>
+<li>then do a second request using <code>limit=N</code>.</li>
+</ul></li>
+</ul>
+<p>Example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_url_query</span>(<span class="at">q =</span> <span class="st">'"weather data"'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 5
+ $ results:List of 70
+ $ query  :List of 1
+ $ skip   : int 0
+ $ limit  : int 100
+ $ total  : int 70</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 16
+ $ _id        : chr "66f8103d560cbda70e9de917"
+ $ Package    : chr "weatherOz"
+ $ Title      : chr "An API Client for Australian Weather and Climate Data Resources"
+ $ Description: chr "Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints pro"| __truncated__
+ $ _user      : chr "ropensci"
+ $ _owner     : chr "ropensci"
+ $ _usedby    : int 0
+ $ _score     : num 8.2
+ $ _uuid      : int 1200269
+ $ maintainer :List of 5
+  ..$ name : chr "Rodrigo Pires"
+  ..$ email: chr "rodrigo.pires@dpird.wa.gov.au"
+  ..$ login: chr "bozaah"
+  ..$ uuid : int 11730095
+  ..$ orcid: chr "0000-0001-7384-6849"
+ $ updated    : int 1727530072
+ $ stars      : int 22
+ $ topics     :List of 19
+  ..$ : chr "dpird"
+  ..$ : chr "bom"
+  ..$ : chr "meteorological-data"
+  ..$ : chr "weather-forecast"
+  ..$ : chr "australia"
+  ..$ : chr "weather"
+  ..$ : chr "weather-data"
+  ..$ : chr "meteorology"
+  ..$ : chr "western-australia"
+  ..$ : chr "australia-bureau-of-meteorology"
+  ..$ : chr "western-australia-agriculture"
+  ..$ : chr "australia-agriculture"
+  ..$ : chr "australia-climate"
+  ..$ : chr "australia-weather"
+  ..$ : chr "api-client"
+  ..$ : chr "climate"
+  ..$ : chr "data"
+  ..$ : chr "rainfall"
+  ..$ : chr "weather-api"
+ $ rundeps    :List of 55
+  ..$ : chr "abind"
+  ..$ : chr "apsimx"
+  ..$ : chr "bit"
+  ..$ : chr "bit64"
+  ..$ : chr "blob"
+  ..$ : chr "cachem"
+  ..$ : chr "class"
+  ..$ : chr "classInt"
+  ..$ : chr "cli"
+  ..$ : chr "clock"
+  ..$ : chr "cpp11"
+  ..$ : chr "crayon"
+  ..$ : chr "crul"
+  ..$ : chr "curl"
+  ..$ : chr "data.table"
+  ..$ : chr "DBI"
+  ..$ : chr "e1071"
+  ..$ : chr "evaluate"
+  ..$ : chr "fastmap"
+  ..$ : chr "foreign"
+  ..$ : chr "generics"
+  ..$ : chr "glue"
+  ..$ : chr "highr"
+  ..$ : chr "httpcode"
+  ..$ : chr "jsonlite"
+  ..$ : chr "KernSmooth"
+  ..$ : chr "knitr"
+  ..$ : chr "lifecycle"
+  ..$ : chr "lubridate"
+  ..$ : chr "magick"
+  ..$ : chr "magrittr"
+  ..$ : chr "MASS"
+  ..$ : chr "memoise"
+  ..$ : chr "mime"
+  ..$ : chr "pkgconfig"
+  ..$ : chr "plogr"
+  ..$ : chr "proxy"
+  ..$ : chr "R6"
+  ..$ : chr "Rcpp"
+  ..$ : chr "rlang"
+  ..$ : chr "RSQLite"
+  ..$ : chr "s2"
+  ..$ : chr "sf"
+  ..$ : chr "stars"
+  ..$ : chr "terra"
+  ..$ : chr "timechange"
+  ..$ : chr "triebeard"
+  ..$ : chr "tzdb"
+  ..$ : chr "units"
+  ..$ : chr "urltools"
+  ..$ : chr "vctrs"
+  ..$ : chr "wk"
+  ..$ : chr "xfun"
+  ..$ : chr "xml2"
+  ..$ : chr "yaml"
+ $ match      : num 170
+ $ rank       : num 1397</code></pre>
+</div>
+</div>
+<p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>
 
 
 </section>
@@ -719,13 +1122,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../install/reproducibility.html" class="pagination-link" aria-label="Reproducibility">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Reproducibility</span></span>
+      <a href="../browse/packages.html" class="pagination-link" aria-label="Individual package information">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Individual package information</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../publish/set-up.html" class="pagination-link" aria-label="Set up your own universe">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../browse/rss-feeds.html" class="pagination-link" aria-label="RSS feeds of package updates">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">RSS feeds of package updates</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -734,4 +1137,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/get-started.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
