@@ -273,16 +273,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#package-information" id="toc-package-information" class="nav-link active" data-scroll-target="#package-information"><span class="header-section-number">5.1</span> Package information</a>
+  <li><a href="#website-tour" id="toc-website-tour" class="nav-link active" data-scroll-target="#website-tour"><span class="header-section-number">5.1</span> Website tour</a></li>
+  <li><a href="#package-information" id="toc-package-information" class="nav-link" data-scroll-target="#package-information"><span class="header-section-number">5.2</span> Package information</a>
   <ul class="collapse">
-  <li><a href="#how-are-the-dependencies-dependents-calculated" id="toc-how-are-the-dependencies-dependents-calculated" class="nav-link" data-scroll-target="#how-are-the-dependencies-dependents-calculated"><span class="header-section-number">5.1.1</span> How are the dependencies / dependents calculated?</a></li>
-  <li><a href="#how-does-r-universe-analyze-system-dependencies-cc" id="toc-how-does-r-universe-analyze-system-dependencies-cc" class="nav-link" data-scroll-target="#how-does-r-universe-analyze-system-dependencies-cc"><span class="header-section-number">5.1.2</span> How does R-universe analyze system dependencies (C/C++)</a></li>
+  <li><a href="#how-are-the-dependencies-dependents-calculated" id="toc-how-are-the-dependencies-dependents-calculated" class="nav-link" data-scroll-target="#how-are-the-dependencies-dependents-calculated"><span class="header-section-number">5.2.1</span> How are the dependencies / dependents calculated?</a></li>
+  <li><a href="#how-does-r-universe-analyze-system-dependencies-cc" id="toc-how-does-r-universe-analyze-system-dependencies-cc" class="nav-link" data-scroll-target="#how-does-r-universe-analyze-system-dependencies-cc"><span class="header-section-number">5.2.2</span> How does R-universe analyze system dependencies (C/C++)</a></li>
   </ul></li>
-  <li><a href="#all-the-documentation" id="toc-all-the-documentation" class="nav-link" data-scroll-target="#all-the-documentation"><span class="header-section-number">5.2</span> All the documentation</a>
+  <li><a href="#all-the-documentation" id="toc-all-the-documentation" class="nav-link" data-scroll-target="#all-the-documentation"><span class="header-section-number">5.3</span> All the documentation</a>
   <ul class="collapse">
-  <li><a href="#cran.dev-shortlinks" id="toc-cran.dev-shortlinks" class="nav-link" data-scroll-target="#cran.dev-shortlinks"><span class="header-section-number">5.2.1</span> cran.dev shortlinks</a></li>
+  <li><a href="#cran.dev-shortlinks" id="toc-cran.dev-shortlinks" class="nav-link" data-scroll-target="#cran.dev-shortlinks"><span class="header-section-number">5.3.1</span> cran.dev shortlinks</a></li>
   </ul></li>
-  <li><a href="#usage-and-development-activity" id="toc-usage-and-development-activity" class="nav-link" data-scroll-target="#usage-and-development-activity"><span class="header-section-number">5.3</span> Usage and development activity</a></li>
+  <li><a href="#usage-and-development-activity" id="toc-usage-and-development-activity" class="nav-link" data-scroll-target="#usage-and-development-activity"><span class="header-section-number">5.4</span> Usage and development activity</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/packages.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -322,17 +323,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>These package pages are generated automatically and provide detailed information about each project, and all the information and resources to quickly install and try the package locally in R.</p>
-<section id="package-information" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="package-information"><span class="header-section-number">5.1</span> Package information</h2>
+<section id="website-tour" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="website-tour"><span class="header-section-number">5.1</span> Website tour</h2>
+<p>To familiarize yourself with the information provided on the R-universe page of each package you can read this documentation chapter but also follow the “Website Tour”. Click on the “Website Tour” button in the navbar.</p>
+</section>
+<section id="package-information" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="package-information"><span class="header-section-number">5.2</span> Package information</h2>
 <p>The initial section of the homepage shows descriptive data and links to resources from this package, such as source/binary files, the package manual and NEWS file. Further down we show installation instructions to install the package in R. Installation is quick and easy because we provide pre-compiled binaries for Windows and MacOS, so no special tools or setup is required on the user machine.</p>
 <p>Here you can also find more information derived by the build system, such as which system libraries the package builds on, topics, and if the package is on CRAN. The badges underneath show statistics about the package, such as dependencies, reverse dependencies, and GitHub stars. Clicking on the ’exports’ badge will show all functions and datasets exported by the package, which link to the respective sections in the manual page. If specified, we also show how the package should be cited in papers.</p>
-<section id="how-are-the-dependencies-dependents-calculated" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="how-are-the-dependencies-dependents-calculated"><span class="header-section-number">5.1.1</span> How are the dependencies / dependents calculated?</h3>
+<section id="how-are-the-dependencies-dependents-calculated" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="how-are-the-dependencies-dependents-calculated"><span class="header-section-number">5.2.1</span> How are the dependencies / dependents calculated?</h3>
 <p>Both are calculated using transitive (recursive) strong dependencies, hence this includes both direct and indirect dependencies. Or in practical terms: other packages that need to be installed at minimum to be able to use the target package.</p>
 <p>At package build time, we use <code>tools::package_dependencies(pkg, recursive = TRUE)</code> to derive the list of hard dependencies and store this in the database. R-base packages are not included. The <code>dependencies</code> value is simply the size of this list. The <code>dependents</code> value is the opposite: this is the number of packages in R-universe which list the target package as one of its dependencies.</p>
 </section>
-<section id="how-does-r-universe-analyze-system-dependencies-cc" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="how-does-r-universe-analyze-system-dependencies-cc"><span class="header-section-number">5.1.2</span> How does R-universe analyze system dependencies (C/C++)</h3>
+<section id="how-does-r-universe-analyze-system-dependencies-cc" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="how-does-r-universe-analyze-system-dependencies-cc"><span class="header-section-number">5.2.2</span> How does R-universe analyze system dependencies (C/C++)</h3>
 <p>After the package has been installed, we use maketools to show external libraries that the package links to:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>maketools<span class="sc">::</span><span class="fu">package_sysdeps</span>(<span class="st">"sf"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="do">##                 shlib      package     headers source              version</span></span>
@@ -344,8 +349,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The maketools vignette explains this in more detail: <a href="https://cran.r-project.org/web/packages/maketools/vignettes/sysdeps.html">Automatically determine run-time dependencies for R packages on Linux</a>.</p>
 </section>
 </section>
-<section id="all-the-documentation" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="all-the-documentation"><span class="header-section-number">5.2</span> All the documentation</h2>
+<section id="all-the-documentation" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="all-the-documentation"><span class="header-section-number">5.3</span> All the documentation</h2>
 <p>To let you start using packages as quickly as possible, R-universe renders all available documentation and presents this as clear and concisely as possible on the homepage.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -357,8 +362,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Most R packages have 3 forms of documentation: a README file, a reference manual (help pages), and a number of articles (vignettes). These articles are often a good place to get started, and are listed on the package homepage right under the descriptives. From here you can view both the rendered html/pdf document, as well as the rmarkdown source file used to (re)produce the article.</p>
 <p>Further down the page you can see the content from the package README. Most packages these days include a README.md file which can nicely be rendered into HTML.</p>
 <p>After the README follows a section named “reference manual” containing a table with all the help pages. These link to the respective chapters in the html reference manual, which provide the most extensive documentation for each function in the package, including descriptions, parameters, examples, etc.</p>
-<section id="cran.dev-shortlinks" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="cran.dev-shortlinks"><span class="header-section-number">5.2.1</span> cran.dev shortlinks</h3>
+<section id="cran.dev-shortlinks" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="cran.dev-shortlinks"><span class="header-section-number">5.3.1</span> cran.dev shortlinks</h3>
 <p>On R-universe you can find package repositories from many different organizations and maintainers. But sometimes you just want to lookup a particular CRAN package, without knowing the developer. The cran.dev shortlink service lets you navigate or link directly to the R-universe homepage and docs of any established CRAN package.</p>
 <p>The root domain <code>https://cran.dev/{package}</code> redirects to the primary homepage for a package:</p>
 <ul>
@@ -408,19 +413,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note that not all packages have a <code>devel</code> version available. CRAN packages that are not found on GitHub or GitLab or R-forge only have a <code>release</code> version, for example: <a href="https://api.cran.dev/MASS" class="uri">https://api.cran.dev/MASS</a></p>
 </section>
 </section>
-<section id="usage-and-development-activity" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="usage-and-development-activity"><span class="header-section-number">5.3</span> Usage and development activity</h2>
+<section id="usage-and-development-activity" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="usage-and-development-activity"><span class="header-section-number">5.4</span> Usage and development activity</h2>
 <p>Besides familiarizing yourself with what the package does, you may be interested in who is working on it, who else is using it, and if it is still actively developed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../img/pkg-development.png" class="lightbox" data-gallery="pkg" title="Development information the sf package"><img src="../img/pkg-development.png" class="img-fluid figure-img" alt="Development information the sf package"></a></p>
 <figcaption>Development information the sf package</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../img/pkg-users.png" class="lightbox" data-gallery="pkg" title="Reverse dependencies of the sf package"><img src="../img/pkg-users.png" class="img-fluid figure-img" alt="Reverse dependencies of the sf package"></a></p>
-<figcaption>Reverse dependencies of the sf package</figcaption>
 </figure>
 </div>
 <p>The “development and contributors” section shows a bar chart with the number of commits per week for the last year, and who the main contributors are. Finally the section “usage by other packages” shows other packages on R-universe depending on this package, grouped by owner. This gives you some indication on how active the project is, and who are involved.</p>
@@ -862,7 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/packages.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/packages.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
