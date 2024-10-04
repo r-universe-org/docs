@@ -99,7 +99,7 @@ This way everything will keep working, even if the default branch gets another n
 ### Hand-written or programmatically created
 
 You can either hand-write this `packages.json` file, or programmatically create it using the tools of your choice. 
-For example you can generate it in R from a data frame using jsonlite:
+For example you can generate it in R from a data frame using [jsonlite](https://jeroen.r-universe.dev/jsonlite):
 
 ```r
 df <- data.frame(
