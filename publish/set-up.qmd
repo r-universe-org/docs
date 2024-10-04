@@ -63,7 +63,7 @@ These are effectively auto-generated registries, on which the build system will 
 As soon as the user creates a proper `universe` registry repository with the `packages.json` file, this will take precedence, and the build system will automatically switch over.
 
 
-#### How to prevent a CRAN/BioC package from automatically being indexed by R-universe
+#### How to prevent a CRAN/BioConductor package from automatically being indexed by R-universe
 
 CRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: `Config/runiverse/noindex: true` (Config/ field names are allowed on CRAN). The R-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from R-universe.
 
