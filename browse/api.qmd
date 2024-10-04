@@ -62,7 +62,7 @@ str(v8, max.level = 1)
 URL: `https://<username>.r-universe.dev/api/search`
 Parameters:
 
-- q: the query string. You can use the [advanced fields](/search).
+- q: the query string. You can use the [advanced fields](/browse/search.html).
 - limit: the number of results to return, by default a maximum of 100 but you can
     - do a first request to determine the total number of hits `N`, returned in the response as the `total` field,
     - then do a second request using `limit=N`.
@@ -88,7 +88,7 @@ deps$total
 URL: `https://r-universe.dev/api/search`
 Parameters:
 
-- q: the query string. You can use the [advanced fields](/search).
+- q: the query string. You can use the [advanced fields](/browse/search.html).
 - limit: the number of results to return, by default a maximum of 100 but you can
     - do a first request to determine the total number of hits `N`, returned in the response as the `total` field,
     - then do a second request using `limit=N`.
