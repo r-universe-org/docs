@@ -5,6 +5,9 @@ screenshot <- function(b, path,
                        cliprect = c(top = 0, left = 0, width = 1920, height = 1080),
                        expand = NULL) {
   img_path <- file.path("img", path)
+  screen_width <- 1920
+  screen_height <- 1080
+  b$Emulation$setVisibleSize(height = screen_height, width = screen_width)
 
   b$screenshot(
     img_path,
@@ -24,31 +27,30 @@ screen_height <- 1080
 b <- ChromoteSession$new(height = screen_height, width = screen_width)
 
 # Landing page ----
+p <- b$Page$loadEventFired(wait_ = FALSE)  # Get the promise for the loadEventFired
 b$Page$navigate("https://r-universe.dev/search/")
-Sys.sleep(1)
+b$wait_for(p)
 screenshot(b, "search.png")
 
 # Searching for something ----
-# https://gist.github.com/oganm/50a8020f718842aa3eee04dcfd57c198
 screenshot_search <- function(query, screen_width) {
-  b$Page$navigate("https://r-universe.dev/search/")
-  Sys.sleep(2)
-  search_box <- b$DOM$querySelector(b$DOM$getDocument()$root$nodeId, "#search-input")
-  b$DOM$focus(search_box$nodeId)
-  b$Input$insertText(text = query)
-  Sys.sleep(2)
+  message(query)
+  p <- b$Page$loadEventFired(wait_ = FALSE)  # Get the promise for the loadEventFired
+  b$Page$navigate(sprintf("https://r-universe.dev/search/?q=%s", query))
+  b$wait_for(p)
   screenshot(
     b, sprintf("search-%s.png", snakecase::to_lower_camel_case(query))
   )
 }
 purrr::walk(
-  c('"missing-data"', "author:jeroen json", "exports:tojson"),
+  c('"missing-data"', "author:jeroen json", "exports:toJSON"),
   screenshot_search,
   screen_width = screen_width
 )
 # Searching, advanced fields ----
+p <- b$Page$loadEventFired(wait_ = FALSE)  # Get the promise for the loadEventFired
 b$Page$navigate("https://r-universe.dev/search/")
-Sys.sleep(1)
+b$wait_for(p)
 search_info <- b$DOM$querySelector(b$DOM$getDocument()$root$nodeId, "button.btn.btn-outline-secondary.dropdown-toggle.dropdown-toggle-split")
 quads <- b$DOM$getBoxModel(search_info$nodeId)
 content_quad <- as.numeric(quads$model$content)
@@ -80,9 +82,10 @@ screenshot(
 
 # work from an organization ----
 screenshot_org <- function(tab, url) {
+  p <- b$Page$loadEventFired(wait_ = FALSE)  # Get the promise for the loadEventFired
   b$Page$navigate(sprintf("%s/%s/", url, tab))
-  if (tab == "contributors") Sys.sleep(20)
-  Sys.sleep(2)
+  #if (tab == "contributors") Sys.sleep(20)
+  b$wait_for(p)
   screenshot(b, sprintf("univ-%s.png", tab))
 }
 purrr::walk(
@@ -93,10 +96,11 @@ purrr::walk(
 
 # about a package ----
 pkg_url <- "https://r-spatial.r-universe.dev/sf"
-fragments <- c("", "citation", "development", "readme", "manual", "users")
+fragments <- c("", "citation", "development", "readme", "manual")
 screenshot_pkg <- function(fragment, pkg_url) {
+  p <- b$Page$loadEventFired(wait_ = FALSE)  # Get the promise for the loadEventFired
   b$Page$navigate(pkg_url)
-  Sys.sleep(4)
+  b$wait_for(p)
 
   if (!nzchar(fragment)) {
     screenshot(b, sprintf("pkg-%s.png", fragment))
