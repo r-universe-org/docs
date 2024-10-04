@@ -16,6 +16,7 @@ book:
         - browse/search.qmd
         - browse/universes.qmd
         - browse/packages.qmd
+        - browse/api.qmd
         - browse/rss-feeds.qmd
     - part: Install
       chapters:
