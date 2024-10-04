@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fe84f82f5e38f060328c04b2faf27c9a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b22013ba1b10a5f6dcf0af032bb2b236.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -108,7 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="https://r-universe.dev/matomo.js"></script>
 
 
-<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -275,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#basic-steps" id="toc-basic-steps" class="nav-link active" data-scroll-target="#basic-steps"><span class="header-section-number">10.1</span> Basic steps</a></li>
-  <li><a href="#creating-your-personal-r-universe-subdomain" id="toc-creating-your-personal-r-universe-subdomain" class="nav-link" data-scroll-target="#creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.2</span> Creating your personal R-universe subdomain</a>
+  <li><a href="#subdomain" id="toc-subdomain" class="nav-link" data-scroll-target="#subdomain"><span class="header-section-number">10.2</span> Creating your personal R-universe subdomain</a>
   <ul class="collapse">
   <li><a href="#case-sensitivity" id="toc-case-sensitivity" class="nav-link" data-scroll-target="#case-sensitivity"><span class="header-section-number">10.2.1</span> Case-sensitivity</a></li>
   <li><a href="#how-much-github-is-compulsory" id="toc-how-much-github-is-compulsory" class="nav-link" data-scroll-target="#how-much-github-is-compulsory"><span class="header-section-number">10.2.2</span> How much GitHub is compulsory?</a></li>
@@ -286,9 +285,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tracking-custom-branches-or-releases" id="toc-tracking-custom-branches-or-releases" class="nav-link" data-scroll-target="#tracking-custom-branches-or-releases"><span class="header-section-number">10.3.2</span> Tracking custom branches or releases</a></li>
   <li><a href="#hand-written-or-programmatically-created" id="toc-hand-written-or-programmatically-created" class="nav-link" data-scroll-target="#hand-written-or-programmatically-created"><span class="header-section-number">10.3.3</span> Hand-written or programmatically created</a></li>
   </ul></li>
-  <li><a href="#installing-the-github-app" id="toc-installing-the-github-app" class="nav-link" data-scroll-target="#installing-the-github-app"><span class="header-section-number">10.4</span> Installing the GitHub app</a></li>
+  <li><a href="#appinstall" id="toc-appinstall" class="nav-link" data-scroll-target="#appinstall"><span class="header-section-number">10.4</span> Installing the GitHub app</a></li>
   <li><a href="#waiting-for-the-first-build" id="toc-waiting-for-the-first-build" class="nav-link" data-scroll-target="#waiting-for-the-first-build"><span class="header-section-number">10.5</span> Waiting for the first build</a></li>
-  <li><a href="#adding-badges-and-user-instructions" id="toc-adding-badges-and-user-instructions" class="nav-link" data-scroll-target="#adding-badges-and-user-instructions"><span class="header-section-number">10.6</span> Adding badges and user instructions</a></li>
+  <li><a href="#document-install" id="toc-document-install" class="nav-link" data-scroll-target="#document-install"><span class="header-section-number">10.6</span> Adding badges and user instructions</a></li>
   <li><a href="#linking-to-your-universe-from-other-websites" id="toc-linking-to-your-universe-from-other-websites" class="nav-link" data-scroll-target="#linking-to-your-universe-from-other-websites"><span class="header-section-number">10.7</span> Linking to your universe from other websites</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -322,15 +321,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Create a Git repository named (all lowercase) <code>&lt;your-username&gt;.r-universe.dev</code> on your GitHub account</strong>, containing a <code>packages.json</code> file which lists the Git repositories with R packages to include.
 <ul>
 <li>For an organization at <code>github.com/ropensci</code> the repository is thus <code>github.com/ropensci/ropensci.r-universe.dev</code>;</li>
-<li>similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>.</li>
+<li>similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>. <a href="#subdomain">More details</a>.</li>
 </ul></li>
-<li><strong>Install the <a href="https://github.com/apps/r-universe/installations/new">r-universe app</a> on this same GitHub account</strong> or organization for which you want to create the universe. Clicking on the <a href="https://github.com/apps/r-universe/installations/new">app link</a> will lead you to a page that asks “Where do you want to install R-universe?”.</li>
+<li><strong>Install the <a href="https://github.com/apps/r-universe/installations/new">r-universe app</a> on this same GitHub account</strong> or organization for which you want to create the universe. Clicking on the <a href="https://github.com/apps/r-universe/installations/new">app link</a> will lead you to a page that asks “Where do you want to install R-universe?”. <a href="#appinstall">More details</a>.</li>
 <li><strong>Wait</strong> for your packages to start appearing on <code>https://&lt;yourname&gt;.r-universe.dev</code> once they have finished building.</li>
-<li><strong>Document</strong> how to install packages from R-universe in the docs of your packages.</li>
+<li><strong>Document</strong> how to install packages from R-universe in the docs of your packages. <a href="#document-install">More details</a>.</li>
 </ol>
 </section>
-<section id="creating-your-personal-r-universe-subdomain" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="creating-your-personal-r-universe-subdomain"><span class="header-section-number">10.2</span> Creating your personal R-universe subdomain</h2>
+<section id="subdomain" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="subdomain"><span class="header-section-number">10.2</span> Creating your personal R-universe subdomain</h2>
 <p>In R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.</p>
 <section id="case-sensitivity" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="case-sensitivity"><span class="header-section-number">10.2.1</span> Case-sensitivity</h3>
@@ -401,8 +400,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To publish your registry, create a Git repository called <code>&lt;yourname&gt;.r-universe.dev</code> on your GitHub account and push your <code>packages.json</code> file. See for example: <a href="https://github.com/maelle/maelle.r-universe.dev" class="uri">https://github.com/maelle/maelle.r-universe.dev</a>.</p>
 </section>
 </section>
-<section id="installing-the-github-app" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="installing-the-github-app"><span class="header-section-number">10.4</span> Installing the GitHub app</h2>
+<section id="appinstall" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="appinstall"><span class="header-section-number">10.4</span> Installing the GitHub app</h2>
 <p>Once you pushed your <code>packages.json</code> file to your new <code>universe</code> repository on GitHub, the next step is to install the <a href="https://github.com/apps/r-universe/installations/new">R-universe GitHub app</a> on your account.</p>
 <p>The <em>“Read and write access to commit statuses”</em> will enable R-universe to show commit status updates (green checkmark) to the repositories of your R packages if they are hosted under that GitHub account.</p>
 <p>We recommend to install the app for “All repositories” as you might later add more packages to your universe.</p>
@@ -432,8 +431,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="adding-badges-and-user-instructions" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="adding-badges-and-user-instructions"><span class="header-section-number">10.6</span> Adding badges and user instructions</h2>
+<section id="document-install" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="document-install"><span class="header-section-number">10.6</span> Adding badges and user instructions</h2>
 <p>Once your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable this universe</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
@@ -888,7 +887,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

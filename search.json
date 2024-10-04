@@ -256,15 +256,15 @@
     "href": "publish/set-up.html#basic-steps",
     "title": "10  Set up your own universe",
     "section": "",
-    "text": "Create a Git repository named (all lowercase) &lt;your-username&gt;.r-universe.dev on your GitHub account, containing a packages.json file which lists the Git repositories with R packages to include.\n\nFor an organization at github.com/ropensci the repository is thus github.com/ropensci/ropensci.r-universe.dev;\nsimilarly for an user at github.com/jeroen the repository is github.com/jeroen/jeroen.r-universe.dev.\n\nInstall the r-universe app on this same GitHub account or organization for which you want to create the universe. Clicking on the app link will lead you to a page that asks “Where do you want to install R-universe?”.\nWait for your packages to start appearing on https://&lt;yourname&gt;.r-universe.dev once they have finished building.\nDocument how to install packages from R-universe in the docs of your packages.",
+    "text": "Create a Git repository named (all lowercase) &lt;your-username&gt;.r-universe.dev on your GitHub account, containing a packages.json file which lists the Git repositories with R packages to include.\n\nFor an organization at github.com/ropensci the repository is thus github.com/ropensci/ropensci.r-universe.dev;\nsimilarly for an user at github.com/jeroen the repository is github.com/jeroen/jeroen.r-universe.dev. More details.\n\nInstall the r-universe app on this same GitHub account or organization for which you want to create the universe. Clicking on the app link will lead you to a page that asks “Where do you want to install R-universe?”. More details.\nWait for your packages to start appearing on https://&lt;yourname&gt;.r-universe.dev once they have finished building.\nDocument how to install packages from R-universe in the docs of your packages. More details.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
-    "objectID": "publish/set-up.html#creating-your-personal-r-universe-subdomain",
-    "href": "publish/set-up.html#creating-your-personal-r-universe-subdomain",
+    "objectID": "publish/set-up.html#subdomain",
+    "href": "publish/set-up.html#subdomain",
     "title": "10  Set up your own universe",
     "section": "10.2 Creating your personal R-universe subdomain",
     "text": "10.2 Creating your personal R-universe subdomain\nIn R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.\n\n10.2.1 Case-sensitivity\nDomain names are by definition case-insensitive and lowercased.\n\n\n10.2.2 How much GitHub is compulsory?\nIn order to start a universe you need a GitHub account as that is where the repository with your packages’ listing has to be hosted. However the R packages themselves do not necessarily need to exist under that same account. They don’t even need to be on GitHub: they may be hosted on any public Git server. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a packages.json registry for that username, without having to buy into the full GitHub platform.",
@@ -285,8 +285,8 @@
     ]
   },
   {
-    "objectID": "publish/set-up.html#installing-the-github-app",
-    "href": "publish/set-up.html#installing-the-github-app",
+    "objectID": "publish/set-up.html#appinstall",
+    "href": "publish/set-up.html#appinstall",
     "title": "10  Set up your own universe",
     "section": "10.4 Installing the GitHub app",
     "text": "10.4 Installing the GitHub app\nOnce you pushed your packages.json file to your new universe repository on GitHub, the next step is to install the R-universe GitHub app on your account.\nThe “Read and write access to commit statuses” will enable R-universe to show commit status updates (green checkmark) to the repositories of your R packages if they are hosted under that GitHub account.\nWe recommend to install the app for “All repositories” as you might later add more packages to your universe.",
@@ -307,8 +307,8 @@
     ]
   },
   {
-    "objectID": "publish/set-up.html#adding-badges-and-user-instructions",
-    "href": "publish/set-up.html#adding-badges-and-user-instructions",
+    "objectID": "publish/set-up.html#document-install",
+    "href": "publish/set-up.html#document-install",
     "title": "10  Set up your own universe",
     "section": "10.6 Adding badges and user instructions",
     "text": "10.6 Adding badges and user instructions\nOnce your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:\n# Enable this universe\noptions(repos = c(\n    maelle = 'https://maelle.r-universe.dev',\n    CRAN = 'https://cloud.r-project.org'))\n\n# Install some packages\ninstall.packages('tinkr')\nTo help package users, you can consider copying these instructions to your package README.md files. And of course you can add an R-universe badge to the package README as well.\nThe badge API is simply /badges/&lt;package&gt; which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:\n![r-universe](https://r-lib.r-universe.dev/badges/cpp11)\nFor example this would produce the following badge:",
