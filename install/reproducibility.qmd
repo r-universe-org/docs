@@ -4,9 +4,16 @@ title: "Reproducibility"
 
 ## Does R-universe archive old versions of packages? How does it work with renv?
 
-R-universe does not archive old versions of packages, but we have something better: we track the upstream git url and commit-id in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/) 
+R-universe does not archive old versions of packages but **we track the upstream git url and commit-id** in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).
 
-## Repository snapshots
+Furthermore, **you can archive fixed versions of an universe** which you might use in production or for reproducibility, what we call [repository snapshots](#snapshots).
+
+## Repository snapshots {#snapshots}
+
+### What is a snapshot of an universe?
+
+A snapshot is a standard layout of a few directories consisting of binaries and source packages as well as a few files that index everything.
+It is a **directory of static files** that you can host somewhere, and from which you can install **fixed versions of packages**.
 
 ### Downloading repository snapshots
 
@@ -23,10 +30,15 @@ Explore the parameters on the API tab of any universe, for example: <https://ggs
 
 A CRAN-like R package repository is essentially a static directory of package files and indexes, with a specific naming structure. 
 R-universe automatically builds and updates all these files based on a registry of packages and upstream git sources. 
-But once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server!
+Once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server.
+For instance...
 
-For example, you could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. 
-Here is a minimal example of such an action: https://github.com/jeroen/backup. Note how the action is vary fast: downloading and extracting the snapshot from R-universe only takes a few seconds. 
+- An organization could host a mirror of their repository internally in their intranet. They could update the mirror every day, every month, etc.
+
+- You could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. 
+Here is a minimal example of such an action: https://github.com/jeroen/backup. 
+
+Note how the aforementioned action is very fast: **downloading and extracting the snapshot from R-universe only takes a few seconds**. 
 So this is easily something that could be done on demand, or automatically on a regular basis.
 
 You can also install packages in R directly from a local snapshot folder, by prefixing the path that you pass to `install.packages` with `file://` (Windows paths need to be normalized to look more unixy):
@@ -42,4 +54,3 @@ prefix <- ifelse (.Platform$OS.type == "windows", "file:///", "file://")
 repos <- paste0(prefix, normalizePath(snapshot, "/"))
 install.packages(c("V8", "mongolite"), repos = repos)
 ```
-
