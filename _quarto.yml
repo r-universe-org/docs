@@ -31,8 +31,7 @@ book:
 lightbox: true
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: [cosmo, custom.scss]
     toc: true
     include-in-header: "matomo.html"
     from: markdown+autolink_bare_uris
