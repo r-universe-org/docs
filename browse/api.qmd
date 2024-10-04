@@ -9,7 +9,7 @@ R-universe offers several APIs.
 The URL of these APIs start with the universe URL. 
 Here we will often use `https://jeroen.r-universe.dev` as an example but you can replace it with any universe URL.
 
-### List of packages in an universe
+### List of packages in an universe {#ls}
 
 URL: `https://<username>.r-universe.dev/api/ls`
 
@@ -29,7 +29,7 @@ URL: `https://<username>.r-universe.dev/api/packages`
 
 Parameters:
 
-- limit: the number of results to return, by default a maximum of 100.
+- limit: the number of results to return, by default a maximum of 100. You can use the [ls endpoint](#ls) to determine the total number of packages in the universe and set that as a limit.
 
 Example:
 
