@@ -10,7 +10,7 @@ The build environment is actually very similar to that of CRAN, if the package c
 
 This is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.
 
-## How to request additional third party system requirements
+## How to request additional third party system requirements?
 
 If packages need a **Linux library** that does not yet exist on the server, either:
 
