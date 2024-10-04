@@ -289,7 +289,7 @@
     "href": "publish/set-up.html#installing-the-github-app",
     "title": "10  Set up your own universe",
     "section": "10.4 Installing the GitHub app",
-    "text": "10.4 Installing the GitHub app\nOnce you pushed your packages.json file to your new universe repository on GitHub, the next step is to install the R-universe GitHub app on your account.\n\n\n\nghapp",
+    "text": "10.4 Installing the GitHub app\nOnce you pushed your packages.json file to your new universe repository on GitHub, the next step is to install the R-universe GitHub app on your account.\nThe “Read and write access to commit statuses” will enable R-universe to show commit status updates (green checkmark) to the repositories of your R packages if they are hosted under that GitHub account.\nWe recommend to install the app for “All repositories” as you might later add more packages to your universe.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Set up your own universe</span>"
