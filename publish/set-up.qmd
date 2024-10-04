@@ -10,11 +10,12 @@ The further sections on this page give more details on each step.
 1. **Create a Git repository named (all lowercase) `<your-username>.r-universe.dev` on your GitHub account**, containing a `packages.json` file which lists the Git repositories with R packages to include. 
     - For an organization at `github.com/ropensci` the repository is thus `github.com/ropensci/ropensci.r-universe.dev`; 
     - similarly for an user at `github.com/jeroen` the repository is `github.com/jeroen/jeroen.r-universe.dev`.
-1. **Install the [r-universe app](https://github.com/apps/r-universe/installations/new) on this same GitHub account** or organization for which you want to create the universe. Clicking on the [app link](https://github.com/apps/r-universe/installations/new) will lead you to a page that asks "Where do you want to install R-universe?".
+  [More details](#subdomain).
+1. **Install the [r-universe app](https://github.com/apps/r-universe/installations/new) on this same GitHub account** or organization for which you want to create the universe. Clicking on the [app link](https://github.com/apps/r-universe/installations/new) will lead you to a page that asks "Where do you want to install R-universe?". [More details](#appinstall).
 1. **Wait** for your packages to start appearing on `https://<yourname>.r-universe.dev` once they have finished building.
-1. **Document** how to install packages from R-universe in the docs of your packages.
+1. **Document** how to install packages from R-universe in the docs of your packages. [More details](#document-install).
 
-## Creating your personal R-universe subdomain
+## Creating your personal R-universe subdomain {#subdomain}
 
 In R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. 
 The subdomains are tied to the GitHub account or organization with that name. 
@@ -121,7 +122,7 @@ You can easily add more packages later by updating your `packages.json` file.
 
 To publish your registry, create a Git repository called `<yourname>.r-universe.dev` on your GitHub account and push your `packages.json` file. See for example: https://github.com/maelle/maelle.r-universe.dev.
 
-## Installing the GitHub app
+## Installing the GitHub app {#appinstall}
 
 Once you pushed your `packages.json` file to your new `universe` repository on GitHub, the next step is to install the [R-universe GitHub app](https://github.com/apps/r-universe/installations/new) on your account.
 
@@ -150,7 +151,7 @@ The GitHub app requires very limited permissions, it only requests permission to
 
 [![success](https://jeroen.github.io/runiverse2021/images/commitstatus.png)](https://jeroen.github.io/runiverse2021/#54)
 
-## Adding badges and user instructions
+## Adding badges and user instructions {#document-install}
 
 Once your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:
 
