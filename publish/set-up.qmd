@@ -12,7 +12,7 @@ The further sections on this page give more details on each step.
     - similarly for an user at `github.com/jeroen` the repository is `github.com/jeroen/jeroen.r-universe.dev`.
   [More details](#subdomain).
 1. **Install the [r-universe app](https://github.com/apps/r-universe/installations/new) on this same GitHub account** or organization for which you want to create the universe. Clicking on the [app link](https://github.com/apps/r-universe/installations/new) will lead you to a page that asks "Where do you want to install R-universe?". [More details](#appinstall).
-1. **Wait** for your packages to start appearing on `https://<yourname>.r-universe.dev` once they have finished building.
+1. **Wait** for your packages to start appearing on `https://<yourname>.r-universe.dev` once they have finished building. [More details](#wait-first-build).
 1. **Document** how to install packages from R-universe in the docs of your packages. [More details](#document-install).
 
 ## Creating your personal R-universe subdomain {#subdomain}
@@ -134,22 +134,22 @@ We recommend to install the app for "All repositories" as you might later add mo
 
 
 
-## Waiting for the first build
+## Waiting for the first build {#wait-first-build}
 
 Once you installed the app, the system will automatically create your personal monorepo under the R-universe organization: `https://github.com/r-universe/<yourname>`. 
 This is where the system keeps the full history of your packages.
-The actions tap of your monorepo is also where the building happens.
+The [actions tab of your monorepo](https://github.com/r-universe/maelle/actions) is also where the building happens.
 
-[![builds](https://jeroen.github.io/runiverse2021/images/actions.png)](https://github.com/r-universe/maelle/actions)
+[![](https://jeroen.github.io/runiverse2021/images/actions.png){fig-alt="Screenshot of the actions tab of the r-universe/maelle repository"}](https://github.com/r-universe/maelle/actions)
 
 After a while (usually no more than one hour), packages and articles that have completed building on all platforms will start appearing on your dashboard, and directly become available for installation by users.
 
 
-[![dashboard](https://jeroen.github.io/runiverse2021/images/maelledash.png)](https://maelle.r-universe.dev)
+[![](https://jeroen.github.io/runiverse2021/images/maelledash.png){fig-alt="Screenshot of the R-universe dashboard for an universe, where icons link back to the build logs on GitHub Actions."}](https://maelle.r-universe.dev)
 
 The GitHub app requires very limited permissions, it only requests permission to *read and write commit statuses*. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.
 
-[![success](https://jeroen.github.io/runiverse2021/images/commitstatus.png)](https://jeroen.github.io/runiverse2021/#54)
+[![](https://jeroen.github.io/runiverse2021/images/commitstatus.png){fig-alt="Screenshot of a GitHub repository demonstrating that clicking on the green icon on the latest commit indicates the successful build of the package for R-universe."}](https://jeroen.github.io/runiverse2021/#54)
 
 ## Adding badges and user instructions {#document-install}
 
