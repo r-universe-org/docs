@@ -256,7 +256,7 @@
     "href": "publish/set-up.html#basic-steps",
     "title": "10  Set up your own universe",
     "section": "",
-    "text": "Create a Git repository named (all lowercase) &lt;your-username&gt;.r-universe.dev on your GitHub account, containing a packages.json file which lists the Git repositories with R packages to include.\n\nFor an organization at github.com/ropensci the repository is thus github.com/ropensci/ropensci.r-universe.dev;\nsimilarly for an user at github.com/jeroen the repository is github.com/jeroen/jeroen.r-universe.dev. More details.\n\nInstall the r-universe app on this same GitHub account or organization for which you want to create the universe. Clicking on the app link will lead you to a page that asks “Where do you want to install R-universe?”. More details.\nWait for your packages to start appearing on https://&lt;yourname&gt;.r-universe.dev once they have finished building.\nDocument how to install packages from R-universe in the docs of your packages. More details.",
+    "text": "Create a Git repository named (all lowercase) &lt;your-username&gt;.r-universe.dev on your GitHub account, containing a packages.json file which lists the Git repositories with R packages to include.\n\nFor an organization at github.com/ropensci the repository is thus github.com/ropensci/ropensci.r-universe.dev;\nsimilarly for an user at github.com/jeroen the repository is github.com/jeroen/jeroen.r-universe.dev. More details.\n\nInstall the r-universe app on this same GitHub account or organization for which you want to create the universe. Clicking on the app link will lead you to a page that asks “Where do you want to install R-universe?”. More details.\nWait for your packages to start appearing on https://&lt;yourname&gt;.r-universe.dev once they have finished building. More details.\nDocument how to install packages from R-universe in the docs of your packages. More details.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Set up your own universe</span>"
@@ -296,11 +296,11 @@
     ]
   },
   {
-    "objectID": "publish/set-up.html#waiting-for-the-first-build",
-    "href": "publish/set-up.html#waiting-for-the-first-build",
+    "objectID": "publish/set-up.html#wait-first-build",
+    "href": "publish/set-up.html#wait-first-build",
     "title": "10  Set up your own universe",
     "section": "10.5 Waiting for the first build",
-    "text": "10.5 Waiting for the first build\nOnce you installed the app, the system will automatically create your personal monorepo under the R-universe organization: https://github.com/r-universe/&lt;yourname&gt;. This is where the system keeps the full history of your packages. The actions tap of your monorepo is also where the building happens.\n\n\n\nbuilds\n\n\nAfter a while (usually no more than one hour), packages and articles that have completed building on all platforms will start appearing on your dashboard, and directly become available for installation by users.\n\n\n\ndashboard\n\n\nThe GitHub app requires very limited permissions, it only requests permission to read and write commit statuses. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.\n\n\n\nsuccess",
+    "text": "10.5 Waiting for the first build\nOnce you installed the app, the system will automatically create your personal monorepo under the R-universe organization: https://github.com/r-universe/&lt;yourname&gt;. This is where the system keeps the full history of your packages. The actions tab of your monorepo is also where the building happens.\n\nAfter a while (usually no more than one hour), packages and articles that have completed building on all platforms will start appearing on your dashboard, and directly become available for installation by users.\n\nThe GitHub app requires very limited permissions, it only requests permission to read and write commit statuses. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Set up your own universe</span>"

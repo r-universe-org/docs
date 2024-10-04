@@ -286,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#hand-written-or-programmatically-created" id="toc-hand-written-or-programmatically-created" class="nav-link" data-scroll-target="#hand-written-or-programmatically-created"><span class="header-section-number">10.3.3</span> Hand-written or programmatically created</a></li>
   </ul></li>
   <li><a href="#appinstall" id="toc-appinstall" class="nav-link" data-scroll-target="#appinstall"><span class="header-section-number">10.4</span> Installing the GitHub app</a></li>
-  <li><a href="#waiting-for-the-first-build" id="toc-waiting-for-the-first-build" class="nav-link" data-scroll-target="#waiting-for-the-first-build"><span class="header-section-number">10.5</span> Waiting for the first build</a></li>
+  <li><a href="#wait-first-build" id="toc-wait-first-build" class="nav-link" data-scroll-target="#wait-first-build"><span class="header-section-number">10.5</span> Waiting for the first build</a></li>
   <li><a href="#document-install" id="toc-document-install" class="nav-link" data-scroll-target="#document-install"><span class="header-section-number">10.6</span> Adding badges and user instructions</a></li>
   <li><a href="#linking-to-your-universe-from-other-websites" id="toc-linking-to-your-universe-from-other-websites" class="nav-link" data-scroll-target="#linking-to-your-universe-from-other-websites"><span class="header-section-number">10.7</span> Linking to your universe from other websites</a></li>
   </ul>
@@ -324,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>similarly for an user at <code>github.com/jeroen</code> the repository is <code>github.com/jeroen/jeroen.r-universe.dev</code>. <a href="#subdomain">More details</a>.</li>
 </ul></li>
 <li><strong>Install the <a href="https://github.com/apps/r-universe/installations/new">r-universe app</a> on this same GitHub account</strong> or organization for which you want to create the universe. Clicking on the <a href="https://github.com/apps/r-universe/installations/new">app link</a> will lead you to a page that asks “Where do you want to install R-universe?”. <a href="#appinstall">More details</a>.</li>
-<li><strong>Wait</strong> for your packages to start appearing on <code>https://&lt;yourname&gt;.r-universe.dev</code> once they have finished building.</li>
+<li><strong>Wait</strong> for your packages to start appearing on <code>https://&lt;yourname&gt;.r-universe.dev</code> once they have finished building. <a href="#wait-first-build">More details</a>.</li>
 <li><strong>Document</strong> how to install packages from R-universe in the docs of your packages. <a href="#document-install">More details</a>.</li>
 </ol>
 </section>
@@ -407,29 +407,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We recommend to install the app for “All repositories” as you might later add more packages to your universe.</p>
 <p><a href="https://jeroen.github.io/runiverse2021/images/installapp.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://jeroen.github.io/runiverse2021/images/installapp.png" class="img-fluid" alt="Screenshot of the GitHub app showing a check mark for installation on 'All repositories'."></a></p>
 </section>
-<section id="waiting-for-the-first-build" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="waiting-for-the-first-build"><span class="header-section-number">10.5</span> Waiting for the first build</h2>
-<p>Once you installed the app, the system will automatically create your personal monorepo under the R-universe organization: <code>https://github.com/r-universe/&lt;yourname&gt;</code>. This is where the system keeps the full history of your packages. The actions tap of your monorepo is also where the building happens.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://jeroen.github.io/runiverse2021/images/actions.png" class="img-fluid figure-img"></p>
-<figcaption>builds</figcaption>
-</figure>
-</div>
+<section id="wait-first-build" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="wait-first-build"><span class="header-section-number">10.5</span> Waiting for the first build</h2>
+<p>Once you installed the app, the system will automatically create your personal monorepo under the R-universe organization: <code>https://github.com/r-universe/&lt;yourname&gt;</code>. This is where the system keeps the full history of your packages. The <a href="https://github.com/r-universe/maelle/actions">actions tab of your monorepo</a> is also where the building happens.</p>
+<p><a href="https://github.com/r-universe/maelle/actions"><img src="https://jeroen.github.io/runiverse2021/images/actions.png" class="img-fluid" alt="Screenshot of the actions tab of the r-universe/maelle repository"></a></p>
 <p>After a while (usually no more than one hour), packages and articles that have completed building on all platforms will start appearing on your dashboard, and directly become available for installation by users.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://jeroen.github.io/runiverse2021/images/maelledash.png" class="img-fluid figure-img"></p>
-<figcaption>dashboard</figcaption>
-</figure>
-</div>
+<p><a href="https://maelle.r-universe.dev"><img src="https://jeroen.github.io/runiverse2021/images/maelledash.png" class="img-fluid" alt="Screenshot of the R-universe dashboard for an universe, where icons link back to the build logs on GitHub Actions."></a></p>
 <p>The GitHub app requires very limited permissions, it only requests permission to <em>read and write commit statuses</em>. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://jeroen.github.io/runiverse2021/images/commitstatus.png" class="img-fluid figure-img"></p>
-<figcaption>success</figcaption>
-</figure>
-</div>
+<p><a href="https://jeroen.github.io/runiverse2021/#54"><img src="https://jeroen.github.io/runiverse2021/images/commitstatus.png" class="img-fluid" alt="Screenshot of a GitHub repository demonstrating that clicking on the green icon on the latest commit indicates the successful build of the package for R-universe."></a></p>
 </section>
 <section id="document-install" class="level2" data-number="10.6">
 <h2 data-number="10.6" class="anchored" data-anchor-id="document-install"><span class="header-section-number">10.6</span> Adding badges and user instructions</h2>
@@ -887,7 +872,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/set-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
