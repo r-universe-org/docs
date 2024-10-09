@@ -19,14 +19,18 @@ The search bar includes an arrow-down button that allows to access the advanced 
 ## How is the package-rank score calculated?
 
 The exact algorithm is a work-in-progress and will change. 
-Right now it is a combination of:
+At the time of writing it includes:
 
  - Number of dependents (that is to say, recursive reverse dependencies);
- - Number of Github stars;
+ - Number of stars on Github;
  - Number of unique contributors;
- - Commit activity over the last year.
+ - Commit activity over the last year;
+ - Downloads per month from CRAN or Bioconductor mirrors;
+ - Number of files on GitHub that mention ’library(pkgname)'.
 
-The score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.
+You can browse [scores and metrics for all packages](https://r-universe.dev/packages).
+
+We plan to keep updating the algorithm as R-universe matures and better data becomes available.
 
 ## Why is a package sometimes listed twice?
 
