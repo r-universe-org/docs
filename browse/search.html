@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b22013ba1b10a5f6dcf0af032bb2b236.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ddbbdeb0f7f0e6a85f3308b7b9966b13.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -306,14 +306,17 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="how-is-the-package-rank-score-calculated" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="how-is-the-package-rank-score-calculated"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</h2>
-<p>The exact algorithm is a work-in-progress and will change. Right now it is a combination of:</p>
+<p>The exact algorithm is a work-in-progress and will change. At the time of writing it includes:</p>
 <ul>
 <li>Number of dependents (that is to say, recursive reverse dependencies);</li>
-<li>Number of Github stars;</li>
+<li>Number of stars on Github;</li>
 <li>Number of unique contributors;</li>
-<li>Commit activity over the last year.</li>
+<li>Commit activity over the last year;</li>
+<li>Downloads per month from CRAN or Bioconductor mirrors;</li>
+<li>Number of files on GitHub that mention ’library(pkgname)’.</li>
 </ul>
-<p>The score is a weighted sum of the above, on a log scale. But we plan to improve the algorithm as the project gets more mature, and better data becomes available.</p>
+<p>You can browse <a href="https://r-universe.dev/packages">scores and metrics for all packages</a>.</p>
+<p>We plan to keep updating the algorithm as R-universe matures and better data becomes available.</p>
 </section>
 <section id="why-is-a-package-sometimes-listed-twice" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.2</span> Why is a package sometimes listed twice?</h2>
@@ -765,7 +768,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/search.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/search.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
