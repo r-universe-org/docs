@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.20">
+<meta name="generator" content="quarto-1.6.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -363,78 +363,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 71
- $ Package         : chr "maketools"
- $ Type            : chr "Package"
- $ Title           : chr "Exploring and Testing the Toolchain and System Libraries"
- $ Version         : chr "1.3.1"
- $ Authors@R       : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\", \"cph\"), \nemail = \"jeroenooms@gmail.com\", comment ="| __truncated__
- $ Description     : chr "Helper functions that interface with the system utilities\nto learn about the local build environment. Lets you"| __truncated__
- $ License         : chr "MIT + file LICENSE"
- $ URL             : chr "https://jeroen.r-universe.dev/maketools"
- $ BugReports      : chr "https://github.com/jeroen/maketools/issues"
- $ Encoding        : chr "UTF-8"
- $ Roxygen         : chr "list(markdown = TRUE)"
- $ RoxygenNote     : chr "7.3.1"
- $ VignetteBuilder : chr "knitr"
- $ Language        : chr "en-US"
- $ Repository      : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl       : chr "https://github.com/jeroen/maketools"
- $ RemoteRef       : chr "HEAD"
- $ RemoteSha       : chr "d46f92ca8e11a85eece34ff72a0a50b5143d3636"
- $ NeedsCompilation: chr "no"
- $ Packaged        :List of 2
- $ Author          : chr "Jeroen Ooms [aut, cre, cph] (&lt;https://orcid.org/0000-0002-4035-0289&gt;)"
- $ Maintainer      : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum          : chr "4aa09cc8b83c2b4b88b0b67db2b70d79"
- $ _user           : chr "jeroen"
- $ _type           : chr "src"
- $ _file           : chr "maketools_1.3.1.tar.gz"
- $ _fileid         : chr "4aa09cc8b83c2b4b88b0b67db2b70d79"
- $ _filesize       : int 116190
- $ _sha256         : chr "ce57279b0d05a336408bb81047cebadb3423f88ba0b95beb9c00402b960ca280"
- $ _created        : chr "2024-10-03T19:13:37.000Z"
- $ _published      : chr "2024-10-03T19:16:40.651Z"
- $ _upstream       : chr "https://github.com/jeroen/maketools"
- $ _commit         :List of 5
- $ _maintainer     :List of 6
- $ _distro         : chr "noble"
- $ _host           : chr "GitHub-Actions"
- $ _status         : chr "success"
- $ _pkgdocs        : chr "skipped"
- $ _winbinary      : chr "success"
- $ _macbinary      : chr "success"
- $ _wasmbinary     : chr "success"
- $ _linuxdevel     : chr "success"
- $ _windevel       : chr "success"
- $ _buildurl       : chr "https://github.com/r-universe/jeroen/actions/runs/11168205390"
- $ _registered     : logi TRUE
- $ _dependencies   :List of 5
- $ _owner          : chr "jeroen"
- $ _selfowned      : logi TRUE
- $ _usedby         : int 0
- $ _updates        :List of 4
- $ _tags           : list()
- $ _stars          : int 14
- $ _contributions  :List of 1
- $ _userbio        :List of 4
- $ _downloads      :List of 2
- $ _devurl         : chr "https://github.com/jeroen/maketools"
- $ _searchresults  : int 1
- $ _assets         :List of 7
- $ _homeurl        : chr "https://github.com/jeroen/maketools"
- $ _realowner      : chr "jeroen"
- $ _cranurl        : logi TRUE
- $ _releases       :List of 7
- $ _exports        :List of 23
- $ _help           :List of 6
- $ _rundeps        :List of 1
- $ _vignettes      :List of 1
- $ _score          : num 6.06
- $ _indexed        : logi TRUE
- $ _nocasepkg      : chr "maketools"
- $ _universes      :List of 1
- $ _binaries       :List of 9</code></pre>
+<pre><code>List of 77
+ $ Package           : chr "V8"
+ $ Type              : chr "Package"
+ $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
+ $ Version           : chr "5.9000"
+ $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
+ $ Description       : chr "An R interface to V8 &lt;https://v8.dev&gt;: Google's open\nsource JavaScript and WebAssembly engine. This package ca"| __truncated__
+ $ License           : chr "MIT + file LICENSE"
+ $ URL               : chr "https://jeroen.r-universe.dev/V8"
+ $ BugReports        : chr "https://github.com/jeroen/v8/issues"
+ $ SystemRequirements: chr "V8 engine version 6+ is needed for ES6 and WASM\nsupport. On Linux you can build against libv8-dev (Debian) or\"| __truncated__
+ $ NeedsCompilation  : chr "yes"
+ $ VignetteBuilder   : chr "knitr"
+ $ RoxygenNote       : chr "7.3.1"
+ $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
+ $ Language          : chr "en-US"
+ $ Encoding          : chr "UTF-8"
+ $ Biarch            : chr "true"
+ $ Repository        : chr "https://jeroen.r-universe.dev"
+ $ RemoteUrl         : chr "https://github.com/jeroen/v8"
+ $ RemoteRef         : chr "HEAD"
+ $ RemoteSha         : chr "76e06b966dc721e2ea70826fc4a7a30ec645c005"
+ $ Packaged          :List of 2
+ $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nJan Marvin Garbuszus [ctb]"
+ $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ MD5sum            : chr "139888e8f2c4f21d5958117a9ac4b39f"
+ $ _user             : chr "jeroen"
+ $ _type             : chr "src"
+ $ _file             : chr "V8_5.9000.tar.gz"
+ $ _fileid           : chr "139888e8f2c4f21d5958117a9ac4b39f"
+ $ _filesize         : int 196083
+ $ _sha256           : chr "e30885ec90d2482549047080995c6788ecb0226a03e8740c95755fa0148a0916"
+ $ _created          : chr "2024-10-09T10:19:30.000Z"
+ $ _published        : chr "2024-10-09T10:24:11.463Z"
+ $ _status           : chr "success"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11252936058"
+ $ _windevel         : chr "success"
+ $ _linuxdevel       : chr "success"
+ $ _wasmbinary       : chr "none"
+ $ _macbinary        : chr "success"
+ $ _winbinary        : chr "success"
+ $ _pkgdocs          : chr "skipped"
+ $ _upstream         : chr "https://github.com/jeroen/v8"
+ $ _commit           :List of 5
+ $ _maintainer       :List of 6
+ $ _distro           : chr "noble"
+ $ _host             : chr "GitHub-Actions"
+ $ _registered       : logi TRUE
+ $ _dependencies     :List of 8
+ $ _owner            : chr "jeroen"
+ $ _selfowned        : logi TRUE
+ $ _usedby           : int 309
+ $ _updates          :List of 13
+ $ _tags             : list()
+ $ _topics           :List of 3
+ $ _stars            : int 199
+ $ _contributions    :List of 10
+ $ _userbio          :List of 4
+ $ _downloads        :List of 2
+ $ _mentions         : int 2
+ $ _devurl           : chr "https://github.com/jeroen/v8"
+ $ _searchresults    : int 496
+ $ _assets           :List of 11
+ $ _homeurl          : chr "https://github.com/jeroen/v8"
+ $ _realowner        : chr "jeroen"
+ $ _cranurl          : logi TRUE
+ $ _releases         :List of 49
+ $ _exports          :List of 6
+ $ _help             :List of 3
+ $ _readme           : chr "https://github.com/jeroen/v8/raw/HEAD/README.md"
+ $ _rundeps          :List of 3
+ $ _sysdeps          :List of 2
+ $ _vignettes        :List of 2
+ $ _score            : num 15.5
+ $ _indexed          : logi TRUE
+ $ _nocasepkg        : chr "v8"
+ $ _universes        :List of 1
+ $ _binaries         :List of 9</code></pre>
 </div>
 </div>
 </section>
@@ -454,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ Package           : chr "V8"
  $ Type              : chr "Package"
  $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
- $ Version           : chr "5.0.1"
+ $ Version           : chr "5.9000"
  $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
  $ Description       : chr "An R interface to V8 &lt;https://v8.dev&gt;: Google's open\nsource JavaScript and WebAssembly engine. This package ca"| __truncated__
  $ License           : chr "MIT + file LICENSE"
@@ -471,39 +477,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ Repository        : chr "https://jeroen.r-universe.dev"
  $ RemoteUrl         : chr "https://github.com/jeroen/v8"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "e3bfdc3518d7c03d53a85aaa2dc5147cee97cbc7"
+ $ RemoteSha         : chr "76e06b966dc721e2ea70826fc4a7a30ec645c005"
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nJan Marvin Garbuszus [ctb]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "99131c2d998e9e26109e1f68a70a4df1"
+ $ MD5sum            : chr "139888e8f2c4f21d5958117a9ac4b39f"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "V8_5.0.1.tar.gz"
- $ _fileid           : chr "99131c2d998e9e26109e1f68a70a4df1"
- $ _filesize         : int 192373
- $ _sha256           : chr "cf2c36b8c095463ec688f191bbca4bf137c69f4b0af61d93b29e218f3a90884b"
- $ _created          : chr "2024-09-24T10:25:43.000Z"
- $ _published        : chr "2024-09-25T15:11:03.987Z"
+ $ _file             : chr "V8_5.9000.tar.gz"
+ $ _fileid           : chr "139888e8f2c4f21d5958117a9ac4b39f"
+ $ _filesize         : int 196083
+ $ _sha256           : chr "e30885ec90d2482549047080995c6788ecb0226a03e8740c95755fa0148a0916"
+ $ _created          : chr "2024-10-09T10:19:30.000Z"
+ $ _published        : chr "2024-10-09T10:24:11.463Z"
+ $ _status           : chr "success"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11252936058"
+ $ _windevel         : chr "success"
+ $ _linuxdevel       : chr "success"
+ $ _wasmbinary       : chr "none"
+ $ _macbinary        : chr "success"
+ $ _winbinary        : chr "success"
+ $ _pkgdocs          : chr "skipped"
  $ _upstream         : chr "https://github.com/jeroen/v8"
  $ _commit           :List of 5
  $ _maintainer       :List of 6
  $ _distro           : chr "noble"
  $ _host             : chr "GitHub-Actions"
- $ _status           : chr "success"
- $ _pkgdocs          : chr "skipped"
- $ _winbinary        : chr "success"
- $ _macbinary        : chr "success"
- $ _wasmbinary       : chr "none"
- $ _linuxdevel       : chr "success"
- $ _windevel         : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11011832224"
  $ _registered       : logi TRUE
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 306
- $ _updates          :List of 11
- $ _tags             :List of 1
+ $ _usedby           : int 309
+ $ _updates          :List of 13
+ $ _tags             : list()
  $ _topics           :List of 3
  $ _stars            : int 199
  $ _contributions    :List of 10
@@ -511,7 +517,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ _downloads        :List of 2
  $ _mentions         : int 2
  $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 486
+ $ _searchresults    : int 496
  $ _assets           :List of 11
  $ _homeurl          : chr "https://github.com/jeroen/v8"
  $ _realowner        : chr "jeroen"
@@ -554,15 +560,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 30
+ $ results:List of 32
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 30</code></pre>
+ $ total  : int 32</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 30</code></pre>
+<pre><code>[1] 32</code></pre>
 </div>
 </div>
 </section>
