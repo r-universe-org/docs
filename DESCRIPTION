@@ -4,6 +4,7 @@ Title: R-Universe Docs
 Description: R-R-Universe Docs
 Version: 0.0.1
 Imports:
+    httr2,
     jsonlite,
     knitr,
     purrr,

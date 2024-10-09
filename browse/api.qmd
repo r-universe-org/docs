@@ -1,0 +1,109 @@
+---
+title: "Programmatic access (APIs)"
+---
+
+R-universe offers several APIs.
+
+## Universe-specific APIs
+
+The URL of these APIs start with the universe URL. 
+Here we will often use `https://jeroen.r-universe.dev` as an example but you can replace it with any universe URL.
+
+### List of packages in an universe {#ls}
+
+URL: `https://<username>.r-universe.dev/api/ls`
+
+Example
+
+```{r}
+packages <- httr2::request("https://jeroen.r-universe.dev/api/ls") |>
+  httr2::req_user_agent("R-universe docs") |>
+  httr2::req_perform() |>
+  httr2::resp_body_json()
+str(packages)
+```
+   
+### Information of all packages in an universe  
+
+URL: `https://<username>.r-universe.dev/api/packages`
+
+Parameters:
+
+- limit: the number of results to return, by default a maximum of 100. You can use the [ls endpoint](#ls) to determine the total number of packages in the universe and set that as a limit.
+
+Example:
+
+```{r}
+packages <- httr2::request("https://jeroen.r-universe.dev/api/packages") |>
+  httr2::req_user_agent("R-universe docs") |>
+  httr2::req_perform() |>
+  httr2::resp_body_json()
+# The result is a list of packages
+str(packages[[1]], max.level = 1)
+```
+   
+### Information on a single package in an universe
+
+URL: `https://<username>.r-universe.dev/api/packages/<package>`
+
+Example:
+
+```{r}
+v8 <- httr2::request("https://jeroen.r-universe.dev/api/packages/V8") |>
+  httr2::req_user_agent("R-universe docs") |>
+  httr2::req_perform() |>
+  httr2::resp_body_json()
+
+str(v8, max.level = 1)
+```
+   
+### Search in an universe
+
+URL: `https://<username>.r-universe.dev/api/search`
+Parameters:
+
+- q: the query string. You can use the [advanced fields](/browse/search.html).
+- limit: the number of results to return, by default a maximum of 100 but you can
+    - do a first request to determine the total number of hits `N`, returned in the response as the `total` field,
+    - then do a second request using `limit=N`.
+
+Example:
+
+How many packages in the rOpenSci universe depend on httr2?
+
+```{r}
+deps <- httr2::request("https://ropensci.r-universe.dev/api/search") |>
+  httr2::req_url_query(q = 'needs:httr2') |> # packages depending on {httr2}
+  httr2::req_user_agent("R-universe docs") |>
+  httr2::req_perform() |>
+  httr2::resp_body_json()
+
+str(deps, max.level = 1)
+deps$total
+```
+
+
+## Search all universes
+
+URL: `https://r-universe.dev/api/search`
+Parameters:
+
+- q: the query string. You can use the [advanced fields](/browse/search.html).
+- limit: the number of results to return, by default a maximum of 100 but you can
+    - do a first request to determine the total number of hits `N`, returned in the response as the `total` field,
+    - then do a second request using `limit=N`.
+
+Example:
+
+```{r}
+packages <- httr2::request("https://r-universe.dev/api/search") |>
+  httr2::req_url_query(q = '"weather data"') |>
+  httr2::req_user_agent("R-universe docs") |>
+  httr2::req_perform() |>
+  httr2::resp_body_json()
+str(packages, max.level = 1)
+str(packages$results[[1]])
+```
+
+Note that searching globally only returns "indexed" packages: if a package is included in several universes, it still shows up only once in search results because of our [deduplication efforts](#deduplication).
+
