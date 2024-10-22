@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.24">
+<meta name="generator" content="quarto-1.6.29">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29a703985b9506ee1f3285ce059650bf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ddbbdeb0f7f0e6a85f3308b7b9966b13.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c4b8ba971fb2b404b2de827696c83f84.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -363,82 +363,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 77
- $ Package           : chr "V8"
+<pre><code>List of 75
+ $ Package           : chr "curl"
  $ Type              : chr "Package"
- $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
- $ Version           : chr "5.9000"
+ $ Title             : chr "A Modern and Flexible Web Client for R"
+ $ Version           : chr "5.3.0"
  $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
- $ Description       : chr "An R interface to V8 &lt;https://v8.dev&gt;: Google's open\nsource JavaScript and WebAssembly engine. This package ca"| __truncated__
+ $ Description       : chr "The curl() and curl_download() functions provide highly\nconfigurable drop-in replacements for base url() and\n"| __truncated__
  $ License           : chr "MIT + file LICENSE"
- $ URL               : chr "https://jeroen.r-universe.dev/V8"
- $ BugReports        : chr "https://github.com/jeroen/v8/issues"
- $ SystemRequirements: chr "V8 engine version 6+ is needed for ES6 and WASM\nsupport. On Linux you can build against libv8-dev (Debian) or\"| __truncated__
- $ NeedsCompilation  : chr "yes"
+ $ SystemRequirements: chr "libcurl: libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb). Version 7.80 or up is recommended."
+ $ URL               : chr "https://jeroen.r-universe.dev/curl https://curl.se/libcurl/"
+ $ BugReports        : chr "https://github.com/jeroen/curl/issues"
  $ VignetteBuilder   : chr "knitr"
- $ RoxygenNote       : chr "7.3.1"
- $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
- $ Language          : chr "en-US"
+ $ RoxygenNote       : chr "7.3.2.9000"
  $ Encoding          : chr "UTF-8"
- $ Biarch            : chr "true"
+ $ Language          : chr "en-US"
+ $ Roxygen           : chr "list(markdown = TRUE)"
  $ Repository        : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl         : chr "https://github.com/jeroen/v8"
+ $ RemoteUrl         : chr "https://github.com/jeroen/curl"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "76e06b966dc721e2ea70826fc4a7a30ec645c005"
+ $ RemoteSha         : chr "44cb6e8e96e94c3367d580f33bd79edd019520ac"
+ $ NeedsCompilation  : chr "yes"
  $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nJan Marvin Garbuszus [ctb]"
+ $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nRStudio [cph]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "139888e8f2c4f21d5958117a9ac4b39f"
+ $ MD5sum            : chr "c1e27b62355b60765fcc84ac5b5b643a"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "V8_5.9000.tar.gz"
- $ _fileid           : chr "139888e8f2c4f21d5958117a9ac4b39f"
- $ _filesize         : int 196083
- $ _sha256           : chr "e30885ec90d2482549047080995c6788ecb0226a03e8740c95755fa0148a0916"
- $ _created          : chr "2024-10-09T10:19:30.000Z"
- $ _published        : chr "2024-10-09T10:24:11.463Z"
+ $ _file             : chr "curl_5.3.0.tar.gz"
+ $ _fileid           : chr "dd03104eec3f020f534556b318affaa462e79718c4eb0a5ee32b94da885503c3"
+ $ _filesize         : int 314815
+ $ _sha256           : chr "dd03104eec3f020f534556b318affaa462e79718c4eb0a5ee32b94da885503c3"
+ $ _created          : chr "2024-10-21T21:14:48.000Z"
+ $ _published        : chr "2024-10-21T21:25:28.463Z"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11448714349"
  $ _status           : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11252936058"
  $ _windevel         : chr "success"
  $ _linuxdevel       : chr "success"
  $ _wasmbinary       : chr "none"
  $ _macbinary        : chr "success"
  $ _winbinary        : chr "success"
  $ _pkgdocs          : chr "skipped"
- $ _upstream         : chr "https://github.com/jeroen/v8"
+ $ _upstream         : chr "https://github.com/jeroen/curl"
  $ _commit           :List of 5
  $ _maintainer       :List of 6
  $ _distro           : chr "noble"
  $ _host             : chr "GitHub-Actions"
  $ _registered       : logi TRUE
- $ _dependencies     :List of 8
+ $ _dependencies     :List of 9
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 309
- $ _updates          :List of 13
- $ _tags             : list()
- $ _topics           :List of 3
- $ _stars            : int 199
- $ _contributions    :List of 10
+ $ _usedby           : int 5583
+ $ _updates          :List of 15
+ $ _tags             :List of 2
+ $ _stars            : int 216
+ $ _contributions    :List of 20
  $ _userbio          :List of 4
  $ _downloads        :List of 2
- $ _mentions         : int 2
- $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 496
+ $ _mentions         : int 21
+ $ _devurl           : chr "https://github.com/jeroen/curl"
+ $ _searchresults    : int 3424
  $ _assets           :List of 11
- $ _homeurl          : chr "https://github.com/jeroen/v8"
+ $ _homeurl          : chr "https://github.com/jeroen/curl"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 49
- $ _exports          :List of 6
- $ _help             :List of 3
- $ _readme           : chr "https://github.com/jeroen/v8/raw/HEAD/README.md"
- $ _rundeps          :List of 3
- $ _sysdeps          :List of 2
+ $ _releases         :List of 46
+ $ _exports          :List of 42
+ $ _help             :List of 19
+ $ _readme           : chr "https://github.com/jeroen/curl/raw/HEAD/README.md"
+ $ _rundeps          : list()
+ $ _sysdeps          :List of 1
  $ _vignettes        :List of 2
- $ _score            : num 15.5
+ $ _score            : num 19.6
  $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "v8"
+ $ _nocasepkg        : chr "curl"
  $ _universes        :List of 1
  $ _binaries         :List of 9</code></pre>
 </div>
@@ -460,7 +458,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ Package           : chr "V8"
  $ Type              : chr "Package"
  $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
- $ Version           : chr "5.9000"
+ $ Version           : chr "6.0.0"
  $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
  $ Description       : chr "An R interface to V8 &lt;https://v8.dev&gt;: Google's open\nsource JavaScript and WebAssembly engine. This package ca"| __truncated__
  $ License           : chr "MIT + file LICENSE"
@@ -477,21 +475,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ Repository        : chr "https://jeroen.r-universe.dev"
  $ RemoteUrl         : chr "https://github.com/jeroen/v8"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "76e06b966dc721e2ea70826fc4a7a30ec645c005"
+ $ RemoteSha         : chr "8d5312779708b6bc13970b199363296d0776fb86"
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nJan Marvin Garbuszus [ctb]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "139888e8f2c4f21d5958117a9ac4b39f"
+ $ MD5sum            : chr "b3e85490797b360b69df1da61f516c6c"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "V8_5.9000.tar.gz"
- $ _fileid           : chr "139888e8f2c4f21d5958117a9ac4b39f"
+ $ _file             : chr "V8_6.0.0.tar.gz"
+ $ _fileid           : chr "b3e85490797b360b69df1da61f516c6c"
  $ _filesize         : int 196083
- $ _sha256           : chr "e30885ec90d2482549047080995c6788ecb0226a03e8740c95755fa0148a0916"
- $ _created          : chr "2024-10-09T10:19:30.000Z"
- $ _published        : chr "2024-10-09T10:24:11.463Z"
+ $ _sha256           : chr "57e4fdd75a66b70e1acfb642252435e7b9f67e1deb596ce7c3979b276712df67"
+ $ _created          : chr "2024-10-12T10:13:37.000Z"
+ $ _published        : chr "2024-10-12T21:19:45.180Z"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11304816202"
  $ _status           : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/11252936058"
  $ _windevel         : chr "success"
  $ _linuxdevel       : chr "success"
  $ _wasmbinary       : chr "none"
@@ -507,7 +505,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 309
+ $ _usedby           : int 311
  $ _updates          :List of 13
  $ _tags             : list()
  $ _topics           :List of 3
@@ -560,15 +558,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 32
+ $ results:List of 33
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 32</code></pre>
+ $ total  : int 33</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 32</code></pre>
+<pre><code>[1] 33</code></pre>
 </div>
 </div>
 </section>
@@ -594,23 +592,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 70
+ $ results:List of 69
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 70</code></pre>
+ $ total  : int 69</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 16
- $ _id        : chr "66f8103d560cbda70e9de917"
+ $ _id        : chr "6715cb55035af9e85905e9ea"
  $ Package    : chr "weatherOz"
  $ Title      : chr "An API Client for Australian Weather and Climate Data Resources"
  $ Description: chr "Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints pro"| __truncated__
  $ _user      : chr "ropensci"
  $ _owner     : chr "ropensci"
  $ _usedby    : int 0
- $ _score     : num 8.2
+ $ _score     : num 8.41
  $ _uuid      : int 1200269
  $ maintainer :List of 5
   ..$ name : chr "Rodrigo Pires"
@@ -618,8 +616,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ..$ login: chr "bozaah"
   ..$ uuid : int 11730095
   ..$ orcid: chr "0000-0001-7384-6849"
- $ updated    : int 1727530072
- $ stars      : int 22
+ $ updated    : int 1729479932
+ $ stars      : int 23
  $ topics     :List of 19
   ..$ : chr "dpird"
   ..$ : chr "bom"
@@ -697,7 +695,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ..$ : chr "xml2"
   ..$ : chr "yaml"
  $ match      : num 170
- $ rank       : num 1397</code></pre>
+ $ rank       : num 1433</code></pre>
 </div>
 </div>
 <p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>
