@@ -9,4 +9,7 @@ Imports:
     knitr,
     purrr,
     rmarkdown,
+    universe (>= 1.0.0),
     xml2
+Remotes:  
+    ropensci/universe
