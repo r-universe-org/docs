@@ -17,6 +17,30 @@ On this page we'll show examples using {httr2} or {universe} directly.
 The URL of these APIs start with the universe URL. 
 Here we will often use `https://jeroen.r-universe.dev` as an example but you can replace it with any universe URL.
 
+### List of all universes
+
+URL: `https://r-universe.dev/stats/everyone`
+
+Example
+
+```{r}
+universes <- httr2::request("https://r-universe.dev/stats/everyone") |>
+  httr2::req_user_agent("R-universe docs") |>
+  httr2::req_perform() |>
+  httr2::resp_body_json()
+str(universes, max.level = 1)
+head(universes[["universes"]])
+head(universes[["maintainers"]])
+```
+
+Or:
+
+```{r}
+universe::everyone() |> head()
+universe::everyone(type = "universes") |> head()
+universe::everyone(type = "maintainers") |> head()
+```
+
 ### List of packages in an universe {#ls}
 
 URL: `https://<username>.r-universe.dev/api/ls`
