@@ -20,5 +20,6 @@ We welcome contributions to this guide.
 Please open a [pull request](https://github.com/r-universe-org/docs) for a small change,
 or open an [issue](https://github.com/r-universe-org/docs/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen) to suggest a larger change (change that we might invite you to create, 
 or that we can make on your behalf).
+Also read our [contributing guide](https://github.com/r-universe-org/docs/blob/main/.github/CONTRIBUTING.md).
 
 This website is licensed under the [CC BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
