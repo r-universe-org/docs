@@ -12,9 +12,9 @@ The first step towards making your package easier to find by search is to polish
 - Details;
 - URL by adding the R-universe URL. [Example](https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17)
 
-### How to add keyword labels to an R package?
+### How to add keyword labels to an R package? {#keywords}
 
-R-universe's search algorithm uses keywords associated with a package.
+R-universe's [search algorithm](#rank) uses keywords associated with a package.
 
 If the R package is hosted on GitHub you can add keywords by configuring [repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). 
 
@@ -23,8 +23,9 @@ This field [is permitted on CRAN](https://cs.github.com/?q=org%3Acran+X-schema.o
 
 The build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like `c++` or `openmp`.
 
-### How to increase the rank of a package?
+### How to increase the rank of a package? {#better-rank}
 
+The place of your package in search results depends on its [rank](#rank).
 One aspect might be to get more GitHub stars.
 Read about ideas in the blog post ["Marketing Ideas For Your Package"](https://ropensci.org/blog/2024/03/07/package-marketing/).
 

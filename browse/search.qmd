@@ -16,9 +16,11 @@ The search bar includes an arrow-down button that allows to access the advanced 
 
 ![Search results for 'exports:toJSON'](../img/search-exportsToJson.png){group="search" fig-alt="Search results for 'exports:tojson'"}
 
-## How is the package-rank score calculated?
+## How is the package-rank score calculated? {#rank}
 
-The exact algorithm is a work-in-progress and will change. 
+The rank of a package in search results is based on its [match](https://github.com/r-universe-org/cranlike-server/blob/master/src/db.js#L63-L93) with the search queries, and on its popularity/quality.
+
+The exact algorithm for calculating popularity/quality is a work-in-progress and will change. 
 At the time of writing it includes:
 
  - Number of dependents (that is to say, recursive reverse dependencies);
@@ -31,6 +33,8 @@ At the time of writing it includes:
 You can browse [scores and metrics for all packages](https://r-universe.dev/packages).
 
 We plan to keep updating the algorithm as R-universe matures and better data becomes available.
+
+As a package maintainer, you can [optimize your package's metadata](#keywords) and work on [improving its rank](#better-rank).
 
 ## Why is a package sometimes listed twice?
 
