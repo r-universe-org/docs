@@ -29,6 +29,10 @@ book:
         - publish/metadata.qmd
         - publish/debug-build.qmd
         - publish/other-networks.qmd
+    - part: Infrastructure
+      chapters:
+        - infra/governance.qmd
+        - infra/contribute.qmd
 lightbox: true
 format:
   html:
