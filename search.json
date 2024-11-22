@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "R-Universe Docs",
     "section": "",
-    "text": "R-universe is rOpenSci’s platform for improving publication and discovery of research software in R.\nR-universe allows users and developers of R packages to…\n\nDiscover: R-universe provides a searchable catalogue for R software, articles, datasets, anywhere in the ecosystem. That catalogue is indexed and ranked using R specific features.\nLearn: R-universe serves rendered material and extensive background information to learn about a package and get started using it.\nPublish: R-universe is an open platform for running personal cran-like package repositories to make your work visible and accessible to a big audience, with or without CRAN.\nDevelop: R-universe provides a zero config development environment for continuous integration (identify upcoming breakage before the release), experimental R features, new platforms such as WebAssembly, etc.\n\nFind out more context, and recent videos, on the project page on the rOpenSci website.\nLearn more about the governance and sustainability of R-universe.\nWe welcome contributions to this guide. Please open a pull request for a small change, or open an issue to suggest a larger change (change that we might invite you to create, or that we can make on your behalf). Also read our contributing guide.\nThis website is licensed under the CC BY-NC-ND 4.0 License.",
+    "text": "R-universe is rOpenSci’s platform for improving publication and discovery of research software in R.\nR-universe allows users and developers of R packages to…\n\nDiscover: R-universe provides a searchable catalogue for R software, articles, datasets, anywhere in the ecosystem. That catalogue is indexed and ranked using R specific features.\nLearn: R-universe serves rendered material and extensive background information to learn about a package and get started using it.\nPublish: R-universe is an open platform for running personal cran-like package repositories to make your work visible and accessible to a big audience, with or without CRAN.\nDevelop: R-universe provides a zero config development environment for continuous integration (identify upcoming breakage before the release), experimental R features, new platforms such as WebAssembly, etc.\n\nFind out more context, and recent videos, on the project page on the rOpenSci website.\nWe welcome contributions to this guide. Please open a pull request for a small change, or open an issue to suggest a larger change (change that we might invite you to create, or that we can make on your behalf). Also read our contributing guide.\nThis website is licensed under the CC BY-NC-ND 4.0 License.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>R-universe docs</span>"
     ]
@@ -25,15 +25,15 @@
     "href": "browse/search.html",
     "title": "3  Search for packages",
     "section": "",
-    "text": "3.1 How is the package-rank score calculated?\nYou can search for packages via https://r-universe.dev/search/ using keywords or author names. If you want to use an exact phrase like “weather data”, you must use double quotes, not single quotes, around it. The search bar includes an arrow-down button that allows to access the advanced search fields.\nThe exact algorithm is a work-in-progress and will change. At the time of writing it includes:\nYou can browse scores and metrics for all packages.\nWe plan to keep updating the algorithm as R-universe matures and better data becomes available.",
+    "text": "3.1 How is the package-rank score calculated?\nYou can search for packages via https://r-universe.dev/search/ using keywords or author names. If you want to use an exact phrase like “weather data”, you must use double quotes, not single quotes, around it. The search bar includes an arrow-down button that allows to access the advanced search fields.\nThe rank of a package in search results is based on its match with the search queries, and on its popularity/quality.\nThe exact algorithm for calculating popularity/quality is a work-in-progress and will change. At the time of writing it includes:\nYou can browse scores and metrics for all packages.\nWe plan to keep updating the algorithm as R-universe matures and better data becomes available.\nAs a package maintainer, you can optimize your package’s metadata and work on improving its rank.",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
     ]
   },
   {
-    "objectID": "browse/search.html#how-is-the-package-rank-score-calculated",
-    "href": "browse/search.html#how-is-the-package-rank-score-calculated",
+    "objectID": "browse/search.html#rank",
+    "href": "browse/search.html#rank",
     "title": "3  Search for packages",
     "section": "",
     "text": "Number of dependents (that is to say, recursive reverse dependencies);\nNumber of stars on Github;\nNumber of unique contributors;\nCommit activity over the last year;\nDownloads per month from CRAN or Bioconductor mirrors;\nNumber of files on GitHub that mention ’library(pkgname)’.",
@@ -377,7 +377,7 @@
     "href": "publish/metadata.html#package-metadata",
     "title": "12  Control the metadata / SEO",
     "section": "",
-    "text": "12.1.1 Basic information in DESCRIPTION\nThe first step towards making your package easier to find by search is to polish those DESCRIPTION fields:\n\nDescription;\nDetails;\nURL by adding the R-universe URL. Example\n\n\n\n12.1.2 How to add keyword labels to an R package?\nR-universe’s search algorithm uses keywords associated with a package.\nIf the R package is hosted on GitHub you can add keywords by configuring repository topics.\nAlternatively, you can specify keywords in the X-schema.org-keywords field in your package DESCRIPTION file. This field is permitted on CRAN as well.\nThe build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like c++ or openmp.\n\n\n12.1.3 How to increase the rank of a package?\nOne aspect might be to get more GitHub stars. Read about ideas in the blog post “Marketing Ideas For Your Package”.\n\n\n12.1.4 How to get a package logo shown in the packages tab?\nWe use the same conventions as pkgdown to find a logo for the package. It either needs to be in one of the locations checked by pkgdown:::find_logo() (man/figures/logo.png and man/figures/logo.svg) or set as an opengraph image in your _pkgdown.yml.",
+    "text": "12.1.1 Basic information in DESCRIPTION\nThe first step towards making your package easier to find by search is to polish those DESCRIPTION fields:\n\nDescription;\nDetails;\nURL by adding the R-universe URL. Example\n\n\n\n12.1.2 How to add keyword labels to an R package?\nR-universe’s search algorithm uses keywords associated with a package.\nIf the R package is hosted on GitHub you can add keywords by configuring repository topics.\nAlternatively, you can specify keywords in the X-schema.org-keywords field in your package DESCRIPTION file. This field is permitted on CRAN as well.\nThe build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like c++ or openmp.\n\n\n12.1.3 How to increase the rank of a package?\nThe place of your package in search results depends on its rank. One aspect might be to get more GitHub stars. Read about ideas in the blog post “Marketing Ideas For Your Package”.\n\n\n12.1.4 How to get a package logo shown in the packages tab?\nWe use the same conventions as pkgdown to find a logo for the package. It either needs to be in one of the locations checked by pkgdown:::find_logo() (man/figures/logo.png and man/figures/logo.svg) or set as an opengraph image in your _pkgdown.yml.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Control the metadata / SEO</span>"
@@ -469,39 +469,6 @@
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Relation to other networks</span>"
-    ]
-  },
-  {
-    "objectID": "infra/governance.html",
-    "href": "infra/governance.html",
-    "title": "15  R-universe governance",
-    "section": "",
-    "text": "15.1 Governance\nR-universe was initiated at, and is currently governed by, rOpenSci.\nrOpenSci is a non-profit initiative that supports open and reproducible science through different projects, including and not limited to: a software peer-review system for R packages, a champions program for people from historically and systematically excluded groups who are interested in contributing to rOpenSci and the broader open source and open science communities, multilingual publishing efforts. rOpenSci builds a welcoming and diverse community. rOpenSci curates a blog, coworking events, community calls.\nTODO: list relevant people?",
-    "crumbs": [
-      "Infrastructure",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>R-universe governance</span>"
-    ]
-  },
-  {
-    "objectID": "infra/governance.html#funding",
-    "href": "infra/governance.html#funding",
-    "title": "15  R-universe governance",
-    "section": "15.2 Funding",
-    "text": "15.2 Funding\nR-universe is financially supported by the R Consortium as a top-level project.\nTODO: previous funding including GSOD?",
-    "crumbs": [
-      "Infrastructure",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>R-universe governance</span>"
-    ]
-  },
-  {
-    "objectID": "infra/contribute.html",
-    "href": "infra/contribute.html",
-    "title": "16  Contribute",
-    "section": "",
-    "text": "R-universe is developed in the open on GitHub.",
-    "crumbs": [
-      "Infrastructure",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Contribute</span>"
     ]
   }
 ]
