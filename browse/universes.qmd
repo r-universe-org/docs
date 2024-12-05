@@ -5,25 +5,49 @@ title: "Browsing work from a maintainer or organization"
 Each user and organization in R-universe has a unique subdomain under r-universe.dev with a package repository from where packages can directly be installed. 
 For example, the packages and information from rOpenSci can be found on https://ropensci.r-universe.dev, and packages maintained by Jeroen Ooms are listed at https://jeroen.r-universe.dev (note how these two sets overlap).
 
-The top tabs allow you to explore different resources within universe. 
+The top tabs allow you to explore different resources within universe.
 
-![Builds tab of an universe](../img/univ-builds.png){group="univ" fig-alt="Builds tab of an universe, including a summary table of package versions and the status of latest builds on different OS."}
+---
 
-The builds tab shows the current state of the repository: a table with the name and version of each package, including the commit date, author, and build status. 
-Clicking on the package name in the table sends you to the [homepage of the package](/browse/packages.html), and the maintainer name links to the subdomain of that maintainer, listing other projects maintained by this person.
+### Builds Tab
 
-![Packages tab of an universe](../img/univ-packages.png){group="univ" fig-alt="Packages tab of an universe, showing one summary card per package."}
+![Builds tab of a universe](../img/univ-builds.png){group="univ" fig-alt="Builds tab of a universe, including a summary table of package versions and the status of latest builds on different OS."}
 
-![Articles tab of an universe](../img/univ-articles.png){group="univ" fig-alt="Articles tab of an universe, showing all vignettes."}
+The **Builds tab** shows the current state of the repository in a table, including:  
+- Package name and version,  
+- Commit date,  
+- Author, and  
+- Build status. 
 
-The packages tab lists descriptive information from all packages in the repository, and the articles tab shows all documents (e.g. vignettes). 
+Clicking on a package name takes you to its [homepage](/browse/packages.html), while clicking the maintainer’s name links to their subdomain, where you can explore other projects they maintain.
 
-![Contributors tab of an universe](../img/univ-contributors.png){group="univ" fig-alt="Contributors tab of an universe, showing contribution activity per contributor."}
+---
 
-The contributors tab shows a chart with contributor statistics for the organization or maintainer.
-Clicking on the a bar in the chart sends you to this other universe where you can explore more work by this person.
+### Packages and Articles Tabs
 
-The same subdomain hosts the actual cran-like package repository for this user or organization. Hence in order to list or install packages from rOpenSci in R, you would use:
+![Packages tab of a universe](../img/univ-packages.png){group="univ" fig-alt="Packages tab of a universe, showing one summary card per package."}
+
+The **Packages tab** lists descriptive information for all packages in the repository.
+
+![Articles tab of a universe](../img/univ-articles.png){group="univ" fig-alt="Articles tab of a universe, showing all vignettes."}
+
+The **Articles tab** displays all documents (e.g., vignettes).
+
+---
+
+### Contributors Tab
+
+![Contributors tab of a universe](../img/univ-contributors.png){group="univ" fig-alt="Contributors tab of a universe, showing contribution activity per contributor."}
+
+The **Contributors tab** shows a chart with contributor statistics for the organization or maintainer.  
+Clicking a bar in the chart takes you to that contributor’s universe, where you can explore more of their work.  
+
+---
+
+### Installing Packages from a Universe
+
+Each subdomain also hosts a CRAN-like package repository for the user or organization.  
+To list or install packages from rOpenSci in R, you can use:
 
 ```r
 # List available packages
