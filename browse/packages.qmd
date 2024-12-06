@@ -2,18 +2,30 @@
 title: "Individual package information"
 ---
 
-Clicking on a package in search results or in a universe overview will lead you to the [homepage for that package](/browse/packages.html). You can also link to this page directly via the url `https://{owner}.r-universe.dev/{package}`.
+Clicking on a package in search results or in a universe overview will take you to the [homepage for that package](/browse/packages.html). You can also link to this page directly using the url `https://{owner}.r-universe.dev/{package}`.
+
+---
+
+## Package Homepage
 
 ![Landing page for the sf package](../img/pkg-.png){group="pkg" fig-alt="Landing page for the sf package, displaying much information including installation instructions."}
 
 ![Citation for the sf package](../img/pkg-citation.png){group="pkg" fig-alt="Citation for the sf package."}
 
-These package pages are generated automatically and provide detailed information about each project, and all the information and resources to quickly install and try the package locally in R.
+Each package page is automatically generated and provides:  
+- Detailed information about the project,  
+- Installation instructions for quick setup in R,  
+- Other relevant resources.  
+
+---
 
 ## Website tour
 
-To familiarize yourself with the information provided on the R-universe page of each package you can read this documentation chapter but also follow the "Website Tour".
-Click on the "Website Tour" button in the navbar.
+To explore the information provided on the R-universe page for each package, you can:  
+- Read this documentation chapter, or  
+- Click the "Website Tour" button in the navbar for an interactive guide.  
+
+---
 
 ## Package information
 
@@ -28,9 +40,11 @@ If specified, we also show how the package should be cited in papers.
 
 ### How are the dependencies / dependents calculated?
 
-Both are calculated using transitive (recursive) strong dependencies, hence this includes both direct and indirect dependencies. Or in practical terms: other packages that need to be installed at minimum to be able to use the target package.
+Dependencies and dependents are derived using transitive (recursive) strong dependencies.  
+- Dependencies: Other packages required to use the target package.  
+- Dependents: Packages listing the target package as a dependency.  
 
-At package build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to derive the list of hard dependencies and store this in the database. R-base packages are not included. The `dependencies` value is simply the size of this list. The `dependents` value is the opposite: this is the number of packages in R-universe which list the target package as one of its dependencies.
+At build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to compute the list of hard dependencies, excluding R-base packages. The size of this list determines the `dependencies` value, while the `dependents` value reflects the number of packages in R-universe depending on the target package.  
 
 
 ### How does R-universe analyze system dependencies (C/C++)
@@ -56,7 +70,7 @@ The maketools vignette explains this in more detail: [Automatically determine ru
 
 ## All the documentation
 
-To let you start using packages as quickly as possible, R-universe renders all available documentation and presents this as clear and concisely as possible on the homepage.
+R-universe renders all available documentation to help you start using packages quickly.
 
 ![README of the sf package](../img/pkg-readme.png){group="pkg" fig-alt="README of the sf package."}
 
