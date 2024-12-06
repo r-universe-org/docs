@@ -4,27 +4,25 @@ title: "Reproducibility"
 
 ## Does R-universe archive old versions of packages? How does it work with renv?
 
-R-universe does not archive old versions of packages but **we track the upstream git url and commit-id** in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).
+R-universe does not archive old versions of packages, but it **tracks the upstream git URL and commit ID** in the R package description. This allows tools like `renv` to restore packages in environments that were installed from R-universe. For more details, see this technote: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).  
 
-Furthermore, **you can archive fixed versions of an universe** which you might use in production or for reproducibility, what we call [repository snapshots](#snapshots).
+You can also **archive fixed versions of a universe** for production or reproducibility, using what we call [repository snapshots](#snapshots).  
 
 ## Repository snapshots {#snapshots}
 
 ### What is a snapshot of an universe?
 
-A snapshot is a standard layout of a few directories consisting of binaries and source packages as well as a few files that index everything.
-It is a **directory of static files** that you can host somewhere, and from which you can install **fixed versions of packages**.
+A snapshot is a directory of static files containing binaries, source packages, and indexing files.  
+Snapshots allow you to host **fixed versions of packages** and install them as needed.
 
 ### Downloading repository snapshots
 
-The new snapshot API lets you download a full copy of any repository on R-universe. 
-You can use such a snapshot to mirror the entire CRAN-like repository on your own servers, or for example to build a stable, validated release of your package suite.
+The snapshot API lets you download a full copy of any repository on R-universe.  
+You can use this snapshot to mirror the CRAN-like repository on your own servers or to build a stable, validated release of your package suite.  
 
 The API endpoint is `/api/snapshot` and has several options to filter content.
-By default it returns a zip file with all the packages, binaries, and documentation in your repository. 
-If this is more than you need, there are parameters to include e.g. only binaries for certain platforms or certain versions of R, or to create a repository from a subset of the packages in your universe. 
-Explore the parameters on the API tab of any universe, for example: <https://ggseg.r-universe.dev/api>.
-
+By default, the endpoint returns a zip file with all the repository’s packages, binaries, and documentation. If needed, you can filter the content to include only specific binaries, R versions, or subsets of packages.  
+Explore the API parameters for your universe, e.g., <https://ggseg.r-universe.dev/api>.  
 
 ### Using snapshots
 
