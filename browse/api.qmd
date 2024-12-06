@@ -2,26 +2,24 @@
 title: "Programmatic access (APIs)"
 ---
 
-R-universe offers several APIs.
-There is no authentication.
+R-universe provides several APIs for programmatic access, requiring no authentication.
 
-You can call the API as you prefer:
+You can interact with the API in two ways:  
+- Create API calls manually in the command-line or R.  
+- Use the [universe R package](https://docs.ropensci.org/universe/) available from rOpenSci's R-universe.  
 
-- creating your API calls "manually" in the command-line or R;
-- using the [universe R package](https://docs.ropensci.org/universe/) available from rOpensci R-universe.
-
-On this page we'll show examples using {httr2} or {universe} directly.
+This page demonstrates examples using `{httr2}` or `{universe}` directly.
 
 ## Universe-specific APIs
 
-The URL of these APIs start with the universe URL. 
-Here we will often use `https://jeroen.r-universe.dev` as an example but you can replace it with any universe URL.
+API endpoints start with the universe URL.  
+This documentation uses `https://jeroen.r-universe.dev` as an example, but you can replace it with any universe URL.  
 
 ### List of all universes
 
 URL: `https://r-universe.dev/stats/everyone`
 
-Example
+Example using `{httr2}`:
 
 ```{r}
 universes <- httr2::request("https://r-universe.dev/stats/everyone") |>
@@ -33,7 +31,7 @@ head(universes[["universes"]])
 head(universes[["maintainers"]])
 ```
 
-Or:
+Example using `{universe}`:
 
 ```{r}
 universe::everyone() |> head()
@@ -45,7 +43,7 @@ universe::everyone(type = "maintainers") |> head()
 
 URL: `https://<username>.r-universe.dev/api/ls`
 
-Example
+Example using `{httr2}`:
 
 ```{r}
 packages <- httr2::request("https://jeroen.r-universe.dev/api/ls") |>
@@ -55,7 +53,7 @@ packages <- httr2::request("https://jeroen.r-universe.dev/api/ls") |>
 str(packages)
 ```
 
-Or:
+Example using `{universe}`:
 
 ```{r}
 packages <- universe::universe_ls("jeroen")
@@ -68,9 +66,9 @@ URL: `https://<username>.r-universe.dev/api/packages`
 
 Parameters:
 
-- limit: the number of results to return, by default a maximum of 100. You can use the [ls endpoint](#ls) to determine the total number of packages in the universe and set that as a limit.
+- limit: Maximum number of results (default: 100). Use the [ls endpoint](#ls) to determine the total number of packages and adjust the limit accordingly.
 
-Example:
+Example using `{httr2}`:
 
 ```{r}
 packages <- httr2::request("https://jeroen.r-universe.dev/api/packages") |>
@@ -81,7 +79,7 @@ packages <- httr2::request("https://jeroen.r-universe.dev/api/packages") |>
 str(packages[[1]], max.level = 1)
 ```
 
-Or:
+Example using `{universe}`:
 
 ```{r}
 packages <- universe::universe_all_packages("jeroen")
@@ -93,7 +91,7 @@ str(packages[[1]], max.level = 1)
 
 URL: `https://<username>.r-universe.dev/api/packages/<package>`
 
-Example:
+Example using `{httr2}`:
 
 ```{r}
 v8 <- httr2::request("https://jeroen.r-universe.dev/api/packages/V8") |>
@@ -104,7 +102,7 @@ v8 <- httr2::request("https://jeroen.r-universe.dev/api/packages/V8") |>
 str(v8, max.level = 1)
 ```
    
-Or:
+Example using `{universe}`:
 
 ```{r}
 V8 <- universe::universe_one_package("jeroen", "V8")
@@ -117,12 +115,12 @@ str(V8, max.level = 1)
 URL: `https://<username>.r-universe.dev/api/search`
 Parameters:
 
-- q: the query string. You can use the [advanced fields](/browse/search.html).
-- limit: the number of results to return, by default a maximum of 100 but you can
-    - do a first request to determine the total number of hits `N`, returned in the response as the `total` field,
-    - then do a second request using `limit=N`.
+- q: Query string (supports [advanced fields](/browse/search.html)).
+- limit: Maximum number of results (default: 100). To retrieve all results:
+    - Perform an initial query to get the `total` field.
+    - Perform a second query with `limit=N`.
 
-Example:
+Using `{httr2}`:
 
 How many packages in the rOpenSci universe depend on httr2?
 
@@ -137,7 +135,7 @@ str(deps, max.level = 1)
 deps$total
 ```
 
-Or:
+Using `{universe}`:
 
 ```{r}
 deps <- universe::universe_search("ropensci", query = 'needs:httr2')
@@ -157,7 +155,7 @@ Parameters:
     - do a first request to determine the total number of hits `N`, returned in the response as the `total` field,
     - then do a second request using `limit=N`.
 
-Example:
+Example using `{httr2}`:
 
 ```{r}
 packages <- httr2::request("https://r-universe.dev/api/search") |>
@@ -169,7 +167,7 @@ str(packages, max.level = 1)
 str(packages$results[[1]])
 ```
 
-Or:
+Example using `{universe}`:
 
 ```{r}
 packages <- universe::global_search(query = '"weather data"', limit = 100L)
