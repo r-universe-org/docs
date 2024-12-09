@@ -248,8 +248,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#reserved-names" id="toc-reserved-names" class="nav-link active" data-scroll-target="#reserved-names"><span class="header-section-number">14.1</span> Reserved names</a></li>
-  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct"><span class="header-section-number">14.2</span> Code of Conduct</a></li>
+  <li><a href="#avoid-name-collisions" id="toc-avoid-name-collisions" class="nav-link active" data-scroll-target="#avoid-name-collisions"><span class="header-section-number">14.1</span> Avoid name collisions</a></li>
+  <li><a href="#reserved-names" id="toc-reserved-names" class="nav-link" data-scroll-target="#reserved-names"><span class="header-section-number">14.2</span> Reserved names</a></li>
+  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct"><span class="header-section-number">14.3</span> Code of Conduct</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/terms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -275,8 +276,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="reserved-names" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="reserved-names"><span class="header-section-number">14.1</span> Reserved names</h2>
+<section id="avoid-name-collisions" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="avoid-name-collisions"><span class="header-section-number">14.1</span> Avoid name collisions</h2>
+<p>While it is technically possible to host a fork or completely different package with the same name in a universe, we strongly recommend your <strong>not</strong> doing it.</p>
+<ul>
+<li>An user might mistakenly install the <code>example</code> package from CRAN rather than the version from an universe. R will automatically overwrite one package with the other when running <code>install.packages()</code> or <code>update.packages()</code>.</li>
+<li>It becomes even trickier when other packages import the package.</li>
+</ul>
+<p>Therefore, when two packages have the same name, and one of them is on CRAN, R-universe: - treats the one that is on CRAN as the official version. - warns users against the duplication on the page of the other package.</p>
+</section>
+<section id="reserved-names" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="reserved-names"><span class="header-section-number">14.2</span> Reserved names</h2>
 <p>The following names should be avoided as package name because <code>https://username.r-universe.dev/{pkg}/</code> has special meaning:</p>
 <ul>
 <li>api</li>
@@ -302,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
 <li>stats</li>
 </ul>
 </section>
-<section id="code-of-conduct" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="code-of-conduct"><span class="header-section-number">14.2</span> Code of Conduct</h2>
+<section id="code-of-conduct" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="code-of-conduct"><span class="header-section-number">14.3</span> Code of Conduct</h2>
 <p>Maintainers of universes are solely responsible for their projects.</p>
 <p>The R-universe project itself is governed by the <a href="https://ropensci.org/code-of-conduct/">rOpenSci code of conduct</a>.</p>
 

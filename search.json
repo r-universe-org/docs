@@ -487,7 +487,18 @@
     "href": "publish/terms.html",
     "title": "14  Package publishing rules",
     "section": "",
-    "text": "14.1 Reserved names\nThe following names should be avoided as package name because https://username.r-universe.dev/{pkg}/ has special meaning:",
+    "text": "14.1 Avoid name collisions\nWhile it is technically possible to host a fork or completely different package with the same name in a universe, we strongly recommend your not doing it.\nTherefore, when two packages have the same name, and one of them is on CRAN, R-universe: - treats the one that is on CRAN as the official version. - warns users against the duplication on the page of the other package.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
+    ]
+  },
+  {
+    "objectID": "publish/terms.html#avoid-name-collisions",
+    "href": "publish/terms.html#avoid-name-collisions",
+    "title": "14  Package publishing rules",
+    "section": "",
+    "text": "An user might mistakenly install the example package from CRAN rather than the version from an universe. R will automatically overwrite one package with the other when running install.packages() or update.packages().\nIt becomes even trickier when other packages import the package.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
@@ -497,8 +508,8 @@
     "objectID": "publish/terms.html#reserved-names",
     "href": "publish/terms.html#reserved-names",
     "title": "14  Package publishing rules",
-    "section": "",
-    "text": "api\napis\narticles\nbadges\nbin\nbuilds\ncitation\ncontributors\ndatasets\ndocs\nfavicon.ico\nfeed.xml\nindex.xml\nmanual\npackages\nreadme\nrobots.txt\nsitemap_index.xml\nsitemap.xml\nsrc\nstats",
+    "section": "14.2 Reserved names",
+    "text": "14.2 Reserved names\nThe following names should be avoided as package name because https://username.r-universe.dev/{pkg}/ has special meaning:\n\napi\napis\narticles\nbadges\nbin\nbuilds\ncitation\ncontributors\ndatasets\ndocs\nfavicon.ico\nfeed.xml\nindex.xml\nmanual\npackages\nreadme\nrobots.txt\nsitemap_index.xml\nsitemap.xml\nsrc\nstats",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
@@ -508,8 +519,8 @@
     "objectID": "publish/terms.html#code-of-conduct",
     "href": "publish/terms.html#code-of-conduct",
     "title": "14  Package publishing rules",
-    "section": "14.2 Code of Conduct",
-    "text": "14.2 Code of Conduct\nMaintainers of universes are solely responsible for their projects.\nThe R-universe project itself is governed by the rOpenSci code of conduct.",
+    "section": "14.3 Code of Conduct",
+    "text": "14.3 Code of Conduct\nMaintainers of universes are solely responsible for their projects.\nThe R-universe project itself is governed by the rOpenSci code of conduct.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
