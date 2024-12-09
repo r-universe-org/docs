@@ -1,5 +1,5 @@
 ---
-title: "Control the metadata / SEO"
+title: "Make your package easier to discover: Control the metadata / SEO"
 ---
 
 ## Package metadata
