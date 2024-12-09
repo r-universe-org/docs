@@ -21,8 +21,10 @@ The snapshot API lets you download a full copy of any repository on R-universe.
 You can use this snapshot to mirror the CRAN-like repository on your own servers or to build a stable, validated release of your package suite.  
 
 The API endpoint is `/api/snapshot` and has several options to filter content.
-By default, the endpoint returns a zip file with all the repository’s packages, binaries, and documentation. If needed, you can filter the content to include only specific binaries, R versions, or subsets of packages.  
-Explore the API parameters for your universe, e.g., <https://ggseg.r-universe.dev/api>.  
+By default, the endpoint returns a zip file with all the repository’s packages, binaries, and documentation.
+If needed, you can filter the content to include only specific binaries, R versions, or subsets of packages.  
+
+Explore the API parameters for your universe, for instance <https://ggseg.r-universe.dev/api>.  
 
 ### Using snapshots
 
