@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Make your package easier to discover: Control the metadata / SEO – R-Universe Docs</title>
+<title>15&nbsp; R-universe governance – R-Universe Docs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../publish/debug-build.html" rel="next">
-<link href="../publish/set-up.html" rel="prev">
+<link href="../infra/contribute.html" rel="next">
+<link href="../publish/other-networks.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/metadata.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../infra/governance.html">Infrastructure</a></li><li class="breadcrumb-item"><a href="../infra/governance.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">R-universe governance</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -214,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/metadata.html" class="sidebar-item-text sidebar-link active">
+  <a href="../publish/metadata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
   </div>
 </li>
@@ -243,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../infra/governance.html" class="sidebar-item-text sidebar-link">
+  <a href="../infra/governance.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">R-universe governance</span></span></a>
   </div>
 </li>
@@ -265,27 +265,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#package-metadata" id="toc-package-metadata" class="nav-link active" data-scroll-target="#package-metadata"><span class="header-section-number">12.1</span> Package metadata</a>
-  <ul class="collapse">
-  <li><a href="#basic-information-in-description" id="toc-basic-information-in-description" class="nav-link" data-scroll-target="#basic-information-in-description"><span class="header-section-number">12.1.1</span> Basic information in DESCRIPTION</a></li>
-  <li><a href="#how-to-add-keyword-labels-to-an-r-package" id="toc-how-to-add-keyword-labels-to-an-r-package" class="nav-link" data-scroll-target="#how-to-add-keyword-labels-to-an-r-package"><span class="header-section-number">12.1.2</span> How to add keyword labels to an R package?</a></li>
-  <li><a href="#how-to-increase-the-rank-of-a-package" id="toc-how-to-increase-the-rank-of-a-package" class="nav-link" data-scroll-target="#how-to-increase-the-rank-of-a-package"><span class="header-section-number">12.1.3</span> How to increase the rank of a package?</a></li>
-  <li><a href="#how-to-get-a-package-logo-shown-in-the-packages-tab" id="toc-how-to-get-a-package-logo-shown-in-the-packages-tab" class="nav-link" data-scroll-target="#how-to-get-a-package-logo-shown-in-the-packages-tab"><span class="header-section-number">12.1.4</span> How to get a package logo shown in the packages tab?</a></li>
-  </ul></li>
-  <li><a href="#individual-contributor-maintainer-metadata" id="toc-individual-contributor-maintainer-metadata" class="nav-link" data-scroll-target="#individual-contributor-maintainer-metadata"><span class="header-section-number">12.2</span> Individual (contributor, maintainer) metadata</a>
-  <ul class="collapse">
-  <li><a href="#how-to-link-a-maintainer-email-addresses-to-a-username-on-r-universe" id="toc-how-to-link-a-maintainer-email-addresses-to-a-username-on-r-universe" class="nav-link" data-scroll-target="#how-to-link-a-maintainer-email-addresses-to-a-username-on-r-universe"><span class="header-section-number">12.2.1</span> How to link a maintainer email addresses to a username on R-universe?</a></li>
-  <li><a href="#my-profile-picture-or-contributor-statistics-do-not-show-up" id="toc-my-profile-picture-or-contributor-statistics-do-not-show-up" class="nav-link" data-scroll-target="#my-profile-picture-or-contributor-statistics-do-not-show-up"><span class="header-section-number">12.2.2</span> My profile picture or contributor statistics do not show up</a></li>
-  </ul></li>
+  <li><a href="#governance" id="toc-governance" class="nav-link active" data-scroll-target="#governance"><span class="header-section-number">15.1</span> Governance</a></li>
+  <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding"><span class="header-section-number">15.2</span> Funding</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/metadata.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/infra/governance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/metadata.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../infra/governance.html">Infrastructure</a></li><li class="breadcrumb-item"><a href="../infra/governance.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">R-universe governance</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">R-universe governance</span></h1>
 </div>
 
 
@@ -302,46 +292,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="package-metadata" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="package-metadata"><span class="header-section-number">12.1</span> Package metadata</h2>
-<section id="basic-information-in-description" class="level3" data-number="12.1.1">
-<h3 data-number="12.1.1" class="anchored" data-anchor-id="basic-information-in-description"><span class="header-section-number">12.1.1</span> Basic information in DESCRIPTION</h3>
-<p>The first step towards making your package easier to find by search is to polish those DESCRIPTION fields:</p>
-<ul>
-<li>Description;</li>
-<li>Details;</li>
-<li>URL by adding the R-universe URL. <a href="https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17">Example</a></li>
-</ul>
+<section id="governance" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="governance"><span class="header-section-number">15.1</span> Governance</h2>
+<p>R-universe was initiated at, and is currently governed by, <a href="https://ropensci.org/">rOpenSci</a>.</p>
+<p>rOpenSci is a non-profit initiative that supports open and reproducible science through different projects, including and not limited to: a software peer-review system for R packages, a champions program for people from historically and systematically excluded groups who are interested in contributing to rOpenSci and the broader open source and open science communities, multilingual publishing efforts. rOpenSci builds a welcoming and diverse community. rOpenSci curates a blog, coworking events, community calls.</p>
+<p>TODO: list relevant people?</p>
 </section>
-<section id="how-to-add-keyword-labels-to-an-r-package" class="level3" data-number="12.1.2">
-<h3 data-number="12.1.2" class="anchored" data-anchor-id="how-to-add-keyword-labels-to-an-r-package"><span class="header-section-number">12.1.2</span> How to add keyword labels to an R package?</h3>
-<p>R-universe’s search algorithm uses keywords associated with a package.</p>
-<p>If the R package is hosted on GitHub you can add keywords by configuring <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics">repository topics</a>.</p>
-<p>Alternatively, you can specify keywords in the <code>X-schema.org-keywords</code> field in your package <code>DESCRIPTION</code> file. This field <a href="https://cs.github.com/?q=org%3Acran+X-schema.org-keywords">is permitted on CRAN</a> as well.</p>
-<p>The build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like <code>c++</code> or <code>openmp</code>.</p>
-</section>
-<section id="how-to-increase-the-rank-of-a-package" class="level3" data-number="12.1.3">
-<h3 data-number="12.1.3" class="anchored" data-anchor-id="how-to-increase-the-rank-of-a-package"><span class="header-section-number">12.1.3</span> How to increase the rank of a package?</h3>
-<p>One aspect might be to get more GitHub stars. Read about ideas in the blog post <a href="https://ropensci.org/blog/2024/03/07/package-marketing/">“Marketing Ideas For Your Package”</a>.</p>
-</section>
-<section id="how-to-get-a-package-logo-shown-in-the-packages-tab" class="level3" data-number="12.1.4">
-<h3 data-number="12.1.4" class="anchored" data-anchor-id="how-to-get-a-package-logo-shown-in-the-packages-tab"><span class="header-section-number">12.1.4</span> How to get a package logo shown in the packages tab?</h3>
-<p>We use the same conventions as pkgdown to find a logo for the package. It either needs to be in one of the locations checked by <code>pkgdown:::find_logo()</code> (<code>man/figures/logo.png</code> and <code>man/figures/logo.svg</code>) or set as an opengraph image in your <code>_pkgdown.yml</code>.</p>
-</section>
-</section>
-<section id="individual-contributor-maintainer-metadata" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="individual-contributor-maintainer-metadata"><span class="header-section-number">12.2</span> Individual (contributor, maintainer) metadata</h2>
-<section id="how-to-link-a-maintainer-email-addresses-to-a-username-on-r-universe" class="level3" data-number="12.2.1">
-<h3 data-number="12.2.1" class="anchored" data-anchor-id="how-to-link-a-maintainer-email-addresses-to-a-username-on-r-universe"><span class="header-section-number">12.2.1</span> How to link a maintainer email addresses to a username on R-universe?</h3>
-<p>We use the GitHub username that is associated with a given email address. If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, everything just works. If you use different email addresses, you can easily add additional email addresses in your <a href="https://github.com/settings/emails">GitHub settings</a>.</p>
-<p>Once you have validated your email address on GitHub, subsequent builds of R packages will be able to associate the package and contributions to your user account. We collect statistics during the build process, so the changes will not become visible until the next build of each package.</p>
-</section>
-<section id="my-profile-picture-or-contributor-statistics-do-not-show-up" class="level3" data-number="12.2.2">
-<h3 data-number="12.2.2" class="anchored" data-anchor-id="my-profile-picture-or-contributor-statistics-do-not-show-up"><span class="header-section-number">12.2.2</span> My profile picture or contributor statistics do not show up</h3>
-<p>Same as above. If no picture shows up, you probably need to register the email address that you use as R package maintainer in your <a href="https://github.com/settings/emails">GitHub settings</a>, and wait for the package to be rebuilt.</p>
+<section id="funding" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="funding"><span class="header-section-number">15.2</span> Funding</h2>
+<p>R-universe is financially supported by the <a href="https://r-consortium.org/">R Consortium</a> as a top-level project.</p>
+<p>TODO: previous funding including GSOD?</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -764,13 +726,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../publish/set-up.html" class="pagination-link" aria-label="Set up your own universe">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span>
+      <a href="../publish/other-networks.html" class="pagination-link" aria-label="Relation to other networks">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../publish/debug-build.html" class="pagination-link" aria-label="Debug package builds">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Debug package builds</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../infra/contribute.html" class="pagination-link" aria-label="Contribute">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Contribute</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -779,4 +741,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/metadata.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/infra/governance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
