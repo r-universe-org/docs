@@ -310,19 +310,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">9.1</span> Does R-universe archive old versions of packages? How does it work with renv?</h2>
-<p>R-universe does not archive old versions of packages but <strong>we track the upstream git url and commit-id</strong> in the R package description. This allows renv or similar systems to restore packages in environments that were installed from r-universe. For more details, see this technote: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a>.</p>
-<p>Furthermore, <strong>you can archive fixed versions of an universe</strong> which you might use in production or for reproducibility, what we call <a href="#snapshots">repository snapshots</a>.</p>
+<p>R-universe does not archive old versions of packages, but it <strong>tracks the upstream git URL and commit ID</strong> in the R package description. This allows tools like <code>renv</code> to restore packages in environments that were installed from R-universe. For more details, see this tech note: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a>.</p>
+<p>You can also <strong>archive fixed versions of a universe</strong> for production or reproducibility, using what we call <a href="#snapshots">repository snapshots</a>.</p>
 </section>
 <section id="snapshots" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="snapshots"><span class="header-section-number">9.2</span> Repository snapshots</h2>
 <section id="what-is-a-snapshot-of-an-universe" class="level3" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="what-is-a-snapshot-of-an-universe"><span class="header-section-number">9.2.1</span> What is a snapshot of an universe?</h3>
-<p>A snapshot is a standard layout of a few directories consisting of binaries and source packages as well as a few files that index everything. It is a <strong>directory of static files</strong> that you can host somewhere, and from which you can install <strong>fixed versions of packages</strong>.</p>
+<p>A snapshot is a standard layout of a few directories consisting of static files containing binaries, source packages, and indexing files.<br>
+Snapshots allow you to host <strong>fixed versions of packages</strong> and install them as needed.</p>
 </section>
 <section id="downloading-repository-snapshots" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="downloading-repository-snapshots"><span class="header-section-number">9.2.2</span> Downloading repository snapshots</h3>
-<p>The new snapshot API lets you download a full copy of any repository on R-universe. You can use such a snapshot to mirror the entire CRAN-like repository on your own servers, or for example to build a stable, validated release of your package suite.</p>
-<p>The API endpoint is <code>/api/snapshot</code> and has several options to filter content. By default it returns a zip file with all the packages, binaries, and documentation in your repository. If this is more than you need, there are parameters to include e.g.&nbsp;only binaries for certain platforms or certain versions of R, or to create a repository from a subset of the packages in your universe. Explore the parameters on the API tab of any universe, for example: <a href="https://ggseg.r-universe.dev/api" class="uri">https://ggseg.r-universe.dev/api</a>.</p>
+<p>The snapshot API lets you download a full copy of any repository on R-universe.<br>
+You can use this snapshot to mirror the CRAN-like repository on your own servers or to build a stable, validated release of your package suite.</p>
+<p>The API endpoint is <code>/api/snapshot</code> and has several options to filter content. By default, the endpoint returns a zip file with all the repository’s packages, binaries, and documentation. If needed, you can filter the content to include only specific binaries, R versions, or subsets of packages.</p>
+<p>Explore the API parameters for your universe, for instance <a href="https://ggseg.r-universe.dev/api" class="uri">https://ggseg.r-universe.dev/api</a>.</p>
 </section>
 <section id="using-snapshots" class="level3" data-number="9.2.3">
 <h3 data-number="9.2.3" class="anchored" data-anchor-id="using-snapshots"><span class="header-section-number">9.2.3</span> Using snapshots</h3>
