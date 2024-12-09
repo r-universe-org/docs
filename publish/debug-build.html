@@ -274,17 +274,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables"><span class="header-section-number">13.1</span> Is it possible to customize the package build process with custom options/tools/variables?</h2>
-<p>Yes, for packages that cannot be build directly from the checkout but need some additional steps, you can add a <a href="https://github.com/r-universe-org/build-source/blob/5830b8aa92d5524b3af6d1b617e605d1a2558543/entrypoint.sh#L50-L57">script</a> that gets executed before R CMD build at the root of your package:</p>
-<ul>
-<li>either an R script called <code>bootstrap.R</code></li>
-<li>or a shell script called <code>.prepare</code>.</li>
-</ul>
-<p>Examples of actions performed by the script:</p>
-<ul>
-<li>Initiate a git submodule;</li>
-<li>Run roxygen2 (some authors do not commit the Rd files to git);</li>
-<li>Other prepping.</li>
-</ul>
+<p>No, that is not possible (apart from the next section about third-party system requirements). Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.</p>
+<p>This is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.</p>
 </section>
 <section id="how-to-request-additional-third-party-system-requirements" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="how-to-request-additional-third-party-system-requirements"><span class="header-section-number">13.2</span> How to request additional third party system requirements?</h2>
