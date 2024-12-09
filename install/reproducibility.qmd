@@ -12,7 +12,7 @@ You can also **archive fixed versions of a universe** for production or reproduc
 
 ### What is a snapshot of an universe?
 
-A snapshot is a directory of static files containing binaries, source packages, and indexing files.  
+A snapshot is a standard layout of a few directories consisting of static files containing binaries, source packages, and indexing files.  
 Snapshots allow you to host **fixed versions of packages** and install them as needed.
 
 ### Downloading repository snapshots
