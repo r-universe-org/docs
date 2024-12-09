@@ -2,20 +2,20 @@
 title: "A catalogue of R packages"
 ---
 
-R-universe can be your entry point to many R packages.
-R-universe is a collection of universes, each of them featuring the packages of a team or individual.
+R-universe serves as your gateway to discovering a wide variety of R packages.  
+R-universe is a collection of **universes**, each representing the packages maintained by an individual or team.  
 
-You can search packages, and assess them thanks to all the information provided on universe and package pages.
-Find out more about the three levels of navigation in R-universe:
+You can search for packages and evaluate them using the detailed information provided on universe and package pages.  
+Explore the three levels of navigation within R-universe:
 
-- [searching the entire R ecosystem](/browse/search.html)
-- [browsing work from a maintainer or organization](/browse/universes.html)
-- [individual package information](/browse/packages.html)
+- [Search the entire R ecosystem](/browse/search.html)
+- [Browse work from a specific maintainer or organization](/browse/universes.html)
+- [Access detailed information about individual packages](/browse/packages.html)
 
 :::{.callout-caution}
-R-universe does not vet packages: it is an open publishing system. 
-The system builds and deploys R packages from Git repositories into installation repositories. 
-The owner of the universe is responsible for their own policies and quality control.
+R-universe does not vet packages; it is an open publishing system. 
+The platform builds and deploys R packages from Git repositories into installation repositories.  
+The responsibility for policies and quality control lies solely with the owner of each universe.  
 :::
 
-With R-universe, you can also follow updates thanks to [RSS feeds](/browse/rss-feeds.html).
+Stay up-to-date with the latest developments by following [RSS feeds](/browse/rss-feeds.html).  
