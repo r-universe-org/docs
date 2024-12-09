@@ -74,7 +74,7 @@ R-universe renders and presents all available documentation to help you start us
 ![Documentation of one function of the sf package](../img/pkg-function-doc.png){group="pkg" fig-alt="Documentation of one function of the sf package."}
 
 
-Most R packages have 3 forms of documentation: a README file, a reference manual (help pages), and a number of articles (vignettes). 
+Most R packages have 3 forms of documentation: a README file, a reference manual (help pages), and a number of articles (including vignettes). 
 These articles are often a good place to get started, and are listed on the package homepage right under the descriptives. 
 From here you can view both the rendered html/pdf document, as well as the rmarkdown source file used to (re)produce the article.
 
