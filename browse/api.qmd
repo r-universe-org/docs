@@ -111,6 +111,16 @@ V8 <- universe::universe_one_package("jeroen", "V8")
 str(V8, max.level = 1)
 ```
 
+## Database dump 
+
+URL: `https://<username>.r-universe.dev/api/dbdump`
+
+This API endpoint is not supported by the universe package yet.
+
+```r
+ropensci <- mongolite::read_bson('https://ropensci.r-universe.dev/api/dbdump')
+```
+
 ### Search in an universe
 
 URL: `https://<username>.r-universe.dev/api/search`
@@ -178,3 +188,12 @@ str(packages$results[[1]])
 
 Note that searching globally only returns "indexed" packages: if a package is included in several universes, it still shows up only once in search results because of our [deduplication efforts](#deduplication).
 
+## Database dump (all universes)
+
+URL: `https://r-universe.dev/api/dbdump`
+
+This API endpoint is not supported by the universe package yet.
+
+```r
+dump <- mongolite::read_bson('https://r-universe.dev/api/dbdump')
+```
