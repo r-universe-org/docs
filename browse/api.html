@@ -282,13 +282,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ls" id="toc-ls" class="nav-link" data-scroll-target="#ls"><span class="header-section-number">6.1.2</span> List of packages in an universe</a></li>
   <li><a href="#information-of-all-packages-in-an-universe" id="toc-information-of-all-packages-in-an-universe" class="nav-link" data-scroll-target="#information-of-all-packages-in-an-universe"><span class="header-section-number">6.1.3</span> Information of all packages in an universe</a></li>
   <li><a href="#information-on-a-single-package-in-an-universe" id="toc-information-on-a-single-package-in-an-universe" class="nav-link" data-scroll-target="#information-on-a-single-package-in-an-universe"><span class="header-section-number">6.1.4</span> Information on a single package in an universe</a></li>
+  <li><a href="#search-in-an-universe" id="toc-search-in-an-universe" class="nav-link" data-scroll-target="#search-in-an-universe"><span class="header-section-number">6.1.5</span> Search in an universe</a></li>
   </ul></li>
-  <li><a href="#database-dump" id="toc-database-dump" class="nav-link" data-scroll-target="#database-dump"><span class="header-section-number">6.2</span> Database dump</a>
-  <ul class="collapse">
-  <li><a href="#search-in-an-universe" id="toc-search-in-an-universe" class="nav-link" data-scroll-target="#search-in-an-universe"><span class="header-section-number">6.2.1</span> Search in an universe</a></li>
-  </ul></li>
-  <li><a href="#search-all-universes" id="toc-search-all-universes" class="nav-link" data-scroll-target="#search-all-universes"><span class="header-section-number">6.3</span> Search all universes</a></li>
-  <li><a href="#database-dump-all-universes" id="toc-database-dump-all-universes" class="nav-link" data-scroll-target="#database-dump-all-universes"><span class="header-section-number">6.4</span> Database dump (all universes)</a></li>
+  <li><a href="#search-all-universes" id="toc-search-all-universes" class="nav-link" data-scroll-target="#search-all-universes"><span class="header-section-number">6.2</span> Search all universes</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -806,14 +802,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </div>
 </div>
 </section>
-</section>
-<section id="database-dump" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="database-dump"><span class="header-section-number">6.2</span> Database dump</h2>
-<p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/dbdump</code></p>
-<p>This API endpoint is not supported by the universe package yet.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ropensci <span class="ot">&lt;-</span> mongolite<span class="sc">::</span><span class="fu">read_bson</span>(<span class="st">'https://ropensci.r-universe.dev/api/dbdump'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="search-in-an-universe" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="search-in-an-universe"><span class="header-section-number">6.2.1</span> Search in an universe</h3>
+<section id="search-in-an-universe" class="level3" data-number="6.1.5">
+<h3 data-number="6.1.5" class="anchored" data-anchor-id="search-in-an-universe"><span class="header-section-number">6.1.5</span> Search in an universe</h3>
 <p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/search</code> Parameters:</p>
 <ul>
 <li>q: Query string (supports <a href="../browse/search.html">advanced fields</a>).</li>
@@ -826,13 +816,13 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <p>Using <code>{httr2}</code>:</p>
 <p>How many packages in the rOpenSci universe depend on httr2?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://ropensci.r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_url_query</span>(<span class="at">q =</span> <span class="st">'needs:httr2'</span>) <span class="sc">|&gt;</span> <span class="co"># packages depending on {httr2}</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://ropensci.r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_url_query</span>(<span class="at">q =</span> <span class="st">'needs:httr2'</span>) <span class="sc">|&gt;</span> <span class="co"># packages depending on {httr2}</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
  $ results:List of 32
@@ -841,16 +831,16 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ limit  : int 100
  $ total  : int 32</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 32</code></pre>
 </div>
 </div>
 <p>Using <code>{universe}</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_search</span>(<span class="st">"ropensci"</span>, <span class="at">query =</span> <span class="st">'needs:httr2'</span>)</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_search</span>(<span class="st">"ropensci"</span>, <span class="at">query =</span> <span class="st">'needs:httr2'</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
  $ results:List of 32
@@ -859,15 +849,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ limit  : int 100
  $ total  : int 32</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 32</code></pre>
 </div>
 </div>
 </section>
 </section>
-<section id="search-all-universes" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="search-all-universes"><span class="header-section-number">6.3</span> Search all universes</h2>
+<section id="search-all-universes" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="search-all-universes"><span class="header-section-number">6.2</span> Search all universes</h2>
 <p>URL: <code>https://r-universe.dev/api/search</code> Parameters:</p>
 <ul>
 <li>q: the query string. You can use the <a href="../browse/search.html">advanced fields</a>.</li>
@@ -879,12 +869,12 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </ul>
 <p>Example using <code>{httr2}</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_url_query</span>(<span class="at">q =</span> <span class="st">'"weather data"'</span>) <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_url_query</span>(<span class="at">q =</span> <span class="st">'"weather data"'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
  $ results:List of 70
@@ -893,7 +883,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ limit  : int 100
  $ total  : int 70</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
  $ _id           : chr "6746caa4626a0c487b74e50f"
@@ -940,8 +930,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </div>
 <p>Example using <code>{universe}</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">global_search</span>(<span class="at">query =</span> <span class="st">'"weather data"'</span>, <span class="at">limit =</span> <span class="dv">100</span>L)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">global_search</span>(<span class="at">query =</span> <span class="st">'"weather data"'</span>, <span class="at">limit =</span> <span class="dv">100</span>L)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
  $ results:List of 70
@@ -950,7 +940,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ limit  : int 100
  $ total  : int 70</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
  $ _id           : chr "6746caa4626a0c487b74e50f"
@@ -996,12 +986,6 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </div>
 </div>
 <p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>
-</section>
-<section id="database-dump-all-universes" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="database-dump-all-universes"><span class="header-section-number">6.4</span> Database dump (all universes)</h2>
-<p>URL: <code>https://r-universe.dev/api/dbdump</code></p>
-<p>This API endpoint is not supported by the universe package yet.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>dump <span class="ot">&lt;-</span> mongolite<span class="sc">::</span><span class="fu">read_bson</span>(<span class="st">'https://r-universe.dev/api/dbdump'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
