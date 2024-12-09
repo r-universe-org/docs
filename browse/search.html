@@ -235,29 +235,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Infrastructure</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../infra/governance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">R-universe governance</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../infra/contribute.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Contribute</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -268,9 +245,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#how-is-the-package-rank-score-calculated" id="toc-how-is-the-package-rank-score-calculated" class="nav-link active" data-scroll-target="#how-is-the-package-rank-score-calculated"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</a></li>
-  <li><a href="#deduplication" id="toc-deduplication" class="nav-link" data-scroll-target="#deduplication"><span class="header-section-number">3.2</span> Which packages get included in search?</a></li>
-  <li><a href="#why-is-a-package-sometimes-listed-twice" id="toc-why-is-a-package-sometimes-listed-twice" class="nav-link" data-scroll-target="#why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.3</span> Why is a package sometimes listed twice?</a></li>
+  <li><a href="#rank" id="toc-rank" class="nav-link active" data-scroll-target="#rank"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</a></li>
+  <li><a href="#why-is-a-package-sometimes-listed-twice" id="toc-why-is-a-package-sometimes-listed-twice" class="nav-link" data-scroll-target="#why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.2</span> Why is a package sometimes listed twice?</a></li>
+  <li><a href="#deduplication" id="toc-deduplication" class="nav-link" data-scroll-target="#deduplication"><span class="header-section-number">3.3</span> Which packages get included in search?</a></li>
+  <li><a href="#why-is-a-package-sometimes-listed-twice-1" id="toc-why-is-a-package-sometimes-listed-twice-1" class="nav-link" data-scroll-target="#why-is-a-package-sometimes-listed-twice-1"><span class="header-section-number">3.4</span> Why is a package sometimes listed twice?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/search.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -329,9 +307,10 @@ The search bar includes a drop-down button for accessing advanced search fields.
 <figcaption>Search results for ‘exports:toJSON’</figcaption>
 </figure>
 </div>
-<section id="how-is-the-package-rank-score-calculated" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="how-is-the-package-rank-score-calculated"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</h2>
-<p>The exact algorithm is a work-in-progress and will change. At the time of writing it includes:</p>
+<section id="rank" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="rank"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</h2>
+<p>The rank of a package in search results is based on its <a href="https://github.com/r-universe-org/cranlike-server/blob/master/src/db.js#L63-L93">match</a> with the search queries, and on its popularity/quality.</p>
+<p>The exact algorithm for calculating popularity/quality is a work-in-progress and will change. At the time of writing it includes:</p>
 <ul>
 <li>Number of dependents (that is to say, recursive reverse dependencies);</li>
 <li>Number of stars on Github;</li>
@@ -340,11 +319,17 @@ The search bar includes a drop-down button for accessing advanced search fields.
 <li>Downloads per month from CRAN or Bioconductor mirrors;</li>
 <li>Number of files on GitHub that mention ‘library(pkgname)’.</li>
 </ul>
-<p>You can explore <a href="https://r-universe.dev/packages">scores and metrics for all packages</a>.<br>
+<p>You can browse <a href="https://r-universe.dev/packages">scores and metrics for all packages</a>.</p>
+<p>We plan to keep updating the algorithm as R-universe matures and better data becomes available.</p>
+<p>As a package maintainer, you can <a href="../publish/metadata.html#keywords">optimize your package’s metadata</a> and work on <a href="../publish/metadata.html#better-rank">improving its rank</a>.</p>
+</section>
+<section id="why-is-a-package-sometimes-listed-twice" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.2</span> Why is a package sometimes listed twice?</h2>
+<p>If a source package fails to build (which means something is very wrong) then you see a red “build failure” message. If there was a previous successful build, it is kept there as well for users to install. You can explore <a href="https://r-universe.dev/packages">scores and metrics for all packages</a>.<br>
 The algorithm will evolve as R-universe matures and better data becomes available.</p>
 </section>
-<section id="deduplication" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="deduplication"><span class="header-section-number">3.2</span> Which packages get included in search?</h2>
+<section id="deduplication" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="deduplication"><span class="header-section-number">3.3</span> Which packages get included in search?</h2>
 <p>In R-universe, a given R package can appear in multiple registries. To avoid duplicates, search results only display packages from the upstream GitHub owner’s universe, excluding third-party copies.</p>
 <p>Specifically, search results include:</p>
 <ul>
@@ -352,8 +337,8 @@ The algorithm will evolve as R-universe matures and better data becomes availabl
 <li>Packages where the universe name differs from the GitHub owner, but the DESCRIPTION file includes the full <code>user.r-universe.dev</code> URL in the <code>URL</code> field (e.g., <code>https://jeroen.r-universe.dev</code> or <code>https://jeroen.r-universe.dev/mypkg</code>).</li>
 </ul>
 </section>
-<section id="why-is-a-package-sometimes-listed-twice" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.3</span> Why is a package sometimes listed twice?</h2>
+<section id="why-is-a-package-sometimes-listed-twice-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice-1"><span class="header-section-number">3.4</span> Why is a package sometimes listed twice?</h2>
 <p>If a source package fails to build (indicating a critical issue), a red “build failure” message is displayed.<br>
 If a previous build succeeded, it remains available for users to install.</p>
 
