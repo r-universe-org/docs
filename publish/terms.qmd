@@ -2,6 +2,19 @@
 title: "Package publishing rules"
 ---
 
+## Avoid name collisions
+
+While it is technically possible to host a fork or completely different package with the same name in a universe,
+we strongly recommend your **not** doing it.
+
+- An user might mistakenly install the `example` package from CRAN rather than the version from an universe.
+R will automatically overwrite one package with the other when running `install.packages()` or `update.packages()`.
+- It becomes even trickier when other packages import the package.
+
+Therefore, when two packages have the same name, and one of them is on CRAN, R-universe: 
+- treats the one that is on CRAN as the official version. 
+- warns users against the duplication on the page of the other package. 
+
 ## Reserved names
 
 The following names should be avoided as package name because `https://username.r-universe.dev/{pkg}/` has special meaning:
