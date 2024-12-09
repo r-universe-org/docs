@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Why publish on R-universe – R-Universe Docs</title>
+<title>14&nbsp; Package publishing rules – R-Universe Docs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../publish/set-up.html" rel="next">
-<link href="../install/reproducibility.html" rel="prev">
+<link href="../publish/other-networks.html" rel="next">
+<link href="../publish/debug-build.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/get-started.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/terms.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -202,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link active">
+  <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
   </div>
 </li>
@@ -226,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/terms.html" class="sidebar-item-text sidebar-link">
+  <a href="../publish/terms.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
   </div>
 </li>
@@ -248,20 +248,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#put-your-packages-and-yourself-on-the-map" id="toc-put-your-packages-and-yourself-on-the-map" class="nav-link active" data-scroll-target="#put-your-packages-and-yourself-on-the-map"><span class="header-section-number">10.1</span> Put your packages (and yourself) on the map</a></li>
-  <li><a href="#make-your-packages-easy-to-install" id="toc-make-your-packages-easy-to-install" class="nav-link" data-scroll-target="#make-your-packages-easy-to-install"><span class="header-section-number">10.2</span> Make your packages easy to install</a></li>
-  <li><a href="#more-inspiration" id="toc-more-inspiration" class="nav-link" data-scroll-target="#more-inspiration"><span class="header-section-number">10.3</span> More inspiration</a></li>
-  <li><a href="#it-is-free" id="toc-it-is-free" class="nav-link" data-scroll-target="#it-is-free"><span class="header-section-number">10.4</span> It is free!</a></li>
-  <li><a href="#only-a-few-steps-for-set-up" id="toc-only-a-few-steps-for-set-up" class="nav-link" data-scroll-target="#only-a-few-steps-for-set-up"><span class="header-section-number">10.5</span> Only a few steps for set-up!</a></li>
+  <li><a href="#avoid-name-collisions" id="toc-avoid-name-collisions" class="nav-link active" data-scroll-target="#avoid-name-collisions"><span class="header-section-number">14.1</span> Avoid name collisions</a></li>
+  <li><a href="#reserved-names" id="toc-reserved-names" class="nav-link" data-scroll-target="#reserved-names"><span class="header-section-number">14.2</span> Reserved names</a></li>
+  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct"><span class="header-section-number">14.3</span> Code of Conduct</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/get-started.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/terms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/get-started.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/terms.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></h1>
 </div>
 
 
@@ -278,26 +276,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="put-your-packages-and-yourself-on-the-map" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="put-your-packages-and-yourself-on-the-map"><span class="header-section-number">10.1</span> Put your packages (and yourself) on the map</h2>
-<p>By registering your packages with R-universe, you make your packages easier to <a href="../browse/get-started.html">find and assess by users</a>.</p>
-<p>Creating your own, or your own organization’s, R-universe creates a showcase of expertise and interests.</p>
+<section id="avoid-name-collisions" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="avoid-name-collisions"><span class="header-section-number">14.1</span> Avoid name collisions</h2>
+<p>While it is technically possible to host a fork or completely different package with the same name in a universe, we strongly recommend your <strong>not</strong> doing it.</p>
+<ul>
+<li>An user might mistakenly install the <code>example</code> package from CRAN rather than the version from an universe. R will automatically overwrite one package with the other when running <code>install.packages()</code> or <code>update.packages()</code>.</li>
+<li>It becomes even trickier when other packages import the package.</li>
+</ul>
+<p>Therefore, when two packages have the same name, and one of them is on CRAN, R-universe: - treats the one that is on CRAN as the official version. - warns users against the duplication on the page of the other package.</p>
 </section>
-<section id="make-your-packages-easy-to-install" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="make-your-packages-easy-to-install"><span class="header-section-number">10.2</span> Make your packages easy to install</h2>
-<p>R-universe builds <a href="../install/binaries.html">binaries for release versions of the most popular platforms</a>.</p>
+<section id="reserved-names" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="reserved-names"><span class="header-section-number">14.2</span> Reserved names</h2>
+<p>The following names should be avoided as package name because <code>https://username.r-universe.dev/{pkg}/</code> has special meaning:</p>
+<ul>
+<li>api</li>
+<li>apis</li>
+<li>articles</li>
+<li>badges</li>
+<li>bin</li>
+<li>builds</li>
+<li>citation</li>
+<li>contributors</li>
+<li>datasets</li>
+<li>docs</li>
+<li>favicon.ico</li>
+<li>feed.xml</li>
+<li>index.xml</li>
+<li>manual</li>
+<li>packages</li>
+<li>readme</li>
+<li>robots.txt</li>
+<li>sitemap_index.xml</li>
+<li>sitemap.xml</li>
+<li>src</li>
+<li>stats</li>
+</ul>
 </section>
-<section id="more-inspiration" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="more-inspiration"><span class="header-section-number">10.3</span> More inspiration</h2>
-<p>Read or watch interviews of the series <a href="https://ropensci.org/blog/2023/11/06/r-universe-stars-finale/">Meeting the stars of the R-Universe</a>, that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.</p>
-</section>
-<section id="it-is-free" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="it-is-free"><span class="header-section-number">10.4</span> It is free!</h2>
-<p>R-universe is provided free of charge.</p>
-</section>
-<section id="only-a-few-steps-for-set-up" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="only-a-few-steps-for-set-up"><span class="header-section-number">10.5</span> Only a few steps for set-up!</h2>
-<p>See the <a href="../publish/set-up.html">set-up docs</a>.</p>
+<section id="code-of-conduct" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="code-of-conduct"><span class="header-section-number">14.3</span> Code of Conduct</h2>
+<p>Maintainers of universes are solely responsible for their projects.</p>
+<p>The R-universe project itself is governed by the <a href="https://ropensci.org/code-of-conduct/">rOpenSci code of conduct</a>.</p>
 
 
 </section>
@@ -722,13 +740,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../install/reproducibility.html" class="pagination-link" aria-label="Reproducibility">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Reproducibility</span></span>
+      <a href="../publish/debug-build.html" class="pagination-link" aria-label="Debug package builds">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Debug package builds</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../publish/set-up.html" class="pagination-link" aria-label="Set up your own universe">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../publish/other-networks.html" class="pagination-link" aria-label="Relation to other networks">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -737,4 +755,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/get-started.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/terms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
