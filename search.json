@@ -472,6 +472,17 @@
     ]
   },
   {
+    "objectID": "publish/debug-build.html#how-to-use-a-universe-on-regular-continous-integration",
+    "href": "publish/debug-build.html#how-to-use-a-universe-on-regular-continous-integration",
+    "title": "13  Debug package builds",
+    "section": "13.5 How to use a universe on regular continous integration?",
+    "text": "13.5 How to use a universe on regular continous integration?\nIf you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the extra-repositories field of the r-lib/actions setup-r action.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Debug package builds</span>"
+    ]
+  },
+  {
     "objectID": "publish/other-networks.html",
     "href": "publish/other-networks.html",
     "title": "14  Relation to other networks",
