@@ -3,6 +3,7 @@ title: "Programmatic access (APIs)"
 ---
 
 R-universe provides several APIs for programmatic access, requiring no authentication.
+Thanks to the APIs you can list universes, packages in an universe, get information on packages, perform searches.
 
 You can interact with the API in two ways:  
 - Create API calls "manually" in the command-line or R.  
