@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.37">
+<meta name="generator" content="quarto-1.7.2">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07c16812f08c4a1591d6ec4fc46327fa.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-1aa6f0cf11c82361bc528069a570c967.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-43cc1495876b7dadb85f7ff523b75766.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -245,8 +245,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#package-metadata" id="toc-package-metadata" class="nav-link active" data-scroll-target="#package-metadata"><span class="header-section-number">12.1</span> Package metadata</a>
   <ul class="collapse">
   <li><a href="#basic-information-in-description" id="toc-basic-information-in-description" class="nav-link" data-scroll-target="#basic-information-in-description"><span class="header-section-number">12.1.1</span> Basic information in DESCRIPTION</a></li>
-  <li><a href="#keywords" id="toc-keywords" class="nav-link" data-scroll-target="#keywords"><span class="header-section-number">12.1.2</span> How to add keyword labels to an R package?</a></li>
-  <li><a href="#better-rank" id="toc-better-rank" class="nav-link" data-scroll-target="#better-rank"><span class="header-section-number">12.1.3</span> How to increase the rank of a package?</a></li>
+  <li><a href="#how-to-add-keyword-labels-to-an-r-package" id="toc-how-to-add-keyword-labels-to-an-r-package" class="nav-link" data-scroll-target="#how-to-add-keyword-labels-to-an-r-package"><span class="header-section-number">12.1.2</span> How to add keyword labels to an R package?</a></li>
+  <li><a href="#how-to-increase-the-rank-of-a-package" id="toc-how-to-increase-the-rank-of-a-package" class="nav-link" data-scroll-target="#how-to-increase-the-rank-of-a-package"><span class="header-section-number">12.1.3</span> How to increase the rank of a package?</a></li>
   <li><a href="#how-to-get-a-package-logo-shown-in-the-packages-tab" id="toc-how-to-get-a-package-logo-shown-in-the-packages-tab" class="nav-link" data-scroll-target="#how-to-get-a-package-logo-shown-in-the-packages-tab"><span class="header-section-number">12.1.4</span> How to get a package logo shown in the packages tab?</a></li>
   </ul></li>
   <li><a href="#individual-contributor-maintainer-metadata" id="toc-individual-contributor-maintainer-metadata" class="nav-link" data-scroll-target="#individual-contributor-maintainer-metadata"><span class="header-section-number">12.2</span> Individual (contributor, maintainer) metadata</a>
@@ -290,16 +290,16 @@ ul.task-list li input[type="checkbox"] {
 <li>URL by adding the R-universe URL. <a href="https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17">Example</a></li>
 </ul>
 </section>
-<section id="keywords" class="level3" data-number="12.1.2">
-<h3 data-number="12.1.2" class="anchored" data-anchor-id="keywords"><span class="header-section-number">12.1.2</span> How to add keyword labels to an R package?</h3>
-<p>R-universe’s <a href="../browse/search.html#rank">search algorithm</a> uses keywords associated with a package.</p>
+<section id="how-to-add-keyword-labels-to-an-r-package" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="how-to-add-keyword-labels-to-an-r-package"><span class="header-section-number">12.1.2</span> How to add keyword labels to an R package?</h3>
+<p>R-universe’s search algorithm uses keywords associated with a package.</p>
 <p>If the R package is hosted on GitHub you can add keywords by configuring <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics">repository topics</a>.</p>
 <p>Alternatively, you can specify keywords in the <code>X-schema.org-keywords</code> field in your package <code>DESCRIPTION</code> file. This field <a href="https://cs.github.com/?q=org%3Acran+X-schema.org-keywords">is permitted on CRAN</a> as well.</p>
 <p>The build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like <code>c++</code> or <code>openmp</code>.</p>
 </section>
-<section id="better-rank" class="level3" data-number="12.1.3">
-<h3 data-number="12.1.3" class="anchored" data-anchor-id="better-rank"><span class="header-section-number">12.1.3</span> How to increase the rank of a package?</h3>
-<p>The place of your package in search results depends on its <a href="../browse/search.html#rank">rank</a>. One aspect might be to get more GitHub stars. Read about ideas in the blog post <a href="https://ropensci.org/blog/2024/03/07/package-marketing/">“Marketing Ideas For Your Package”</a>.</p>
+<section id="how-to-increase-the-rank-of-a-package" class="level3" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="how-to-increase-the-rank-of-a-package"><span class="header-section-number">12.1.3</span> How to increase the rank of a package?</h3>
+<p>One aspect might be to get more GitHub stars. Read about ideas in the blog post <a href="https://ropensci.org/blog/2024/03/07/package-marketing/">“Marketing Ideas For Your Package”</a>.</p>
 </section>
 <section id="how-to-get-a-package-logo-shown-in-the-packages-tab" class="level3" data-number="12.1.4">
 <h3 data-number="12.1.4" class="anchored" data-anchor-id="how-to-get-a-package-logo-shown-in-the-packages-tab"><span class="header-section-number">12.1.4</span> How to get a package logo shown in the packages tab?</h3>
