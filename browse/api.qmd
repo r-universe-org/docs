@@ -117,8 +117,8 @@ Parameters:
 
 - q: Query string (supports [advanced fields](/browse/search.html)).
 - limit: Maximum number of results (default: 100). To retrieve all results:
-    - Perform an initial query to get the `total` field.
-    - Perform a second query with `limit=N`.
+    - Perform an initial query to get the value `total` field.
+    - Perform a second query with `limit=total`.
 
 Using `{httr2}`:
 
