@@ -4,7 +4,6 @@ title: "Individual package information"
 
 Clicking on a package in search results or in a universe overview will take you to the [homepage for that package](/browse/packages.html). You can also link to this page directly using the url `https://{owner}.r-universe.dev/{package}`.
 
----
 
 ## Package Homepage
 
@@ -17,15 +16,11 @@ Each package page is automatically generated and provides:
 - Installation instructions for quick setup in R,  
 - Other relevant resources.  
 
----
-
 ## Website tour
 
 To explore the information provided on the R-universe page for each package, you can:  
 - Read this documentation chapter, or  
 - Click the "Website Tour" button in the navbar for an interactive guide.  
-
----
 
 ## Package information
 
