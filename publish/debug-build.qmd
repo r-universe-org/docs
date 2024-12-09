@@ -8,7 +8,7 @@ No, that is not possible (apart from the next section about third-party system r
 Think of R-universe more like your own mini-CRAN. 
 The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.
 
-This is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some hidden settings or tools.
+This is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.
 
 ## How to request additional third party system requirements?
 

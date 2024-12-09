@@ -4,7 +4,7 @@ title: "Relation to other networks"
 
 ## Relation to other networks
 
-Packages on R-universe may also also exist on other networks, such as CRAN or BioConductor.
+Packages on R-universe may also also exist on other networks, such as CRAN or Bioconductor.
 
 Note that CRAN is not meant to be the only CRAN-style package repository, as [explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote](https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8).
 
