@@ -465,7 +465,7 @@
     "href": "publish/other-networks.html",
     "title": "14  Relation to other networks",
     "section": "",
-    "text": "14.1 Relation to other networks\nPackages on R-universe may also also exist on other networks, such as CRAN or BioConductor.\nNote that CRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
+    "text": "14.1 Relation to other networks\nPackages on R-universe may also also exist on other networks, such as CRAN or Bioconductor.\nNote that CRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Relation to other networks</span>"
