@@ -3,6 +3,7 @@ title: "RSS feeds of package updates"
 ---
 
 The `/feed.xml` endpoint on any R-universe domain provides an RSS feed of recent R package updates in the repository.  
+They are [update live](https://github.com/r-universe-org/frontend/blob/main/routes/universe.js?rgh-link-date=2024-12-09T13%3A49%3A32Z#L215-L231). 
 
 Examples:  
 - [ropensci.r-universe.dev/feed.xml](https://ropensci.r-universe.dev/feed.xml)  
@@ -36,7 +37,4 @@ sprintf("
 ```
 
 The dashboard for any universe also includes a link to this same URL, such that users can easily find and subscribe to your feed.
-
-
-
 
