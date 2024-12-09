@@ -310,20 +310,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>R-universe offers several APIs. There is no authentication.</p>
-<p>You can call the API as you prefer:</p>
-<ul>
-<li>creating your API calls “manually” in the command-line or R;</li>
-<li>using the <a href="https://docs.ropensci.org/universe/">universe R package</a> available from rOpensci R-universe.</li>
-</ul>
-<p>On this page we’ll show examples using {httr2} or {universe} directly.</p>
+<p>R-universe provides several APIs for programmatic access, requiring no authentication.</p>
+<p>You can interact with the API in two ways:<br>
+- Create API calls “manually” in the command-line or R.<br>
+- Use the <a href="https://docs.ropensci.org/universe/">universe R package</a> available from rOpenSci’s R-universe.</p>
+<p>This page demonstrates usage with <code>{httr2}</code> or <code>{universe}</code> directly.</p>
 <section id="universe-specific-apis" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="universe-specific-apis"><span class="header-section-number">6.1</span> Universe-specific APIs</h2>
-<p>The URL of these APIs start with the universe URL. Here we will often use <code>https://jeroen.r-universe.dev</code> as an example but you can replace it with any universe URL.</p>
+<p>API endpoints start with the universe URL.<br>
+This documentation uses <code>https://jeroen.r-universe.dev</code> as an example, but you can replace it with any universe URL.</p>
 <section id="list-of-all-universes" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="list-of-all-universes"><span class="header-section-number">6.1.1</span> List of all universes</h3>
 <p>URL: <code>https://r-universe.dev/stats/everyone</code></p>
-<p>Example</p>
+<p>Example using <code>{httr2}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>universes <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://r-universe.dev/stats/everyone"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
@@ -376,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [1] "16cile"</code></pre>
 </div>
 </div>
-<p>Or:</p>
+<p>Example using <code>{universe}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>universe<span class="sc">::</span><span class="fu">everyone</span>() <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -400,7 +399,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="ls" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="ls"><span class="header-section-number">6.1.2</span> List of packages in an universe</h3>
 <p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/ls</code></p>
-<p>Example</p>
+<p>Example using <code>{httr2}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://jeroen.r-universe.dev/api/ls"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
@@ -430,7 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ : chr "webutils"</code></pre>
 </div>
 </div>
-<p>Or:</p>
+<p>Example using <code>{universe}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_ls</span>(<span class="st">"jeroen"</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -444,9 +443,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/packages</code></p>
 <p>Parameters:</p>
 <ul>
-<li>limit: the number of results to return, by default a maximum of 100. You can use the <a href="#ls">ls endpoint</a> to determine the total number of packages in the universe and set that as a limit.</li>
+<li>limit: Maximum number of results (default: 100). Use the <a href="#ls">ls endpoint</a> to determine the total number of packages and adjust the limit accordingly.</li>
 </ul>
-<p>Example:</p>
+<p>Example using <code>{httr2}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://jeroen.r-universe.dev/api/packages"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
@@ -535,7 +534,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ _binaries         :List of 9</code></pre>
 </div>
 </div>
-<p>Or:</p>
+<p>Example using <code>{universe}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_all_packages</span>(<span class="st">"jeroen"</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
@@ -625,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="information-on-a-single-package-in-an-universe" class="level3" data-number="6.1.4">
 <h3 data-number="6.1.4" class="anchored" data-anchor-id="information-on-a-single-package-in-an-universe"><span class="header-section-number">6.1.4</span> Information on a single package in an universe</h3>
 <p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/packages/&lt;package&gt;</code></p>
-<p>Example:</p>
+<p>Example using <code>{httr2}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>v8 <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://jeroen.r-universe.dev/api/packages/V8"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_user_agent</span>(<span class="st">"R-universe docs"</span>) <span class="sc">|&gt;</span></span>
@@ -715,7 +714,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ _binaries         :List of 9</code></pre>
 </div>
 </div>
-<p>Or:</p>
+<p>Example using <code>{universe}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>V8 <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_one_package</span>(<span class="st">"jeroen"</span>, <span class="st">"V8"</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
@@ -807,14 +806,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="6.1.5" class="anchored" data-anchor-id="search-in-an-universe"><span class="header-section-number">6.1.5</span> Search in an universe</h3>
 <p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/search</code> Parameters:</p>
 <ul>
-<li>q: the query string. You can use the <a href="../browse/search.html">advanced fields</a>.</li>
-<li>limit: the number of results to return, by default a maximum of 100 but you can
+<li>q: Query string (supports <a href="../browse/search.html">advanced fields</a>).</li>
+<li>limit: Maximum number of results (default: 100). To retrieve all results:
 <ul>
-<li>do a first request to determine the total number of hits <code>N</code>, returned in the response as the <code>total</code> field,</li>
-<li>then do a second request using <code>limit=N</code>.</li>
+<li>Perform an initial query to get the value <code>total</code> field.</li>
+<li>Perform a second query with <code>limit=total</code>.</li>
 </ul></li>
 </ul>
-<p>Example:</p>
+<p>Using <code>{httr2}</code>:</p>
 <p>How many packages in the rOpenSci universe depend on httr2?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://ropensci.r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
@@ -837,7 +836,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 32</code></pre>
 </div>
 </div>
-<p>Or:</p>
+<p>Using <code>{universe}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_search</span>(<span class="st">"ropensci"</span>, <span class="at">query =</span> <span class="st">'needs:httr2'</span>)</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
@@ -868,7 +867,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>then do a second request using <code>limit=N</code>.</li>
 </ul></li>
 </ul>
-<p>Example:</p>
+<p>Example using <code>{httr2}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://r-universe.dev/api/search"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">req_url_query</span>(<span class="at">q =</span> <span class="st">'"weather data"'</span>) <span class="sc">|&gt;</span></span>
@@ -929,7 +928,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  $ rank          : num 1453</code></pre>
 </div>
 </div>
-<p>Or:</p>
+<p>Example using <code>{universe}</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">global_search</span>(<span class="at">query =</span> <span class="st">'"weather data"'</span>, <span class="at">limit =</span> <span class="dv">100</span>L)</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
