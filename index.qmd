@@ -16,7 +16,20 @@ cat(pitch, sep = "\n")
 
 Find out more context, and recent videos, on the [project page on the rOpenSci website](https://ropensci.org/r-universe). 
 
-### Contributing to This Guide
+### Using this guide {.unnumbered}
+
+Are you...
+
+- An R user that just wants to search something or retrieve information;
+- A package developer;
+- A universe developer (aka r-multiverse /pharmaverse /biocondctor or similar people); 
+- Someone willing to contribute to r-universe to improve the infrastructure or documentation?
+
+This documentation should help. 
+Use the table of contents on the left, and please contribute (next section) if anything is unclear or missing!
+
+### Contributing to this guide {.unnumbered}
+
 We welcome contributions to this guide.
 
 - For small changes, please open a [pull request](https://github.com/r-universe-org/docs).
@@ -24,6 +37,7 @@ We welcome contributions to this guide.
 
 Make sure to read our [contributing guide](https://github.com/r-universe-org/docs/blob/main/.github/CONTRIBUTING.md) before getting started.
 
+### Acknowledgements and licence {.unnumbered}
 
 We're grateful for reviewers of this documentation website:
 
