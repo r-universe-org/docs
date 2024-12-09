@@ -22,4 +22,9 @@ or open an [issue](https://github.com/r-universe-org/docs/issues?q=sort%3Aupdate
 or that we can make on your behalf).
 Also read our [contributing guide](https://github.com/r-universe-org/docs/blob/main/.github/CONTRIBUTING.md).
 
+We're grateful for reviewers of this documentation website:
+
+- [Lluís Revilla](https://github.com/llrs)
+- [Yaoxiang Li](https://github.com/YaoxiangLi)
+
 This website is licensed under the [CC BY-NC-ND 4.0 License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
