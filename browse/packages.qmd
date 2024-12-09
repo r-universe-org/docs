@@ -35,7 +35,8 @@ If specified, we also show how the package should be cited in papers.
 
 ### How are the dependencies / dependents calculated?
 
-Dependencies and dependents are derived using transitive (recursive) strong dependencies.  
+Dependencies and dependents are derived using transitive (recursive) strong dependencies. Hence this includes both direct and indirect dependencies.
+
 - Dependencies: Other packages required to use the target package.  
 - Dependents: Packages listing the target package as a dependency.  
 
