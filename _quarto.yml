@@ -22,6 +22,7 @@ book:
       chapters:
         - install/binaries.qmd
         - install/reproducibility.qmd
+        - install/suggested.qmd
     - part: Publish
       chapters:
         - publish/get-started.qmd
