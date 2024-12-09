@@ -31,11 +31,6 @@ At the time of writing it includes:
 You can explore [scores and metrics for all packages](https://r-universe.dev/packages).  
 The algorithm will evolve as R-universe matures and better data becomes available.
 
-## Why is a package sometimes listed twice?
-
-If a source package fails to build (indicating a critical issue), a red "build failure" message is displayed.  
-If a previous build succeeded, it remains available for users to install. 
-
 ## Which packages get included in search? {#deduplication}
 
 In R-universe, a given R package can appear in multiple registries.
@@ -45,3 +40,9 @@ Specifically, search results include:
 
 - Packages where the GitHub owner matches the universe name (e.g., packages under `https://jeroen.r-universe.dev` from `https://github.com/jeroen/`). This includes all CRAN packages.
 - Packages where the universe name differs from the GitHub owner, but the DESCRIPTION file includes the full `user.r-universe.dev` URL in the `URL` field (e.g., `https://jeroen.r-universe.dev` or `https://jeroen.r-universe.dev/mypkg`).
+
+
+## Why is a package sometimes listed twice?
+
+If a source package fails to build (indicating a critical issue), a red "build failure" message is displayed.  
+If a previous build succeeded, it remains available for users to install. 
