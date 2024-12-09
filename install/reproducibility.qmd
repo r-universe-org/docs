@@ -4,7 +4,7 @@ title: "Reproducibility"
 
 ## Does R-universe archive old versions of packages? How does it work with renv?
 
-R-universe does not archive old versions of packages, but it **tracks the upstream git URL and commit ID** in the R package description. This allows tools like `renv` to restore packages in environments that were installed from R-universe. For more details, see this technote: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).  
+R-universe does not archive old versions of packages, but it **tracks the upstream git URL and commit ID** in the R package description. This allows tools like `renv` to restore packages in environments that were installed from R-universe. For more details, see this tech note: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).  
 
 You can also **archive fixed versions of a universe** for production or reproducibility, using what we call [repository snapshots](#snapshots).  
 
