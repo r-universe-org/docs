@@ -40,7 +40,7 @@ Dependencies and dependents are derived using transitive (recursive) strong depe
 - Dependencies: Other packages required to use the target package.  
 - Dependents: Packages listing the target package as a dependency.  
 
-At build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to compute the list of hard dependencies, excluding R-base packages. The size of this list determines the `dependencies` value, while the `dependents` value reflects the number of packages in R-universe depending on the target package.  
+At package build time, we use `tools::package_dependencies(pkg, recursive = TRUE)` to compute the list of hard dependencies, excluding R-base packages. The size of this list determines the `dependencies` value, while the `dependents` value reflects the number of packages in R-universe depending on the target package.  
 
 
 ### How does R-universe analyze system dependencies (C/C++)
