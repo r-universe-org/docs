@@ -146,7 +146,7 @@
     "href": "browse/api.html",
     "title": "6  Programmatic access (APIs)",
     "section": "",
-    "text": "6.1 Universe-specific APIs\nR-universe provides several APIs for programmatic access, requiring no authentication.\nYou can interact with the API in two ways:\n- Create API calls “manually” in the command-line or R.\n- Use the universe R package available from rOpenSci’s R-universe.\nThis page demonstrates usage with {httr2} or {universe} directly.\nAPI endpoints start with the universe URL.\nThis documentation uses https://jeroen.r-universe.dev as an example, but you can replace it with any universe URL.",
+    "text": "6.1 Universe-specific APIs\nR-universe provides several APIs for programmatic access, requiring no authentication. Thanks to the APIs you can list universes, packages in an universe, get information on packages, perform searches.\nYou can interact with the API in two ways:\n- Create API calls “manually” in the command-line or R.\n- Use the universe R package available from rOpenSci’s R-universe.\nThis page demonstrates usage with {httr2} or {universe} directly.\nAPI endpoints start with the universe URL.\nThis documentation uses https://jeroen.r-universe.dev as an example, but you can replace it with any universe URL.",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Programmatic access (APIs)</span>"
