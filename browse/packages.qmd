@@ -66,7 +66,7 @@ The maketools vignette explains this in more detail: [Automatically determine ru
 
 ## All the documentation
 
-R-universe renders all available documentation to help you start using packages quickly.
+R-universe renders and presents all available documentation to help you start using packages quickly.
 
 ![README of the sf package](../img/pkg-readme.png){group="pkg" fig-alt="README of the sf package."}
 
