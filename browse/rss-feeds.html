@@ -262,13 +262,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The /feed.xml endpoint on any R-universe domain gives an RSS feed of recent R package updates in the repository:</p>
-<ul>
-<li><a href="https://ropensci.r-universe.dev/feed.xml" class="uri">https://ropensci.r-universe.dev/feed.xml</a></li>
-<li><a href="https://tidyverse.r-universe.dev/feed.xml" class="uri">https://tidyverse.r-universe.dev/feed.xml</a></li>
-<li><a href="https://jeroen.r-universe.dev/feed.xml" class="uri">https://jeroen.r-universe.dev/feed.xml</a></li>
-</ul>
-<p>Each feed item contains the name and version of the updated R package, along with a timestamp and a link to the build log of the most recent commit. The feed also contains some additional metadata such as the package description, and a list of the articles (vignettes) contained in the package.</p>
+<p>The <code>/feed.xml</code> endpoint on any R-universe domain provides an RSS feed of recent R package updates in the repository.</p>
+<p>Examples:<br>
+- <a href="https://ropensci.r-universe.dev/feed.xml">ropensci.r-universe.dev/feed.xml</a><br>
+- <a href="https://tidyverse.r-universe.dev/feed.xml">tidyverse.r-universe.dev/feed.xml</a><br>
+- <a href="https://jeroen.r-universe.dev/feed.xml">jeroen.r-universe.dev/feed.xml</a></p>
+<p>Each feed item includes:<br>
+- The name and version of the updated R package,<br>
+- A timestamp,<br>
+- A link to the build log for the most recent commit, and<br>
+- Additional metadata such as the package description and a list of articles (vignettes) in the package.</p>
 <details>
 <summary>
 Example (<a href="https://jeroen.r-universe.dev/feed.xml" class="uri">https://jeroen.r-universe.dev/feed.xml</a>)
