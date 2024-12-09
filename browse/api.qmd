@@ -5,7 +5,7 @@ title: "Programmatic access (APIs)"
 R-universe provides several APIs for programmatic access, requiring no authentication.
 
 You can interact with the API in two ways:  
-- Create API calls manually in the command-line or R.  
+- Create API calls "manually" in the command-line or R.  
 - Use the [universe R package](https://docs.ropensci.org/universe/) available from rOpenSci's R-universe.  
 
 This page demonstrates examples using `{httr2}` or `{universe}` directly.
