@@ -246,8 +246,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#how-is-the-package-rank-score-calculated" id="toc-how-is-the-package-rank-score-calculated" class="nav-link active" data-scroll-target="#how-is-the-package-rank-score-calculated"><span class="header-section-number">3.1</span> How is the package-rank score calculated?</a></li>
-  <li><a href="#why-is-a-package-sometimes-listed-twice" id="toc-why-is-a-package-sometimes-listed-twice" class="nav-link" data-scroll-target="#why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.2</span> Why is a package sometimes listed twice?</a></li>
-  <li><a href="#deduplication" id="toc-deduplication" class="nav-link" data-scroll-target="#deduplication"><span class="header-section-number">3.3</span> Which packages get included in search?</a></li>
+  <li><a href="#deduplication" id="toc-deduplication" class="nav-link" data-scroll-target="#deduplication"><span class="header-section-number">3.2</span> Which packages get included in search?</a></li>
+  <li><a href="#why-is-a-package-sometimes-listed-twice" id="toc-why-is-a-package-sometimes-listed-twice" class="nav-link" data-scroll-target="#why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.3</span> Why is a package sometimes listed twice?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/search.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -320,19 +320,19 @@ The search bar includes a drop-down button for accessing advanced search fields.
 <p>You can explore <a href="https://r-universe.dev/packages">scores and metrics for all packages</a>.<br>
 The algorithm will evolve as R-universe matures and better data becomes available.</p>
 </section>
-<section id="why-is-a-package-sometimes-listed-twice" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.2</span> Why is a package sometimes listed twice?</h2>
-<p>If a source package fails to build (indicating a critical issue), a red “build failure” message is displayed.<br>
-If a previous build succeeded, it remains available for users to install.</p>
-</section>
-<section id="deduplication" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="deduplication"><span class="header-section-number">3.3</span> Which packages get included in search?</h2>
+<section id="deduplication" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="deduplication"><span class="header-section-number">3.2</span> Which packages get included in search?</h2>
 <p>In R-universe, a given R package can appear in multiple registries. To avoid duplicates, search results only display packages from the upstream GitHub owner’s universe, excluding third-party copies.</p>
 <p>Specifically, search results include:</p>
 <ul>
 <li>Packages where the GitHub owner matches the universe name (e.g., packages under <code>https://jeroen.r-universe.dev</code> from <code>https://github.com/jeroen/</code>). This includes all CRAN packages.</li>
 <li>Packages where the universe name differs from the GitHub owner, but the DESCRIPTION file includes the full <code>user.r-universe.dev</code> URL in the <code>URL</code> field (e.g., <code>https://jeroen.r-universe.dev</code> or <code>https://jeroen.r-universe.dev/mypkg</code>).</li>
 </ul>
+</section>
+<section id="why-is-a-package-sometimes-listed-twice" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="why-is-a-package-sometimes-listed-twice"><span class="header-section-number">3.3</span> Why is a package sometimes listed twice?</h2>
+<p>If a source package fails to build (indicating a critical issue), a red “build failure” message is displayed.<br>
+If a previous build succeeded, it remains available for users to install.</p>
 
 
 </section>

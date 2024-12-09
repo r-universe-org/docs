@@ -43,22 +43,22 @@
     ]
   },
   {
-    "objectID": "browse/search.html#why-is-a-package-sometimes-listed-twice",
-    "href": "browse/search.html#why-is-a-package-sometimes-listed-twice",
+    "objectID": "browse/search.html#deduplication",
+    "href": "browse/search.html#deduplication",
     "title": "3  Search for packages",
-    "section": "3.2 Why is a package sometimes listed twice?",
-    "text": "3.2 Why is a package sometimes listed twice?\nIf a source package fails to build (indicating a critical issue), a red “build failure” message is displayed.\nIf a previous build succeeded, it remains available for users to install.",
+    "section": "3.2 Which packages get included in search?",
+    "text": "3.2 Which packages get included in search?\nIn R-universe, a given R package can appear in multiple registries. To avoid duplicates, search results only display packages from the upstream GitHub owner’s universe, excluding third-party copies.\nSpecifically, search results include:\n\nPackages where the GitHub owner matches the universe name (e.g., packages under https://jeroen.r-universe.dev from https://github.com/jeroen/). This includes all CRAN packages.\nPackages where the universe name differs from the GitHub owner, but the DESCRIPTION file includes the full user.r-universe.dev URL in the URL field (e.g., https://jeroen.r-universe.dev or https://jeroen.r-universe.dev/mypkg).",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
     ]
   },
   {
-    "objectID": "browse/search.html#deduplication",
-    "href": "browse/search.html#deduplication",
+    "objectID": "browse/search.html#why-is-a-package-sometimes-listed-twice",
+    "href": "browse/search.html#why-is-a-package-sometimes-listed-twice",
     "title": "3  Search for packages",
-    "section": "3.3 Which packages get included in search?",
-    "text": "3.3 Which packages get included in search?\nIn R-universe, a given R package can appear in multiple registries. To avoid duplicates, search results only display packages from the upstream GitHub owner’s universe, excluding third-party copies.\nSpecifically, search results include:\n\nPackages where the GitHub owner matches the universe name (e.g., packages under https://jeroen.r-universe.dev from https://github.com/jeroen/). This includes all CRAN packages.\nPackages where the universe name differs from the GitHub owner, but the DESCRIPTION file includes the full user.r-universe.dev URL in the URL field (e.g., https://jeroen.r-universe.dev or https://jeroen.r-universe.dev/mypkg).",
+    "section": "3.3 Why is a package sometimes listed twice?",
+    "text": "3.3 Why is a package sometimes listed twice?\nIf a source package fails to build (indicating a critical issue), a red “build failure” message is displayed.\nIf a previous build succeeded, it remains available for users to install.",
     "crumbs": [
       "Browse",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Search for packages</span>"
