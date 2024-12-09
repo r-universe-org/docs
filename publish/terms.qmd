@@ -1,0 +1,35 @@
+---
+title: "Package publishing rules"
+---
+
+## Reserved names
+
+The following names should be avoided as package name because `https://username.r-universe.dev/{pkg}/` has special meaning:
+
+-  api 
+-  apis 
+-  articles 
+-  badges 
+-  bin 
+-  builds 
+-  citation 
+-  contributors 
+-  datasets 
+-  docs 
+-  favicon.ico 
+-  feed.xml 
+-  index.xml 
+-  manual 
+-  packages 
+-  readme 
+-  robots.txt 
+-  sitemap_index.xml 
+-  sitemap.xml 
+-  src 
+-  stats
+
+## Code of Conduct
+
+Maintainers of universes are solely responsible for their projects.
+
+The R-universe project itself is governed by the [rOpenSci code of conduct](https://ropensci.org/code-of-conduct/).
