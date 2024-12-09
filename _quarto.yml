@@ -28,6 +28,7 @@ book:
         - publish/set-up.qmd
         - publish/metadata.qmd
         - publish/debug-build.qmd
+        - publish/terms.qmd
         - publish/other-networks.qmd
 lightbox: true
 format:
