@@ -153,6 +153,10 @@ Note that not all packages have a `devel` version available. CRAN packages that 
 
 ## Usage and development activity
 
+::: {.callout-warning}
+The information on development is only accurate if the developers push to the tracked Git repository. If for instance a maintainer updates a package on Bioconductor or CRAN without updating the Git repository, the information on R-universe will be stale.
+:::
+
 Besides familiarizing yourself with what the package does, you may be interested in who is working on it, who else is using it, and if it is still actively developed.
 
 ![Development information the sf package](../img/pkg-development.png){group="pkg" fig-alt="Development information the sf package"}
