@@ -2,26 +2,24 @@
 title: "Why publish on R-universe"
 ---
 
-## Put your packages (and yourself) on the map
+## Highlight your packages and expertise
 
-By registering your packages with R-universe, you make your packages easier to [find and assess by users](/browse/get-started.html).
+Registering your packages with R-universe makes them easier for users to [discover and evaluate](/browse/get-started.html).  
 
-Creating your own, or your own organization's, R-universe creates a showcase of expertise and interests.
+Creating an R-universe for yourself or your organization showcases your expertise, interests, and contributions to the R community.  
 
-## Make your packages easy to install
+## Simplify installation for your users
 
-R-universe builds [binaries for release versions of the most popular platforms](/install/binaries.html).
+R-universe builds [binaries for release versions of the most popular platforms](/install/binaries.html), ensuring your packages are easy to install across systems. 
 
-## More inspiration
+## Get inspired by success stories
 
 Read or watch interviews of the series [Meeting the stars of the R-Universe](https://ropensci.org/blog/2023/11/06/r-universe-stars-finale/), that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.
 
-## It is free!
+## Enjoy it for free!
 
 R-universe is provided free of charge.
 
-## Only a few steps for set-up!
+## Set up in just a few steps
 
-See the [set-up docs](/publish/set-up.html).
-
-
+Follow the [set-up documentation](/publish/set-up.html) to get started quickly.  
