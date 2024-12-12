@@ -1,0 +1,19 @@
+---
+title: "R-universe governance"
+---
+
+## Governance {#governance}
+
+R-universe was initiated at, and is currently governed by, [rOpenSci](https://ropensci.org/).
+
+rOpenSci is a non-profit initiative that supports open and reproducible science through different projects, including and not limited to: a software peer-review system for R packages, a champions program for people from historically and systematically excluded groups who are interested in contributing to rOpenSci and the broader open source and open science communities, multilingual publishing efforts.
+rOpenSci builds a welcoming and diverse community. 
+rOpenSci curates a blog, coworking events, community calls.
+
+TODO: list relevant people?
+
+## Funding {#funding}
+
+R-universe is financially supported by the [R Consortium](https://r-consortium.org/) as a top-level project.
+
+TODO: previous funding including GSOD?
