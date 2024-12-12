@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.2">
+<meta name="generator" content="quarto-1.7.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07c16812f08c4a1591d6ec4fc46327fa.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-81b5c3e63835cfde897ecd3d35a35a41.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-43cc1495876b7dadb85f7ff523b75766.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -295,7 +295,47 @@ jeroen.r-universe.dev
   &lt;title&gt;R packages by jeroen&lt;/title&gt;
   &lt;link&gt;https://jeroen.r-universe.dev&lt;/link&gt;
 &lt;/image&gt;
-&lt;lastBuildDate&gt;Wed, 04 Dec 2024 20:05:08 GMT&lt;/lastBuildDate&gt;
+&lt;lastBuildDate&gt;Wed, 11 Dec 2024 13:00:48 GMT&lt;/lastBuildDate&gt;
+&lt;item&gt;
+  &lt;title&gt;[jeroen] openssl 2.3.0&lt;/title&gt;
+  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
+  &lt;description&gt;Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers. Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic signatures can either be created and verified manually or via x509 certificates. AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric (public key) encryption or EC for Diffie Hellman. High-level envelope functions combine RSA and AES for encrypting arbitrary sized data. Other utilities include key generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random number generator, and 'bignum' math methods for manually performing crypto calculations on large multibyte integers.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/12277417592&lt;/link&gt;
+  &lt;pubDate&gt;Wed, 11 Dec 2024 13:00:48 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;openssl&lt;/r:package&gt;
+  &lt;r:version&gt;2.3.0&lt;/r:version&gt;
+  &lt;r:status&gt;success&lt;/r:status&gt;
+  &lt;r:repository&gt;https://jeroen.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/jeroen/openssl&lt;/r:upstream&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;crypto_hashing.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;crypto_hashing.html&lt;/r:filename&gt;
+    &lt;r:title&gt;Cryptographic Hashing in R&lt;/r:title&gt;
+    &lt;r:created&gt;2015-01-07 04:08:07&lt;/r:created&gt;
+    &lt;r:modified&gt;2024-08-16 09:18:11&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;bignum.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;bignum.html&lt;/r:filename&gt;
+    &lt;r:title&gt;Fun with bignum: how RSA encryption works&lt;/r:title&gt;
+    &lt;r:created&gt;2015-11-24 12:00:10&lt;/r:created&gt;
+    &lt;r:modified&gt;2020-06-01 10:12:29&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;secure_rng.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;secure_rng.html&lt;/r:filename&gt;
+    &lt;r:title&gt;Generating Secure Random Numbers in R&lt;/r:title&gt;
+    &lt;r:created&gt;2015-01-07 04:08:07&lt;/r:created&gt;
+    &lt;r:modified&gt;2024-08-16 09:18:11&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;keys.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;keys.html&lt;/r:filename&gt;
+    &lt;r:title&gt;Importing and exporting RSA/DSA/EC keys&lt;/r:title&gt;
+    &lt;r:created&gt;2016-05-25 10:42:58&lt;/r:created&gt;
+    &lt;r:modified&gt;2016-10-26 19:55:55&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+&lt;/item&gt;
 &lt;item&gt;
   &lt;title&gt;[jeroen] curl 6.0.2&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
@@ -378,46 +418,6 @@ jeroen.r-universe.dev
   &lt;r:upstream&gt;https://github.com/ropensci/unrtf&lt;/r:upstream&gt;
 &lt;/item&gt;
 &lt;item&gt;
-  &lt;title&gt;[jeroen] openssl 2.2.2&lt;/title&gt;
-  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers. Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic signatures can either be created and verified manually or via x509 certificates. AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric (public key) encryption or EC for Diffie Hellman. High-level envelope functions combine RSA and AES for encrypting arbitrary sized data. Other utilities include key generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random number generator, and 'bignum' math methods for manually performing crypto calculations on large multibyte integers.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/11993712834&lt;/link&gt;
-  &lt;pubDate&gt;Fri, 25 Oct 2024 21:54:18 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;openssl&lt;/r:package&gt;
-  &lt;r:version&gt;2.2.2&lt;/r:version&gt;
-  &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://jeroen.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/jeroen/openssl&lt;/r:upstream&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;crypto_hashing.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;crypto_hashing.html&lt;/r:filename&gt;
-    &lt;r:title&gt;Cryptographic Hashing in R&lt;/r:title&gt;
-    &lt;r:created&gt;2015-01-07 04:08:07&lt;/r:created&gt;
-    &lt;r:modified&gt;2024-08-16 09:18:11&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;bignum.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;bignum.html&lt;/r:filename&gt;
-    &lt;r:title&gt;Fun with bignum: how RSA encryption works&lt;/r:title&gt;
-    &lt;r:created&gt;2015-11-24 12:00:10&lt;/r:created&gt;
-    &lt;r:modified&gt;2020-06-01 10:12:29&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;secure_rng.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;secure_rng.html&lt;/r:filename&gt;
-    &lt;r:title&gt;Generating Secure Random Numbers in R&lt;/r:title&gt;
-    &lt;r:created&gt;2015-01-07 04:08:07&lt;/r:created&gt;
-    &lt;r:modified&gt;2024-08-16 09:18:11&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;keys.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;keys.html&lt;/r:filename&gt;
-    &lt;r:title&gt;Importing and exporting RSA/DSA/EC keys&lt;/r:title&gt;
-    &lt;r:created&gt;2016-05-25 10:42:58&lt;/r:created&gt;
-    &lt;r:modified&gt;2016-10-26 19:55:55&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-&lt;/item&gt;
-&lt;item&gt;
   &lt;title&gt;[ropensci] universe 1.0.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Utilities to interact with the R-universe platform. Includes functions to manage local package repositories, as well as API wrappers for retrieving data and metadata about packages in r-universe.&lt;/description&gt;
@@ -452,7 +452,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] commonmark 1.9.3&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;The CommonMark specification &amp;lt;https://github.github.com/gfm/&amp;gt; defines a rationalized version of markdown syntax. This package uses the 'cmark' reference implementation for converting markdown text into various formats including html, latex and groff man. In addition it exposes the markdown parse tree in xml format. Also includes opt-in support for GFM extensions including tables, autolinks, and strikethrough text.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/11773353545&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/12271052195&lt;/link&gt;
   &lt;pubDate&gt;Sat, 12 Oct 2024 17:50:40 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;commonmark&lt;/r:package&gt;
   &lt;r:version&gt;1.9.3&lt;/r:version&gt;
@@ -464,7 +464,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] V8 6.0.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;An R interface to V8 &amp;lt;https://v8.dev&amp;gt;: Google's open source JavaScript and WebAssembly engine. This package can be compiled either with V8 version 6 and up or NodeJS when built as a shared library.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/11773522041&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/12271052393&lt;/link&gt;
   &lt;pubDate&gt;Sat, 12 Oct 2024 10:07:36 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;V8&lt;/r:package&gt;
   &lt;r:version&gt;6.0.0&lt;/r:version&gt;
