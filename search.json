@@ -322,51 +322,51 @@
     "href": "publish/get-started.html",
     "title": "10  Why publish on R-universe",
     "section": "",
-    "text": "10.1 Put your packages (and yourself) on the map\nBy registering your packages with R-universe, you make your packages easier to find and assess by users.\nCreating your own, or your own organization’s, R-universe creates a showcase of expertise and interests.",
+    "text": "10.1 Highlight your packages and expertise\nRegistering your packages with R-universe makes them easier for users to discover and evaluate.\nCreating an R-universe for yourself or your organization showcases your expertise, interests, and contributions to the R community.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
-    "objectID": "publish/get-started.html#make-your-packages-easy-to-install",
-    "href": "publish/get-started.html#make-your-packages-easy-to-install",
+    "objectID": "publish/get-started.html#simplify-installation-for-your-users",
+    "href": "publish/get-started.html#simplify-installation-for-your-users",
     "title": "10  Why publish on R-universe",
-    "section": "10.2 Make your packages easy to install",
-    "text": "10.2 Make your packages easy to install\nR-universe builds binaries for release versions of the most popular platforms.",
+    "section": "10.2 Simplify installation for your users",
+    "text": "10.2 Simplify installation for your users\nR-universe builds binaries for release versions of the most popular platforms, ensuring your packages are easy to install across systems.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
-    "objectID": "publish/get-started.html#more-inspiration",
-    "href": "publish/get-started.html#more-inspiration",
+    "objectID": "publish/get-started.html#get-inspired-by-success-stories",
+    "href": "publish/get-started.html#get-inspired-by-success-stories",
     "title": "10  Why publish on R-universe",
-    "section": "10.3 More inspiration",
-    "text": "10.3 More inspiration\nRead or watch interviews of the series Meeting the stars of the R-Universe, that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.",
+    "section": "10.3 Get inspired by success stories",
+    "text": "10.3 Get inspired by success stories\nRead or watch interviews of the series Meeting the stars of the R-Universe, that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
-    "objectID": "publish/get-started.html#it-is-free",
-    "href": "publish/get-started.html#it-is-free",
+    "objectID": "publish/get-started.html#enjoy-it-for-free",
+    "href": "publish/get-started.html#enjoy-it-for-free",
     "title": "10  Why publish on R-universe",
-    "section": "10.4 It is free!",
-    "text": "10.4 It is free!\nR-universe is provided free of charge.",
+    "section": "10.4 Enjoy it for free!",
+    "text": "10.4 Enjoy it for free!\nR-universe is provided free of charge.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
-    "objectID": "publish/get-started.html#only-a-few-steps-for-set-up",
-    "href": "publish/get-started.html#only-a-few-steps-for-set-up",
+    "objectID": "publish/get-started.html#set-up-in-just-a-few-steps",
+    "href": "publish/get-started.html#set-up-in-just-a-few-steps",
     "title": "10  Why publish on R-universe",
-    "section": "10.5 Only a few steps for set-up!",
-    "text": "10.5 Only a few steps for set-up!\nSee the set-up docs.",
+    "section": "10.5 Set up in just a few steps",
+    "text": "10.5 Set up in just a few steps\nFollow the set-up documentation to get started quickly.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
