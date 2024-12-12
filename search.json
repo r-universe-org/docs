@@ -318,6 +318,17 @@
     ]
   },
   {
+    "objectID": "install/reproducibility.html#using-snapshot-from-the-r-multiverse",
+    "href": "install/reproducibility.html#using-snapshot-from-the-r-multiverse",
+    "title": "9  Reproducibility",
+    "section": "9.3 Using snapshot from the R-multiverse",
+    "text": "9.3 Using snapshot from the R-multiverse\nR-multiverse is a general-purpose R package repository system with transparent governance and open source infrastructure. It deploys a production snapshot once every three months TODO https://github.com/r-multiverse/help/discussions/115",
+    "crumbs": [
+      "Install",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Reproducibility</span>"
+    ]
+  },
+  {
     "objectID": "publish/get-started.html",
     "href": "publish/get-started.html",
     "title": "10  Why publish on R-universe",
@@ -367,6 +378,17 @@
     "title": "10  Why publish on R-universe",
     "section": "10.5 Set up in just a few steps",
     "text": "10.5 Set up in just a few steps\nFollow the set-up documentation to get started quickly.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+    ]
+  },
+  {
+    "objectID": "publish/get-started.html#a-general-purpose-package-repository-built-on-r-universe-the-r-multiverse",
+    "href": "publish/get-started.html#a-general-purpose-package-repository-built-on-r-universe-the-r-multiverse",
+    "title": "10  Why publish on R-universe",
+    "section": "10.6 A general-purpose package repository built on R-universe: the R-multiverse",
+    "text": "10.6 A general-purpose package repository built on R-universe: the R-multiverse\nR-multiverse is a general-purpose R package repository system with transparent governance and open source infrastructure. More on R-multiverse’s website",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
