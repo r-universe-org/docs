@@ -494,58 +494,58 @@
     ]
   },
   {
-    "objectID": "publish/debug-build.html",
-    "href": "publish/debug-build.html",
-    "title": "13  Debug package builds",
+    "objectID": "publish/troubleshoot-build.html",
+    "href": "publish/troubleshoot-build.html",
+    "title": "13  Trouble shoot package builds",
     "section": "",
     "text": "13.1 Is it possible to customize the package build process with custom options/tools/variables?\nNo, that is not possible (apart from the next section about third-party system requirements). Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.\nThis is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Debug package builds</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
-    "objectID": "publish/debug-build.html#how-to-request-additional-third-party-system-requirements",
-    "href": "publish/debug-build.html#how-to-request-additional-third-party-system-requirements",
-    "title": "13  Debug package builds",
+    "objectID": "publish/troubleshoot-build.html#how-to-request-additional-third-party-system-requirements",
+    "href": "publish/troubleshoot-build.html#how-to-request-additional-third-party-system-requirements",
+    "title": "13  Trouble shoot package builds",
     "section": "13.2 How to request additional third party system requirements?",
     "text": "13.2 How to request additional third party system requirements?\nIf packages need a Linux library that does not yet exist on the server, either:\n\nSend a PR to add them to the base image, for reasonably small/common system dependencies.\nAlternatively: send a PR to https://github.com/rstudio/r-system-requirements that resolves the library based on what is in the package DESCRIPTION file under SystemRequirements.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Debug package builds</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
-    "objectID": "publish/debug-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
-    "href": "publish/debug-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
-    "title": "13  Debug package builds",
+    "objectID": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
+    "href": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
+    "title": "13  Trouble shoot package builds",
     "section": "13.3 How to publish vignettes/articles which require custom software/tokens to render?",
     "text": "13.3 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Debug package builds</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
-    "objectID": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
-    "href": "publish/debug-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
-    "title": "13  Debug package builds",
+    "objectID": "publish/troubleshoot-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
+    "href": "publish/troubleshoot-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
+    "title": "13  Trouble shoot package builds",
     "section": "13.4 Are packages on R-universe required to pass CMD check or meet other criteria?",
     "text": "13.4 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Debug package builds</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
-    "objectID": "publish/debug-build.html#how-to-use-a-universe-on-regular-continous-integration",
-    "href": "publish/debug-build.html#how-to-use-a-universe-on-regular-continous-integration",
-    "title": "13  Debug package builds",
+    "objectID": "publish/troubleshoot-build.html#how-to-use-a-universe-on-regular-continous-integration",
+    "href": "publish/troubleshoot-build.html#how-to-use-a-universe-on-regular-continous-integration",
+    "title": "13  Trouble shoot package builds",
     "section": "13.5 How to use a universe on regular continous integration?",
     "text": "13.5 How to use a universe on regular continous integration?\nIf you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the extra-repositories field of the r-lib/actions setup-r action.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Debug package builds</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
