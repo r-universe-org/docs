@@ -42,7 +42,3 @@ No.
 R-universe is an open publishing system. 
 The system just builds and deploys R packages from git into personal cran-like repositories. 
 The owner of the universe is responsible for their own policies and quality control.
-
-## How to use a universe on regular continous integration?
-
-If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the [`extra-repositories` field of the `r-lib/actions` setup-r action](https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs).
