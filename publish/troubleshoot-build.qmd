@@ -1,5 +1,5 @@
 ---
-title: "Debug package builds"
+title: "Trouble shoot package builds"
 ---
 
 ## Is it possible to customize the package build process with custom options/tools/variables?

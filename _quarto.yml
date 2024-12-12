@@ -27,7 +27,7 @@ book:
         - publish/get-started.qmd
         - publish/set-up.qmd
         - publish/metadata.qmd
-        - publish/debug-build.qmd
+        - publish/troubleshoot-build.qmd
         - publish/terms.qmd
         - publish/other-networks.qmd
 lightbox: true
