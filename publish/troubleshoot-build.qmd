@@ -2,6 +2,13 @@
 title: "Trouble shoot package builds"
 ---
 
+## How often is data updated? {#data-updates}
+
+- Every hour, the systems checks the package git repos and the registry for changes. 
+- If there are changes, 
+   - the workflow starts building those packages, 
+   - then upon completion uploads them to r-universe.
+
 ## Is it possible to customize the package build process with custom options/tools/variables?
 
 No, that is not possible (apart from the next section about third-party system requirements). 
