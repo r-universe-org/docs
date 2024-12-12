@@ -23,3 +23,8 @@ R-universe is provided free of charge.
 ## Set up in just a few steps
 
 Follow the [set-up documentation](/publish/set-up.html) to get started quickly.  
+
+## A general-purpose package repository built on R-universe: the R-multiverse
+
+R-multiverse is a general-purpose R package repository system with [transparent governance](https://r-multiverse.org/policies.html) and open source infrastructure. 
+More on [R-multiverse's website](https://r-multiverse.org/)
