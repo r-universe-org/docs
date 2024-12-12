@@ -10,6 +10,19 @@ The build environment is actually very similar to that of CRAN, if the package c
 
 This is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.
 
+## What if the git repo is not a ready-to-build source package?
+
+For packages that cannot be build directly from the checkout but need some additional steps, you can add a [script](https://github.com/r-universe-org/build-source/blob/5830b8aa92d5524b3af6d1b617e605d1a2558543/entrypoint.sh#L50-L57) that gets executed before R CMD build at the root of your package:
+
+- either an R script called `bootstrap.R`
+- or a shell script called `.prepare`.
+
+Examples of actions performed by the script:
+
+- Initiate a git submodule;
+- Run roxygen2 (some authors do not commit the Rd files to git);
+- Other prepping.
+
 ## How to request additional third party system requirements?
 
 If packages need a **Linux library** that does not yet exist on the server, either:
