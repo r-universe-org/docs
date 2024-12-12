@@ -23,7 +23,7 @@ Examples of actions performed by the script:
 - Run roxygen2 (some authors do not commit the Rd files to git);
 - Other prepping.
 
-## How to request additional third party system requirements?
+## How to request additional third party system requirements? {#third-party-reqs}
 
 If packages need a **Linux library** that does not yet exist on the server, either:
 
