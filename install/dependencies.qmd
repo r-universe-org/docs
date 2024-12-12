@@ -1,0 +1,21 @@
+---
+title: "Using dependencies from R-universe"
+---
+
+## Can a CRAN package take on a dependency from R-universe?
+
+Yes! It has to be an optional dependency (`Suggests`) and you need to
+
+- List the R-universe in the `Additional_repositories` field in `DESCRIPTION`. [Examples of CRAN packages doing so](https://github.com/search?q=org%3Acran+path%3ADESCRIPTION+additional_repositories%3A+r-universe.dev&type=code). The field will *not* ensure installation of the package. Its sole purpose is allowing CRAN to check the package is indeed available in that other repository.
+
+- Document, for the user, how to install the missing package. You can do that 
+    - In user-facing documentation (README, package-level manual page, manual page of the functions that use the dependency). [Example](https://github.com/ropensci/usaboundaries?tab=readme-ov-file#installation).
+    - Within the code, for instance:
+
+```r
+rlang::check_installed("targets", action = function(...) install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org')))
+```
+
+## How to use a universe on regular continous integration?
+
+If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the [`extra-repositories` field of the `r-lib/actions` setup-r action](https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs).
