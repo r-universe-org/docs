@@ -318,322 +318,344 @@
     ]
   },
   {
+    "objectID": "install/dependencies.html",
+    "href": "install/dependencies.html",
+    "title": "10  Using dependencies from R-universe",
+    "section": "",
+    "text": "10.1 Can a CRAN package take on a dependency from R-universe?\nYes! It has to be an optional dependency (Suggests) and you need to",
+    "crumbs": [
+      "Install",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Using dependencies from R-universe</span>"
+    ]
+  },
+  {
+    "objectID": "install/dependencies.html#can-a-cran-package-take-on-a-dependency-from-r-universe",
+    "href": "install/dependencies.html#can-a-cran-package-take-on-a-dependency-from-r-universe",
+    "title": "10  Using dependencies from R-universe",
+    "section": "",
+    "text": "List the R-universe in the Additional_repositories field in DESCRIPTION. Examples of CRAN packages doing so. The field will not ensure installation of the package. Its sole purpose is allowing CRAN to check the package is indeed available in that other repository.\nDocument, for the user, how to install the missing package. You can do that\n\nIn user-facing documentation (README, package-level manual page, manual page of the functions that use the dependency). Example.\nWithin the code, for instance:\n\n\nrlang::check_installed(\"targets\", action = function(...) install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org')))",
+    "crumbs": [
+      "Install",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Using dependencies from R-universe</span>"
+    ]
+  },
+  {
+    "objectID": "install/dependencies.html#how-to-use-a-universe-on-regular-continous-integration",
+    "href": "install/dependencies.html#how-to-use-a-universe-on-regular-continous-integration",
+    "title": "10  Using dependencies from R-universe",
+    "section": "10.2 How to use a universe on regular continous integration?",
+    "text": "10.2 How to use a universe on regular continous integration?\nIf you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the extra-repositories field of the r-lib/actions setup-r action.",
+    "crumbs": [
+      "Install",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Using dependencies from R-universe</span>"
+    ]
+  },
+  {
     "objectID": "publish/get-started.html",
     "href": "publish/get-started.html",
-    "title": "10  Why publish on R-universe",
+    "title": "11  Why publish on R-universe",
     "section": "",
-    "text": "10.1 Highlight your packages and expertise\nRegistering your packages with R-universe makes them easier for users to discover and evaluate.\nCreating an R-universe for yourself or your organization showcases your expertise, interests, and contributions to the R community.",
+    "text": "11.1 Highlight your packages and expertise\nRegistering your packages with R-universe makes them easier for users to discover and evaluate.\nCreating an R-universe for yourself or your organization showcases your expertise, interests, and contributions to the R community.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
     "objectID": "publish/get-started.html#simplify-installation-for-your-users",
     "href": "publish/get-started.html#simplify-installation-for-your-users",
-    "title": "10  Why publish on R-universe",
-    "section": "10.2 Simplify installation for your users",
-    "text": "10.2 Simplify installation for your users\nR-universe builds binaries for release versions of the most popular platforms, ensuring your packages are easy to install across systems.",
+    "title": "11  Why publish on R-universe",
+    "section": "11.2 Simplify installation for your users",
+    "text": "11.2 Simplify installation for your users\nR-universe builds binaries for release versions of the most popular platforms, ensuring your packages are easy to install across systems.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
     "objectID": "publish/get-started.html#get-inspired-by-success-stories",
     "href": "publish/get-started.html#get-inspired-by-success-stories",
-    "title": "10  Why publish on R-universe",
-    "section": "10.3 Get inspired by success stories",
-    "text": "10.3 Get inspired by success stories\nRead or watch interviews of the series Meeting the stars of the R-Universe, that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.",
+    "title": "11  Why publish on R-universe",
+    "section": "11.3 Get inspired by success stories",
+    "text": "11.3 Get inspired by success stories\nRead or watch interviews of the series Meeting the stars of the R-Universe, that are examples of organizations and teams that choose R-Universe to facilitate access and promote community sharing of data and software.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
     "objectID": "publish/get-started.html#enjoy-it-for-free",
     "href": "publish/get-started.html#enjoy-it-for-free",
-    "title": "10  Why publish on R-universe",
-    "section": "10.4 Enjoy it for free!",
-    "text": "10.4 Enjoy it for free!\nR-universe is provided free of charge.",
+    "title": "11  Why publish on R-universe",
+    "section": "11.4 Enjoy it for free!",
+    "text": "11.4 Enjoy it for free!\nR-universe is provided free of charge.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
     "objectID": "publish/get-started.html#set-up-in-just-a-few-steps",
     "href": "publish/get-started.html#set-up-in-just-a-few-steps",
-    "title": "10  Why publish on R-universe",
-    "section": "10.5 Set up in just a few steps",
-    "text": "10.5 Set up in just a few steps\nFollow the set-up documentation to get started quickly.",
+    "title": "11  Why publish on R-universe",
+    "section": "11.5 Set up in just a few steps",
+    "text": "11.5 Set up in just a few steps\nFollow the set-up documentation to get started quickly.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Why publish on R-universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html",
     "href": "publish/set-up.html",
-    "title": "11  Set up your own universe",
+    "title": "12  Set up your own universe",
     "section": "",
-    "text": "11.1 Basic steps\nCreating a universe for your R packages can be done in a few steps described below. The further sections on this page give more details on each step.",
+    "text": "12.1 Basic steps\nCreating a universe for your R packages can be done in a few steps described below. The further sections on this page give more details on each step.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html#basic-steps",
     "href": "publish/set-up.html#basic-steps",
-    "title": "11  Set up your own universe",
+    "title": "12  Set up your own universe",
     "section": "",
     "text": "Create a Git repository named (all lowercase) &lt;your-username&gt;.r-universe.dev on your GitHub account, containing a packages.json file which lists the Git repositories with R packages to include.\n\nFor an organization at github.com/ropensci the repository is thus github.com/ropensci/ropensci.r-universe.dev;\nsimilarly for an user at github.com/jeroen the repository is github.com/jeroen/jeroen.r-universe.dev. More details.\n\nInstall the r-universe app on this same GitHub account or organization for which you want to create the universe. Clicking on the app link will lead you to a page that asks “Where do you want to install R-universe?”. More details.\nWait for your packages to start appearing on https://&lt;yourname&gt;.r-universe.dev once they have finished building. More details.\nDocument how to install packages from R-universe in the docs of your packages. More details.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html#subdomain",
     "href": "publish/set-up.html#subdomain",
-    "title": "11  Set up your own universe",
-    "section": "11.2 Creating your personal R-universe subdomain",
-    "text": "11.2 Creating your personal R-universe subdomain\nIn R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.\n\n11.2.1 Case-sensitivity\nDomain names are by definition case-insensitive and lowercased.\n\n\n11.2.2 How much GitHub is compulsory?\nIn order to start a universe you need a GitHub account as that is where the repository with your packages’ listing has to be hosted. However the R packages themselves do not necessarily need to exist under that same account. They don’t even need to be on GitHub: they may be hosted on any public Git server. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a packages.json registry for that username, without having to buy into the full GitHub platform.",
+    "title": "12  Set up your own universe",
+    "section": "12.2 Creating your personal R-universe subdomain",
+    "text": "12.2 Creating your personal R-universe subdomain\nIn R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.\n\n12.2.1 Case-sensitivity\nDomain names are by definition case-insensitive and lowercased.\n\n\n12.2.2 How much GitHub is compulsory?\nIn order to start a universe you need a GitHub account as that is where the repository with your packages’ listing has to be hosted. However the R packages themselves do not necessarily need to exist under that same account. They don’t even need to be on GitHub: they may be hosted on any public Git server. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a packages.json registry for that username, without having to buy into the full GitHub platform.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html#populating-the-packages.json-registry-file",
     "href": "publish/set-up.html#populating-the-packages.json-registry-file",
-    "title": "11  Set up your own universe",
-    "section": "11.3 Populating the packages.json registry file",
-    "text": "11.3 Populating the packages.json registry file\nIn order to publish content on R-universe, you need to create a registry file called packages.json, which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields package and url for each entry, for example:\n[\n    {\n        \"package\": \"curl\",\n        \"url\": \"https://github.com/jeroen/curl\"\n    },\n    {\n        \"package\": \"pdftools\",\n        \"url\": \"https://github.com/ropensci/pdftools\"\n    },\n    {\n        \"package\": \"stringdist\",\n        \"url\": \"https://github.com/markvanderloo/stringdist\",\n        \"subdir\": \"pkg\"\n    }\n]\n\n11.3.1 Special case of CRAN packages\nWhen browsing the R-universe homepage you may notice that some major universes that contain many CRAN packages do not have a packages.json registry: When the R-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account. Ownership is determined by the presence of a link to a GitHub repository in the URL or BugReports field of a CRAN package. Our scraper scans all CRAN packages for GitHub links on a daily basis and stores results in the cran-to-git database.\nThese are effectively auto-generated registries, on which the build system will fall back if the user does not have a personal registry. As soon as the user creates a proper universe registry repository with the packages.json file, this will take precedence, and the build system will automatically switch over.\n\n11.3.1.1 How to prevent a CRAN/BioConductor package from automatically being indexed by R-universe\nCRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: Config/runiverse/noindex: true (Config/ field names are allowed on CRAN). The R-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from R-universe.\n\n\n\n11.3.2 Tracking custom branches or releases\nBy default, R-universe tracks and builds the default branch for each package Git repository, for instance master or main. It is possible to customize which Git branch or tag to track by adding a branch field to the registry.\nThe branch field can take the name of any Git reference (either a branch or a tag). You can also set it to a special value \"*release\" which will automatically lookup the most recent GitHub release, using the same syntax as in remotes. For example:\n[\n  {\n    \"package\" : \"somepackage\",\n    \"url\" : \"https://github.com/jeroen/somepackage\",\n    \"branch\" : \"stable\"\n  }\n  {\n    \"package\": \"jose\",\n    \"url\": \"https://github.com/jeroen/jose\",\n    \"branch\" : \"*release\"\n  }\n]\nIf you want to use the default Git branch, it is safest to omit the branch field. This way everything will keep working, even if the default branch gets another name at some point in the future.\n\n\n11.3.3 Hand-written or programmatically created\nYou can either hand-write this packages.json file, or programmatically create it using the tools of your choice. For example you can generate it in R from a data frame using jsonlite:\ndf &lt;- data.frame(\n    package = c(\"curl\", \"pdftools\", \"stringdist\"),\n    url = c(\"https://github.com/jeroen/curl\", \"https://github.com/ropensci/pdftools\", \n        \"https://github.com/markvanderloo/stringdist\"),\n    subdir = c(NA, NA, \"pkg\")\n)\njsonlite::write_json(df, 'packages.json', pretty = TRUE)\nThe url value must be a public Git url. This is important; our build servers literally call git clone ${url} on each of the entries. The package field must match the name of the R package from the DESCRIPTION file under that url. If the R package does not live in the root of the Git repository, you also need to set the subdir field to the path of the R package root directory.\nWhen creating a new universe, start by adding no more than a few packages. You can easily add more packages later by updating your packages.json file.\nTo publish your registry, create a Git repository called &lt;yourname&gt;.r-universe.dev on your GitHub account and push your packages.json file. See for example: https://github.com/maelle/maelle.r-universe.dev.",
+    "title": "12  Set up your own universe",
+    "section": "12.3 Populating the packages.json registry file",
+    "text": "12.3 Populating the packages.json registry file\nIn order to publish content on R-universe, you need to create a registry file called packages.json, which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields package and url for each entry, for example:\n[\n    {\n        \"package\": \"curl\",\n        \"url\": \"https://github.com/jeroen/curl\"\n    },\n    {\n        \"package\": \"pdftools\",\n        \"url\": \"https://github.com/ropensci/pdftools\"\n    },\n    {\n        \"package\": \"stringdist\",\n        \"url\": \"https://github.com/markvanderloo/stringdist\",\n        \"subdir\": \"pkg\"\n    }\n]\n\n12.3.1 Special case of CRAN packages\nWhen browsing the R-universe homepage you may notice that some major universes that contain many CRAN packages do not have a packages.json registry: When the R-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account. Ownership is determined by the presence of a link to a GitHub repository in the URL or BugReports field of a CRAN package. Our scraper scans all CRAN packages for GitHub links on a daily basis and stores results in the cran-to-git database.\nThese are effectively auto-generated registries, on which the build system will fall back if the user does not have a personal registry. As soon as the user creates a proper universe registry repository with the packages.json file, this will take precedence, and the build system will automatically switch over.\n\n12.3.1.1 How to prevent a CRAN/BioConductor package from automatically being indexed by R-universe\nCRAN and BioConductor packages with a valid Git URL in the description are automatically indexed by R-universe. To prevent this, add a line to the package DESCRIPTION file with: Config/runiverse/noindex: true (Config/ field names are allowed on CRAN). The R-universe scraper runs once per day, so it can take up to 24 hours for the package to be removed from R-universe.\n\n\n\n12.3.2 Tracking custom branches or releases\nBy default, R-universe tracks and builds the default branch for each package Git repository, for instance master or main. It is possible to customize which Git branch or tag to track by adding a branch field to the registry.\nThe branch field can take the name of any Git reference (either a branch or a tag). You can also set it to a special value \"*release\" which will automatically lookup the most recent GitHub release, using the same syntax as in remotes. For example:\n[\n  {\n    \"package\" : \"somepackage\",\n    \"url\" : \"https://github.com/jeroen/somepackage\",\n    \"branch\" : \"stable\"\n  }\n  {\n    \"package\": \"jose\",\n    \"url\": \"https://github.com/jeroen/jose\",\n    \"branch\" : \"*release\"\n  }\n]\nIf you want to use the default Git branch, it is safest to omit the branch field. This way everything will keep working, even if the default branch gets another name at some point in the future.\n\n\n12.3.3 Hand-written or programmatically created\nYou can either hand-write this packages.json file, or programmatically create it using the tools of your choice. For example you can generate it in R from a data frame using jsonlite:\ndf &lt;- data.frame(\n    package = c(\"curl\", \"pdftools\", \"stringdist\"),\n    url = c(\"https://github.com/jeroen/curl\", \"https://github.com/ropensci/pdftools\", \n        \"https://github.com/markvanderloo/stringdist\"),\n    subdir = c(NA, NA, \"pkg\")\n)\njsonlite::write_json(df, 'packages.json', pretty = TRUE)\nThe url value must be a public Git url. This is important; our build servers literally call git clone ${url} on each of the entries. The package field must match the name of the R package from the DESCRIPTION file under that url. If the R package does not live in the root of the Git repository, you also need to set the subdir field to the path of the R package root directory.\nWhen creating a new universe, start by adding no more than a few packages. You can easily add more packages later by updating your packages.json file.\nTo publish your registry, create a Git repository called &lt;yourname&gt;.r-universe.dev on your GitHub account and push your packages.json file. See for example: https://github.com/maelle/maelle.r-universe.dev.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html#appinstall",
     "href": "publish/set-up.html#appinstall",
-    "title": "11  Set up your own universe",
-    "section": "11.4 Installing the GitHub app",
-    "text": "11.4 Installing the GitHub app\nOnce you pushed your packages.json file to your new universe repository on GitHub, the next step is to install the R-universe GitHub app on your account.\nThe “Read and write access to commit statuses” will enable R-universe to show commit status updates (green checkmark) to the repositories of your R packages if they are hosted under that GitHub account.\nWe recommend to install the app for “All repositories” as you might later add more packages to your universe.",
+    "title": "12  Set up your own universe",
+    "section": "12.4 Installing the GitHub app",
+    "text": "12.4 Installing the GitHub app\nOnce you pushed your packages.json file to your new universe repository on GitHub, the next step is to install the R-universe GitHub app on your account.\nThe “Read and write access to commit statuses” will enable R-universe to show commit status updates (green checkmark) to the repositories of your R packages if they are hosted under that GitHub account.\nWe recommend to install the app for “All repositories” as you might later add more packages to your universe.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html#wait-first-build",
     "href": "publish/set-up.html#wait-first-build",
-    "title": "11  Set up your own universe",
-    "section": "11.5 Waiting for the first build",
-    "text": "11.5 Waiting for the first build\nOnce you installed the app, the system will automatically create your personal monorepo under the R-universe organization: https://github.com/r-universe/&lt;yourname&gt;. This is where the system keeps the full history of your packages. The actions tab of your monorepo is also where the building happens.\n\nAfter a while (usually no more than one hour), packages and articles that have completed building on all platforms will start appearing on your dashboard, and directly become available for installation by users.\n\nThe GitHub app requires very limited permissions, it only requests permission to read and write commit statuses. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.",
+    "title": "12  Set up your own universe",
+    "section": "12.5 Waiting for the first build",
+    "text": "12.5 Waiting for the first build\nOnce you installed the app, the system will automatically create your personal monorepo under the R-universe organization: https://github.com/r-universe/&lt;yourname&gt;. This is where the system keeps the full history of your packages. The actions tab of your monorepo is also where the building happens.\n\nAfter a while (usually no more than one hour), packages and articles that have completed building on all platforms will start appearing on your dashboard, and directly become available for installation by users.\n\nThe GitHub app requires very limited permissions, it only requests permission to read and write commit statuses. This means that the R-universe build system can post a green checkmark on your package Git commits, once your package is successfully built and deployed to R-universe. Thereby R-universe serves as a full CI-CD system that shows you if your package build and deploy was successful.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html#document-install",
     "href": "publish/set-up.html#document-install",
-    "title": "11  Set up your own universe",
-    "section": "11.6 Adding badges and user instructions",
-    "text": "11.6 Adding badges and user instructions\nOnce your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:\n# Enable this universe\noptions(repos = c(\n    maelle = 'https://maelle.r-universe.dev',\n    CRAN = 'https://cloud.r-project.org'))\n\n# Install some packages\ninstall.packages('tinkr')\nTo help package users, you can consider copying these instructions to your package README.md files. And of course you can add an R-universe badge to the package README as well.\nThe badge API is simply /badges/&lt;package&gt; which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:\n![r-universe](https://r-lib.r-universe.dev/badges/cpp11)\nFor example this would produce the following badge:",
+    "title": "12  Set up your own universe",
+    "section": "12.6 Adding badges and user instructions",
+    "text": "12.6 Adding badges and user instructions\nOnce your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:\n# Enable this universe\noptions(repos = c(\n    maelle = 'https://maelle.r-universe.dev',\n    CRAN = 'https://cloud.r-project.org'))\n\n# Install some packages\ninstall.packages('tinkr')\nTo help package users, you can consider copying these instructions to your package README.md files. And of course you can add an R-universe badge to the package README as well.\nThe badge API is simply /badges/&lt;package&gt; which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:\n![r-universe](https://r-lib.r-universe.dev/badges/cpp11)\nFor example this would produce the following badge:",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/set-up.html#linking-to-your-universe-from-other-websites",
     "href": "publish/set-up.html#linking-to-your-universe-from-other-websites",
-    "title": "11  Set up your own universe",
-    "section": "11.7 Linking to your universe from other websites",
-    "text": "11.7 Linking to your universe from other websites\nFeel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.). You can use a rocket icon as icon.",
+    "title": "12  Set up your own universe",
+    "section": "12.7 Linking to your universe from other websites",
+    "text": "12.7 Linking to your universe from other websites\nFeel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.). You can use a rocket icon as icon.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Set up your own universe</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Set up your own universe</span>"
     ]
   },
   {
     "objectID": "publish/metadata.html",
     "href": "publish/metadata.html",
-    "title": "12  Make your package easier to discover: Control the metadata / SEO",
+    "title": "13  Make your package easier to discover: Control the metadata / SEO",
     "section": "",
-    "text": "12.1 Package metadata",
+    "text": "13.1 Package metadata",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Make your package easier to discover: Control the metadata / SEO</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Make your package easier to discover: Control the metadata / SEO</span>"
     ]
   },
   {
     "objectID": "publish/metadata.html#package-metadata",
     "href": "publish/metadata.html#package-metadata",
-    "title": "12  Make your package easier to discover: Control the metadata / SEO",
+    "title": "13  Make your package easier to discover: Control the metadata / SEO",
     "section": "",
-    "text": "12.1.1 Basic information in DESCRIPTION\nThe first step towards making your package easier to find by search is to polish those DESCRIPTION fields:\n\nDescription;\nDetails;\nURL by adding the R-universe URL. Example\n\n\n\n12.1.2 How to add keyword labels to an R package?\nR-universe’s search algorithm uses keywords associated with a package.\nIf the R package is hosted on GitHub you can add keywords by configuring repository topics.\nAlternatively, you can specify keywords in the X-schema.org-keywords field in your package DESCRIPTION file. This field is permitted on CRAN as well.\nThe build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like c++ or openmp.\n\n\n12.1.3 How to increase the rank of a package?\nThe place of your package in search results depends on its rank. One aspect might be to get more GitHub stars. Read about ideas in the blog post “Marketing Ideas For Your Package”.\n\n\n12.1.4 How to get a package logo shown in the packages tab?\nWe use the same conventions as pkgdown to find a logo for the package. It either needs to be in one of the locations checked by pkgdown:::find_logo() (man/figures/logo.png and man/figures/logo.svg) or set as an opengraph image in your _pkgdown.yml.",
+    "text": "13.1.1 Basic information in DESCRIPTION\nThe first step towards making your package easier to find by search is to polish those DESCRIPTION fields:\n\nDescription;\nDetails;\nURL by adding the R-universe URL. Example\n\n\n\n13.1.2 How to add keyword labels to an R package?\nR-universe’s search algorithm uses keywords associated with a package.\nIf the R package is hosted on GitHub you can add keywords by configuring repository topics.\nAlternatively, you can specify keywords in the X-schema.org-keywords field in your package DESCRIPTION file. This field is permitted on CRAN as well.\nThe build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like c++ or openmp.\n\n\n13.1.3 How to increase the rank of a package?\nThe place of your package in search results depends on its rank. One aspect might be to get more GitHub stars. Read about ideas in the blog post “Marketing Ideas For Your Package”.\n\n\n13.1.4 How to get a package logo shown in the packages tab?\nWe use the same conventions as pkgdown to find a logo for the package. It either needs to be in one of the locations checked by pkgdown:::find_logo() (man/figures/logo.png and man/figures/logo.svg) or set as an opengraph image in your _pkgdown.yml.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Make your package easier to discover: Control the metadata / SEO</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Make your package easier to discover: Control the metadata / SEO</span>"
     ]
   },
   {
     "objectID": "publish/metadata.html#individual-contributor-maintainer-metadata",
     "href": "publish/metadata.html#individual-contributor-maintainer-metadata",
-    "title": "12  Make your package easier to discover: Control the metadata / SEO",
-    "section": "12.2 Individual (contributor, maintainer) metadata",
-    "text": "12.2 Individual (contributor, maintainer) metadata\n\n12.2.1 How to link a maintainer email addresses to a username on R-universe?\nWe use the GitHub username that is associated with a given email address. If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, everything just works. If you use different email addresses, you can easily add additional email addresses in your GitHub settings.\nOnce you have validated your email address on GitHub, subsequent builds of R packages will be able to associate the package and contributions to your user account. We collect statistics during the build process, so the changes will not become visible until the next build of each package.\n\n\n12.2.2 My profile picture or contributor statistics do not show up\nSame as above. If no picture shows up, you probably need to register the email address that you use as R package maintainer in your GitHub settings, and wait for the package to be rebuilt.",
+    "title": "13  Make your package easier to discover: Control the metadata / SEO",
+    "section": "13.2 Individual (contributor, maintainer) metadata",
+    "text": "13.2 Individual (contributor, maintainer) metadata\n\n13.2.1 How to link a maintainer email addresses to a username on R-universe?\nWe use the GitHub username that is associated with a given email address. If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, everything just works. If you use different email addresses, you can easily add additional email addresses in your GitHub settings.\nOnce you have validated your email address on GitHub, subsequent builds of R packages will be able to associate the package and contributions to your user account. We collect statistics during the build process, so the changes will not become visible until the next build of each package.\n\n\n13.2.2 My profile picture or contributor statistics do not show up\nSame as above. If no picture shows up, you probably need to register the email address that you use as R package maintainer in your GitHub settings, and wait for the package to be rebuilt.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Make your package easier to discover: Control the metadata / SEO</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Make your package easier to discover: Control the metadata / SEO</span>"
     ]
   },
   {
     "objectID": "publish/troubleshoot-build.html",
     "href": "publish/troubleshoot-build.html",
-    "title": "13  Trouble shoot package builds",
+    "title": "14  Trouble shoot package builds",
     "section": "",
-    "text": "13.1 Is it possible to customize the package build process with custom options/tools/variables?\nNo, that is not possible (apart from the next section about third-party system requirements). Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.\nThis is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.",
+    "text": "14.1 Is it possible to customize the package build process with custom options/tools/variables?\nNo, that is not possible (apart from the next section about third-party system requirements). Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.\nThis is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
     "objectID": "publish/troubleshoot-build.html#what-if-the-git-repo-is-not-a-ready-to-build-source-package",
     "href": "publish/troubleshoot-build.html#what-if-the-git-repo-is-not-a-ready-to-build-source-package",
-    "title": "13  Trouble shoot package builds",
-    "section": "13.2 What if the git repo is not a ready-to-build source package?",
-    "text": "13.2 What if the git repo is not a ready-to-build source package?\nFor packages that cannot be build directly from the checkout but need some additional steps, you can add a script that gets executed before R CMD build at the root of your package:\n\neither an R script called bootstrap.R\nor a shell script called .prepare.\n\nExamples of actions performed by the script:\n\nInitiate a git submodule;\nRun roxygen2 (some authors do not commit the Rd files to git);\nOther prepping.",
+    "title": "14  Trouble shoot package builds",
+    "section": "14.2 What if the git repo is not a ready-to-build source package?",
+    "text": "14.2 What if the git repo is not a ready-to-build source package?\nFor packages that cannot be build directly from the checkout but need some additional steps, you can add a script that gets executed before R CMD build at the root of your package:\n\neither an R script called bootstrap.R\nor a shell script called .prepare.\n\nExamples of actions performed by the script:\n\nInitiate a git submodule;\nRun roxygen2 (some authors do not commit the Rd files to git);\nOther prepping.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
     "objectID": "publish/troubleshoot-build.html#how-to-request-additional-third-party-system-requirements",
     "href": "publish/troubleshoot-build.html#how-to-request-additional-third-party-system-requirements",
-    "title": "13  Trouble shoot package builds",
-    "section": "13.3 How to request additional third party system requirements?",
-    "text": "13.3 How to request additional third party system requirements?\nIf packages need a Linux library that does not yet exist on the server, either:\n\nSend a PR to add them to the base image, for reasonably small/common system dependencies.\nAlternatively: send a PR to https://github.com/rstudio/r-system-requirements that resolves the library based on what is in the package DESCRIPTION file under SystemRequirements.",
+    "title": "14  Trouble shoot package builds",
+    "section": "14.3 How to request additional third party system requirements?",
+    "text": "14.3 How to request additional third party system requirements?\nIf packages need a Linux library that does not yet exist on the server, either:\n\nSend a PR to add them to the base image, for reasonably small/common system dependencies.\nAlternatively: send a PR to https://github.com/rstudio/r-system-requirements that resolves the library based on what is in the package DESCRIPTION file under SystemRequirements.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
     "objectID": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
     "href": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
-    "title": "13  Trouble shoot package builds",
-    "section": "13.4 How to publish vignettes/articles which require custom software/tokens to render?",
-    "text": "13.4 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles.",
+    "title": "14  Trouble shoot package builds",
+    "section": "14.4 How to publish vignettes/articles which require custom software/tokens to render?",
+    "text": "14.4 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
     "objectID": "publish/troubleshoot-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "href": "publish/troubleshoot-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
-    "title": "13  Trouble shoot package builds",
-    "section": "13.5 Are packages on R-universe required to pass CMD check or meet other criteria?",
-    "text": "13.5 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
+    "title": "14  Trouble shoot package builds",
+    "section": "14.5 Are packages on R-universe required to pass CMD check or meet other criteria?",
+    "text": "14.5 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
-    ]
-  },
-  {
-    "objectID": "publish/troubleshoot-build.html#how-to-use-a-universe-on-regular-continous-integration",
-    "href": "publish/troubleshoot-build.html#how-to-use-a-universe-on-regular-continous-integration",
-    "title": "13  Trouble shoot package builds",
-    "section": "13.6 How to use a universe on regular continous integration?",
-    "text": "13.6 How to use a universe on regular continous integration?\nIf you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the extra-repositories field of the r-lib/actions setup-r action.",
-    "crumbs": [
-      "Publish",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
     "objectID": "publish/terms.html",
     "href": "publish/terms.html",
-    "title": "14  Package publishing rules",
+    "title": "15  Package publishing rules",
     "section": "",
-    "text": "14.1 Avoid name collisions\nWhile it is technically possible to host a fork or completely different package with the same name in a universe, we strongly recommend your not doing it.\nTherefore, when two packages have the same name, and one of them is on CRAN, R-universe: - treats the one that is on CRAN as the official version. - warns users against the duplication on the page of the other package.",
+    "text": "15.1 Avoid name collisions\nWhile it is technically possible to host a fork or completely different package with the same name in a universe, we strongly recommend your not doing it.\nTherefore, when two packages have the same name, and one of them is on CRAN, R-universe: - treats the one that is on CRAN as the official version. - warns users against the duplication on the page of the other package.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Package publishing rules</span>"
     ]
   },
   {
     "objectID": "publish/terms.html#avoid-name-collisions",
     "href": "publish/terms.html#avoid-name-collisions",
-    "title": "14  Package publishing rules",
+    "title": "15  Package publishing rules",
     "section": "",
     "text": "An user might mistakenly install the example package from CRAN rather than the version from an universe. R will automatically overwrite one package with the other when running install.packages() or update.packages().\nIt becomes even trickier when other packages import the package.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Package publishing rules</span>"
     ]
   },
   {
     "objectID": "publish/terms.html#reserved-names",
     "href": "publish/terms.html#reserved-names",
-    "title": "14  Package publishing rules",
-    "section": "14.2 Reserved names",
-    "text": "14.2 Reserved names\nThe following names should be avoided as package name because https://username.r-universe.dev/{pkg}/ has special meaning:\n\napi\napis\narticles\nbadges\nbin\nbuilds\ncitation\ncontributors\ndatasets\ndocs\nfavicon.ico\nfeed.xml\nindex.xml\nmanual\npackages\nreadme\nrobots.txt\nsitemap_index.xml\nsitemap.xml\nsrc\nstats",
+    "title": "15  Package publishing rules",
+    "section": "15.2 Reserved names",
+    "text": "15.2 Reserved names\nThe following names should be avoided as package name because https://username.r-universe.dev/{pkg}/ has special meaning:\n\napi\napis\narticles\nbadges\nbin\nbuilds\ncitation\ncontributors\ndatasets\ndocs\nfavicon.ico\nfeed.xml\nindex.xml\nmanual\npackages\nreadme\nrobots.txt\nsitemap_index.xml\nsitemap.xml\nsrc\nstats",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Package publishing rules</span>"
     ]
   },
   {
     "objectID": "publish/terms.html#code-of-conduct",
     "href": "publish/terms.html#code-of-conduct",
-    "title": "14  Package publishing rules",
-    "section": "14.3 Code of Conduct",
-    "text": "14.3 Code of Conduct\nMaintainers of universes are solely responsible for their projects.\nThe R-universe project itself is governed by the rOpenSci code of conduct.",
+    "title": "15  Package publishing rules",
+    "section": "15.3 Code of Conduct",
+    "text": "15.3 Code of Conduct\nMaintainers of universes are solely responsible for their projects.\nThe R-universe project itself is governed by the rOpenSci code of conduct.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Package publishing rules</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Package publishing rules</span>"
     ]
   },
   {
     "objectID": "publish/other-networks.html",
     "href": "publish/other-networks.html",
-    "title": "15  Relation to other networks",
+    "title": "16  Relation to other networks",
     "section": "",
-    "text": "15.1 Relation to other networks\nPackages on R-universe may also also exist on other networks, such as CRAN or Bioconductor.\nNote that CRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
+    "text": "16.1 Relation to other networks\nPackages on R-universe may also also exist on other networks, such as CRAN or Bioconductor.\nNote that CRAN is not meant to be the only CRAN-style package repository, as explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Relation to other networks</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Relation to other networks</span>"
     ]
   },
   {
     "objectID": "publish/other-networks.html#can-we-use-r-universe-to-host-older-versions-of-cran-packages",
     "href": "publish/other-networks.html#can-we-use-r-universe-to-host-older-versions-of-cran-packages",
-    "title": "15  Relation to other networks",
-    "section": "15.2 Can we use r-universe to host older versions of CRAN packages?",
-    "text": "15.2 Can we use r-universe to host older versions of CRAN packages?\nThis is possible, but be careful that it may not work as you expect. R’s install.packages() and update.packages() will always install the latest version of a package it can find in any of the available repos. So the package may automatically get updated to the CRAN version on the end-user machine.",
+    "title": "16  Relation to other networks",
+    "section": "16.2 Can we use r-universe to host older versions of CRAN packages?",
+    "text": "16.2 Can we use r-universe to host older versions of CRAN packages?\nThis is possible, but be careful that it may not work as you expect. R’s install.packages() and update.packages() will always install the latest version of a package it can find in any of the available repos. So the package may automatically get updated to the CRAN version on the end-user machine.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Relation to other networks</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Relation to other networks</span>"
     ]
   },
   {
     "objectID": "publish/other-networks.html#can-we-use-r-universe-to-host-a-fork-of-a-cran-package",
     "href": "publish/other-networks.html#can-we-use-r-universe-to-host-a-fork-of-a-cran-package",
-    "title": "15  Relation to other networks",
-    "section": "15.3 Can we use r-universe to host a fork of a CRAN package?",
-    "text": "15.3 Can we use r-universe to host a fork of a CRAN package?\nThis is possible but generally a bad idea. Your package may automatically get overwritten by the CRAN version of the package the next time the user runs install.packages() or update.packages(). Also note that other packages may depend on this package, and might not be compatible with your fork.",
+    "title": "16  Relation to other networks",
+    "section": "16.3 Can we use r-universe to host a fork of a CRAN package?",
+    "text": "16.3 Can we use r-universe to host a fork of a CRAN package?\nThis is possible but generally a bad idea. Your package may automatically get overwritten by the CRAN version of the package the next time the user runs install.packages() or update.packages(). Also note that other packages may depend on this package, and might not be compatible with your fork.",
     "crumbs": [
       "Publish",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Relation to other networks</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Relation to other networks</span>"
     ]
   }
 ]
