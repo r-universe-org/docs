@@ -4,51 +4,49 @@ title: "Trouble shoot package builds"
 
 ## How often is data updated? {#data-updates}
 
-- Every hour, the systems checks the package git repos and the registry for changes. 
-- If there are changes, 
-   - the workflow starts building those packages, 
-   - then upon completion uploads them to r-universe.
+- The system checks package Git repositories and the registry for changes every hour.  
+- If changes are detected:  
+   - The workflow starts building the affected packages.  
+   - Upon completion, the packages are uploaded to R-universe.  
 
-## Is it possible to customize the package build process with custom options/tools/variables?
+## Can the package build process be customized with custom options/tools/variables?
 
-No, that is not possible (apart from the next section about third-party system requirements). 
-Think of R-universe more like your own mini-CRAN. 
-The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.
+No, customization is not possible, except for addressing third-party system requirements (covered in the next section).  
+Think of R-universe as your own mini-CRAN. The build environment is very similar to CRAN's, so if a package builds successfully on CRAN, it is likely to work on R-universe.  
 
-This is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.
+This restriction ensures that packages deployed on R-universe are reproducible, work seamlessly on user machines, and do not rely on custom settings or tools.  
 
-## What if the git repo is not a ready-to-build source package?
+## What if the Git repository  is not a ready-to-build source package?
 
-For packages that cannot be build directly from the checkout but need some additional steps, you can add a [script](https://github.com/r-universe-org/build-source/blob/5830b8aa92d5524b3af6d1b617e605d1a2558543/entrypoint.sh#L50-L57) that gets executed before R CMD build at the root of your package:
+For repositories requiring additional preparation before building, you can add a [script](https://github.com/r-universe-org/build-source/blob/5830b8aa92d5524b3af6d1b617e605d1a2558543/entrypoint.sh#L50-L57) at the root of the package:  
+- An R script named `bootstrap.R`, or  
+- A shell script named `.prepare`.
 
-- either an R script called `bootstrap.R`
-- or a shell script called `.prepare`.
+These scripts will be executed before `R CMD build`.
 
 Examples of actions performed by the script:
 
-- Initiate a git submodule;
-- Run roxygen2 (some authors do not commit the Rd files to git);
-- Other prepping.
+- Initializing a Git submodule.  
+- Running `roxygen2` (if `.Rd` files are not committed to Git).  
+- Performing other necessary preparations.
 
-## How to request additional third party system requirements? {#third-party-reqs}
+## How to request additional third-party system requirements? {#third-party-reqs}
 
-If packages need a **Linux library** that does not yet exist on the server, either:
+If packages need a **Linux library** that is not available on the server:
 
- - Send a PR to add them to the [base image](https://github.com/r-universe-org/base-image), for reasonably small/common system dependencies.
- 
- - Alternatively: send a PR to https://github.com/rstudio/r-system-requirements that resolves the library based on what is in the package DESCRIPTION file under `SystemRequirements`.
+ 1. Send a pull request (PR) to the [base image](https://github.com/r-universe-org/base-image) for reasonably small or common dependencies.  
+ 2. Alternatively, send a PR to [rstudio/r-system-requirements](https://github.com/rstudio/r-system-requirements) to resolve the library based on the `SystemRequirements` field in the package `DESCRIPTION` file.  
 
-## How to publish vignettes/articles which require custom software/tokens to render?
+## How to publish vignettes/articles requiring custom software/tokens to render?
 
-The best solution is to precompute these vignettes on your local machine, see: [How to precompute package vignettes or pkgdown articles](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
-
+Precompute these vignettes locally before publishing.  
+Follow the guide: [How to precompute package vignettes or pkgdown articles](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).  
 
 ## Are packages on R-universe required to pass CMD check or meet other criteria?
 
-No. 
-R-universe is an open publishing system. 
-The system just builds and deploys R packages from git into personal cran-like repositories. 
-The owner of the universe is responsible for their own policies and quality control.
+No, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.  
+
+The universe owner is responsible for setting policies and ensuring quality control.  
 
 ## How to use a universe on regular continous integration?
 
