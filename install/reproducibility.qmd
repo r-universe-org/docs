@@ -54,3 +54,9 @@ prefix <- ifelse (.Platform$OS.type == "windows", "file:///", "file://")
 repos <- paste0(prefix, normalizePath(snapshot, "/"))
 install.packages(c("V8", "mongolite"), repos = repos)
 ```
+
+## Using snapshot from the R-multiverse
+
+[R-multiverse](https://r-multiverse.org/) is a general-purpose R package repository system with transparent governance and open source infrastructure.
+It [deploys a production snapshot once every three months](https://r-multiverse.org/production.html#snapshots)
+TODO https://github.com/r-multiverse/help/discussions/115
