@@ -12,7 +12,8 @@ title: "Trouble shoot package builds"
 ## Can the package build process be customized with custom options/tools/variables?
 
 No, customization is not possible, except for addressing third-party system requirements (covered in the next section).  
-Think of R-universe as your own mini-CRAN. The build environment is very similar to CRAN's, so if a package builds successfully on CRAN, it is likely to work on R-universe.  
+Think of R-universe as your own mini-CRAN. 
+The build environment is very similar to CRAN's, so if a package builds successfully on CRAN, it is likely to work on R-universe.  
 
 This restriction ensures that packages deployed on R-universe are reproducible, work seamlessly on user machines, and do not rely on custom settings or tools.  
 
