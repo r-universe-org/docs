@@ -341,8 +341,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(universes, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
- $ universes  :List of 9770
- $ maintainers:List of 9591</code></pre>
+ $ universes  :List of 9777
+ $ maintainers:List of 9595</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -464,40 +464,39 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 77
- $ Package           : chr "openssl"
+<pre><code>List of 75
+ $ Package           : chr "webp"
  $ Type              : chr "Package"
- $ Title             : chr "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL"
- $ Version           : chr "2.3.0"
- $ Authors@R         : chr "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID"| __truncated__
- $ Description       : chr "Bindings to OpenSSL libssl and libcrypto, plus custom SSH\nkey parsers. Supports RSA, DSA and EC curves P-256, "| __truncated__
+ $ Title             : chr "A New Format for Lossless and Lossy Image Compression"
+ $ Version           : chr "1.3.0"
+ $ Authors@R         : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID ="| __truncated__
+ $ Description       : chr "Lossless webp images are 26% smaller in size compared to\nPNG. Lossy webp images are 25-34% smaller in size com"| __truncated__
  $ License           : chr "MIT + file LICENSE"
- $ URL               : chr "https://jeroen.r-universe.dev/openssl"
- $ BugReports        : chr "https://github.com/jeroen/openssl/issues"
- $ SystemRequirements: chr "OpenSSL &gt;= 1.0.2"
- $ VignetteBuilder   : chr "knitr"
- $ RoxygenNote       : chr "7.3.2"
+ $ URL               : chr "https://jeroen.r-universe.dev/webp"
+ $ BugReports        : chr "https://github.com/jeroen/webp/issues"
+ $ SystemRequirements: chr "libwebp"
  $ Encoding          : chr "UTF-8"
- $ Roxygen           : chr "list(markdown = TRUE)"
- $ Config/pak/sysreqs: chr "libssl-dev"
+ $ RoxygenNote       : chr "7.1.1"
+ $ Language          : chr "en-GB"
+ $ Config/pak/sysreqs: chr "libwebp-dev"
  $ Repository        : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl         : chr "https://github.com/jeroen/openssl"
+ $ RemoteUrl         : chr "https://github.com/jeroen/webp"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "a7ee961c0fc0e60a8d9445bc02bcb0de2a993ff8"
+ $ RemoteSha         : chr "76da06971a5af9c614659b9916c66b845d5f22a7"
  $ NeedsCompilation  : chr "yes"
  $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nOliver Keyes [ctb]"
+ $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;)"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "948f05364ce53273085919029b6d4774"
+ $ MD5sum            : chr "3b8a3f837a531d1a555ce17b3458ff1f"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "openssl_2.3.0.tar.gz"
- $ _fileid           : chr "50737e4891e26491c48a332e82e445fca370dc73a223b339244b96c2d7849ea0"
- $ _filesize         : int 500571
- $ _sha256           : chr "50737e4891e26491c48a332e82e445fca370dc73a223b339244b96c2d7849ea0"
- $ _created          : chr "2024-12-11T13:33:57.000Z"
- $ _published        : chr "2024-12-11T13:38:30.268Z"
- $ _upstream         : chr "https://github.com/jeroen/openssl"
+ $ _file             : chr "webp_1.3.0.tar.gz"
+ $ _fileid           : chr "d347c600cae39eed137ccd2f95b02197ec5554f063c17f5b86dfcfc3b9ffa38e"
+ $ _filesize         : int 92889
+ $ _sha256           : chr "d347c600cae39eed137ccd2f95b02197ec5554f063c17f5b86dfcfc3b9ffa38e"
+ $ _created          : chr "2024-12-14T23:22:00.000Z"
+ $ _published        : chr "2024-12-14T23:24:51.231Z"
+ $ _upstream         : chr "https://github.com/jeroen/webp"
  $ _commit           :List of 5
  $ _maintainer       :List of 8
  $ _distro           : chr "noble"
@@ -509,38 +508,37 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _wasmbinary       : chr "success"
  $ _linuxdevel       : chr "success"
  $ _windevel         : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12277417592"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12333884463"
  $ _registered       : logi TRUE
- $ _dependencies     :List of 9
+ $ _dependencies     :List of 2
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 4896
- $ _updates          :List of 11
- $ _tags             :List of 1
- $ _stars            : int 65
- $ _contributions    :List of 12
+ $ _usedby           : int 4
+ $ _updates          :List of 3
+ $ _tags             : list()
+ $ _stars            : int 14
+ $ _contributions    :List of 2
  $ _userbio          :List of 4
  $ _downloads        :List of 2
- $ _mentions         : int 7
- $ _devurl           : chr "https://github.com/jeroen/openssl"
- $ _searchresults    : int 628
+ $ _devurl           : chr "https://github.com/jeroen/webp"
+ $ _searchresults    : int 7
  $ _topics           :List of 1
  $ _assets           :List of 11
- $ _homeurl          : chr "https://github.com/jeroen/openssl"
+ $ _homeurl          : chr "https://github.com/jeroen/webp"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 45
- $ _exports          :List of 78
- $ _help             :List of 22
- $ _readme           : chr "https://github.com/jeroen/openssl/raw/HEAD/README.md"
- $ _rundeps          :List of 2
- $ _sysdeps          :List of 2
- $ _vignettes        :List of 4
- $ _score            : num 18
+ $ _releases         :List of 7
+ $ _exports          :List of 2
+ $ _help             :List of 1
+ $ _pkglogo          : chr "https://github.com/jeroen/webp/raw/HEAD/man/figures/logo.png"
+ $ _readme           : chr "https://github.com/jeroen/webp/raw/HEAD/README.md"
+ $ _rundeps          : list()
+ $ _sysdeps          :List of 1
+ $ _score            : num 6
  $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "openssl"
+ $ _nocasepkg        : chr "webp"
  $ _universes        :List of 1
- $ _previous         : chr "2.2.2"
+ $ _previous         : chr "1.2.1"
  $ _binaries         :List of 11</code></pre>
 </div>
 </div>
@@ -550,40 +548,39 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 77
- $ Package           : chr "openssl"
+<pre><code>List of 75
+ $ Package           : chr "webp"
  $ Type              : chr "Package"
- $ Title             : chr "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL"
- $ Version           : chr "2.3.0"
- $ Authors@R         : chr "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID"| __truncated__
- $ Description       : chr "Bindings to OpenSSL libssl and libcrypto, plus custom SSH\nkey parsers. Supports RSA, DSA and EC curves P-256, "| __truncated__
+ $ Title             : chr "A New Format for Lossless and Lossy Image Compression"
+ $ Version           : chr "1.3.0"
+ $ Authors@R         : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID ="| __truncated__
+ $ Description       : chr "Lossless webp images are 26% smaller in size compared to\nPNG. Lossy webp images are 25-34% smaller in size com"| __truncated__
  $ License           : chr "MIT + file LICENSE"
- $ URL               : chr "https://jeroen.r-universe.dev/openssl"
- $ BugReports        : chr "https://github.com/jeroen/openssl/issues"
- $ SystemRequirements: chr "OpenSSL &gt;= 1.0.2"
- $ VignetteBuilder   : chr "knitr"
- $ RoxygenNote       : chr "7.3.2"
+ $ URL               : chr "https://jeroen.r-universe.dev/webp"
+ $ BugReports        : chr "https://github.com/jeroen/webp/issues"
+ $ SystemRequirements: chr "libwebp"
  $ Encoding          : chr "UTF-8"
- $ Roxygen           : chr "list(markdown = TRUE)"
- $ Config/pak/sysreqs: chr "libssl-dev"
+ $ RoxygenNote       : chr "7.1.1"
+ $ Language          : chr "en-GB"
+ $ Config/pak/sysreqs: chr "libwebp-dev"
  $ Repository        : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl         : chr "https://github.com/jeroen/openssl"
+ $ RemoteUrl         : chr "https://github.com/jeroen/webp"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "a7ee961c0fc0e60a8d9445bc02bcb0de2a993ff8"
+ $ RemoteSha         : chr "76da06971a5af9c614659b9916c66b845d5f22a7"
  $ NeedsCompilation  : chr "yes"
  $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nOliver Keyes [ctb]"
+ $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;)"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "948f05364ce53273085919029b6d4774"
+ $ MD5sum            : chr "3b8a3f837a531d1a555ce17b3458ff1f"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "openssl_2.3.0.tar.gz"
- $ _fileid           : chr "50737e4891e26491c48a332e82e445fca370dc73a223b339244b96c2d7849ea0"
- $ _filesize         : int 500571
- $ _sha256           : chr "50737e4891e26491c48a332e82e445fca370dc73a223b339244b96c2d7849ea0"
- $ _created          : chr "2024-12-11T13:33:57.000Z"
- $ _published        : chr "2024-12-11T13:38:30.268Z"
- $ _upstream         : chr "https://github.com/jeroen/openssl"
+ $ _file             : chr "webp_1.3.0.tar.gz"
+ $ _fileid           : chr "d347c600cae39eed137ccd2f95b02197ec5554f063c17f5b86dfcfc3b9ffa38e"
+ $ _filesize         : int 92889
+ $ _sha256           : chr "d347c600cae39eed137ccd2f95b02197ec5554f063c17f5b86dfcfc3b9ffa38e"
+ $ _created          : chr "2024-12-14T23:22:00.000Z"
+ $ _published        : chr "2024-12-14T23:24:51.231Z"
+ $ _upstream         : chr "https://github.com/jeroen/webp"
  $ _commit           :List of 5
  $ _maintainer       :List of 8
  $ _distro           : chr "noble"
@@ -595,38 +592,37 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _wasmbinary       : chr "success"
  $ _linuxdevel       : chr "success"
  $ _windevel         : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12277417592"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12333884463"
  $ _registered       : logi TRUE
- $ _dependencies     :List of 9
+ $ _dependencies     :List of 2
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 4896
- $ _updates          :List of 11
- $ _tags             :List of 1
- $ _stars            : int 65
- $ _contributions    :List of 12
+ $ _usedby           : int 4
+ $ _updates          :List of 3
+ $ _tags             : list()
+ $ _stars            : int 14
+ $ _contributions    :List of 2
  $ _userbio          :List of 4
  $ _downloads        :List of 2
- $ _mentions         : int 7
- $ _devurl           : chr "https://github.com/jeroen/openssl"
- $ _searchresults    : int 628
+ $ _devurl           : chr "https://github.com/jeroen/webp"
+ $ _searchresults    : int 7
  $ _topics           :List of 1
  $ _assets           :List of 11
- $ _homeurl          : chr "https://github.com/jeroen/openssl"
+ $ _homeurl          : chr "https://github.com/jeroen/webp"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 45
- $ _exports          :List of 78
- $ _help             :List of 22
- $ _readme           : chr "https://github.com/jeroen/openssl/raw/HEAD/README.md"
- $ _rundeps          :List of 2
- $ _sysdeps          :List of 2
- $ _vignettes        :List of 4
- $ _score            : num 18
+ $ _releases         :List of 7
+ $ _exports          :List of 2
+ $ _help             :List of 1
+ $ _pkglogo          : chr "https://github.com/jeroen/webp/raw/HEAD/man/figures/logo.png"
+ $ _readme           : chr "https://github.com/jeroen/webp/raw/HEAD/README.md"
+ $ _rundeps          : list()
+ $ _sysdeps          :List of 1
+ $ _score            : num 6
  $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "openssl"
+ $ _nocasepkg        : chr "webp"
  $ _universes        :List of 1
- $ _previous         : chr "2.2.2"
+ $ _previous         : chr "1.2.1"
  $ _binaries         :List of 11</code></pre>
 </div>
 </div>
@@ -893,11 +889,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 70
+ $ results:List of 72
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 70</code></pre>
+ $ total  : int 72</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -950,11 +946,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 70
+ $ results:List of 72
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 70</code></pre>
+ $ total  : int 72</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

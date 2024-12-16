@@ -278,43 +278,68 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="avoid-name-collisions" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="avoid-name-collisions"><span class="header-section-number">14.1</span> Avoid name collisions</h2>
-<p>While it is technically possible to host a fork or completely different package with the same name in a universe, we strongly recommend your <strong>not</strong> doing it.</p>
+<p>While it is technically possible to host a fork or a completely different package with the same name in a universe, this practice is <strong>strongly discouraged</strong>.</p>
 <ul>
-<li>An user might mistakenly install the <code>example</code> package from CRAN rather than the version from an universe. R will automatically overwrite one package with the other when running <code>install.packages()</code> or <code>update.packages()</code>.</li>
-<li>It becomes even trickier when other packages import the package.</li>
+<li>Users might accidentally install the <code>example</code> package from CRAN instead of the intended version from a universe.<br>
+</li>
+<li>R will overwrite one package with the other when running <code>install.packages()</code> or <code>update.packages()</code>.<br>
+</li>
+<li>This issue becomes more problematic when other packages depend on the conflicting package.</li>
 </ul>
-<p>Therefore, when two packages have the same name, and one of them is on CRAN, R-universe: - treats the one that is on CRAN as the official version. - warns users against the duplication on the page of the other package.</p>
+<p>To address this, R-universe:<br>
+- Treats the CRAN version as the official package.<br>
+- Warns users about the duplication on the page of the conflicting package.</p>
 </section>
 <section id="reserved-names" class="level2" data-number="14.2">
 <h2 data-number="14.2" class="anchored" data-anchor-id="reserved-names"><span class="header-section-number">14.2</span> Reserved names</h2>
-<p>The following names should be avoided as package name because <code>https://username.r-universe.dev/{pkg}/</code> has special meaning:</p>
+<p>Avoid using the following names for packages, as they have special meanings in R-universe URLs (<code>https://username.r-universe.dev/{pkg}/</code>):</p>
 <ul>
-<li>api</li>
-<li>apis</li>
-<li>articles</li>
-<li>badges</li>
-<li>bin</li>
-<li>builds</li>
-<li>citation</li>
-<li>contributors</li>
-<li>datasets</li>
-<li>docs</li>
-<li>favicon.ico</li>
-<li>feed.xml</li>
-<li>index.xml</li>
-<li>manual</li>
-<li>packages</li>
-<li>readme</li>
-<li>robots.txt</li>
-<li>sitemap_index.xml</li>
-<li>sitemap.xml</li>
-<li>src</li>
-<li>stats</li>
+<li><code>api</code><br>
+</li>
+<li><code>apis</code><br>
+</li>
+<li><code>articles</code><br>
+</li>
+<li><code>badges</code><br>
+</li>
+<li><code>bin</code><br>
+</li>
+<li><code>builds</code><br>
+</li>
+<li><code>citation</code><br>
+</li>
+<li><code>contributors</code><br>
+</li>
+<li><code>datasets</code><br>
+</li>
+<li><code>docs</code><br>
+</li>
+<li><code>favicon.ico</code><br>
+</li>
+<li><code>feed.xml</code><br>
+</li>
+<li><code>index.xml</code><br>
+</li>
+<li><code>manual</code><br>
+</li>
+<li><code>packages</code><br>
+</li>
+<li><code>readme</code><br>
+</li>
+<li><code>robots.txt</code><br>
+</li>
+<li><code>sitemap_index.xml</code><br>
+</li>
+<li><code>sitemap.xml</code><br>
+</li>
+<li><code>src</code><br>
+</li>
+<li><code>stats</code></li>
 </ul>
 </section>
 <section id="code-of-conduct" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="code-of-conduct"><span class="header-section-number">14.3</span> Code of Conduct</h2>
-<p>Maintainers of universes are solely responsible for their projects.</p>
+<p>Universe maintainers are solely responsible for the projects in their universes.</p>
 <p>The R-universe project itself is governed by the <a href="https://ropensci.org/code-of-conduct/">rOpenSci code of conduct</a>.</p>
 
 
