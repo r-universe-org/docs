@@ -165,7 +165,8 @@ options(repos = c(
 install.packages('tinkr')
 ```
 
-Copy these instructions to your package `README.md` files to assist users. You can also add an R-universe badge to indicate the deployed version:
+Copy these instructions to your package `README.md` files to assist users. 
+You can also add an R-universe badge to indicate the deployed version:
 
 The badge API is simply `/badges/<package>` which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:
 
