@@ -43,7 +43,8 @@ R-universe associates maintainers with their GitHub usernames based on email add
 - Use the same email address in your `DESCRIPTION` file’s maintainer field or commits one of the email addresses you registered on GitHub.  
 - If you use multiple email addresses, add them to your [GitHub settings](https://github.com/settings/emails).  
 
-Once the email is validated on GitHub, future builds of your packages will reflect the association. Note that changes take effect after the next package build.  
+Once the email is validated on GitHub, future builds of your packages will reflect the association. 
+Note that changes take effect after the next package build.  
 
 ### My profile picture or contributor statistics do not show up
 
