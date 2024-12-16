@@ -17,7 +17,7 @@ The first step towards making your package easier to find by search is to polish
 R-universe's [search algorithm](#rank) leverages keywords associated with a package.  
 
 - **For GitHub-hosted packages**: Add keywords using [repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics).  
-- **For CRAN-compliant packages**: Use the `X-schema.org-keywords` field in the `DESCRIPTION` file. This field is [CRAN-permitted](https://cs.github.com/?q=org%3Acran+X-schema.org-keywords).  
+- **For any package, including CRAN-compliant packages**: Use the `X-schema.org-keywords` field in the `DESCRIPTION` file. This field is [CRAN-permitted](https://cs.github.com/?q=org%3Acran+X-schema.org-keywords).  
 
 Additionally, the build system may automatically generate keywords based on package analysis, including linked system libraries or language tags like `c++` or `openmp`.  
 
