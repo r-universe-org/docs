@@ -45,7 +45,8 @@ Follow the guide: [How to precompute package vignettes or pkgdown articles](http
 
 ## Are packages on R-universe required to pass CMD check or meet other criteria?
 
-No, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.  
+No, R-universe is an open publishing system. 
+It builds and deploys R packages from Git into personal CRAN-like repositories.  
 
 The universe owner is responsible for setting policies and ensuring quality control.  
 
