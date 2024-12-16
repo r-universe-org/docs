@@ -289,7 +289,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#downloading-repository-snapshots" id="toc-downloading-repository-snapshots" class="nav-link" data-scroll-target="#downloading-repository-snapshots"><span class="header-section-number">8.2.2</span> Downloading repository snapshots</a></li>
   <li><a href="#using-snapshots" id="toc-using-snapshots" class="nav-link" data-scroll-target="#using-snapshots"><span class="header-section-number">8.2.3</span> Using snapshots</a></li>
   </ul></li>
-  <li><a href="#using-snapshot-from-the-r-multiverse" id="toc-using-snapshot-from-the-r-multiverse" class="nav-link" data-scroll-target="#using-snapshot-from-the-r-multiverse"><span class="header-section-number">8.3</span> Using snapshot from the R-multiverse</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/reproducibility.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -352,13 +351,9 @@ You can use this snapshot to mirror the CRAN-like repository on your own servers
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>prefix <span class="ot">&lt;-</span> <span class="fu">ifelse</span> (.Platform<span class="sc">$</span>OS.type <span class="sc">==</span> <span class="st">"windows"</span>, <span class="st">"file:///"</span>, <span class="st">"file://"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>repos <span class="ot">&lt;-</span> <span class="fu">paste0</span>(prefix, <span class="fu">normalizePath</span>(snapshot, <span class="st">"/"</span>))</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"V8"</span>, <span class="st">"mongolite"</span>), <span class="at">repos =</span> repos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="using-snapshot-from-the-r-multiverse" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="using-snapshot-from-the-r-multiverse"><span class="header-section-number">8.3</span> Using snapshot from the R-multiverse</h2>
-<p><a href="https://r-multiverse.org/">R-multiverse</a> is a general-purpose R package repository system with transparent governance and open source infrastructure. It <a href="https://r-multiverse.org/production.html#snapshots">deploys a production snapshot once every three months</a> TODO <a href="https://github.com/r-multiverse/help/discussions/115" class="uri">https://github.com/r-multiverse/help/discussions/115</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
