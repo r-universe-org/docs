@@ -17,7 +17,8 @@ Additional details for each step are provided in the sections that follow.
 
 ## Creating your personal R-universe subdomain {#subdomain}
 
-Each user gets a private subdomain on R-universe, where you control the content independently. Subdomains are tied to GitHub accounts or organizations with the same name.
+Each user gets a private subdomain on R-universe, where you control the content independently. 
+Subdomains are tied to GitHub accounts or organizations with the same name.
 
 ### Case-sensitivity
 
