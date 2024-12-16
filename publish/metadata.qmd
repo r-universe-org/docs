@@ -32,7 +32,7 @@ To improve ranking:
 
 R-universe uses `pkgdown` conventions to detect package logos:  
 - Place the logo in `man/figures/logo.png` or `man/figures/logo.svg`, which can be checked by `pkgdown:::find_logo()`.
-- Alternatively, specify the logo as an opengraph image in your `_pkgdown.yml`.  
+- Alternatively, specify the logo as an [opengraph image in your `_pkgdown.yml`](https://pkgdown.r-lib.org/articles/metadata.html#site-wide-customization).  
 
 ## Individual (contributor, maintainer) metadata
 
