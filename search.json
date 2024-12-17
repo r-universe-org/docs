@@ -377,7 +377,7 @@
     "href": "publish/set-up.html",
     "title": "10  Set up your own universe",
     "section": "",
-    "text": "10.1 Basic steps\nCreating a universe for your R packages can be done in a few steps described below. The further sections on this page give more details on each step.",
+    "text": "10.1 Basic steps\nSetting up a universe for your R packages involves just a few steps, outlined below. Additional details for each step are provided in the sections that follow.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Set up your own universe</span>"
@@ -399,7 +399,7 @@
     "href": "publish/set-up.html#subdomain",
     "title": "10  Set up your own universe",
     "section": "10.2 Creating your personal R-universe subdomain",
-    "text": "10.2 Creating your personal R-universe subdomain\nIn R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.\n\n10.2.1 Case-sensitivity\nDomain names are by definition case-insensitive and lowercased.\n\n\n10.2.2 How much GitHub is compulsory?\nIn order to start a universe you need a GitHub account as that is where the repository with your packages’ listing has to be hosted. However the R packages themselves do not necessarily need to exist under that same account. They don’t even need to be on GitHub: they may be hosted on any public Git server. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a packages.json registry for that username, without having to buy into the full GitHub platform.",
+    "text": "10.2 Creating your personal R-universe subdomain\nEach user gets a private subdomain on R-universe, where you control the content independently. Subdomains are tied to GitHub accounts or organizations with the same name.\n\n10.2.1 Case-sensitivity\nDomain names are by definition case-insensitive and lowercased.\n\n\n10.2.2 How much GitHub is compulsory?\nYou need a GitHub account to host the repository for your packages.json registry. However, the R packages themselves do not need to be under the same account or even on GitHub. They can be hosted on any public Git server, such as GitLab or a university Git server. A GitHub account is only required for publishing the packages.json registry.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Set up your own universe</span>"
@@ -443,7 +443,7 @@
     "href": "publish/set-up.html#document-install",
     "title": "10  Set up your own universe",
     "section": "10.6 Adding badges and user instructions",
-    "text": "10.6 Adding badges and user instructions\nOnce your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:\n# Enable this universe\noptions(repos = c(\n    maelle = 'https://maelle.r-universe.dev',\n    CRAN = 'https://cloud.r-project.org'))\n\n# Install some packages\ninstall.packages('tinkr')\nTo help package users, you can consider copying these instructions to your package README.md files. And of course you can add an R-universe badge to the package README as well.\nThe badge API is simply /badges/&lt;package&gt; which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:\n![r-universe](https://r-lib.r-universe.dev/badges/cpp11)\nFor example this would produce the following badge:",
+    "text": "10.6 Adding badges and user instructions\nOnce your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:\n# Enable this universe\noptions(repos = c(\n    maelle = 'https://maelle.r-universe.dev',\n    CRAN = 'https://cloud.r-project.org'))\n\n# Install some packages\ninstall.packages('tinkr')\nCopy these instructions to your package README.md files to assist users. You can also add an R-universe badge to indicate the deployed version:\nThe badge API is simply /badges/&lt;package&gt; which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:\n![r-universe](https://r-lib.r-universe.dev/badges/cpp11)\nFor example this would produce the following badge:",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Set up your own universe</span>"

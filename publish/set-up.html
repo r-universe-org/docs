@@ -328,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="basic-steps" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="basic-steps"><span class="header-section-number">10.1</span> Basic steps</h2>
-<p>Creating a universe for your R packages can be done in a few steps described below. The further sections on this page give more details on each step.</p>
+<p>Setting up a universe for your R packages involves just a few steps, outlined below. Additional details for each step are provided in the sections that follow.</p>
 <ol type="1">
 <li><strong>Create a Git repository named (all lowercase) <code>&lt;your-username&gt;.r-universe.dev</code> on your GitHub account</strong>, containing a <code>packages.json</code> file which lists the Git repositories with R packages to include.
 <ul>
@@ -342,14 +342,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="subdomain" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="subdomain"><span class="header-section-number">10.2</span> Creating your personal R-universe subdomain</h2>
-<p>In R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. The subdomains are tied to the GitHub account or organization with that name.</p>
+<p>Each user gets a private subdomain on R-universe, where you control the content independently. Subdomains are tied to GitHub accounts or organizations with the same name.</p>
 <section id="case-sensitivity" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="case-sensitivity"><span class="header-section-number">10.2.1</span> Case-sensitivity</h3>
 <p>Domain names are by definition case-insensitive and lowercased.</p>
 </section>
 <section id="how-much-github-is-compulsory" class="level3" data-number="10.2.2">
 <h3 data-number="10.2.2" class="anchored" data-anchor-id="how-much-github-is-compulsory"><span class="header-section-number">10.2.2</span> How much GitHub is compulsory?</h3>
-<p>In order to start a universe you need a GitHub account as that is where the repository with your packages’ listing has to be hosted. However <strong>the R packages themselves do not necessarily need to exist under that same account</strong>. They <strong>don’t even need to be on GitHub</strong>: they may be hosted on <strong>any public Git server</strong>. If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a <code>packages.json</code> registry for that username, without having to buy into the full GitHub platform.</p>
+<p>You need a GitHub account to host the repository for your <code>packages.json</code> registry. However, <strong>the R packages themselves do not need to be under the same account or even on GitHub</strong>. They can be hosted on <strong>any public Git server</strong>, such as GitLab or a university Git server. A GitHub account is only required for publishing the <code>packages.json</code> registry.</p>
 </section>
 </section>
 <section id="populating-the-packages.json-registry-file" class="level2" data-number="10.3">
@@ -438,7 +438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install some packages</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tinkr'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>To help package users, you can consider copying these instructions to your package README.md files. And of course you can add an R-universe badge to the package README as well.</p>
+<p>Copy these instructions to your package <code>README.md</code> files to assist users. You can also add an R-universe badge to indicate the deployed version:</p>
 <p>The badge API is simply <code>/badges/&lt;package&gt;</code> which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="al">![r-universe](https://r-lib.r-universe.dev/badges/cpp11)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>For example this would produce the following badge: <img style="margin-bottom:3px;" src="https://r-lib.r-universe.dev/badges/cpp11"></p>
