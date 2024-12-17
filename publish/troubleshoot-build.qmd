@@ -20,6 +20,7 @@ This restriction ensures that packages deployed on R-universe are reproducible, 
 ## What if the Git repository  is not a ready-to-build source package?
 
 For repositories requiring additional preparation before building, you can add a [script](https://github.com/r-universe-org/build-source/blob/5830b8aa92d5524b3af6d1b617e605d1a2558543/entrypoint.sh#L50-L57) at the root of the package:  
+
 - An R script named `bootstrap.R`, or  
 - A shell script named `.prepare`.
 
