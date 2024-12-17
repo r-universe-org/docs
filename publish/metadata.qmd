@@ -8,9 +8,9 @@ title: "Make your package easier to discover: Control the metadata / SEO"
 
 The first step towards making your package easier to find by search is to polish those DESCRIPTION fields:
 
-- **Description**  
-- **Details**  
-- **URL**: Include your R-universe URL. [Example](https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17)  
+- Description
+- Details 
+- URL: Include your R-universe URL. [Example](https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17)  
 
 ### How to add keyword labels to an R package? {#keywords}
 
@@ -24,9 +24,8 @@ Additionally, the build system may automatically generate keywords based on pack
 ### How to increase the rank of a package? {#better-rank}
 
 Your package’s rank in search results depends on its [ranking algorithm](#rank).  
-To improve ranking:  
-- Gain more GitHub stars.  
-- Follow strategies from the blog post ["Marketing Ideas For Your Package"](https://ropensci.org/blog/2024/03/07/package-marketing/).  
+To improve ranking, you can follow strategies from the blog post ["Marketing Ideas For Your Package"](https://ropensci.org/blog/2024/03/07/package-marketing/).
+In particular, gaining more GitHub stars will improve the rank. 
 
 ### How to get a package logo shown in the packages tab?
 
