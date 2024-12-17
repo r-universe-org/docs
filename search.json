@@ -509,29 +509,29 @@
     "href": "publish/troubleshoot-build.html#data-updates",
     "title": "12  Trouble shoot package builds",
     "section": "",
-    "text": "Every hour, the systems checks the package git repos and the registry for changes.\nIf there are changes,\n\nthe workflow starts building those packages,\nthen upon completion uploads them to r-universe.",
+    "text": "The system checks package Git repositories and the registry for changes every hour.\n\nIf changes are detected:\n\nThe workflow starts building the affected packages.\n\nUpon completion, the packages are uploaded to R-universe.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
-    "objectID": "publish/troubleshoot-build.html#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables",
-    "href": "publish/troubleshoot-build.html#is-it-possible-to-customize-the-package-build-process-with-custom-optionstoolsvariables",
+    "objectID": "publish/troubleshoot-build.html#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables",
+    "href": "publish/troubleshoot-build.html#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables",
     "title": "12  Trouble shoot package builds",
-    "section": "12.2 Is it possible to customize the package build process with custom options/tools/variables?",
-    "text": "12.2 Is it possible to customize the package build process with custom options/tools/variables?\nNo, that is not possible (apart from the next section about third-party system requirements). Think of R-universe more like your own mini-CRAN. The build environment is actually very similar to that of CRAN, if the package can build on CRAN, it will probably work on R-universe.\nThis is on purpose: we want to make sure that the packages deployed on R-universe are reproducible and will work on the user machine as well, and do not depend on some custom settings or tools.",
+    "section": "12.2 Can the package build process be customized with custom options/tools/variables?",
+    "text": "12.2 Can the package build process be customized with custom options/tools/variables?\nNo, customization is not possible, except for addressing third-party system requirements (covered in the next section).\nThink of R-universe as your own mini-CRAN. The build environment is very similar to CRAN’s, so if a package builds successfully on CRAN, it is likely to work on R-universe.\nThis restriction ensures that packages deployed on R-universe are reproducible, work seamlessly on user machines, and do not rely on custom settings or tools.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
-    "objectID": "publish/troubleshoot-build.html#what-if-the-git-repo-is-not-a-ready-to-build-source-package",
-    "href": "publish/troubleshoot-build.html#what-if-the-git-repo-is-not-a-ready-to-build-source-package",
+    "objectID": "publish/troubleshoot-build.html#what-if-the-git-repository-is-not-a-ready-to-build-source-package",
+    "href": "publish/troubleshoot-build.html#what-if-the-git-repository-is-not-a-ready-to-build-source-package",
     "title": "12  Trouble shoot package builds",
-    "section": "12.3 What if the git repo is not a ready-to-build source package?",
-    "text": "12.3 What if the git repo is not a ready-to-build source package?\nFor packages that cannot be build directly from the checkout but need some additional steps, you can add a script that gets executed before R CMD build at the root of your package:\n\neither an R script called bootstrap.R\nor a shell script called .prepare.\n\nExamples of actions performed by the script:\n\nInitiate a git submodule;\nRun roxygen2 (some authors do not commit the Rd files to git);\nOther prepping.",
+    "section": "12.3 What if the Git repository is not a ready-to-build source package?",
+    "text": "12.3 What if the Git repository is not a ready-to-build source package?\nFor repositories requiring additional preparation before building, you can add a script at the root of the package:\n\nAn R script named bootstrap.R, or\n\nA shell script named .prepare.\n\nThese scripts will be executed before R CMD build.\nExamples of actions performed by the script:\n\nInitializing a Git submodule.\n\nRunning roxygen2 (if .Rd files are not committed to Git).\n\nPerforming other necessary preparations.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -541,19 +541,19 @@
     "objectID": "publish/troubleshoot-build.html#third-party-reqs",
     "href": "publish/troubleshoot-build.html#third-party-reqs",
     "title": "12  Trouble shoot package builds",
-    "section": "12.4 How to request additional third party system requirements?",
-    "text": "12.4 How to request additional third party system requirements?\nIf packages need a Linux library that does not yet exist on the server, either:\n\nSend a PR to add them to the base image, for reasonably small/common system dependencies.\nAlternatively: send a PR to https://github.com/rstudio/r-system-requirements that resolves the library based on what is in the package DESCRIPTION file under SystemRequirements.",
+    "section": "12.4 How to request additional third-party system requirements?",
+    "text": "12.4 How to request additional third-party system requirements?\nIf packages need a Linux library that is not available on the server:\n\nSend a pull request (PR) to the base image for reasonably small or common dependencies.\n\nAlternatively, send a PR to rstudio/r-system-requirements to resolve the library based on the SystemRequirements field in the package DESCRIPTION file.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
     ]
   },
   {
-    "objectID": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
-    "href": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-which-require-custom-softwaretokens-to-render",
+    "objectID": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render",
+    "href": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render",
     "title": "12  Trouble shoot package builds",
-    "section": "12.5 How to publish vignettes/articles which require custom software/tokens to render?",
-    "text": "12.5 How to publish vignettes/articles which require custom software/tokens to render?\nThe best solution is to precompute these vignettes on your local machine, see: How to precompute package vignettes or pkgdown articles.",
+    "section": "12.5 How to publish vignettes/articles requiring custom software/tokens to render?",
+    "text": "12.5 How to publish vignettes/articles requiring custom software/tokens to render?\nPrecompute these vignettes locally before publishing.\nFollow the guide: How to precompute package vignettes or pkgdown articles.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -564,7 +564,7 @@
     "href": "publish/troubleshoot-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "title": "12  Trouble shoot package builds",
     "section": "12.6 Are packages on R-universe required to pass CMD check or meet other criteria?",
-    "text": "12.6 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo.  R-universe is an open publishing system. The system just builds and deploys R packages from git into personal cran-like repositories. The owner of the universe is responsible for their own policies and quality control.",
+    "text": "12.6 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.\nThe universe owner is responsible for setting policies and ensuring quality control.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
