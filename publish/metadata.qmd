@@ -49,6 +49,7 @@ Note that changes take effect after the next package build.
 ### My profile picture or contributor statistics do not show up
 
 If your profile picture or contributor statistics are not visible:  
+
 1. Ensure the email used in the package `DESCRIPTION` file is registered in your [GitHub settings](https://github.com/settings/emails).  
 2. Wait for the next package rebuild for the changes to be reflected. 
 
