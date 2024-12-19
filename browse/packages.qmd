@@ -62,6 +62,7 @@ So to emphasize, this does __not__ use heuristics / guessing based on the packag
 
 The maketools vignette explains this in more detail: [Automatically determine run-time dependencies for R packages on Linux](https://cran.r-project.org/web/packages/maketools/vignettes/sysdeps.html).
 
+See also [how to request a third-party system](#third-party-reqs) that your package needs.
 
 
 ## All the documentation

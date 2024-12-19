@@ -4,45 +4,45 @@ title: "Package publishing rules"
 
 ## Avoid name collisions
 
-While it is technically possible to host a fork or completely different package with the same name in a universe,
-we strongly recommend your **not** doing it.
+While it is technically possible to host a fork or a completely different package with the same name in a universe, this practice is **strongly discouraged**.  
 
-- An user might mistakenly install the `example` package from CRAN rather than the version from an universe.
-R will automatically overwrite one package with the other when running `install.packages()` or `update.packages()`.
-- It becomes even trickier when other packages import the package.
 
-Therefore, when two packages have the same name, and one of them is on CRAN, R-universe: 
-- treats the one that is on CRAN as the official version. 
-- warns users against the duplication on the page of the other package. 
+- Users might accidentally install the `example` package from CRAN instead of the intended version from a universe.  
+- R will overwrite one package with the other when running `install.packages()` or `update.packages()`.  
+- This issue becomes more problematic when other packages depend on the conflicting package.  
+
+To address this, R-universe:  
+- Treats the CRAN version as the official package.  
+- Warns users about the duplication on the page of the conflicting package.  
 
 ## Reserved names
 
-The following names should be avoided as package name because `https://username.r-universe.dev/{pkg}/` has special meaning:
+Avoid using the following names for packages, as they have special meanings in R-universe URLs (`https://username.r-universe.dev/{pkg}/`):  
 
--  api 
--  apis 
--  articles 
--  badges 
--  bin 
--  builds 
--  citation 
--  contributors 
--  datasets 
--  docs 
--  favicon.ico 
--  feed.xml 
--  index.xml 
--  manual 
--  packages 
--  readme 
--  robots.txt 
--  sitemap_index.xml 
--  sitemap.xml 
--  src 
--  stats
+- `api`  
+- `apis`  
+- `articles`  
+- `badges`  
+- `bin`  
+- `builds`  
+- `citation`  
+- `contributors`  
+- `datasets`  
+- `docs`  
+- `favicon.ico`  
+- `feed.xml`  
+- `index.xml`  
+- `manual`  
+- `packages`  
+- `readme`  
+- `robots.txt`  
+- `sitemap_index.xml`  
+- `sitemap.xml`  
+- `src`  
+- `stats`
 
 ## Code of Conduct
 
-Maintainers of universes are solely responsible for their projects.
+Universe maintainers are solely responsible for the projects in their universes.  
 
 The R-universe project itself is governed by the [rOpenSci code of conduct](https://ropensci.org/code-of-conduct/).

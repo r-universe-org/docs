@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "R-Universe Docs"
+  title: "R-Universe Documentation"
   reader-mode: true
   site-url: https://docs.r-universe.dev/
   repo-url: https://github.com/r-universe-org/hitchhikers-guide

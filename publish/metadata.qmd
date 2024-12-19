@@ -8,44 +8,48 @@ title: "Make your package easier to discover: Control the metadata / SEO"
 
 The first step towards making your package easier to find by search is to polish those DESCRIPTION fields:
 
-- Description; 
-- Details;
-- URL by adding the R-universe URL. [Example](https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17)
+- Description
+- Details 
+- URL: Include your R-universe URL. [Example](https://github.com/r-lib/gert/blob/e5030397517a8658ade1d82a6edd788cf7e935da/DESCRIPTION#L16-L17)  
 
 ### How to add keyword labels to an R package? {#keywords}
 
-R-universe's [search algorithm](#rank) uses keywords associated with a package.
+R-universe's [search algorithm](#rank) leverages keywords associated with a package.  
 
-If the R package is hosted on GitHub you can add keywords by configuring [repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics). 
+- **For GitHub-hosted packages**: Add keywords using [repository topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics).  
+- **For any package, including CRAN-compliant packages**: Use the `X-schema.org-keywords` field in the `DESCRIPTION` file. This field is [CRAN-permitted](https://cs.github.com/?q=org%3Acran+X-schema.org-keywords).  
 
-Alternatively, you can specify keywords in the `X-schema.org-keywords` field in your package `DESCRIPTION` file. 
-This field [is permitted on CRAN](https://cs.github.com/?q=org%3Acran+X-schema.org-keywords) as well.
-
-The build system may also add some keywords automatically based on analysis of the package, including the names of system libraries that the package links to, or language tags like `c++` or `openmp`.
+Additionally, the build system may automatically generate keywords based on package analysis, including linked system libraries or language tags like `c++` or `openmp`.  
 
 ### How to increase the rank of a package? {#better-rank}
 
-The place of your package in search results depends on its [rank](#rank).
-One aspect might be to get more GitHub stars.
-Read about ideas in the blog post ["Marketing Ideas For Your Package"](https://ropensci.org/blog/2024/03/07/package-marketing/).
+Your package’s rank in search results depends on its [ranking algorithm](#rank).  
+To improve ranking, you can follow strategies from the blog post ["Marketing Ideas For Your Package"](https://ropensci.org/blog/2024/03/07/package-marketing/).
+In particular, gaining more GitHub stars will improve the rank. 
 
 ### How to get a package logo shown in the packages tab?
 
-We use the same conventions as pkgdown to find a logo for the package. 
-It either needs to be in one of the locations checked by `pkgdown:::find_logo()` (`man/figures/logo.png` and `man/figures/logo.svg`) or set as an opengraph image in your `_pkgdown.yml`.
+R-universe uses `pkgdown` conventions to detect package logos:  
+
+- Place the logo in `man/figures/logo.png` or `man/figures/logo.svg`, which can be checked by `pkgdown:::find_logo()`.
+- Alternatively, specify the logo as an [opengraph image in your `_pkgdown.yml`](https://pkgdown.r-lib.org/articles/metadata.html#site-wide-customization).  
 
 ## Individual (contributor, maintainer) metadata
 
 ### How to link a maintainer email addresses to a username on R-universe?
 
-We use the GitHub username that is associated with a given email address. 
-If the email address that you use in the R package maintainer field, or in commits, is the same as your GitHub account, everything just works. 
-If you use different email addresses, you can easily add additional email addresses in your [GitHub settings](https://github.com/settings/emails).
+R-universe associates maintainers with their GitHub usernames based on email addresses.  
 
-Once you have validated your email address on GitHub, subsequent builds of R packages will be able to associate the package and contributions to your user account. 
-We collect statistics during the build process, so the changes will not become visible until the next build of each package.
+- Use as email address in your `DESCRIPTION` file’s maintainer field or commits, one of the email addresses you registered on GitHub.  
+- If you use multiple email addresses, add them to your [GitHub settings](https://github.com/settings/emails).  
+
+Once the email is validated on GitHub, future builds of your packages will reflect the association. 
+Note that changes take effect after the next package build.  
 
 ### My profile picture or contributor statistics do not show up
 
-Same as above. 
-If no picture shows up, you probably need to register the email address that you use as R package maintainer in your [GitHub settings](https://github.com/settings/emails), and wait for the package to be rebuilt.
+If your profile picture or contributor statistics are not visible:  
+
+1. Ensure the email used in the package `DESCRIPTION` file is registered in your [GitHub settings](https://github.com/settings/emails).  
+2. Wait for the next package rebuild for the changes to be reflected. 
+

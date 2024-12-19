@@ -4,8 +4,8 @@ title: "Set up your own universe"
 
 ## Basic steps
 
-Creating a universe for your R packages can be done in a few steps described below.
-The further sections on this page give more details on each step.
+Setting up a universe for your R packages involves just a few steps, outlined below. 
+Additional details for each step are provided in the sections that follow.
 
 1. **Create a Git repository named (all lowercase) `<your-username>.r-universe.dev` on your GitHub account**, containing a `packages.json` file which lists the Git repositories with R packages to include. 
     - For an organization at `github.com/ropensci` the repository is thus `github.com/ropensci/ropensci.r-universe.dev`; 
@@ -17,8 +17,8 @@ The further sections on this page give more details on each step.
 
 ## Creating your personal R-universe subdomain {#subdomain}
 
-In R-universe, every user has a private subdomain, where you control the content, and which does not interfere with other users. 
-The subdomains are tied to the GitHub account or organization with that name. 
+Each user gets a private subdomain on R-universe, where you control the content independently. 
+Subdomains are tied to GitHub accounts or organizations with the same name.
 
 ### Case-sensitivity
 
@@ -26,10 +26,10 @@ Domain names are by definition case-insensitive and lowercased.
 
 ### How much GitHub is compulsory?
 
-In order to start a universe you need a GitHub account as that is where the repository with your packages' listing has to be hosted. 
-However **the R packages themselves do not necessarily need to exist under that same account**. 
-They **don’t even need to be on GitHub**: they may be hosted on **any public Git server**. 
-If your R packages are hosted on another Git service, such as Gitlab, or a university Git server, you can simply use a GitHub account only for publishing a `packages.json` registry for that username, without having to buy into the full GitHub platform.
+You need a GitHub account to host the repository for your `packages.json` registry.
+However, **the R packages themselves do not need to be under the same account or even on GitHub**. 
+They can be hosted on **any public Git server**, such as GitLab or a university Git server.
+A GitHub account is only required for publishing the `packages.json` registry.
 
 ## Populating the packages.json registry file
 
@@ -165,11 +165,10 @@ options(repos = c(
 install.packages('tinkr')
 ```
 
-To help package users, you can consider copying these instructions to your package README.md files. 
-And of course you can add an R-universe badge to the package README as well.
+Copy these instructions to your package `README.md` files to assist users. 
+You can also add an R-universe badge to indicate the deployed version:
 
 The badge API is simply `/badges/<package>` which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:
-
 
 ```md
 ![r-universe](https://r-lib.r-universe.dev/badges/cpp11)
