@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>12&nbsp; Trouble shoot package builds – R-Universe Documentation</title>
+<title>13&nbsp; Trouble shoot package builds – R-Universe Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -189,6 +189,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install/dependencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -203,37 +209,37 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/set-up.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/metadata.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/terms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/other-networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span></a>
   </div>
 </li>
       </ul>
@@ -248,22 +254,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#data-updates" id="toc-data-updates" class="nav-link active" data-scroll-target="#data-updates"><span class="header-section-number">12.1</span> How often is data updated?</a></li>
-  <li><a href="#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" id="toc-can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" class="nav-link" data-scroll-target="#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables"><span class="header-section-number">12.2</span> Can the package build process be customized with custom options/tools/variables?</a></li>
-  <li><a href="#what-if-the-git-repository-is-not-a-ready-to-build-source-package" id="toc-what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="nav-link" data-scroll-target="#what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">12.3</span> What if the Git repository is not a ready-to-build source package?</a></li>
-  <li><a href="#third-party-reqs" id="toc-third-party-reqs" class="nav-link" data-scroll-target="#third-party-reqs"><span class="header-section-number">12.4</span> How to request additional third-party system requirements?</a></li>
-  <li><a href="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">12.5</span> How to publish vignettes/articles requiring custom software/tokens to render?</a></li>
-  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">12.6</span> Are packages on R-universe required to pass CMD check or meet other criteria?</a></li>
-  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">12.7</span> How to use a universe on regular continous integration?</a></li>
+  <li><a href="#data-updates" id="toc-data-updates" class="nav-link active" data-scroll-target="#data-updates"><span class="header-section-number">13.1</span> How often is data updated?</a></li>
+  <li><a href="#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" id="toc-can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" class="nav-link" data-scroll-target="#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables"><span class="header-section-number">13.2</span> Can the package build process be customized with custom options/tools/variables?</a></li>
+  <li><a href="#what-if-the-git-repository-is-not-a-ready-to-build-source-package" id="toc-what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="nav-link" data-scroll-target="#what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">13.3</span> What if the Git repository is not a ready-to-build source package?</a></li>
+  <li><a href="#third-party-reqs" id="toc-third-party-reqs" class="nav-link" data-scroll-target="#third-party-reqs"><span class="header-section-number">13.4</span> How to request additional third-party system requirements?</a></li>
+  <li><a href="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">13.5</span> How to publish vignettes/articles requiring custom software/tokens to render?</a></li>
+  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.6</span> Are packages on R-universe required to pass CMD check or meet other criteria?</a></li>
+  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.7</span> How to use a universe on regular continous integration?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/troubleshoot-build.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></h1>
 </div>
 
 
@@ -280,8 +286,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="data-updates" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="data-updates"><span class="header-section-number">12.1</span> How often is data updated?</h2>
+<section id="data-updates" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="data-updates"><span class="header-section-number">13.1</span> How often is data updated?</h2>
 <ul>
 <li>The system checks package Git repositories and the registry for changes every hour.<br>
 </li>
@@ -293,14 +299,14 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="can-the-package-build-process-be-customized-with-custom-optionstoolsvariables"><span class="header-section-number">12.2</span> Can the package build process be customized with custom options/tools/variables?</h2>
+<section id="can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="can-the-package-build-process-be-customized-with-custom-optionstoolsvariables"><span class="header-section-number">13.2</span> Can the package build process be customized with custom options/tools/variables?</h2>
 <p>No, customization is not possible, except for addressing third-party system requirements (covered in the next section).<br>
 Think of R-universe as your own mini-CRAN. The build environment is very similar to CRAN’s, so if a package builds successfully on CRAN, it is likely to work on R-universe.</p>
 <p>This restriction ensures that packages deployed on R-universe are reproducible, work seamlessly on user machines, and do not rely on custom settings or tools.</p>
 </section>
-<section id="what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">12.3</span> What if the Git repository is not a ready-to-build source package?</h2>
+<section id="what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">13.3</span> What if the Git repository is not a ready-to-build source package?</h2>
 <p>For repositories requiring additional preparation before building, you can add a <a href="https://github.com/r-universe-org/build-source/blob/5830b8aa92d5524b3af6d1b617e605d1a2558543/entrypoint.sh#L50-L57">script</a> at the root of the package:</p>
 <ul>
 <li>An R script named <code>bootstrap.R</code>, or<br>
@@ -317,8 +323,8 @@ Think of R-universe as your own mini-CRAN. The build environment is very similar
 <li>Performing other necessary preparations.</li>
 </ul>
 </section>
-<section id="third-party-reqs" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="third-party-reqs"><span class="header-section-number">12.4</span> How to request additional third-party system requirements?</h2>
+<section id="third-party-reqs" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="third-party-reqs"><span class="header-section-number">13.4</span> How to request additional third-party system requirements?</h2>
 <p>If packages need a <strong>Linux library</strong> that is not available on the server:</p>
 <ol type="1">
 <li>Send a pull request (PR) to the <a href="https://github.com/r-universe-org/base-image">base image</a> for reasonably small or common dependencies.<br>
@@ -326,18 +332,18 @@ Think of R-universe as your own mini-CRAN. The build environment is very similar
 <li>Alternatively, send a PR to <a href="https://github.com/rstudio/r-system-requirements">rstudio/r-system-requirements</a> to resolve the library based on the <code>SystemRequirements</code> field in the package <code>DESCRIPTION</code> file.</li>
 </ol>
 </section>
-<section id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">12.5</span> How to publish vignettes/articles requiring custom software/tokens to render?</h2>
+<section id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">13.5</span> How to publish vignettes/articles requiring custom software/tokens to render?</h2>
 <p>Precompute these vignettes locally before publishing.<br>
 Follow the guide: <a href="https://ropensci.org/blog/2019/12/08/precompute-vignettes/">How to precompute package vignettes or pkgdown articles</a>.</p>
 </section>
-<section id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">12.6</span> Are packages on R-universe required to pass CMD check or meet other criteria?</h2>
+<section id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.6</span> Are packages on R-universe required to pass CMD check or meet other criteria?</h2>
 <p>No, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.</p>
 <p>The universe owner is responsible for setting policies and ensuring quality control.</p>
 </section>
-<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="12.7">
-<h2 data-number="12.7" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">12.7</span> How to use a universe on regular continous integration?</h2>
+<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.7</span> How to use a universe on regular continous integration?</h2>
 <p>If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs"><code>extra-repositories</code> field of the <code>r-lib/actions</code> setup-r action</a>.</p>
 
 
@@ -764,12 +770,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../publish/metadata.html" class="pagination-link" aria-label="Make your package easier to discover: Control the metadata / SEO">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../publish/terms.html" class="pagination-link" aria-label="Package publishing rules">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

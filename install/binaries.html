@@ -223,6 +223,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install/dependencies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -237,37 +243,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/set-up.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/metadata.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/terms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/other-networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span></a>
   </div>
 </li>
       </ul>
@@ -283,8 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#does-r-universe-have-linux-binaries" id="toc-does-r-universe-have-linux-binaries" class="nav-link active" data-scroll-target="#does-r-universe-have-linux-binaries"><span class="header-section-number">7.1</span> Does R-universe have Linux binaries?</a></li>
-  <li><a href="#binaries-for-packages-with-compiled-code" id="toc-binaries-for-packages-with-compiled-code" class="nav-link" data-scroll-target="#binaries-for-packages-with-compiled-code"><span class="header-section-number">7.2</span> Binaries for packages with compiled code</a></li>
-  <li><a href="#how-to-use-webassembly-binaries" id="toc-how-to-use-webassembly-binaries" class="nav-link" data-scroll-target="#how-to-use-webassembly-binaries"><span class="header-section-number">7.3</span> How to use WebAssembly Binaries</a></li>
+  <li><a href="#how-to-use-webassembly-binaries" id="toc-how-to-use-webassembly-binaries" class="nav-link" data-scroll-target="#how-to-use-webassembly-binaries"><span class="header-section-number">7.2</span> How to use WebAssembly Binaries</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/binaries.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -321,13 +326,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>See how <a href="https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16">this is done automatically in the base image</a> when an environment variable <code>MY_UNIVERSE</code> is set.</p>
 </section>
-<section id="binaries-for-packages-with-compiled-code" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="binaries-for-packages-with-compiled-code"><span class="header-section-number">7.2</span> Binaries for packages with compiled code</h2>
-<p>In information on packages provided by the <a href="../browse/api.html#api-pkg">API</a>, the <code>arch</code> field to the <code>binaries</code> field only if there is compiled code in the package. Packages without compiled code are identical on all architectures.</p>
-<p>On MacOS we only build a separate intel and arm64 version for packages with compiled code, otherwise the same binary is used for both.</p>
-</section>
-<section id="how-to-use-webassembly-binaries" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="how-to-use-webassembly-binaries"><span class="header-section-number">7.3</span> How to use WebAssembly Binaries</h2>
+<section id="how-to-use-webassembly-binaries" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="how-to-use-webassembly-binaries"><span class="header-section-number">7.2</span> How to use WebAssembly Binaries</h2>
 <p>We have experimental support for webassembly binaries! You should use the official <a href="https://repo.r-wasm.org">r-wasm repository</a> for dependencies. For example to install the dev version of dplyr:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'dplyr'</span>,</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://tidyverse.r-universe.dev'</span>, <span class="st">'https://repo.r-wasm.org'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
