@@ -285,11 +285,22 @@
     ]
   },
   {
+    "objectID": "install/binaries.html#binaries-for-packages-with-compiled-code",
+    "href": "install/binaries.html#binaries-for-packages-with-compiled-code",
+    "title": "7  Binaries",
+    "section": "7.2 Binaries for packages with compiled code",
+    "text": "7.2 Binaries for packages with compiled code\nIn information on packages provided by the API, the arch field to the binaries field only if there is compiled code in the package. Packages without compiled code are identical on all architectures.\nOn MacOS we only build a separate intel and arm64 version for packages with compiled code, otherwise the same binary is used for both.",
+    "crumbs": [
+      "Install",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Binaries</span>"
+    ]
+  },
+  {
     "objectID": "install/binaries.html#how-to-use-webassembly-binaries",
     "href": "install/binaries.html#how-to-use-webassembly-binaries",
     "title": "7  Binaries",
-    "section": "7.2 How to use WebAssembly Binaries",
-    "text": "7.2 How to use WebAssembly Binaries\nWe have experimental support for webassembly binaries! You should use the official r-wasm repository for dependencies. For example to install the dev version of dplyr:\ninstall.packages('dplyr',\n  repos = c('https://tidyverse.r-universe.dev', 'https://repo.r-wasm.org'))",
+    "section": "7.3 How to use WebAssembly Binaries",
+    "text": "7.3 How to use WebAssembly Binaries\nWe have experimental support for webassembly binaries! You should use the official r-wasm repository for dependencies. For example to install the dev version of dplyr:\ninstall.packages('dplyr',\n  repos = c('https://tidyverse.r-universe.dev', 'https://repo.r-wasm.org'))",
     "crumbs": [
       "Install",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Binaries</span>"
