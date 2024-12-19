@@ -17,6 +17,8 @@ cat(pitch, sep = "\n")
 
 Find out more context, and recent videos, on the [project page on the rOpenSci website](https://ropensci.org/r-universe). 
 
+Learn more about the [governance](#governance) and [sustainability](#funding) of R-universe.
+
 ### Using this guide {.unnumbered}
 
 Are you...
