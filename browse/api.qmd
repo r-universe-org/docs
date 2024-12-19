@@ -87,8 +87,10 @@ packages <- universe::universe_all_packages("jeroen")
 # The result is a list of packages
 str(packages[[1]], max.level = 1)
 ```
+
+
    
-### Information on a single package in an universe
+### Information on a single package in an universe {#api-pkg}
 
 URL: `https://<username>.r-universe.dev/api/packages/<package>`
 
