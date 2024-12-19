@@ -54,3 +54,7 @@ The universe owner is responsible for setting policies and ensuring quality cont
 ## How to use a universe on regular continous integration?
 
 If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the [`extra-repositories` field of the `r-lib/actions` setup-r action](https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs).
+
+## How to know whether tests are run on R-universe?
+
+During the build, the `MY_UNIVERSE` environment variable is set to the URL of the universe.
