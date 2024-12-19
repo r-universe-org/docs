@@ -18,6 +18,14 @@ options(repos = c(
 
 See how [this is done automatically in the base image](https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16) when an environment variable `MY_UNIVERSE` is set.
 
+
+## Binaries for packages with compiled code
+
+In information on packages provided by the [API](#api-pkg), the `arch` field to the `binaries` field only if there is compiled code in the package. 
+Packages without compiled code are identical on all architectures.
+
+On MacOS we only build a separate intel and arm64 version for packages with compiled code, otherwise the same binary is used for both.
+
 ## How to use WebAssembly Binaries
 
 We have experimental support for webassembly binaries! You should use the official [r-wasm repository](https://repo.r-wasm.org) for dependencies. For example to install the dev version of dplyr:
