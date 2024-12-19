@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.3">
+<meta name="generator" content="quarto-1.7.5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-81b5c3e63835cfde897ecd3d35a35a41.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ff4371ef257df69894857e99c6ad0d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-43cc1495876b7dadb85f7ff523b75766.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -248,8 +248,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#relation-to-other-networks" id="toc-relation-to-other-networks" class="nav-link active" data-scroll-target="#relation-to-other-networks"><span class="header-section-number">14.1</span> Relation to other networks</a></li>
-  <li><a href="#can-we-use-r-universe-to-host-older-versions-of-cran-packages" id="toc-can-we-use-r-universe-to-host-older-versions-of-cran-packages" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-older-versions-of-cran-packages"><span class="header-section-number">14.2</span> Can we use r-universe to host older versions of CRAN packages?</a></li>
-  <li><a href="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package" id="toc-can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">14.3</span> Can we use r-universe to host a fork of a CRAN package?</a></li>
+  <li><a href="#can-we-use-r-universe-to-host-older-versions-of-cran-packages" id="toc-can-we-use-r-universe-to-host-older-versions-of-cran-packages" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-older-versions-of-cran-packages"><span class="header-section-number">14.2</span> Can we use R-universe to host older versions of CRAN packages?</a></li>
+  <li><a href="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package" id="toc-can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">14.3</span> Can we use R-universe to host a fork of a CRAN package?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/other-networks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -277,16 +277,26 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="relation-to-other-networks" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="relation-to-other-networks"><span class="header-section-number">14.1</span> Relation to other networks</h2>
-<p>Packages on R-universe may also also exist on other networks, such as CRAN or Bioconductor.</p>
-<p>Note that CRAN is not meant to be the only CRAN-style package repository, as <a href="https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8">explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote</a>.</p>
+<p>Packages on R-universe may also exist on other networks, such as CRAN or Bioconductor.</p>
+<p>It’s important to note that CRAN is not intended to be the sole CRAN-style package repository, as <a href="https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8">explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote</a>.</p>
 </section>
 <section id="can-we-use-r-universe-to-host-older-versions-of-cran-packages" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-older-versions-of-cran-packages"><span class="header-section-number">14.2</span> Can we use r-universe to host older versions of CRAN packages?</h2>
-<p>This is possible, but be careful that it may not work as you expect. R’s <code>install.packages()</code> and <code>update.packages()</code> will always install the latest version of a package it can find in any of the available repos. So the package may automatically get updated to the CRAN version on the end-user machine.</p>
+<h2 data-number="14.2" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-older-versions-of-cran-packages"><span class="header-section-number">14.2</span> Can we use R-universe to host older versions of CRAN packages?</h2>
+<p>While hosting older versions of CRAN packages on R-universe is technically possible, it may not work as intended.</p>
+<ul>
+<li>R’s <code>install.packages()</code> and <code>update.packages()</code> functions will always install the latest version of a package available across all configured repositories.<br>
+</li>
+<li>As a result, the older version hosted on R-universe might be automatically updated to the latest CRAN version on the user’s machine.</li>
+</ul>
 </section>
 <section id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">14.3</span> Can we use r-universe to host a fork of a CRAN package?</h2>
-<p>This is possible but generally a bad idea. Your package may automatically get overwritten by the CRAN version of the package the next time the user runs <code>install.packages()</code> or <code>update.packages()</code>. Also note that other packages may depend on this package, and might not be compatible with your fork.</p>
+<h2 data-number="14.3" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">14.3</span> Can we use R-universe to host a fork of a CRAN package?</h2>
+<p>Hosting a fork of a CRAN package on R-universe is possible but generally not recommended.</p>
+<ul>
+<li>The CRAN version of the package may overwrite your fork when the user runs <code>install.packages()</code> or <code>update.packages()</code>.<br>
+</li>
+<li>Additionally, other packages depending on the original CRAN package may not be compatible with your fork, leading to potential issues.</li>
+</ul>
 
 
 </section>
