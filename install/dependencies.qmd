@@ -8,6 +8,8 @@ Yes! It has to be an optional dependency (`Suggests`) and you need to
 
 - List the R-universe in the `Additional_repositories` field in `DESCRIPTION`. [Examples of CRAN packages doing so](https://github.com/search?q=org%3Acran+path%3ADESCRIPTION+additional_repositories%3A+r-universe.dev&type=code). The field will *not* ensure installation of the package. Its sole purpose is allowing CRAN to check the package is indeed available in that other repository.
 
+- Alternatively, if you are ok getting a NOTE from R CMD check (that you can explain in cran-comments.md) list the URL where to install the package somewhere else in `DESCRIPTION` ([example](https://github.com/cran/prioritizr/blob/0738fe58f55c812a3023e81398d4294487a8c497/DESCRIPTION#L21)).
+
 - Document, for the user, how to install the missing package. You can do that 
     - In user-facing documentation (README, package-level manual page, manual page of the functions that use the dependency). [Example](https://github.com/ropensci/usaboundaries?tab=readme-ov-file#installation).
     - Within the code, for instance:
