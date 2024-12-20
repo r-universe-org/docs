@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Reproducibility – R-Universe Documentation</title>
+<title>9&nbsp; Using dependencies from R-universe – R-Universe Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../install/dependencies.html" rel="next">
-<link href="../install/binaries.html" rel="prev">
+<link href="../publish/get-started.html" rel="next">
+<link href="../install/reproducibility.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/reproducibility.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/dependencies.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -219,13 +219,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../install/reproducibility.html" class="sidebar-item-text sidebar-link active">
+  <a href="../install/reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../install/dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="../install/dependencies.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></span></a>
   </div>
 </li>
@@ -288,22 +288,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" id="toc-does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="nav-link active" data-scroll-target="#does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does R-universe archive old versions of packages? How does it work with renv?</a></li>
-  <li><a href="#snapshots" id="toc-snapshots" class="nav-link" data-scroll-target="#snapshots"><span class="header-section-number">8.2</span> Repository snapshots</a>
-  <ul class="collapse">
-  <li><a href="#what-is-a-snapshot-of-an-universe" id="toc-what-is-a-snapshot-of-an-universe" class="nav-link" data-scroll-target="#what-is-a-snapshot-of-an-universe"><span class="header-section-number">8.2.1</span> What is a snapshot of an universe?</a></li>
-  <li><a href="#downloading-repository-snapshots" id="toc-downloading-repository-snapshots" class="nav-link" data-scroll-target="#downloading-repository-snapshots"><span class="header-section-number">8.2.2</span> Downloading repository snapshots</a></li>
-  <li><a href="#using-snapshots" id="toc-using-snapshots" class="nav-link" data-scroll-target="#using-snapshots"><span class="header-section-number">8.2.3</span> Using snapshots</a></li>
-  </ul></li>
+  <li><a href="#can-a-cran-package-take-on-a-dependency-from-r-universe" id="toc-can-a-cran-package-take-on-a-dependency-from-r-universe" class="nav-link active" data-scroll-target="#can-a-cran-package-take-on-a-dependency-from-r-universe"><span class="header-section-number">9.1</span> Can a CRAN package take on a dependency from R-universe?</a></li>
+  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.2</span> How to use a universe on regular continous integration?</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/reproducibility.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/dependencies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/reproducibility.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install/binaries.html">Install</a></li><li class="breadcrumb-item"><a href="../install/dependencies.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></h1>
 </div>
 
 
@@ -320,46 +315,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="does-r-universe-archive-old-versions-of-packages-how-does-it-work-with-renv"><span class="header-section-number">8.1</span> Does R-universe archive old versions of packages? How does it work with renv?</h2>
-<p>R-universe does not archive old versions of packages, but it <strong>tracks the upstream git URL and commit ID</strong> in the R package description. This allows tools like <code>renv</code> to restore packages in environments that were installed from R-universe. For more details, see this tech note: <a href="https://ropensci.org/blog/2022/01/06/runiverse-renv/">How renv restores packages from r-universe for reproducibility or production</a>.</p>
-<p>You can also <strong>archive fixed versions of a universe</strong> for production or reproducibility, using what we call <a href="#snapshots">repository snapshots</a>.</p>
-</section>
-<section id="snapshots" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="snapshots"><span class="header-section-number">8.2</span> Repository snapshots</h2>
-<section id="what-is-a-snapshot-of-an-universe" class="level3" data-number="8.2.1">
-<h3 data-number="8.2.1" class="anchored" data-anchor-id="what-is-a-snapshot-of-an-universe"><span class="header-section-number">8.2.1</span> What is a snapshot of an universe?</h3>
-<p>A snapshot is a standard layout of a few directories consisting of static files containing binaries, source packages, and indexing files.<br>
-Snapshots allow you to host <strong>fixed versions of packages</strong> and install them as needed.</p>
-</section>
-<section id="downloading-repository-snapshots" class="level3" data-number="8.2.2">
-<h3 data-number="8.2.2" class="anchored" data-anchor-id="downloading-repository-snapshots"><span class="header-section-number">8.2.2</span> Downloading repository snapshots</h3>
-<p>The snapshot API lets you download a full copy of any repository on R-universe.<br>
-You can use this snapshot to mirror the CRAN-like repository on your own servers or to build a stable, validated release of your package suite.</p>
-<p>The API endpoint is <code>/api/snapshot</code> and has several options to filter content. By default, the endpoint returns a zip file with all the repository’s packages, binaries, and documentation. If needed, you can filter the content to include only specific binaries, R versions, or subsets of packages.</p>
-<p>Explore the API parameters for your universe, for instance <a href="https://ggseg.r-universe.dev/api" class="uri">https://ggseg.r-universe.dev/api</a>.</p>
-</section>
-<section id="using-snapshots" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="using-snapshots"><span class="header-section-number">8.2.3</span> Using snapshots</h3>
-<p>A CRAN-like R package repository is essentially a static directory of package files and indexes, with a specific naming structure. R-universe automatically builds and updates all these files based on a registry of packages and upstream git sources. Once everything is generated, you can simply copy the entire folder elsewhere, and have a frozen CRAN-like package repository on that server. For instance…</p>
+<section id="can-a-cran-package-take-on-a-dependency-from-r-universe" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="can-a-cran-package-take-on-a-dependency-from-r-universe"><span class="header-section-number">9.1</span> Can a CRAN package take on a dependency from R-universe?</h2>
+<p>Yes! It has to be an optional dependency (<code>Suggests</code>) and you need to</p>
 <ul>
-<li><p>An organization could host a mirror of their repository internally in their intranet. They could update the mirror every day, every month, etc.</p></li>
-<li><p>You could create a GitHub Action which regularly downloads a snapshot from R-universe to publish on github-pages. Here is a minimal example of such an action: <a href="https://github.com/jeroen/backup" class="uri">https://github.com/jeroen/backup</a>.</p></li>
+<li><p>List the R-universe in the <code>Additional_repositories</code> field in <code>DESCRIPTION</code>. <a href="https://github.com/search?q=org%3Acran+path%3ADESCRIPTION+additional_repositories%3A+r-universe.dev&amp;type=code">Examples of CRAN packages doing so</a>. The field will <em>not</em> ensure installation of the package. Its sole purpose is allowing CRAN to check the package is indeed available in that other repository.</p></li>
+<li><p>Document, for the user, how to install the missing package. You can do that</p>
+<ul>
+<li>In user-facing documentation (README, package-level manual page, manual page of the functions that use the dependency). <a href="https://github.com/ropensci/usaboundaries?tab=readme-ov-file#installation">Example</a>.</li>
+<li>Within the code, for instance:</li>
+</ul></li>
 </ul>
-<p>Note how the aforementioned action is very fast: <strong>downloading and extracting the snapshot from R-universe only takes a few seconds</strong>. So this is easily something that could be done on demand, or automatically on a regular basis.</p>
-<p>You can also install packages in R directly from a local snapshot folder, by prefixing the path that you pass to <code>install.packages</code> with <code>file://</code> (Windows paths need to be normalized to look more unixy):</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download and extract the snapshot</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>curl<span class="sc">::</span><span class="fu">curl_download</span>(<span class="st">"https://jeroen.r-universe.dev/api/snapshot/zip?binaries=4.3"</span>, <span class="st">"snapshot.zip"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>snapshot <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="fu">tempdir</span>(), <span class="st">'jeroen'</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(<span class="st">"snapshot.zip"</span>, <span class="at">exdir =</span> snapshot)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install packages from the local repository</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>prefix <span class="ot">&lt;-</span> <span class="fu">ifelse</span> (.Platform<span class="sc">$</span>OS.type <span class="sc">==</span> <span class="st">"windows"</span>, <span class="st">"file:///"</span>, <span class="st">"file://"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>repos <span class="ot">&lt;-</span> <span class="fu">paste0</span>(prefix, <span class="fu">normalizePath</span>(snapshot, <span class="st">"/"</span>))</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"V8"</span>, <span class="st">"mongolite"</span>), <span class="at">repos =</span> repos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span>(<span class="fu">require</span>(<span class="st">"targets"</span>)) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stop</span>(<span class="st">"You can install targets with install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or a solution that will automatically prompt the user to install the missing package:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rlang<span class="sc">::</span><span class="fu">check_installed</span>(<span class="st">"targets"</span>, <span class="at">action =</span> <span class="cf">function</span>(...) <span class="fu">install.packages</span>(<span class="st">'targets'</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://ropensci.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.2</span> How to use a universe on regular continous integration?</h2>
+<p>If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs"><code>extra-repositories</code> field of the <code>r-lib/actions</code> setup-r action</a>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -782,13 +759,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../install/binaries.html" class="pagination-link" aria-label="Binaries">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></span>
+      <a href="../install/reproducibility.html" class="pagination-link" aria-label="Reproducibility">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../install/dependencies.html" class="pagination-link" aria-label="Using dependencies from R-universe">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../publish/get-started.html" class="pagination-link" aria-label="Why publish on R-universe">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -797,4 +774,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/reproducibility.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/dependencies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
