@@ -320,6 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Yes! It has to be an optional dependency (<code>Suggests</code>) and you need to</p>
 <ul>
 <li><p>List the R-universe in the <code>Additional_repositories</code> field in <code>DESCRIPTION</code>. <a href="https://github.com/search?q=org%3Acran+path%3ADESCRIPTION+additional_repositories%3A+r-universe.dev&amp;type=code">Examples of CRAN packages doing so</a>. The field will <em>not</em> ensure installation of the package. Its sole purpose is allowing CRAN to check the package is indeed available in that other repository.</p></li>
+<li><p>Alternatively, if you are ok getting a NOTE from R CMD check (that you can explain in cran-comments.md) list the URL where to install the package somewhere else in <code>DESCRIPTION</code> (<a href="https://github.com/cran/prioritizr/blob/0738fe58f55c812a3023e81398d4294487a8c497/DESCRIPTION#L21">example</a>).</p></li>
 <li><p>Document, for the user, how to install the missing package. You can do that</p>
 <ul>
 <li>In user-facing documentation (README, package-level manual page, manual page of the functions that use the dependency). <a href="https://github.com/ropensci/usaboundaries?tab=readme-ov-file#installation">Example</a>.</li>
