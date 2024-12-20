@@ -11,7 +11,16 @@ Yes! It has to be an optional dependency (`Suggests`) and you need to
 - Document, for the user, how to install the missing package. You can do that 
     - In user-facing documentation (README, package-level manual page, manual page of the functions that use the dependency). [Example](https://github.com/ropensci/usaboundaries?tab=readme-ov-file#installation).
     - Within the code, for instance:
+    
+```r
+if (!(require("targets")) {
+  stop("You can install targets with install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))")
+}
 
+```
+
+or a solution that will automatically prompt the user to install the missing package:
+    
 ```r
 rlang::check_installed("targets", action = function(...) install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org')))
 ```
