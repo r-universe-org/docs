@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.5">
+<meta name="generator" content="quarto-1.7.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -66,12 +66,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../">
 <link href="../browse/rss-feeds.html" rel="next">
 <link href="../browse/packages.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ff4371ef257df69894857e99c6ad0d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fbc47131a039e0df962caa6cecbb2e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-43cc1495876b7dadb85f7ff523b75766.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -223,12 +224,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../install/dependencies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -243,37 +238,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/set-up.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/metadata.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/terms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/other-networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span></a>
   </div>
 </li>
       </ul>
@@ -347,8 +342,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(universes, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
- $ universes  :List of 9789
- $ maintainers:List of 9606</code></pre>
+ $ universes  :List of 9795
+ $ maintainers:List of 9604</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -474,7 +469,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Package           : chr "openssl"
  $ Type              : chr "Package"
  $ Title             : chr "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL"
- $ Version           : chr "2.3.0"
+ $ Version           : chr "2.3.1"
  $ Authors@R         : chr "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID"| __truncated__
  $ Description       : chr "Bindings to OpenSSL libssl and libcrypto, plus custom SSH\nkey parsers. Supports RSA, DSA and EC curves P-256, "| __truncated__
  $ License           : chr "MIT + file LICENSE"
@@ -489,23 +484,23 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Repository        : chr "https://jeroen.r-universe.dev"
  $ RemoteUrl         : chr "https://github.com/jeroen/openssl"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "597003e7aa95106cd34ff82c431e551a1e1e2978"
+ $ RemoteSha         : chr "5cb84333f9da1178d897774836a5734c9dd69de2"
  $ NeedsCompilation  : chr "yes"
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nOliver Keyes [ctb]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "9d7591c7946c8940cb349c6be596a01c"
+ $ MD5sum            : chr "9dee2d6434a36b79af3ed58d77fc2f68"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "openssl_2.3.0.tar.gz"
- $ _fileid           : chr "85871dedbf550e8c2b7b0756c9f90f188dbce5339a51b6d36278ef35e48b79d9"
- $ _filesize         : int 502923
- $ _sha256           : chr "85871dedbf550e8c2b7b0756c9f90f188dbce5339a51b6d36278ef35e48b79d9"
- $ _created          : chr "2024-12-16T14:24:38.000Z"
- $ _published        : chr "2024-12-16T14:30:01.595Z"
+ $ _file             : chr "openssl_2.3.1.tar.gz"
+ $ _fileid           : chr "9418c58a763d84314c8cfe5c3cce7a28c402ede000e82a9dad02fbccf3f70b42"
+ $ _filesize         : int 499543
+ $ _sha256           : chr "9418c58a763d84314c8cfe5c3cce7a28c402ede000e82a9dad02fbccf3f70b42"
+ $ _created          : chr "2025-01-08T21:22:30.000Z"
+ $ _published        : chr "2025-01-08T21:26:56.361Z"
  $ _upstream         : chr "https://github.com/jeroen/openssl"
  $ _commit           :List of 5
- $ _maintainer       :List of 8
+ $ _maintainer       :List of 7
  $ _distro           : chr "noble"
  $ _host             : chr "GitHub-Actions"
  $ _status           : chr "success"
@@ -515,12 +510,12 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _wasmbinary       : chr "success"
  $ _linuxdevel       : chr "success"
  $ _windevel         : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12354605194"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12679224004"
  $ _registered       : logi TRUE
  $ _dependencies     :List of 9
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 4897
+ $ _usedby           : int 4906
  $ _updates          :List of 12
  $ _tags             :List of 1
  $ _stars            : int 65
@@ -529,20 +524,20 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 7
  $ _devurl           : chr "https://github.com/jeroen/openssl"
- $ _searchresults    : int 612
+ $ _searchresults    : int 632
  $ _topics           :List of 1
  $ _assets           :List of 11
  $ _homeurl          : chr "https://github.com/jeroen/openssl"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 45
+ $ _releases         :List of 46
  $ _exports          :List of 78
  $ _help             :List of 22
  $ _readme           : chr "https://github.com/jeroen/openssl/raw/HEAD/README.md"
  $ _rundeps          :List of 2
  $ _sysdeps          :List of 2
  $ _vignettes        :List of 4
- $ _score            : num 18
+ $ _score            : num 17.9
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "openssl"
  $ _universes        :List of 1
@@ -559,7 +554,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Package           : chr "openssl"
  $ Type              : chr "Package"
  $ Title             : chr "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL"
- $ Version           : chr "2.3.0"
+ $ Version           : chr "2.3.1"
  $ Authors@R         : chr "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID"| __truncated__
  $ Description       : chr "Bindings to OpenSSL libssl and libcrypto, plus custom SSH\nkey parsers. Supports RSA, DSA and EC curves P-256, "| __truncated__
  $ License           : chr "MIT + file LICENSE"
@@ -574,23 +569,23 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Repository        : chr "https://jeroen.r-universe.dev"
  $ RemoteUrl         : chr "https://github.com/jeroen/openssl"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "597003e7aa95106cd34ff82c431e551a1e1e2978"
+ $ RemoteSha         : chr "5cb84333f9da1178d897774836a5734c9dd69de2"
  $ NeedsCompilation  : chr "yes"
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nOliver Keyes [ctb]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "9d7591c7946c8940cb349c6be596a01c"
+ $ MD5sum            : chr "9dee2d6434a36b79af3ed58d77fc2f68"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "openssl_2.3.0.tar.gz"
- $ _fileid           : chr "85871dedbf550e8c2b7b0756c9f90f188dbce5339a51b6d36278ef35e48b79d9"
- $ _filesize         : int 502923
- $ _sha256           : chr "85871dedbf550e8c2b7b0756c9f90f188dbce5339a51b6d36278ef35e48b79d9"
- $ _created          : chr "2024-12-16T14:24:38.000Z"
- $ _published        : chr "2024-12-16T14:30:01.595Z"
+ $ _file             : chr "openssl_2.3.1.tar.gz"
+ $ _fileid           : chr "9418c58a763d84314c8cfe5c3cce7a28c402ede000e82a9dad02fbccf3f70b42"
+ $ _filesize         : int 499543
+ $ _sha256           : chr "9418c58a763d84314c8cfe5c3cce7a28c402ede000e82a9dad02fbccf3f70b42"
+ $ _created          : chr "2025-01-08T21:22:30.000Z"
+ $ _published        : chr "2025-01-08T21:26:56.361Z"
  $ _upstream         : chr "https://github.com/jeroen/openssl"
  $ _commit           :List of 5
- $ _maintainer       :List of 8
+ $ _maintainer       :List of 7
  $ _distro           : chr "noble"
  $ _host             : chr "GitHub-Actions"
  $ _status           : chr "success"
@@ -600,12 +595,12 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _wasmbinary       : chr "success"
  $ _linuxdevel       : chr "success"
  $ _windevel         : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12354605194"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12679224004"
  $ _registered       : logi TRUE
  $ _dependencies     :List of 9
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 4897
+ $ _usedby           : int 4906
  $ _updates          :List of 12
  $ _tags             :List of 1
  $ _stars            : int 65
@@ -614,20 +609,20 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 7
  $ _devurl           : chr "https://github.com/jeroen/openssl"
- $ _searchresults    : int 612
+ $ _searchresults    : int 632
  $ _topics           :List of 1
  $ _assets           :List of 11
  $ _homeurl          : chr "https://github.com/jeroen/openssl"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 45
+ $ _releases         :List of 46
  $ _exports          :List of 78
  $ _help             :List of 22
  $ _readme           : chr "https://github.com/jeroen/openssl/raw/HEAD/README.md"
  $ _rundeps          :List of 2
  $ _sysdeps          :List of 2
  $ _vignettes        :List of 4
- $ _score            : num 18
+ $ _score            : num 17.9
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "openssl"
  $ _universes        :List of 1
@@ -673,18 +668,18 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nJan Marvin Garbuszus [ctb]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "342798d0a03393a2ba3f8e9c7fd31e1c"
+ $ MD5sum            : chr "7151441f43e851f9b8b77281748766e3"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
  $ _file             : chr "V8_6.0.0.tar.gz"
- $ _fileid           : chr "3d2cc303775643e1cece616cd4825f0bcfd899116131c0b3ea5b22350396e446"
- $ _filesize         : int 196441
- $ _sha256           : chr "3d2cc303775643e1cece616cd4825f0bcfd899116131c0b3ea5b22350396e446"
- $ _created          : chr "2024-12-11T06:43:05.000Z"
- $ _published        : chr "2024-12-11T06:49:06.961Z"
+ $ _fileid           : chr "451031c78a376a40c1e4243db9c6089b54bb2eda47174d584b4be0af8a034b53"
+ $ _filesize         : int 196468
+ $ _sha256           : chr "451031c78a376a40c1e4243db9c6089b54bb2eda47174d584b4be0af8a034b53"
+ $ _created          : chr "2025-01-10T06:18:42.000Z"
+ $ _published        : chr "2025-01-10T06:23:29.146Z"
  $ _upstream         : chr "https://github.com/jeroen/v8"
  $ _commit           :List of 5
- $ _maintainer       :List of 8
+ $ _maintainer       :List of 7
  $ _distro           : chr "noble"
  $ _host             : chr "GitHub-Actions"
  $ _status           : chr "success"
@@ -694,12 +689,12 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _wasmbinary       : chr "none"
  $ _linuxdevel       : chr "success"
  $ _windevel         : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12271052393"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12704342811"
  $ _registered       : logi TRUE
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 324
+ $ _usedby           : int 325
  $ _updates          :List of 11
  $ _tags             : list()
  $ _topics           :List of 5
@@ -709,7 +704,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 2
  $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 512
+ $ _searchresults    : int 500
  $ _assets           :List of 11
  $ _homeurl          : chr "https://github.com/jeroen/v8"
  $ _realowner        : chr "jeroen"
@@ -721,7 +716,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _rundeps          :List of 3
  $ _sysdeps          :List of 2
  $ _vignettes        :List of 2
- $ _score            : num 15.8
+ $ _score            : num 15.7
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "v8"
  $ _universes        :List of 1
@@ -760,18 +755,18 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nJan Marvin Garbuszus [ctb]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "342798d0a03393a2ba3f8e9c7fd31e1c"
+ $ MD5sum            : chr "7151441f43e851f9b8b77281748766e3"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
  $ _file             : chr "V8_6.0.0.tar.gz"
- $ _fileid           : chr "3d2cc303775643e1cece616cd4825f0bcfd899116131c0b3ea5b22350396e446"
- $ _filesize         : int 196441
- $ _sha256           : chr "3d2cc303775643e1cece616cd4825f0bcfd899116131c0b3ea5b22350396e446"
- $ _created          : chr "2024-12-11T06:43:05.000Z"
- $ _published        : chr "2024-12-11T06:49:06.961Z"
+ $ _fileid           : chr "451031c78a376a40c1e4243db9c6089b54bb2eda47174d584b4be0af8a034b53"
+ $ _filesize         : int 196468
+ $ _sha256           : chr "451031c78a376a40c1e4243db9c6089b54bb2eda47174d584b4be0af8a034b53"
+ $ _created          : chr "2025-01-10T06:18:42.000Z"
+ $ _published        : chr "2025-01-10T06:23:29.146Z"
  $ _upstream         : chr "https://github.com/jeroen/v8"
  $ _commit           :List of 5
- $ _maintainer       :List of 8
+ $ _maintainer       :List of 7
  $ _distro           : chr "noble"
  $ _host             : chr "GitHub-Actions"
  $ _status           : chr "success"
@@ -781,12 +776,12 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _wasmbinary       : chr "none"
  $ _linuxdevel       : chr "success"
  $ _windevel         : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12271052393"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/12704342811"
  $ _registered       : logi TRUE
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 324
+ $ _usedby           : int 325
  $ _updates          :List of 11
  $ _tags             : list()
  $ _topics           :List of 5
@@ -796,7 +791,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 2
  $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 512
+ $ _searchresults    : int 500
  $ _assets           :List of 11
  $ _homeurl          : chr "https://github.com/jeroen/v8"
  $ _realowner        : chr "jeroen"
@@ -808,7 +803,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _rundeps          :List of 3
  $ _sysdeps          :List of 2
  $ _vignettes        :List of 2
- $ _score            : num 15.8
+ $ _score            : num 15.7
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "v8"
  $ _universes        :List of 1
@@ -897,23 +892,23 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 73
+ $ results:List of 75
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 73</code></pre>
+ $ total  : int 75</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "6746caa4626a0c487b74e50f"
+ $ _id           : chr "676e405689f7bbc5d2bce2bc"
  $ Package       : chr "weatherOz"
  $ Title         : chr "An API Client for Australian Weather and Climate Data Resources"
  $ Description   : chr "Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints pro"| __truncated__
  $ _user         : chr "ropensci"
  $ _usedby       : int 0
  $ _searchresults: int 39
- $ _score        : num 8.53
+ $ _score        : num 8.52
  $ _uuid         : int 1200269
  $ maintainer    :List of 6
   ..$ name   : chr "Rodrigo Pires"
@@ -923,7 +918,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ uuid   : int 11730095
   ..$ orcid  : chr "0000-0001-7384-6849"
  $ updated       : int 1732690924
- $ stars         : int 27
+ $ stars         : int 30
  $ topics        :List of 19
   ..$ : chr "dpird"
   ..$ : chr "bom"
@@ -945,7 +940,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "rainfall"
   ..$ : chr "weather-api"
  $ match         : num 170
- $ rank          : num 1453</code></pre>
+ $ rank          : num 1451</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -954,23 +949,23 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 73
+ $ results:List of 75
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 73</code></pre>
+ $ total  : int 75</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "6746caa4626a0c487b74e50f"
+ $ _id           : chr "676e405689f7bbc5d2bce2bc"
  $ Package       : chr "weatherOz"
  $ Title         : chr "An API Client for Australian Weather and Climate Data Resources"
  $ Description   : chr "Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints pro"| __truncated__
  $ _user         : chr "ropensci"
  $ _usedby       : int 0
  $ _searchresults: int 39
- $ _score        : num 8.53
+ $ _score        : num 8.52
  $ _uuid         : int 1200269
  $ maintainer    :List of 6
   ..$ name   : chr "Rodrigo Pires"
@@ -980,7 +975,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ uuid   : int 11730095
   ..$ orcid  : chr "0000-0001-7384-6849"
  $ updated       : int 1732690924
- $ stars         : int 27
+ $ stars         : int 30
  $ topics        :List of 19
   ..$ : chr "dpird"
   ..$ : chr "bom"
@@ -1002,7 +997,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "rainfall"
   ..$ : chr "weather-api"
  $ match         : num 170
- $ rank          : num 1453</code></pre>
+ $ rank          : num 1451</code></pre>
 </div>
 </div>
 <p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>
