@@ -304,6 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#badge-showing-the-number-of-the-deployed-version" id="toc-badge-showing-the-number-of-the-deployed-version" class="nav-link" data-scroll-target="#badge-showing-the-number-of-the-deployed-version"><span class="header-section-number">10.6.1</span> Badge showing the number of the deployed version</a></li>
   <li><a href="#badge-showing-the-status-of-the-latest-check" id="toc-badge-showing-the-status-of-the-latest-check" class="nav-link" data-scroll-target="#badge-showing-the-status-of-the-latest-check"><span class="header-section-number">10.6.2</span> Badge showing the status of the latest check</a></li>
+  <li><a href="#badges-customization" id="toc-badges-customization" class="nav-link" data-scroll-target="#badges-customization"><span class="header-section-number">10.6.3</span> Badges customization</a></li>
   </ul></li>
   <li><a href="#linking-to-your-universe-from-other-websites" id="toc-linking-to-your-universe-from-other-websites" class="nav-link" data-scroll-target="#linking-to-your-universe-from-other-websites"><span class="header-section-number">10.7</span> Linking to your universe from other websites</a></li>
   </ul>
@@ -449,7 +450,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You can also add an R-universe badge to indicate the deployed version.</p>
 <p>The badge API is simply <code>/badges/&lt;package&gt;</code> which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![r-universe version](https://r-lib.r-universe.dev/badges/cpp11)</span><span class="co">](https://r-lib.r-universe.dev/cpp11)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Refer to <a href="https://r-lib.r-universe.dev/badges" class="uri">https://r-lib.r-universe.dev/badges</a> for examples of badges.</p>
 </section>
 <section id="badge-showing-the-status-of-the-latest-check" class="level3" data-number="10.6.2">
 <h3 data-number="10.6.2" class="anchored" data-anchor-id="badge-showing-the-status-of-the-latest-check"><span class="header-section-number">10.6.2</span> Badge showing the status of the latest check</h3>
@@ -457,6 +457,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb6"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![r-universe status](https://r-lib.r-universe.dev/cpp11/badges/checks)</span><span class="co">](https://r-lib.r-universe.dev/cpp11)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The current implementation includes status for building vignettes and check results for R-release and R-devel on Windows, macOS and Linux. It shows the “worst result” of those checks, similar to what GitHub Action check badges do: if there is 1 “error”, 1 “warning and 5 ok, the badge shows”error”.</p>
 <p>The check status ignores R-oldrel and platforms where we only build binaries but do not check (webassembly), to avoid false positives.</p>
+</section>
+<section id="badges-customization" class="level3" data-number="10.6.3">
+<h3 data-number="10.6.3" class="anchored" data-anchor-id="badges-customization"><span class="header-section-number">10.6.3</span> Badges customization</h3>
+<p>Refer to <a href="https://r-lib.r-universe.dev/badges" class="uri">https://r-lib.r-universe.dev/badges</a> for examples of badges and information on how to customize them (color, scale, style).</p>
 </section>
 </section>
 <section id="linking-to-your-universe-from-other-websites" class="level2" data-number="10.7">
