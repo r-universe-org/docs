@@ -166,15 +166,32 @@ install.packages('tinkr')
 ```
 
 Copy these instructions to your package `README.md` files to assist users. 
-You can also add an R-universe badge to indicate the deployed version:
+
+### Badge showing the number of the deployed version
+
+You can also add an R-universe badge to indicate the deployed version.
 
 The badge API is simply `/badges/<package>` which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:
 
 ```md
-![r-universe](https://r-lib.r-universe.dev/badges/cpp11)
+[![r-universe version](https://r-lib.r-universe.dev/cpp11/badges/version)](https://r-lib.r-universe.dev/cpp11)
+```
+### Badge showing the status of the latest check
+
+Alternatively, or as a complement, you can add an R-universe badge to indicate the check status.
+
+```md
+[![r-universe status](https://r-lib.r-universe.dev/cpp11/badges/checks)](https://r-lib.r-universe.dev/cpp11)
 ```
 
-For example this would produce the following badge: <img style="margin-bottom:3px;" src="https://r-lib.r-universe.dev/badges/cpp11"></img>
+The current implementation includes status for building vignettes and check results for R-release and R-devel on Windows, macOS and Linux.
+It shows the "worst result" of those checks, similar to what GitHub Action check badges do: if there is 1 "error", 1 "warning and 5 ok, the badge shows "error".
+
+The check status ignores R-oldrel and platforms where we only build binaries but do not check (webassembly), to avoid false positives.
+
+### Badges customization
+
+Refer to https://r-lib.r-universe.dev/badges for examples of badges and information on how to customize them (color, scale, style).
 
 
 ## Linking to your universe from other websites
