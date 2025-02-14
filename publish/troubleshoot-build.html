@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -280,12 +314,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#data-updates" id="toc-data-updates" class="nav-link active" data-scroll-target="#data-updates"><span class="header-section-number">13.1</span> How often is data updated?</a></li>
   <li><a href="#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" id="toc-can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" class="nav-link" data-scroll-target="#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables"><span class="header-section-number">13.2</span> Can the package build process be customized with custom options/tools/variables?</a></li>
-  <li><a href="#what-if-the-git-repository-is-not-a-ready-to-build-source-package" id="toc-what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="nav-link" data-scroll-target="#what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">13.3</span> What if the Git repository is not a ready-to-build source package?</a></li>
-  <li><a href="#third-party-reqs" id="toc-third-party-reqs" class="nav-link" data-scroll-target="#third-party-reqs"><span class="header-section-number">13.4</span> How to request additional third-party system requirements?</a></li>
-  <li><a href="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">13.5</span> How to publish vignettes/articles requiring custom software/tokens to render?</a></li>
-  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.6</span> Are packages on R-universe required to pass CMD check or meet other criteria?</a></li>
-  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.7</span> How to use a universe on regular continous integration?</a></li>
-  <li><a href="#how-to-know-whether-tests-are-run-on-r-universe" id="toc-how-to-know-whether-tests-are-run-on-r-universe" class="nav-link" data-scroll-target="#how-to-know-whether-tests-are-run-on-r-universe"><span class="header-section-number">13.8</span> How to know whether tests are run on R-universe?</a></li>
+  <li><a href="#configure-some-options-with-config.json" id="toc-configure-some-options-with-config.json" class="nav-link" data-scroll-target="#configure-some-options-with-config.json"><span class="header-section-number">13.3</span> Configure some options with <code>config.json</code></a></li>
+  <li><a href="#what-if-the-git-repository-is-not-a-ready-to-build-source-package" id="toc-what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="nav-link" data-scroll-target="#what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">13.4</span> What if the Git repository is not a ready-to-build source package?</a></li>
+  <li><a href="#third-party-reqs" id="toc-third-party-reqs" class="nav-link" data-scroll-target="#third-party-reqs"><span class="header-section-number">13.5</span> How to request additional third-party system requirements?</a></li>
+  <li><a href="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">13.6</span> How to publish vignettes/articles requiring custom software/tokens to render?</a></li>
+  <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.7</span> Are packages on R-universe required to pass CMD check or meet other criteria?</a></li>
+  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.8</span> How to use a universe on regular continous integration?</a></li>
+  <li><a href="#how-to-know-whether-tests-are-run-on-r-universe" id="toc-how-to-know-whether-tests-are-run-on-r-universe" class="nav-link" data-scroll-target="#how-to-know-whether-tests-are-run-on-r-universe"><span class="header-section-number">13.9</span> How to know whether tests are run on R-universe?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/troubleshoot-build.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -326,12 +361,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="can-the-package-build-process-be-customized-with-custom-optionstoolsvariables" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="can-the-package-build-process-be-customized-with-custom-optionstoolsvariables"><span class="header-section-number">13.2</span> Can the package build process be customized with custom options/tools/variables?</h2>
-<p>No, customization is not possible, except for addressing third-party system requirements (covered in the next section).<br>
+<p>No, customization is overall not possible, except for addressing third-party system requirements (covered in the next two sections).<br>
 Think of R-universe as your own mini-CRAN. The build environment is very similar to CRAN’s, so if a package builds successfully on CRAN, it is likely to work on R-universe.</p>
 <p>This restriction ensures that packages deployed on R-universe are reproducible, work seamlessly on user machines, and do not rely on custom settings or tools.</p>
 </section>
-<section id="what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">13.3</span> What if the Git repository is not a ready-to-build source package?</h2>
+<section id="configure-some-options-with-config.json" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="configure-some-options-with-config.json"><span class="header-section-number">13.3</span> Configure some options with <code>config.json</code></h2>
+<p>You can create a <code>config.json</code> file alongside your <code>packages.json</code> file to set some global options.</p>
+<p>Currently the only option is <code>cran_version</code> which has to be a <code>yyyy-mm-dd</code> string and will use dependencies from a certain p3m snapshot date, for example: <a href="https://github.com/r-multiverse/staging/blob/main/config.json" class="uri">https://github.com/r-multiverse/staging/blob/main/config.json</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"cran_version"</span><span class="fu">:</span> <span class="st">"2025-01-15"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will set <code>options(repos = c(CRAN = "https://p3m.dev/cran/2025-01-15"))</code></p>
+</section>
+<section id="what-if-the-git-repository-is-not-a-ready-to-build-source-package" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="what-if-the-git-repository-is-not-a-ready-to-build-source-package"><span class="header-section-number">13.4</span> What if the Git repository is not a ready-to-build source package?</h2>
 <p>For repositories requiring additional preparation before building, you can add a <a href="https://github.com/r-universe-org/build-source/blob/5830b8aa92d5524b3af6d1b617e605d1a2558543/entrypoint.sh#L50-L57">script</a> at the root of the package:</p>
 <ul>
 <li>An R script named <code>bootstrap.R</code>, or<br>
@@ -348,8 +392,8 @@ Think of R-universe as your own mini-CRAN. The build environment is very similar
 <li>Performing other necessary preparations.</li>
 </ul>
 </section>
-<section id="third-party-reqs" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="third-party-reqs"><span class="header-section-number">13.4</span> How to request additional third-party system requirements?</h2>
+<section id="third-party-reqs" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="third-party-reqs"><span class="header-section-number">13.5</span> How to request additional third-party system requirements?</h2>
 <p>If packages need a <strong>Linux library</strong> that is not available on the server:</p>
 <ol type="1">
 <li>Send a pull request (PR) to the <a href="https://github.com/r-universe-org/base-image">base image</a> for reasonably small or common dependencies.<br>
@@ -357,22 +401,22 @@ Think of R-universe as your own mini-CRAN. The build environment is very similar
 <li>Alternatively, send a PR to <a href="https://github.com/rstudio/r-system-requirements">rstudio/r-system-requirements</a> to resolve the library based on the <code>SystemRequirements</code> field in the package <code>DESCRIPTION</code> file.</li>
 </ol>
 </section>
-<section id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="level2" data-number="13.5">
-<h2 data-number="13.5" class="anchored" data-anchor-id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">13.5</span> How to publish vignettes/articles requiring custom software/tokens to render?</h2>
+<section id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">13.6</span> How to publish vignettes/articles requiring custom software/tokens to render?</h2>
 <p>Precompute these vignettes locally before publishing.<br>
 Follow the guide: <a href="https://ropensci.org/blog/2019/12/08/precompute-vignettes/">How to precompute package vignettes or pkgdown articles</a>.</p>
 </section>
-<section id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="level2" data-number="13.6">
-<h2 data-number="13.6" class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.6</span> Are packages on R-universe required to pass CMD check or meet other criteria?</h2>
+<section id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.7</span> Are packages on R-universe required to pass CMD check or meet other criteria?</h2>
 <p>No, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.</p>
 <p>The universe owner is responsible for setting policies and ensuring quality control.</p>
 </section>
-<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="13.7">
-<h2 data-number="13.7" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.7</span> How to use a universe on regular continous integration?</h2>
+<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.8</span> How to use a universe on regular continous integration?</h2>
 <p>If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs"><code>extra-repositories</code> field of the <code>r-lib/actions</code> setup-r action</a>.</p>
 </section>
-<section id="how-to-know-whether-tests-are-run-on-r-universe" class="level2" data-number="13.8">
-<h2 data-number="13.8" class="anchored" data-anchor-id="how-to-know-whether-tests-are-run-on-r-universe"><span class="header-section-number">13.8</span> How to know whether tests are run on R-universe?</h2>
+<section id="how-to-know-whether-tests-are-run-on-r-universe" class="level2" data-number="13.9">
+<h2 data-number="13.9" class="anchored" data-anchor-id="how-to-know-whether-tests-are-run-on-r-universe"><span class="header-section-number">13.9</span> How to know whether tests are run on R-universe?</h2>
 <p>During the build, the <code>MY_UNIVERSE</code> environment variable is set to the URL of the universe.</p>
 
 

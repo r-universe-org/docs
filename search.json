@@ -575,7 +575,18 @@
     "href": "publish/troubleshoot-build.html#can-the-package-build-process-be-customized-with-custom-optionstoolsvariables",
     "title": "13  Trouble shoot package builds",
     "section": "13.2 Can the package build process be customized with custom options/tools/variables?",
-    "text": "13.2 Can the package build process be customized with custom options/tools/variables?\nNo, customization is not possible, except for addressing third-party system requirements (covered in the next section).\nThink of R-universe as your own mini-CRAN. The build environment is very similar to CRAN’s, so if a package builds successfully on CRAN, it is likely to work on R-universe.\nThis restriction ensures that packages deployed on R-universe are reproducible, work seamlessly on user machines, and do not rely on custom settings or tools.",
+    "text": "13.2 Can the package build process be customized with custom options/tools/variables?\nNo, customization is overall not possible, except for addressing third-party system requirements (covered in the next two sections).\nThink of R-universe as your own mini-CRAN. The build environment is very similar to CRAN’s, so if a package builds successfully on CRAN, it is likely to work on R-universe.\nThis restriction ensures that packages deployed on R-universe are reproducible, work seamlessly on user machines, and do not rely on custom settings or tools.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
+    ]
+  },
+  {
+    "objectID": "publish/troubleshoot-build.html#configure-some-options-with-config.json",
+    "href": "publish/troubleshoot-build.html#configure-some-options-with-config.json",
+    "title": "13  Trouble shoot package builds",
+    "section": "13.3 Configure some options with config.json",
+    "text": "13.3 Configure some options with config.json\nYou can create a config.json file alongside your packages.json file to set some global options.\nCurrently the only option is cran_version which has to be a yyyy-mm-dd string and will use dependencies from a certain p3m snapshot date, for example: https://github.com/r-multiverse/staging/blob/main/config.json\n{\n  \"cran_version\": \"2025-01-15\"\n}\nThis will set options(repos = c(CRAN = \"https://p3m.dev/cran/2025-01-15\"))",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -585,8 +596,8 @@
     "objectID": "publish/troubleshoot-build.html#what-if-the-git-repository-is-not-a-ready-to-build-source-package",
     "href": "publish/troubleshoot-build.html#what-if-the-git-repository-is-not-a-ready-to-build-source-package",
     "title": "13  Trouble shoot package builds",
-    "section": "13.3 What if the Git repository is not a ready-to-build source package?",
-    "text": "13.3 What if the Git repository is not a ready-to-build source package?\nFor repositories requiring additional preparation before building, you can add a script at the root of the package:\n\nAn R script named bootstrap.R, or\n\nA shell script named .prepare.\n\nThese scripts will be executed before R CMD build.\nExamples of actions performed by the script:\n\nInitializing a Git submodule.\n\nRunning roxygen2 (if .Rd files are not committed to Git).\n\nPerforming other necessary preparations.",
+    "section": "13.4 What if the Git repository is not a ready-to-build source package?",
+    "text": "13.4 What if the Git repository is not a ready-to-build source package?\nFor repositories requiring additional preparation before building, you can add a script at the root of the package:\n\nAn R script named bootstrap.R, or\n\nA shell script named .prepare.\n\nThese scripts will be executed before R CMD build.\nExamples of actions performed by the script:\n\nInitializing a Git submodule.\n\nRunning roxygen2 (if .Rd files are not committed to Git).\n\nPerforming other necessary preparations.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -596,8 +607,8 @@
     "objectID": "publish/troubleshoot-build.html#third-party-reqs",
     "href": "publish/troubleshoot-build.html#third-party-reqs",
     "title": "13  Trouble shoot package builds",
-    "section": "13.4 How to request additional third-party system requirements?",
-    "text": "13.4 How to request additional third-party system requirements?\nIf packages need a Linux library that is not available on the server:\n\nSend a pull request (PR) to the base image for reasonably small or common dependencies.\n\nAlternatively, send a PR to rstudio/r-system-requirements to resolve the library based on the SystemRequirements field in the package DESCRIPTION file.",
+    "section": "13.5 How to request additional third-party system requirements?",
+    "text": "13.5 How to request additional third-party system requirements?\nIf packages need a Linux library that is not available on the server:\n\nSend a pull request (PR) to the base image for reasonably small or common dependencies.\n\nAlternatively, send a PR to rstudio/r-system-requirements to resolve the library based on the SystemRequirements field in the package DESCRIPTION file.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -607,8 +618,8 @@
     "objectID": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render",
     "href": "publish/troubleshoot-build.html#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render",
     "title": "13  Trouble shoot package builds",
-    "section": "13.5 How to publish vignettes/articles requiring custom software/tokens to render?",
-    "text": "13.5 How to publish vignettes/articles requiring custom software/tokens to render?\nPrecompute these vignettes locally before publishing.\nFollow the guide: How to precompute package vignettes or pkgdown articles.",
+    "section": "13.6 How to publish vignettes/articles requiring custom software/tokens to render?",
+    "text": "13.6 How to publish vignettes/articles requiring custom software/tokens to render?\nPrecompute these vignettes locally before publishing.\nFollow the guide: How to precompute package vignettes or pkgdown articles.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -618,8 +629,8 @@
     "objectID": "publish/troubleshoot-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "href": "publish/troubleshoot-build.html#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria",
     "title": "13  Trouble shoot package builds",
-    "section": "13.6 Are packages on R-universe required to pass CMD check or meet other criteria?",
-    "text": "13.6 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.\nThe universe owner is responsible for setting policies and ensuring quality control.",
+    "section": "13.7 Are packages on R-universe required to pass CMD check or meet other criteria?",
+    "text": "13.7 Are packages on R-universe required to pass CMD check or meet other criteria?\nNo, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.\nThe universe owner is responsible for setting policies and ensuring quality control.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -629,8 +640,8 @@
     "objectID": "publish/troubleshoot-build.html#how-to-use-a-universe-on-regular-continous-integration",
     "href": "publish/troubleshoot-build.html#how-to-use-a-universe-on-regular-continous-integration",
     "title": "13  Trouble shoot package builds",
-    "section": "13.7 How to use a universe on regular continous integration?",
-    "text": "13.7 How to use a universe on regular continous integration?\nIf you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the extra-repositories field of the r-lib/actions setup-r action.",
+    "section": "13.8 How to use a universe on regular continous integration?",
+    "text": "13.8 How to use a universe on regular continous integration?\nIf you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the extra-repositories field of the r-lib/actions setup-r action.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
@@ -640,8 +651,8 @@
     "objectID": "publish/troubleshoot-build.html#how-to-know-whether-tests-are-run-on-r-universe",
     "href": "publish/troubleshoot-build.html#how-to-know-whether-tests-are-run-on-r-universe",
     "title": "13  Trouble shoot package builds",
-    "section": "13.8 How to know whether tests are run on R-universe?",
-    "text": "13.8 How to know whether tests are run on R-universe?\nDuring the build, the MY_UNIVERSE environment variable is set to the URL of the universe.",
+    "section": "13.9 How to know whether tests are run on R-universe?",
+    "text": "13.9 How to know whether tests are run on R-universe?\nDuring the build, the MY_UNIVERSE environment variable is set to the URL of the universe.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Trouble shoot package builds</span>"
