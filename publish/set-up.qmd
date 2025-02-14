@@ -122,6 +122,39 @@ You can easily add more packages later by updating your `packages.json` file.
 
 To publish your registry, create a Git repository called `<yourname>.r-universe.dev` on your GitHub account and push your `packages.json` file. See for example: https://github.com/maelle/maelle.r-universe.dev.
 
+### Custom metadata
+
+It is possible to add custom metadata by using the `metadata` field in each package entries `packages.json` for example see the [rOpenSci package registry](https://github.com/ropensci/roregistry/blob/gh-pages/packages.json):
+
+```json
+  {
+    "package": "ijtiff",
+    "url": "https://github.com/ropensci/ijtiff",
+    "branch": "master",
+    "metadata": {
+      "review": {
+        "id": 164,
+        "status": "reviewed",
+        "version": "0.1.0",
+        "organization": "rOpenSci Software Review",
+        "url": "https://github.com/ropensci/software-review/issues/164"
+      }
+    }
+  },
+```
+
+The data becomes available in the [API](/browse/api.html) under the `_metadata` key, for example [ijtiff](https://ropensci.r-universe.dev/api/packages/ijtiff).
+
+```{r}
+ijtiff <- universe::universe_one_package("ropensci", "ijtiff")
+ijtiff[["_metadata"]]
+```
+
+For some cases we can also expose some metadata in the WebUI. 
+If the metadata contains `review` data then is [shown](https://github.com/r-universe-org/frontend/blob/3ecaaa787d37776d84bd5f3cad5110d4adb2c793/views/pkginfo.pug#L127-L135) on [package pages](/browse/packages.html): example of [ijtiff package page](https://ropensci.r-universe.dev/ijtiff).
+
+If useful we could conditionally display other sorts of meta information, [get in touch](https://github.com/r-universe-org/help/discussions).
+
 ## Installing the GitHub app {#appinstall}
 
 Once you pushed your `packages.json` file to your new `universe` repository on GitHub, the next step is to install the [R-universe GitHub app](https://github.com/apps/r-universe/installations/new) on your account.
