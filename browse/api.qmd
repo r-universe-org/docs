@@ -109,7 +109,7 @@ Example using `{universe}`:
 
 ```{r}
 V8 <- universe::universe_one_package("jeroen", "V8")
-# The result is a list of packages
+# The result is a list
 str(V8, max.level = 1)
 ```
 
