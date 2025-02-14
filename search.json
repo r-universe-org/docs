@@ -329,17 +329,6 @@
     ]
   },
   {
-    "objectID": "install/reproducibility.html#using-snapshots-from-the-r-multiverse",
-    "href": "install/reproducibility.html#using-snapshots-from-the-r-multiverse",
-    "title": "8  Reproducibility",
-    "section": "8.3 Using snapshots from the R-multiverse",
-    "text": "8.3 Using snapshots from the R-multiverse\nR-multiverse is a new initiative to establish a trustworthy, community-curated R package repository that runs on the open-source r-universe infrastructure. It deploys a production snapshot once every three months TODO https://github.com/r-multiverse/help/discussions/115",
-    "crumbs": [
-      "Install",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Reproducibility</span>"
-    ]
-  },
-  {
     "objectID": "install/dependencies.html",
     "href": "install/dependencies.html",
     "title": "9  Using dependencies from R-universe",
@@ -406,11 +395,22 @@
     ]
   },
   {
+    "objectID": "publish/get-started.html#build-upon-r-universe",
+    "href": "publish/get-started.html#build-upon-r-universe",
+    "title": "10  Why publish on R-universe",
+    "section": "10.4 Build upon R-universe",
+    "text": "10.4 Build upon R-universe\nAs an example of an initiative based on R-universe, R-multiverse is a new initiative to establish a trustworthy, community-curated R package repository that runs on the open-source r-universe infrastructure.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
+    ]
+  },
+  {
     "objectID": "publish/get-started.html#enjoy-it-for-free",
     "href": "publish/get-started.html#enjoy-it-for-free",
     "title": "10  Why publish on R-universe",
-    "section": "10.4 Enjoy it for free!",
-    "text": "10.4 Enjoy it for free!\nR-universe is provided free of charge.",
+    "section": "10.5 Enjoy it for free!",
+    "text": "10.5 Enjoy it for free!\nR-universe is provided free of charge.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
@@ -420,19 +420,8 @@
     "objectID": "publish/get-started.html#set-up-in-just-a-few-steps",
     "href": "publish/get-started.html#set-up-in-just-a-few-steps",
     "title": "10  Why publish on R-universe",
-    "section": "10.5 Set up in just a few steps",
-    "text": "10.5 Set up in just a few steps\nFollow the set-up documentation to get started quickly.",
-    "crumbs": [
-      "Publish",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
-    ]
-  },
-  {
-    "objectID": "publish/get-started.html#a-general-purpose-package-repository-built-on-r-universe-the-r-multiverse",
-    "href": "publish/get-started.html#a-general-purpose-package-repository-built-on-r-universe-the-r-multiverse",
-    "title": "10  Why publish on R-universe",
-    "section": "10.6 A general-purpose package repository built on R-universe: the R-multiverse",
-    "text": "10.6 A general-purpose package repository built on R-universe: the R-multiverse\nR-multiverse is a general-purpose R package repository system with transparent governance and open source infrastructure. More on R-multiverse’s website",
+    "section": "10.6 Set up in just a few steps",
+    "text": "10.6 Set up in just a few steps\nFollow the set-up documentation to get started quickly.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
