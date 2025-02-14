@@ -10,10 +10,10 @@ rOpenSci is a non-profit initiative that supports open and reproducible science 
 rOpenSci builds a welcoming and diverse community. 
 rOpenSci curates a blog, coworking events, community calls.
 
-TODO: list relevant people?
+R-universe development is lead by [Jeroen Ooms](https://github.com/jeroen/).
 
 ## Funding {#funding}
 
-R-universe is financially supported by the [R Consortium](https://r-consortium.org/) as a top-level project.
+R-universe is financially supported by the [R Consortium](https://r-consortium.org/) as a [top-level project](https://ropensci.org/blog/2024/12/03/r-universe-r-consortium-tlp/).
 
-TODO: previous funding including GSOD?
+R-universe previously received funding by the [Moore Foundation](https://ropensci.org/blog/2019/11/06/scientific-package-ecosystem/) and [Google Season of Docs](https://ropensci.org/blog/2024/04/12/gsod-announcement/).
