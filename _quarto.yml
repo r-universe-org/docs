@@ -31,6 +31,10 @@ book:
         - publish/troubleshoot-build.qmd
         - publish/terms.qmd
         - publish/other-networks.qmd
+    - part: Infrastructure
+      chapters:
+        - infra/governance.qmd
+        - infra/contribute.qmd
 lightbox: true
 format:
   html:

@@ -1,0 +1,5 @@
+---
+title: "Contribute"
+---
+
+R-universe is developed in the open on [GitHub](https://github.com/r-universe-org).

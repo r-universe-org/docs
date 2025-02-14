@@ -1,0 +1,19 @@
+---
+title: "R-universe governance"
+---
+
+## Governance {#governance}
+
+R-universe was initiated at, and is currently governed by, [rOpenSci](https://ropensci.org/).
+
+rOpenSci is a non-profit initiative that supports open and reproducible science through different projects, including and not limited to: a software peer-review system for R packages, a champions program for people from historically and systematically excluded groups who are interested in contributing to rOpenSci and the broader open source and open science communities, multilingual publishing efforts.
+rOpenSci builds a welcoming and diverse community. 
+rOpenSci curates a blog, coworking events, community calls.
+
+R-universe development is lead by [Jeroen Ooms](https://github.com/jeroen/).
+
+## Funding {#funding}
+
+R-universe is financially supported by the [R Consortium](https://r-consortium.org/) as a [top-level project](https://ropensci.org/blog/2024/12/03/r-universe-r-consortium-tlp/).
+
+R-universe previously received funding by the [Moore Foundation](https://ropensci.org/blog/2019/11/06/scientific-package-ecosystem/) and [Google Season of Docs](https://ropensci.org/blog/2024/04/12/gsod-announcement/).
