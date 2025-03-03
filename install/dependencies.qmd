@@ -15,7 +15,7 @@ Yes! It has to be an optional dependency (`Suggests`) and you need to
     - Within the code, for instance:
     
 ```r
-if (!(require("targets")) {
+if (!(require("targets"))) {
   stop("You can install targets with install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))")
 }
 
