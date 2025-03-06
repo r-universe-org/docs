@@ -24,7 +24,7 @@ The API endpoint is `/api/snapshot` and has several options to filter content.
 By default, the endpoint returns a zip file with all the repository’s packages, binaries, and documentation.
 If needed, you can filter the content to include only specific binaries, R versions, or subsets of packages.  
 
-Explore the API parameters for your universe, for instance <https://ggseg.r-universe.dev/api>.  
+Explore the API parameters for your universe, for instance <https://ggseg.r-universe.dev/apis>.  
 
 ### Using snapshots
 
