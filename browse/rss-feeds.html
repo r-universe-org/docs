@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.14">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,16 +32,15 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../install/binaries.html" rel="next">
 <link href="../browse/api.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8c4c3d43a67d5579f14f1e6229e0c929.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-de0323ecca2742aca15ee70059b6d6ba.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-94cadb5a41a2ed2c97452e6a40d1f334.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -326,7 +325,19 @@ jeroen.r-universe.dev
   &lt;title&gt;R packages by jeroen&lt;/title&gt;
   &lt;link&gt;https://jeroen.r-universe.dev&lt;/link&gt;
 &lt;/image&gt;
-&lt;lastBuildDate&gt;Tue, 04 Mar 2025 13:07:01 GMT&lt;/lastBuildDate&gt;
+&lt;lastBuildDate&gt;Thu, 06 Mar 2025 19:21:35 GMT&lt;/lastBuildDate&gt;
+&lt;item&gt;
+  &lt;title&gt;[ropensci] opencv 0.5.0&lt;/title&gt;
+  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
+  &lt;description&gt;Exposes some of the available 'OpenCV' &amp;lt;https://opencv.org/&amp;gt; algorithms, such as a QR code scanner, and edge, body or face detection. These can either be applied to analyze static images, or to filter live video footage from a camera device.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/13707424369&lt;/link&gt;
+  &lt;pubDate&gt;Thu, 06 Mar 2025 19:21:35 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;opencv&lt;/r:package&gt;
+  &lt;r:version&gt;0.5.0&lt;/r:version&gt;
+  &lt;r:status&gt;success&lt;/r:status&gt;
+  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/ropensci/opencv&lt;/r:upstream&gt;
+&lt;/item&gt;
 &lt;item&gt;
   &lt;title&gt;[jeroen] mongolite 3.1.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
@@ -1028,18 +1039,6 @@ jeroen.r-universe.dev
   &lt;/r:article&gt;
 &lt;/item&gt;
 &lt;item&gt;
-  &lt;title&gt;[ropensci] opencv 0.4.1&lt;/title&gt;
-  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Exposes some of the available 'OpenCV' &amp;lt;https://opencv.org/&amp;gt; algorithms, such as a QR code scanner, and edge, body or face detection. These can either be applied to analyze static images, or to filter live video footage from a camera device.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/13612876864&lt;/link&gt;
-  &lt;pubDate&gt;Thu, 03 Oct 2024 18:17:56 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;opencv&lt;/r:package&gt;
-  &lt;r:version&gt;0.4.1&lt;/r:version&gt;
-  &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/ropensci/opencv&lt;/r:upstream&gt;
-&lt;/item&gt;
-&lt;item&gt;
   &lt;title&gt;[ropensci] spelling 2.3.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Spell checking common document formats including latex, markdown, manual pages, and description files. Includes utilities to automate checking of documentation and vignettes as a unit test during 'R CMD check'. Both British and American English are supported out of the box and other languages can be added. In addition, packages may define a 'wordlist' to allow custom terminology without having to abuse punctuation.&lt;/description&gt;
@@ -1226,6 +1225,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -1336,6 +1337,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
