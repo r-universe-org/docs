@@ -11,6 +11,7 @@ Creating an R-universe for yourself or your organization showcases your expertis
 ## Simplify installation for your users
 
 R-universe builds [binaries for release versions of the most popular platforms](/install/binaries.html), ensuring your packages are easy to install across systems. 
+You can use R-universe to distribute an easy-to-install development version of your package between releases on other networks like [CRAN](#newer-than-cran).
 
 ## Get inspired by success stories
 
