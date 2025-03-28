@@ -8,12 +8,17 @@ Packages on R-universe may also exist on other networks, such as CRAN or Biocond
 
 It's important to note that CRAN is not intended to be the sole CRAN-style package repository, as [explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote](https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8).  
 
-## Can we use R-universe to host older versions of CRAN packages?
+## Can we use R-universe to host older versions of CRAN packages? {#newer-than-cran}
 
 While hosting older versions of CRAN packages on R-universe is technically possible, it may not work as intended.  
 
 - R's `install.packages()` and `update.packages()` functions will always install the latest version of a package available across all configured repositories.  
 - As a result, the older version hosted on R-universe might be automatically updated to the latest CRAN version on the user’s machine.  
+
+## Can we use R-universe to host newer versions of CRAN packages?
+
+Yes, you can use R-universe to distribute the development version of your package between CRAN releases.
+It is one of the intended use cases for R-universe.
 
 ## Can we use R-universe to host a fork of a CRAN package?
 
