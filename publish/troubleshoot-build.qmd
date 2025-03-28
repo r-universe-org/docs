@@ -72,3 +72,15 @@ If you want to test a package against versions of other packages that are in a u
 ## How to know whether tests are run on R-universe?
 
 During the build, the `MY_UNIVERSE` environment variable is set to the URL of the universe.
+
+## How to handle the transfer of a repository to another GitHub owner?
+
+If a package is on GitHub and possibly CRAN, and on R-Universe through an organization with a [`packages.json`](#registry-file), here is how to best move the package to another GitHub organization:
+
+1. Move the GitHub repository to another organization on GitHub. This will create redirects from the old URL to the new.
+1. Remove the package from the original organization's `packages.json`. This will remove it from the original organization's universe.
+1. Change the URL in the package DESCRIPTION to the new GitHub organization.
+1. If the package is on CRAN, update the package on CRAN with the new URL in DESCRIPTION
+
+Updating the package on CRAN will speed up the process of having R-universe point to the right repository from the CRAN universe. 
+Otherwise it could take up to a month for the cran.r-universe.dev/<pkg> to get rebuilt and detect the redirected git origin.
