@@ -21,7 +21,7 @@ This restriction ensures that packages deployed on R-universe are reproducible, 
 
 You can create a `config.json` file alongside your `packages.json` file to set some global options.
 
-Currently the only option is `cran_version` which has to be a `yyyy-mm-dd` string and will use dependencies from a certain p3m snapshot date, for example: https://github.com/r-multiverse/staging/blob/main/config.json 
+Currently the only option is `cran_version` which has to be a `yyyy-mm-dd` string and will use dependencies from a certain p3m snapshot date.
 
 ```json
 {
