@@ -280,7 +280,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#relation-to-other-networks" id="toc-relation-to-other-networks" class="nav-link active" data-scroll-target="#relation-to-other-networks"><span class="header-section-number">15.1</span> Relation to other networks</a></li>
   <li><a href="#can-we-use-r-universe-to-host-older-versions-of-cran-packages" id="toc-can-we-use-r-universe-to-host-older-versions-of-cran-packages" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-older-versions-of-cran-packages"><span class="header-section-number">15.2</span> Can we use R-universe to host older versions of CRAN packages?</a></li>
-  <li><a href="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package" id="toc-can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">15.3</span> Can we use R-universe to host a fork of a CRAN package?</a></li>
+  <li><a href="#newer-than-cran" id="toc-newer-than-cran" class="nav-link" data-scroll-target="#newer-than-cran"><span class="header-section-number">15.3</span> Can we use R-universe to host newer versions of CRAN packages?</a></li>
+  <li><a href="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package" id="toc-can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">15.4</span> Can we use R-universe to host a fork of a CRAN package?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/other-networks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -320,8 +321,12 @@ ul.task-list li input[type="checkbox"] {
 <li>As a result, the older version hosted on R-universe might be automatically updated to the latest CRAN version on the user’s machine.</li>
 </ul>
 </section>
-<section id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">15.3</span> Can we use R-universe to host a fork of a CRAN package?</h2>
+<section id="newer-than-cran" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="newer-than-cran"><span class="header-section-number">15.3</span> Can we use R-universe to host newer versions of CRAN packages?</h2>
+<p>Yes, you can use R-universe to distribute the development version of your package between CRAN releases. It is one of the intended use cases for R-universe.</p>
+</section>
+<section id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">15.4</span> Can we use R-universe to host a fork of a CRAN package?</h2>
 <p>Hosting a fork of a CRAN package on R-universe is possible but generally not recommended.</p>
 <ul>
 <li>The CRAN version of the package may overwrite your fork when the user runs <code>install.packages()</code> or <code>update.packages()</code>.<br>

@@ -377,7 +377,7 @@
     "href": "publish/get-started.html#simplify-installation-for-your-users",
     "title": "10  Why publish on R-universe",
     "section": "10.2 Simplify installation for your users",
-    "text": "10.2 Simplify installation for your users\nR-universe builds binaries for release versions of the most popular platforms, ensuring your packages are easy to install across systems.",
+    "text": "10.2 Simplify installation for your users\nR-universe builds binaries for release versions of the most popular platforms, ensuring your packages are easy to install across systems. You can use R-universe to distribute an easy-to-install development version of your package between releases on other networks like CRAN.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Why publish on R-universe</span>"
@@ -725,11 +725,22 @@
     ]
   },
   {
+    "objectID": "publish/other-networks.html#newer-than-cran",
+    "href": "publish/other-networks.html#newer-than-cran",
+    "title": "15  Relation to other networks",
+    "section": "15.3 Can we use R-universe to host newer versions of CRAN packages?",
+    "text": "15.3 Can we use R-universe to host newer versions of CRAN packages?\nYes, you can use R-universe to distribute the development version of your package between CRAN releases. It is one of the intended use cases for R-universe.",
+    "crumbs": [
+      "Publish",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Relation to other networks</span>"
+    ]
+  },
+  {
     "objectID": "publish/other-networks.html#can-we-use-r-universe-to-host-a-fork-of-a-cran-package",
     "href": "publish/other-networks.html#can-we-use-r-universe-to-host-a-fork-of-a-cran-package",
     "title": "15  Relation to other networks",
-    "section": "15.3 Can we use R-universe to host a fork of a CRAN package?",
-    "text": "15.3 Can we use R-universe to host a fork of a CRAN package?\nHosting a fork of a CRAN package on R-universe is possible but generally not recommended.\n\nThe CRAN version of the package may overwrite your fork when the user runs install.packages() or update.packages().\n\nAdditionally, other packages depending on the original CRAN package may not be compatible with your fork, leading to potential issues.",
+    "section": "15.4 Can we use R-universe to host a fork of a CRAN package?",
+    "text": "15.4 Can we use R-universe to host a fork of a CRAN package?\nHosting a fork of a CRAN package on R-universe is possible but generally not recommended.\n\nThe CRAN version of the package may overwrite your fork when the user runs install.packages() or update.packages().\n\nAdditionally, other packages depending on the original CRAN package may not be compatible with your fork, leading to potential issues.",
     "crumbs": [
       "Publish",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Relation to other networks</span>"
