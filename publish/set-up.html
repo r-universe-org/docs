@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.20">
+<meta name="generator" content="quarto-1.7.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6bb072e51ab976e338d8fd19b221fbe5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b2bd955b7378b94aa8c2ba4fafa553c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c38166ff329307005f0d2d8163dd2d5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -335,7 +335,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#badge-showing-the-number-of-the-deployed-version" id="toc-badge-showing-the-number-of-the-deployed-version" class="nav-link" data-scroll-target="#badge-showing-the-number-of-the-deployed-version"><span class="header-section-number">11.6.1</span> Badge showing the number of the deployed version</a></li>
   <li><a href="#badge-showing-the-status-of-the-latest-check" id="toc-badge-showing-the-status-of-the-latest-check" class="nav-link" data-scroll-target="#badge-showing-the-status-of-the-latest-check"><span class="header-section-number">11.6.2</span> Badge showing the status of the latest check</a></li>
-  <li><a href="#badges-customization" id="toc-badges-customization" class="nav-link" data-scroll-target="#badges-customization"><span class="header-section-number">11.6.3</span> Badges customization</a></li>
+  <li><a href="#badges-for-the-universe" id="toc-badges-for-the-universe" class="nav-link" data-scroll-target="#badges-for-the-universe"><span class="header-section-number">11.6.3</span> Badges for the universe</a></li>
+  <li><a href="#badges-customization" id="toc-badges-customization" class="nav-link" data-scroll-target="#badges-customization"><span class="header-section-number">11.6.4</span> Badges customization</a></li>
   </ul></li>
   <li><a href="#linking-to-your-universe-from-other-websites" id="toc-linking-to-your-universe-from-other-websites" class="nav-link" data-scroll-target="#linking-to-your-universe-from-other-websites"><span class="header-section-number">11.7</span> Linking to your universe from other websites</a></li>
   </ul>
@@ -531,8 +532,18 @@ $review$url
 <p>The current implementation includes status for building vignettes and check results for R-release and R-devel on Windows, macOS and Linux. It shows the “worst result” of those checks, similar to what GitHub Action check badges do: if there is 1 “error”, 1 “warning and 5 ok, the badge shows”error”.</p>
 <p>The check status ignores R-oldrel and platforms where we only build binaries but do not check (webassembly), to avoid false positives.</p>
 </section>
-<section id="badges-customization" class="level3" data-number="11.6.3">
-<h3 data-number="11.6.3" class="anchored" data-anchor-id="badges-customization"><span class="header-section-number">11.6.3</span> Badges customization</h3>
+<section id="badges-for-the-universe" class="level3" data-number="11.6.3">
+<h3 data-number="11.6.3" class="anchored" data-anchor-id="badges-for-the-universe"><span class="header-section-number">11.6.3</span> Badges for the universe</h3>
+<p>The following badges are available for each universe:</p>
+<ul>
+<li>Name of the universe, for instance <a href="https://ropensci.r-universe.dev/badges/:name" class="uri">https://ropensci.r-universe.dev/badges/:name</a></li>
+<li>Number of packages in the universe, for instance <a href="https://ropensci.r-universe.dev/badges/:packages" class="uri">https://ropensci.r-universe.dev/badges/:packages</a></li>
+<li>Number of articles in the universe, for instance <a href="https://ropensci.r-universe.dev/badges/:articles" class="uri">https://ropensci.r-universe.dev/badges/:articles</a></li>
+<li>Number of datasets in the universe, for instance <a href="https://ropensci.r-universe.dev/badges/:datasets" class="uri">https://ropensci.r-universe.dev/badges/:datasets</a></li>
+</ul>
+</section>
+<section id="badges-customization" class="level3" data-number="11.6.4">
+<h3 data-number="11.6.4" class="anchored" data-anchor-id="badges-customization"><span class="header-section-number">11.6.4</span> Badges customization</h3>
 <p>Refer to <a href="https://r-lib.r-universe.dev/badges" class="uri">https://r-lib.r-universe.dev/badges</a> for examples of badges and information on how to customize them (color, scale, style).</p>
 </section>
 </section>

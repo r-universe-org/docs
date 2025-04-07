@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.20">
+<meta name="generator" content="quarto-1.7.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6bb072e51ab976e338d8fd19b221fbe5.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b2bd955b7378b94aa8c2ba4fafa553c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c38166ff329307005f0d2d8163dd2d5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -372,8 +372,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(universes, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
- $ universes  :List of 9996
- $ maintainers:List of 9787</code></pre>
+ $ universes  :List of 10004
+ $ maintainers:List of 9794</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -493,83 +493,78 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 76
- $ Package           : chr "mongolite"
- $ Type              : chr "Package"
- $ Title             : chr "Fast and Simple 'MongoDB' Client for R"
- $ Description       : chr "High-performance MongoDB client based on 'mongo-c-driver'\nand 'jsonlite'. Includes support for aggregation, in"| __truncated__
- $ Version           : chr "4.0.0"
- $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", ,\"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \""| __truncated__
- $ License           : chr "Apache License 2.0"
- $ URL               : chr "https://jeroen.r-universe.dev/mongolite"
- $ BugReports        : chr "https://github.com/jeroen/mongolite/issues"
- $ SystemRequirements: chr "OpenSSL, Cyrus SASL (aka libsasl2)"
- $ RoxygenNote       : chr "7.3.2.9000"
- $ Roxygen           : chr "list(markdown = TRUE)"
- $ Language          : chr "en-GB"
- $ Encoding          : chr "UTF-8"
- $ Config/pak/sysreqs: chr "libssl-dev libsasl2-dev"
- $ Repository        : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl         : chr "https://github.com/jeroen/mongolite"
- $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "02d0e8d96de1453629806eb166b83f623be36628"
- $ NeedsCompilation  : chr "yes"
- $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nMongoDB, Inc [cph] (Bundled mongo-c-driver, "| __truncated__
- $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "733938c10a7b66f4ee2e72371069d5a0"
- $ _user             : chr "jeroen"
- $ _type             : chr "src"
- $ _file             : chr "mongolite_4.0.0.tar.gz"
- $ _fileid           : chr "d2c91905c610cf63bf16892b8a5232630f857f4fdc07746e1cac5a92e9108f9a"
- $ _filesize         : int 1125672
- $ _sha256           : chr "d2c91905c610cf63bf16892b8a5232630f857f4fdc07746e1cac5a92e9108f9a"
- $ _created          : chr "2025-04-01T22:03:47.000Z"
- $ _published        : chr "2025-04-01T22:10:35.721Z"
- $ _status           : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/14206890905"
- $ _windevel         : chr "success"
- $ _linuxdevel       : chr "success"
- $ _wasmbinary       : chr "none"
- $ _macbinary        : chr "success"
- $ _winbinary        : chr "success"
- $ _pkgdocs          : chr "skipped"
- $ _upstream         : chr "https://github.com/jeroen/mongolite"
- $ _commit           :List of 5
- $ _maintainer       :List of 7
- $ _distro           : chr "noble"
- $ _host             : chr "GitHub-Actions"
- $ _registered       : logi TRUE
- $ _dependencies     :List of 7
- $ _owner            : chr "jeroen"
- $ _selfowned        : logi TRUE
- $ _usedby           : int 10
- $ _updates          :List of 11
- $ _tags             :List of 1
- $ _stars            : int 285
- $ _contributors     :List of 9
- $ _userbio          :List of 4
- $ _downloads        :List of 2
- $ _devurl           : chr "https://github.com/jeroen/mongolite"
- $ _searchresults    : int 860
- $ _topics           :List of 4
- $ _rbuild           : chr "4.4.3"
- $ _assets           :List of 11
- $ _homeurl          : chr "https://github.com/jeroen/mongolite"
- $ _realowner        : chr "jeroen"
- $ _cranurl          : logi TRUE
- $ _releases         :List of 43
- $ _exports          :List of 6
- $ _help             :List of 6
- $ _pkglogo          : chr "https://github.com/jeroen/mongolite/raw/HEAD/man/figures/logo.png"
- $ _readme           : chr "https://github.com/jeroen/mongolite/raw/HEAD/readme.md"
- $ _rundeps          :List of 5
- $ _sysdeps          :List of 5
- $ _score            : num 11.3
- $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "mongolite"
- $ _universes        :List of 1
- $ _binaries         :List of 11</code></pre>
+<pre><code>List of 71
+ $ Package         : chr "brotli"
+ $ Type            : chr "Package"
+ $ Title           : chr "A Compression Format Optimized for the Web"
+ $ Version         : chr "1.3.2"
+ $ Authors@R       : chr "c(\nperson(\"Jeroen\", \"Ooms\", ,\"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \""| __truncated__
+ $ Description     : chr "A lossless compressed data format that uses a combination\nof the LZ77 algorithm and Huffman coding\n&lt;https://w"| __truncated__
+ $ License         : chr "MIT + file LICENSE"
+ $ URL             : chr "https://jeroen.r-universe.dev/brotli"
+ $ BugReports      : chr "https://github.com/jeroen/brotli/issues"
+ $ VignetteBuilder : chr "knitr, R.rsp"
+ $ RoxygenNote     : chr "6.0.1"
+ $ Language        : chr "en-US"
+ $ Repository      : chr "https://jeroen.r-universe.dev"
+ $ RemoteUrl       : chr "https://github.com/jeroen/brotli"
+ $ RemoteRef       : chr "HEAD"
+ $ RemoteSha       : chr "ff207e6e8f53674662e91c646cd93637ca34ae30"
+ $ NeedsCompilation: chr "yes"
+ $ Packaged        :List of 2
+ $ Author          : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nGoogle, Inc [aut, cph] (Brotli C++ library)"
+ $ Maintainer      : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ MD5sum          : chr "148072e31eb43894bf115f4a98200e4c"
+ $ _user           : chr "jeroen"
+ $ _type           : chr "src"
+ $ _file           : chr "brotli_1.3.2.tar.gz"
+ $ _fileid         : chr "49ddfc31a970e46587a50994c5d72971d01cbf0bdeb944700dab34c5c0099808"
+ $ _filesize       : int 887966
+ $ _sha256         : chr "49ddfc31a970e46587a50994c5d72971d01cbf0bdeb944700dab34c5c0099808"
+ $ _created        : chr "2025-04-06T21:15:55.000Z"
+ $ _published      : chr "2025-04-06T21:19:27.333Z"
+ $ _upstream       : chr "https://github.com/jeroen/brotli"
+ $ _commit         :List of 5
+ $ _maintainer     :List of 7
+ $ _distro         : chr "noble"
+ $ _host           : chr "GitHub-Actions"
+ $ _status         : chr "success"
+ $ _pkgdocs        : chr "skipped"
+ $ _winbinary      : chr "success"
+ $ _macbinary      : chr "success"
+ $ _wasmbinary     : chr "success"
+ $ _linuxdevel     : chr "success"
+ $ _windevel       : chr "success"
+ $ _buildurl       : chr "https://github.com/r-universe/jeroen/actions/runs/14296665020"
+ $ _registered     : logi TRUE
+ $ _dependencies   :List of 6
+ $ _owner          : chr "jeroen"
+ $ _selfowned      : logi TRUE
+ $ _usedby         : int 5
+ $ _updates        :List of 4
+ $ _tags           : list()
+ $ _stars          : int 2
+ $ _contributors   :List of 1
+ $ _userbio        :List of 4
+ $ _downloads      :List of 2
+ $ _devurl         : chr "https://github.com/jeroen/brotli"
+ $ _searchresults  : int 16
+ $ _rbuild         : chr "4.4.3"
+ $ _assets         :List of 11
+ $ _homeurl        : chr "https://github.com/jeroen/brotli"
+ $ _realowner      : chr "jeroen"
+ $ _cranurl        : logi TRUE
+ $ _releases       :List of 12
+ $ _exports        :List of 2
+ $ _help           :List of 1
+ $ _readme         : chr "https://github.com/jeroen/brotli/raw/HEAD/README.md"
+ $ _rundeps        : list()
+ $ _vignettes      :List of 2
+ $ _score          : num 6.55
+ $ _indexed        : logi TRUE
+ $ _nocasepkg      : chr "brotli"
+ $ _universes      :List of 1
+ $ _binaries       :List of 13</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -578,83 +573,78 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 76
- $ Package           : chr "mongolite"
- $ Type              : chr "Package"
- $ Title             : chr "Fast and Simple 'MongoDB' Client for R"
- $ Description       : chr "High-performance MongoDB client based on 'mongo-c-driver'\nand 'jsonlite'. Includes support for aggregation, in"| __truncated__
- $ Version           : chr "4.0.0"
- $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", ,\"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \""| __truncated__
- $ License           : chr "Apache License 2.0"
- $ URL               : chr "https://jeroen.r-universe.dev/mongolite"
- $ BugReports        : chr "https://github.com/jeroen/mongolite/issues"
- $ SystemRequirements: chr "OpenSSL, Cyrus SASL (aka libsasl2)"
- $ RoxygenNote       : chr "7.3.2.9000"
- $ Roxygen           : chr "list(markdown = TRUE)"
- $ Language          : chr "en-GB"
- $ Encoding          : chr "UTF-8"
- $ Config/pak/sysreqs: chr "libssl-dev libsasl2-dev"
- $ Repository        : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl         : chr "https://github.com/jeroen/mongolite"
- $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "02d0e8d96de1453629806eb166b83f623be36628"
- $ NeedsCompilation  : chr "yes"
- $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nMongoDB, Inc [cph] (Bundled mongo-c-driver, "| __truncated__
- $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "733938c10a7b66f4ee2e72371069d5a0"
- $ _user             : chr "jeroen"
- $ _type             : chr "src"
- $ _file             : chr "mongolite_4.0.0.tar.gz"
- $ _fileid           : chr "d2c91905c610cf63bf16892b8a5232630f857f4fdc07746e1cac5a92e9108f9a"
- $ _filesize         : int 1125672
- $ _sha256           : chr "d2c91905c610cf63bf16892b8a5232630f857f4fdc07746e1cac5a92e9108f9a"
- $ _created          : chr "2025-04-01T22:03:47.000Z"
- $ _published        : chr "2025-04-01T22:10:35.721Z"
- $ _status           : chr "success"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/14206890905"
- $ _windevel         : chr "success"
- $ _linuxdevel       : chr "success"
- $ _wasmbinary       : chr "none"
- $ _macbinary        : chr "success"
- $ _winbinary        : chr "success"
- $ _pkgdocs          : chr "skipped"
- $ _upstream         : chr "https://github.com/jeroen/mongolite"
- $ _commit           :List of 5
- $ _maintainer       :List of 7
- $ _distro           : chr "noble"
- $ _host             : chr "GitHub-Actions"
- $ _registered       : logi TRUE
- $ _dependencies     :List of 7
- $ _owner            : chr "jeroen"
- $ _selfowned        : logi TRUE
- $ _usedby           : int 10
- $ _updates          :List of 11
- $ _tags             :List of 1
- $ _stars            : int 285
- $ _contributors     :List of 9
- $ _userbio          :List of 4
- $ _downloads        :List of 2
- $ _devurl           : chr "https://github.com/jeroen/mongolite"
- $ _searchresults    : int 860
- $ _topics           :List of 4
- $ _rbuild           : chr "4.4.3"
- $ _assets           :List of 11
- $ _homeurl          : chr "https://github.com/jeroen/mongolite"
- $ _realowner        : chr "jeroen"
- $ _cranurl          : logi TRUE
- $ _releases         :List of 43
- $ _exports          :List of 6
- $ _help             :List of 6
- $ _pkglogo          : chr "https://github.com/jeroen/mongolite/raw/HEAD/man/figures/logo.png"
- $ _readme           : chr "https://github.com/jeroen/mongolite/raw/HEAD/readme.md"
- $ _rundeps          :List of 5
- $ _sysdeps          :List of 5
- $ _score            : num 11.3
- $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "mongolite"
- $ _universes        :List of 1
- $ _binaries         :List of 11</code></pre>
+<pre><code>List of 71
+ $ Package         : chr "brotli"
+ $ Type            : chr "Package"
+ $ Title           : chr "A Compression Format Optimized for the Web"
+ $ Version         : chr "1.3.2"
+ $ Authors@R       : chr "c(\nperson(\"Jeroen\", \"Ooms\", ,\"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \""| __truncated__
+ $ Description     : chr "A lossless compressed data format that uses a combination\nof the LZ77 algorithm and Huffman coding\n&lt;https://w"| __truncated__
+ $ License         : chr "MIT + file LICENSE"
+ $ URL             : chr "https://jeroen.r-universe.dev/brotli"
+ $ BugReports      : chr "https://github.com/jeroen/brotli/issues"
+ $ VignetteBuilder : chr "knitr, R.rsp"
+ $ RoxygenNote     : chr "6.0.1"
+ $ Language        : chr "en-US"
+ $ Repository      : chr "https://jeroen.r-universe.dev"
+ $ RemoteUrl       : chr "https://github.com/jeroen/brotli"
+ $ RemoteRef       : chr "HEAD"
+ $ RemoteSha       : chr "ff207e6e8f53674662e91c646cd93637ca34ae30"
+ $ NeedsCompilation: chr "yes"
+ $ Packaged        :List of 2
+ $ Author          : chr "Jeroen Ooms [aut, cre] (&lt;https://orcid.org/0000-0002-4035-0289&gt;),\nGoogle, Inc [aut, cph] (Brotli C++ library)"
+ $ Maintainer      : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ MD5sum          : chr "148072e31eb43894bf115f4a98200e4c"
+ $ _user           : chr "jeroen"
+ $ _type           : chr "src"
+ $ _file           : chr "brotli_1.3.2.tar.gz"
+ $ _fileid         : chr "49ddfc31a970e46587a50994c5d72971d01cbf0bdeb944700dab34c5c0099808"
+ $ _filesize       : int 887966
+ $ _sha256         : chr "49ddfc31a970e46587a50994c5d72971d01cbf0bdeb944700dab34c5c0099808"
+ $ _created        : chr "2025-04-06T21:15:55.000Z"
+ $ _published      : chr "2025-04-06T21:19:27.333Z"
+ $ _upstream       : chr "https://github.com/jeroen/brotli"
+ $ _commit         :List of 5
+ $ _maintainer     :List of 7
+ $ _distro         : chr "noble"
+ $ _host           : chr "GitHub-Actions"
+ $ _status         : chr "success"
+ $ _pkgdocs        : chr "skipped"
+ $ _winbinary      : chr "success"
+ $ _macbinary      : chr "success"
+ $ _wasmbinary     : chr "success"
+ $ _linuxdevel     : chr "success"
+ $ _windevel       : chr "success"
+ $ _buildurl       : chr "https://github.com/r-universe/jeroen/actions/runs/14296665020"
+ $ _registered     : logi TRUE
+ $ _dependencies   :List of 6
+ $ _owner          : chr "jeroen"
+ $ _selfowned      : logi TRUE
+ $ _usedby         : int 5
+ $ _updates        :List of 4
+ $ _tags           : list()
+ $ _stars          : int 2
+ $ _contributors   :List of 1
+ $ _userbio        :List of 4
+ $ _downloads      :List of 2
+ $ _devurl         : chr "https://github.com/jeroen/brotli"
+ $ _searchresults  : int 16
+ $ _rbuild         : chr "4.4.3"
+ $ _assets         :List of 11
+ $ _homeurl        : chr "https://github.com/jeroen/brotli"
+ $ _realowner      : chr "jeroen"
+ $ _cranurl        : logi TRUE
+ $ _releases       :List of 12
+ $ _exports        :List of 2
+ $ _help           :List of 1
+ $ _readme         : chr "https://github.com/jeroen/brotli/raw/HEAD/README.md"
+ $ _rundeps        : list()
+ $ _vignettes      :List of 2
+ $ _score          : num 6.55
+ $ _indexed        : logi TRUE
+ $ _nocasepkg      : chr "brotli"
+ $ _universes      :List of 1
+ $ _binaries       :List of 13</code></pre>
 </div>
 </div>
 </section>
@@ -922,11 +912,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 76
+ $ results:List of 77
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 76</code></pre>
+ $ total  : int 77</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -979,11 +969,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 76
+ $ results:List of 77
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 76</code></pre>
+ $ total  : int 77</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
