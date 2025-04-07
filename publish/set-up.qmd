@@ -222,6 +222,15 @@ It shows the "worst result" of those checks, similar to what GitHub Action check
 
 The check status ignores R-oldrel and platforms where we only build binaries but do not check (webassembly), to avoid false positives.
 
+### Badges for the universe
+
+The following badges are available for each universe: 
+
+ - Name of the universe, for instance https://ropensci.r-universe.dev/badges/:name
+ - Number of packages in the universe, for instance https://ropensci.r-universe.dev/badges/:packages
+ - Number of articles in the universe, for instance https://ropensci.r-universe.dev/badges/:articles
+ - Number of datasets in the universe, for instance https://ropensci.r-universe.dev/badges/:datasets
+
 ### Badges customization
 
 Refer to https://r-lib.r-universe.dev/badges for examples of badges and information on how to customize them (color, scale, style).
