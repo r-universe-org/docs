@@ -2,7 +2,7 @@
 title: "Set up your own universe"
 ---
 
-## Basic steps
+## Basic steps {#basic-steps}
 
 Setting up a universe for your R packages involves just a few steps, outlined below. 
 Additional details for each step are provided in the sections that follow.
@@ -31,7 +31,7 @@ However, **the R packages themselves do not need to be under the same account or
 They can be hosted on **any public Git server**, such as GitLab or a university Git server.
 A GitHub account is only required for publishing the `packages.json` registry.
 
-## Populating the packages.json registry file
+## Populating the packages.json registry file {#registry-file}
 
 In order to publish content on R-universe, you need to create a registry file called [packages.json](https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json), which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields `package` and `url` for each entry, for example:
 
