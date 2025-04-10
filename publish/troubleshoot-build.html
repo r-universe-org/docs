@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.21">
+<meta name="generator" content="quarto-1.7.22">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b2bd955b7378b94aa8c2ba4fafa553c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c38166ff329307005f0d2d8163dd2d5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -322,6 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.7</span> Are packages on R-universe required to pass CMD check or meet other criteria?</a></li>
   <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.8</span> How to use a universe on regular continous integration?</a></li>
   <li><a href="#how-to-know-whether-tests-are-run-on-r-universe" id="toc-how-to-know-whether-tests-are-run-on-r-universe" class="nav-link" data-scroll-target="#how-to-know-whether-tests-are-run-on-r-universe"><span class="header-section-number">13.9</span> How to know whether tests are run on R-universe?</a></li>
+  <li><a href="#how-to-handle-the-transfer-of-a-repository-to-another-github-owner" id="toc-how-to-handle-the-transfer-of-a-repository-to-another-github-owner" class="nav-link" data-scroll-target="#how-to-handle-the-transfer-of-a-repository-to-another-github-owner"><span class="header-section-number">13.10</span> How to handle the transfer of a repository to another GitHub owner?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/troubleshoot-build.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -419,6 +420,17 @@ Follow the guide: <a href="https://ropensci.org/blog/2019/12/08/precompute-vigne
 <section id="how-to-know-whether-tests-are-run-on-r-universe" class="level2" data-number="13.9">
 <h2 data-number="13.9" class="anchored" data-anchor-id="how-to-know-whether-tests-are-run-on-r-universe"><span class="header-section-number">13.9</span> How to know whether tests are run on R-universe?</h2>
 <p>During the build, the <code>MY_UNIVERSE</code> environment variable is set to the URL of the universe.</p>
+</section>
+<section id="how-to-handle-the-transfer-of-a-repository-to-another-github-owner" class="level2" data-number="13.10">
+<h2 data-number="13.10" class="anchored" data-anchor-id="how-to-handle-the-transfer-of-a-repository-to-another-github-owner"><span class="header-section-number">13.10</span> How to handle the transfer of a repository to another GitHub owner?</h2>
+<p>If a package is on GitHub and possibly CRAN, and on R-Universe through an organization with a <a href="set-up.html#registry-file"><code>packages.json</code></a>, here is how to best move the package to another GitHub organization:</p>
+<ol type="1">
+<li>Move the GitHub repository to another organization on GitHub. This will create redirects from the old URL to the new.</li>
+<li>Remove the package from the original organization’s <code>packages.json</code>. This will remove it from the original organization’s universe.</li>
+<li>Change the URL in the package DESCRIPTION to the new GitHub organization.</li>
+<li>If the package is on CRAN, update the package on CRAN with the new URL in DESCRIPTION</li>
+</ol>
+<p>Updating the package on CRAN will speed up the process of having R-universe point to the right repository from the CRAN universe. Otherwise it could take up to a month for the cran.r-universe.dev/<pkg> to get rebuilt and detect the redirected git origin.</pkg></p>
 
 
 </section>
