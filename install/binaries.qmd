@@ -10,7 +10,7 @@ To use these binaries on Linux, add the corresponding repository to your `repos`
 
 ```r
 options(repos = c(
-  linux = 'https://jeroen.r-universe.dev/bin/linux/noble/4.4/',
+  linux = 'https://jeroen.r-universe.dev/bin/linux/noble/4.5/',
   sources = 'https://jeroen.r-universe.dev',
   cran = 'https://cloud.r-project.org'
 ))
