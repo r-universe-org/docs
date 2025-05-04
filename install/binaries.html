@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.22">
+<meta name="generator" content="quarto-1.8.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b4406b7675125bc2ba204020e191172.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-443ac161e34e8c1eedb78f958e3d9213.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c38166ff329307005f0d2d8163dd2d5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d4a66ca132bf27284fe7c398a2f1d068.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -313,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#does-r-universe-have-linux-binaries" id="toc-does-r-universe-have-linux-binaries" class="nav-link active" data-scroll-target="#does-r-universe-have-linux-binaries"><span class="header-section-number">7.1</span> Does R-universe have Linux binaries?</a></li>
+  <li><a href="#how-to-install-linux-binary-packages" id="toc-how-to-install-linux-binary-packages" class="nav-link active" data-scroll-target="#how-to-install-linux-binary-packages"><span class="header-section-number">7.1</span> How to install Linux binary packages?</a></li>
   <li><a href="#binaries-for-packages-with-compiled-code" id="toc-binaries-for-packages-with-compiled-code" class="nav-link" data-scroll-target="#binaries-for-packages-with-compiled-code"><span class="header-section-number">7.2</span> Binaries for packages with compiled code</a></li>
   <li><a href="#how-to-use-webassembly-binaries" id="toc-how-to-use-webassembly-binaries" class="nav-link" data-scroll-target="#how-to-use-webassembly-binaries"><span class="header-section-number">7.3</span> How to use WebAssembly Binaries</a></li>
   </ul>
@@ -341,27 +341,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="does-r-universe-have-linux-binaries" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="does-r-universe-have-linux-binaries"><span class="header-section-number">7.1</span> Does R-universe have Linux binaries?</h2>
-<p>Yes, R-universe provides Linux binaries, but currently only for a single target: <code>r-release</code> on <code>ubuntu:latest</code>. This is the platform used by the R-universe build system, as configured in the <a href="https://github.com/r-universe-org/base-image">base-image</a>. These binaries are used when installing package dependencies.</p>
-<p>To use these binaries on Linux, add the corresponding repository to your <code>repos</code>. There’s no need to set a custom user agent. For example, for the <code>jeroen</code> universe:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">linux =</span> <span class="st">'https://jeroen.r-universe.dev/bin/linux/noble/4.4/'</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">sources =</span> <span class="st">'https://jeroen.r-universe.dev'</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">cran =</span> <span class="st">'https://cloud.r-project.org'</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>See how <a href="https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16">this is done automatically in the base image</a> when an environment variable <code>MY_UNIVERSE</code> is set.</p>
+<section id="how-to-install-linux-binary-packages" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="how-to-install-linux-binary-packages"><span class="header-section-number">7.1</span> How to install Linux binary packages?</h2>
+<p>R-universe builds and checks Linux binaries for one Linux distribution: <code>ubuntu:latest</code> (currently ubuntu 24.04 aka “noble”). This is the most widely used Linux distribution and also the platform used by the R-universe build system itself, as configured in the <a href="https://github.com/r-universe-org/base-image">base-image</a>.</p>
+<p>On Linux, R-universe builds and checks Linux binaries for R-devel and R-release, for both on x86_64 and arm64 systems. The repositories use the following URL pattern:</p>
+<pre><code>https://${owner}.r-universe.dev/bin/linux/${distro}-${arch}/${rversion}/</code></pre>
+<p>There is no need to set a custom user agent. To install these binaries on Linux, add the corresponding repository to your <code>repos</code>. You can use the <code>cran.r-universe.dev</code> instead of a regular CRAN mirror in order to get binaries for all the CRAN dependencies as well. Below is an example function that you can put in e.g.&nbsp;your <code>~/.Rprofile</code> file to set the <code>option(repos)</code> :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>linux_binary_repo <span class="ot">&lt;-</span> <span class="cf">function</span>(universe){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sprintf</span>(<span class="st">'https://%s.r-universe.dev/bin/linux/noble-%s/%s/'</span>, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    universe,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    R.version<span class="sc">$</span>arch, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">substr</span>(<span class="fu">getRversion</span>(), <span class="dv">1</span>, <span class="dv">3</span>))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># For example: enable ropensci and cran repositories </span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">linux_binary_repo</span>(<span class="fu">c</span>(<span class="st">'ropensci'</span>, <span class="st">'cran'</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After setting your <code>options(repos)</code> like this, <code>install.packages()</code> will automatically install binaries when available, and fall back to source installations for other packages.</p>
+<p>Also see how this is done automatically in the <a href="https://github.com/r-universe-org/base-image/blob/master/Rprofile">base image Rprofile</a>.</p>
 </section>
 <section id="binaries-for-packages-with-compiled-code" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="binaries-for-packages-with-compiled-code"><span class="header-section-number">7.2</span> Binaries for packages with compiled code</h2>
 <p>In information on packages provided by the <a href="../browse/api.html#api-pkg">API</a>, the <code>arch</code> field to the <code>binaries</code> field only if there is compiled code in the package. Packages without compiled code are identical on all architectures.</p>
-<p>On MacOS we only build a separate intel and arm64 version for packages with compiled code, otherwise the same binary is used for both.</p>
+<p>On MacOS and Linux we only build a separate x86_64 and arm64 version for packages with compiled code, otherwise the same binary is used for both.</p>
 </section>
 <section id="how-to-use-webassembly-binaries" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="how-to-use-webassembly-binaries"><span class="header-section-number">7.3</span> How to use WebAssembly Binaries</h2>
 <p>We have experimental support for webassembly binaries! You should use the official <a href="https://repo.r-wasm.org">r-wasm repository</a> for dependencies. For example to install the dev version of dplyr:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'dplyr'</span>,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://tidyverse.r-universe.dev'</span>, <span class="st">'https://repo.r-wasm.org'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'dplyr'</span>,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://tidyverse.r-universe.dev'</span>, <span class="st">'https://repo.r-wasm.org'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
