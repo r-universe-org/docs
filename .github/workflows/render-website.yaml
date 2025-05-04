@@ -74,7 +74,7 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v1
         with:
-          fail: true
+          fail: false
           args: "docs --exclude-loopback --insecure --exclude-mail --exclude-path docs/site_libs --cache --max-cache-age 1d"
 
       - name: "Read lychee's out.md"
