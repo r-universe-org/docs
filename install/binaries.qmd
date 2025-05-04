@@ -2,21 +2,33 @@
 title: "Binaries"
 ---
 
-## Does R-universe have Linux binaries?
+## How to install Linux binary packages?
 
-Yes, R-universe provides Linux binaries, but currently only for a single target: `r-release` on `ubuntu:latest`. This is the platform used by the R-universe build system, as configured in the [base-image](https://github.com/r-universe-org/base-image). These binaries are used when installing package dependencies.  
+R-universe builds and checks Linux binaries for one Linux distribution: `ubuntu:latest` (currently ubuntu 24.04 aka "noble"). This is the most widely used Linux distribution and also the platform used by the R-universe build system itself, as configured in the [base-image](https://github.com/r-universe-org/base-image).
 
-To use these binaries on Linux, add the corresponding repository to your `repos`. There’s no need to set a custom user agent. For example, for the `jeroen` universe:
+On Linux, R-universe builds and checks Linux binaries for R-devel and R-release, for both on x86_64 and arm64 systems. The repositories use the following URL pattern:
 
-```r
-options(repos = c(
-  linux = 'https://jeroen.r-universe.dev/bin/linux/noble/4.5/',
-  sources = 'https://jeroen.r-universe.dev',
-  cran = 'https://cloud.r-project.org'
-))
+```
+https://${owner}.r-universe.dev/bin/linux/${distro}-${arch}/${rversion}/
 ```
 
-See how [this is done automatically in the base image](https://github.com/r-universe-org/base-image/blob/f20ec9fc6f51ef8a89aad489206a43790bd9bf77/Rprofile#L10-L16) when an environment variable `MY_UNIVERSE` is set.
+There is no need to set a custom user agent. To install these binaries on Linux, add the corresponding repository to your `repos`. You can use the `cran.r-universe.dev` instead of a regular CRAN mirror in order to get binaries for all the CRAN dependencies as well. Below is an example function that you can put in e.g. your `~/.Rprofile` file to set the `option(repos)` :
+
+```r
+linux_binary_repo <- function(universe){
+  sprintf('https://%s.r-universe.dev/bin/linux/noble-%s/%s/', 
+    universe,
+    R.version$arch, 
+    substr(getRversion(), 1, 3))
+}
+
+# For example: enable ropensci and cran repositories 
+options(repos = linux_binary_repo(c('ropensci', 'cran')))
+```
+
+After setting your `options(repos)` like this, `install.packages()` will automatically install binaries when available, and fall back to source installations for other packages.
+
+Also see how this is done automatically in the [base image Rprofile](https://github.com/r-universe-org/base-image/blob/master/Rprofile).
 
 
 ## Binaries for packages with compiled code
@@ -24,7 +36,7 @@ See how [this is done automatically in the base image](https://github.com/r-univ
 In information on packages provided by the [API](#api-pkg), the `arch` field to the `binaries` field only if there is compiled code in the package. 
 Packages without compiled code are identical on all architectures.
 
-On MacOS we only build a separate intel and arm64 version for packages with compiled code, otherwise the same binary is used for both.
+On MacOS and Linux we only build a separate x86_64 and arm64 version for packages with compiled code, otherwise the same binary is used for both.
 
 ## How to use WebAssembly Binaries
 
