@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.1">
+<meta name="generator" content="quarto-1.8.14">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../browse/api.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-443ac161e34e8c1eedb78f958e3d9213.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d4a66ca132bf27284fe7c398a2f1d068.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e312f9d47aaf37bdfe19b3f8292c6322.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -326,27 +327,110 @@ jeroen.r-universe.dev
   &lt;title&gt;R packages by jeroen&lt;/title&gt;
   &lt;link&gt;https://jeroen.r-universe.dev&lt;/link&gt;
 &lt;/image&gt;
-&lt;lastBuildDate&gt;Tue, 29 Apr 2025 12:46:03 GMT&lt;/lastBuildDate&gt;
+&lt;lastBuildDate&gt;Tue, 10 Jun 2025 13:53:54 GMT&lt;/lastBuildDate&gt;
 &lt;item&gt;
-  &lt;title&gt;[ropensci] av 0.9.4&lt;/title&gt;
+  &lt;title&gt;[r-rust] gifski 1.33.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Bindings to 'FFmpeg' &amp;lt;http://www.ffmpeg.org/&amp;gt; AV library for working with audio and video in R. Generates high quality video from images or R graphics with custom audio. Also offers high performance tools for reading raw audio, creating 'spectrograms', and converting between countless audio / video formats. This package interfaces directly to the C API and does not require any command line utilities.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821839641&lt;/link&gt;
-  &lt;pubDate&gt;Tue, 29 Apr 2025 12:46:03 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;av&lt;/r:package&gt;
-  &lt;r:version&gt;0.9.4&lt;/r:version&gt;
+  &lt;description&gt;Multi-threaded GIF encoder written in Rust: &amp;lt;https://gif.ski/&amp;gt;. Converts images to GIF animations using pngquant's efficient cross-frame palettes and temporal dithering with thousands of colors per frame.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/r-rust/actions/runs/15562103278&lt;/link&gt;
+  &lt;pubDate&gt;Tue, 10 Jun 2025 13:53:54 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;gifski&lt;/r:package&gt;
+  &lt;r:version&gt;1.33.0&lt;/r:version&gt;
   &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/ropensci/av&lt;/r:upstream&gt;
+  &lt;r:repository&gt;https://r-rust.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/r-rust/gifski&lt;/r:upstream&gt;
 &lt;/item&gt;
 &lt;item&gt;
-  &lt;title&gt;[jeroen] openssl 2.3.2&lt;/title&gt;
+  &lt;title&gt;[jeroen] curl 6.3.0.9000&lt;/title&gt;
+  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
+  &lt;description&gt;Bindings to 'libcurl' &amp;lt;https://curl.se/libcurl/&amp;gt; for performing fully configurable HTTP/FTP requests where responses can be processed in memory, on disk, or streaming via the callback or connection interfaces. Some knowledge of 'libcurl' is recommended; for a more-user-friendly web client see the 'httr2' package which builds on this package with http specific tools and logic.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15539452970&lt;/link&gt;
+  &lt;pubDate&gt;Mon, 09 Jun 2025 15:44:25 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;curl&lt;/r:package&gt;
+  &lt;r:version&gt;6.3.0.9000&lt;/r:version&gt;
+  &lt;r:status&gt;success&lt;/r:status&gt;
+  &lt;r:repository&gt;https://jeroen.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/jeroen/curl&lt;/r:upstream&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;windows.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;windows.html&lt;/r:filename&gt;
+    &lt;r:title&gt;Proxies and Certificates on Windows Networks&lt;/r:title&gt;
+    &lt;r:created&gt;2019-08-28 13:27:44&lt;/r:created&gt;
+    &lt;r:modified&gt;2024-10-24 19:54:07&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;intro.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;intro.html&lt;/r:filename&gt;
+    &lt;r:title&gt;The curl package: a modern R interface to libcurl&lt;/r:title&gt;
+    &lt;r:created&gt;2015-02-28 22:25:46&lt;/r:created&gt;
+    &lt;r:modified&gt;2025-02-21 14:23:14&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+&lt;/item&gt;
+&lt;item&gt;
+  &lt;title&gt;[r-rust] hellorust 1.2.3&lt;/title&gt;
+  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
+  &lt;description&gt;Template R package with minimal setup to use Rust code in R without hacks or frameworks. Includes basic examples of importing cargo dependencies, spawning threads and passing numbers or strings from Rust to R. Cargo crates are automatically 'vendored' in the R source package to support offline installation. The GitHub repository for this package has more details and also explains how to set up CI. This project was first presented at 'Erum2018' to showcase R-Rust integration &amp;lt;https://jeroen.github.io/erum2018/&amp;gt;; for a real world use-case, see the 'gifski' package on 'CRAN'.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/r-rust/actions/runs/15521064638&lt;/link&gt;
+  &lt;pubDate&gt;Sun, 08 Jun 2025 14:21:55 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;hellorust&lt;/r:package&gt;
+  &lt;r:version&gt;1.2.3&lt;/r:version&gt;
+  &lt;r:status&gt;success&lt;/r:status&gt;
+  &lt;r:repository&gt;https://r-rust.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/r-rust/hellorust&lt;/r:upstream&gt;
+&lt;/item&gt;
+&lt;item&gt;
+  &lt;title&gt;[ropensci] magick 2.8.7&lt;/title&gt;
+  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
+  &lt;description&gt;Bindings to 'ImageMagick': the most comprehensive open-source image processing library available. Supports many common formats (png, jpeg, tiff, pdf, etc) and manipulations (rotate, scale, crop, trim, flip, blur, etc). All operations are vectorized via the Magick++ STL meaning they operate either on a single frame or a series of frames for working with layers, collages, or animation. In RStudio images are automatically previewed when printed to the console, resulting in an interactive editing environment. The latest version of the package includes a native graphics device for creating in-memory graphics or drawing onto images using pixel coordinates.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15508295209&lt;/link&gt;
+  &lt;pubDate&gt;Sat, 07 Jun 2025 13:10:52 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;magick&lt;/r:package&gt;
+  &lt;r:version&gt;2.8.7&lt;/r:version&gt;
+  &lt;r:status&gt;success&lt;/r:status&gt;
+  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/ropensci/magick&lt;/r:upstream&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;intro.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;intro.html&lt;/r:filename&gt;
+    &lt;r:title&gt;The magick package: Advanced Image-Processing in R&lt;/r:title&gt;
+    &lt;r:created&gt;2016-08-23 22:05:16&lt;/r:created&gt;
+    &lt;r:modified&gt;2024-03-08 09:55:01&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+&lt;/item&gt;
+&lt;item&gt;
+  &lt;title&gt;[jeroen] V8 6.0.4&lt;/title&gt;
+  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
+  &lt;description&gt;An R interface to V8 &amp;lt;https://v8.dev&amp;gt;: Google's open source JavaScript and WebAssembly engine. This package can be compiled either with V8 version 6 and up or NodeJS when built as a shared library.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15421574110&lt;/link&gt;
+  &lt;pubDate&gt;Tue, 03 Jun 2025 15:18:36 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;V8&lt;/r:package&gt;
+  &lt;r:version&gt;6.0.4&lt;/r:version&gt;
+  &lt;r:status&gt;success&lt;/r:status&gt;
+  &lt;r:repository&gt;https://jeroen.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/jeroen/v8&lt;/r:upstream&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;v8_intro.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;v8_intro.html&lt;/r:filename&gt;
+    &lt;r:title&gt;Introduction to V8 for R&lt;/r:title&gt;
+    &lt;r:created&gt;2015-01-09 04:21:51&lt;/r:created&gt;
+    &lt;r:modified&gt;2023-08-24 14:47:17&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+  &lt;r:article&gt;
+    &lt;r:source&gt;npm.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;npm.html&lt;/r:filename&gt;
+    &lt;r:title&gt;Using NPM packages in V8&lt;/r:title&gt;
+    &lt;r:created&gt;2015-01-09 07:47:49&lt;/r:created&gt;
+    &lt;r:modified&gt;2023-01-21 22:06:20&lt;/r:modified&gt;
+  &lt;/r:article&gt;
+&lt;/item&gt;
+&lt;item&gt;
+  &lt;title&gt;[jeroen] openssl 2.3.4&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to OpenSSL libssl and libcrypto, plus custom SSH key parsers. Supports RSA, DSA and EC curves P-256, P-384, P-521, and curve25519. Cryptographic signatures can either be created and verified manually or via x509 certificates. AES can be used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric (public key) encryption or EC for Diffie Hellman. High-level envelope functions combine RSA and AES for encrypting arbitrary sized data. Other utilities include key generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure random number generator, and 'bignum' math methods for manually performing crypto calculations on large multibyte integers.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14668993608&lt;/link&gt;
-  &lt;pubDate&gt;Fri, 25 Apr 2025 15:21:09 GMT&lt;/pubDate&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15398840689&lt;/link&gt;
+  &lt;pubDate&gt;Thu, 29 May 2025 11:26:00 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;openssl&lt;/r:package&gt;
-  &lt;r:version&gt;2.3.2&lt;/r:version&gt;
+  &lt;r:version&gt;2.3.4&lt;/r:version&gt;
   &lt;r:status&gt;success&lt;/r:status&gt;
   &lt;r:repository&gt;https://jeroen.r-universe.dev&lt;/r:repository&gt;
   &lt;r:upstream&gt;https://github.com/jeroen/openssl&lt;/r:upstream&gt;
@@ -380,37 +464,30 @@ jeroen.r-universe.dev
   &lt;/r:article&gt;
 &lt;/item&gt;
 &lt;item&gt;
-  &lt;title&gt;[jeroen] curl 6.2.3&lt;/title&gt;
+  &lt;title&gt;[ropensci] gert 2.1.5&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Bindings to 'libcurl' &amp;lt;https://curl.se/libcurl/&amp;gt; for performing fully configurable HTTP/FTP requests where responses can be processed in memory, on disk, or streaming via the callback or connection interfaces. Some knowledge of 'libcurl' is recommended; for a more-user-friendly web client see the 'httr2' package which builds on this package with http specific tools and logic.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14811009290&lt;/link&gt;
-  &lt;pubDate&gt;Thu, 24 Apr 2025 21:06:20 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;curl&lt;/r:package&gt;
-  &lt;r:version&gt;6.2.3&lt;/r:version&gt;
+  &lt;description&gt;Simple git client for R based on 'libgit2' &amp;lt;https://libgit2.org&amp;gt; with support for SSH and HTTPS remotes. All functions in 'gert' use basic R data types (such as vectors and data-frames) for their arguments and return values. User credentials are shared with command line 'git' through the git-credential store and ssh keys stored on disk or ssh-agent.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15053357331&lt;/link&gt;
+  &lt;pubDate&gt;Thu, 15 May 2025 18:56:09 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;gert&lt;/r:package&gt;
+  &lt;r:version&gt;2.1.5&lt;/r:version&gt;
   &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://jeroen.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/jeroen/curl&lt;/r:upstream&gt;
+  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/r-lib/gert&lt;/r:upstream&gt;
   &lt;r:article&gt;
-    &lt;r:source&gt;windows.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;windows.html&lt;/r:filename&gt;
-    &lt;r:title&gt;Proxies and Certificates on Windows Networks&lt;/r:title&gt;
-    &lt;r:created&gt;2019-08-28 13:27:44&lt;/r:created&gt;
-    &lt;r:modified&gt;2024-10-24 19:54:07&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;intro.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;intro.html&lt;/r:filename&gt;
-    &lt;r:title&gt;The curl package: a modern R interface to libcurl&lt;/r:title&gt;
-    &lt;r:created&gt;2015-02-28 22:25:46&lt;/r:created&gt;
-    &lt;r:modified&gt;2025-02-21 14:23:14&lt;/r:modified&gt;
+    &lt;r:source&gt;gert.Rmd&lt;/r:source&gt;
+    &lt;r:filename&gt;gert.html&lt;/r:filename&gt;
+    &lt;r:title&gt;gert&lt;/r:title&gt;
+    &lt;r:created&gt;2020-05-26 22:26:27&lt;/r:created&gt;
+    &lt;r:modified&gt;2023-08-07 12:18:11&lt;/r:modified&gt;
   &lt;/r:article&gt;
 &lt;/item&gt;
 &lt;item&gt;
   &lt;title&gt;[ropensci] writexl 1.5.4&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Zero-dependency data frame to xlsx exporter based on 'libxlsxwriter' &amp;lt;https://libxlsxwriter.github.io&amp;gt;. Fast and no Java or Excel required.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978956&lt;/link&gt;
-  &lt;pubDate&gt;Wed, 16 Apr 2025 22:49:38 GMT&lt;/pubDate&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15235465441&lt;/link&gt;
+  &lt;pubDate&gt;Mon, 12 May 2025 17:41:35 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;writexl&lt;/r:package&gt;
   &lt;r:version&gt;1.5.4&lt;/r:version&gt;
   &lt;r:status&gt;success&lt;/r:status&gt;
@@ -418,10 +495,22 @@ jeroen.r-universe.dev
   &lt;r:upstream&gt;https://github.com/ropensci/writexl&lt;/r:upstream&gt;
 &lt;/item&gt;
 &lt;item&gt;
+  &lt;title&gt;[ropensci] av 0.9.4&lt;/title&gt;
+  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
+  &lt;description&gt;Bindings to 'FFmpeg' &amp;lt;http://www.ffmpeg.org/&amp;gt; AV library for working with audio and video in R. Generates high quality video from images or R graphics with custom audio. Also offers high performance tools for reading raw audio, creating 'spectrograms', and converting between countless audio / video formats. This package interfaces directly to the C API and does not require any command line utilities.&lt;/description&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412205939&lt;/link&gt;
+  &lt;pubDate&gt;Tue, 29 Apr 2025 12:46:03 GMT&lt;/pubDate&gt;
+  &lt;r:package&gt;av&lt;/r:package&gt;
+  &lt;r:version&gt;0.9.4&lt;/r:version&gt;
+  &lt;r:status&gt;success&lt;/r:status&gt;
+  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
+  &lt;r:upstream&gt;https://github.com/ropensci/av&lt;/r:upstream&gt;
+&lt;/item&gt;
+&lt;item&gt;
   &lt;title&gt;[jeroen] gpg 1.4.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to GnuPG for working with OpenGPG (RFC4880) cryptographic methods. Includes utilities for public key encryption, creating and verifying digital signatures, and managing your local keyring. Some functionality depends on the version of GnuPG that is installed on the system. On Windows this package can be used together with 'GPG4Win' which provides a GUI for managing keys and entering passphrases.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14642155949&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15222738294&lt;/link&gt;
   &lt;pubDate&gt;Tue, 15 Apr 2025 14:05:45 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;gpg&lt;/r:package&gt;
   &lt;r:version&gt;1.4.0&lt;/r:version&gt;
@@ -440,7 +529,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] postdoc 1.4.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Generates simple and beautiful one-page HTML reference manuals with package documentation. Math rendering and syntax highlighting are done server-side in R such that no JavaScript libraries are needed in the browser, which makes the documentation portable and fast to load.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14727608754&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15341413501&lt;/link&gt;
   &lt;pubDate&gt;Sun, 13 Apr 2025 12:59:50 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;postdoc&lt;/r:package&gt;
   &lt;r:version&gt;1.4.1&lt;/r:version&gt;
@@ -452,7 +541,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] graphql 1.5.3&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to the 'libgraphqlparser' C++ library. Parses GraphQL &amp;lt;https://graphql.org&amp;gt; syntax and exports the AST in JSON format.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821976955&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14965665856&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 21:14:13 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;graphql&lt;/r:package&gt;
   &lt;r:version&gt;1.5.3&lt;/r:version&gt;
@@ -461,22 +550,10 @@ jeroen.r-universe.dev
   &lt;r:upstream&gt;https://github.com/ropensci/graphql&lt;/r:upstream&gt;
 &lt;/item&gt;
 &lt;item&gt;
-  &lt;title&gt;[r-rust] hellorust 1.2.3&lt;/title&gt;
-  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Template R package with minimal setup to use Rust code in R without hacks or frameworks. Includes basic examples of importing cargo dependencies, spawning threads and passing numbers or strings from Rust to R. Cargo crates are automatically 'vendored' in the R source package to support offline installation. The GitHub repository for this package has more details and also explains how to set up CI. This project was first presented at 'Erum2018' to showcase R-Rust integration &amp;lt;https://jeroen.github.io/erum2018/&amp;gt;; for a real world use-case, see the 'gifski' package on 'CRAN'.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-rust/actions/runs/14695121759&lt;/link&gt;
-  &lt;pubDate&gt;Sun, 06 Apr 2025 20:41:59 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;hellorust&lt;/r:package&gt;
-  &lt;r:version&gt;1.2.3&lt;/r:version&gt;
-  &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://r-rust.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/r-rust/hellorust&lt;/r:upstream&gt;
-&lt;/item&gt;
-&lt;item&gt;
   &lt;title&gt;[ropensci] commonmark 1.9.5&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;The CommonMark specification &amp;lt;https://github.github.com/gfm/&amp;gt; defines a rationalized version of markdown syntax. This package uses the 'cmark' reference implementation for converting markdown text into various formats including html, latex and groff man. In addition it exposes the markdown parse tree in xml format. Also includes opt-in support for GFM extensions including tables, autolinks, and strikethrough text.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821976114&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412209224&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 20:35:39 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;commonmark&lt;/r:package&gt;
   &lt;r:version&gt;1.9.5&lt;/r:version&gt;
@@ -488,7 +565,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] brotli 1.3.2&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;A lossless compressed data format that uses a combination of the LZ77 algorithm and Huffman coding &amp;lt;https://www.rfc-editor.org/rfc/rfc7932&amp;gt;. Brotli is similar in speed to deflate (gzip) but offers more dense compression.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14695123951&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15395242601&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 20:32:54 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;brotli&lt;/r:package&gt;
   &lt;r:version&gt;1.3.2&lt;/r:version&gt;
@@ -514,7 +591,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] cld2 1.2.6&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to Google's C++ library Compact Language Detector 2 (see &amp;lt;https://github.com/cld2owners/cld2#readme&amp;gt; for more information). Probabilistically detects over 80 languages in plain text or HTML. For mixed-language input it returns the top three detected languages and their approximate proportion of the total classified text bytes (e.g. 80% English and 20% French out of 1000 bytes). There is also a 'cld3' package on CRAN which uses a neural network model instead.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821975842&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15386212618&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 20:31:48 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;cld2&lt;/r:package&gt;
   &lt;r:version&gt;1.2.6&lt;/r:version&gt;
@@ -526,7 +603,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] hunspell 3.0.7&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Low level spell checker and morphological analyzer based on the famous 'hunspell' library &amp;lt;https://hunspell.github.io&amp;gt;. The package can analyze or check individual words as well as parse text, latex, html or xml documents. For a more user-friendly interface use the 'spelling' package which builds on this package to automate checking of files, documentation and vignettes in all common formats.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821977009&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412226491&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 20:29:29 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;hunspell&lt;/r:package&gt;
   &lt;r:version&gt;3.0.7&lt;/r:version&gt;
@@ -545,7 +622,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] mongolite 4.0.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;High-performance MongoDB client based on 'mongo-c-driver' and 'jsonlite'. Includes support for aggregation, indexing, map-reduce, streaming, encryption, enterprise authentication, and GridFS. The online user manual provides an overview of the available methods in the package: &amp;lt;https://jeroen.github.io/mongolite/&amp;gt;.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14642689642&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15435030634&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 19:48:56 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;mongolite&lt;/r:package&gt;
   &lt;r:version&gt;4.0.0&lt;/r:version&gt;
@@ -557,7 +634,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] jsonlite 2.0.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;A reasonably fast JSON parser and generator, optimized for statistical data and the web. Offers simple, flexible tools for working with JSON in R, and is particularly powerful for building pipelines and interacting with a web API. The implementation is based on the mapping described in the vignette (Ooms, 2014). In addition to converting JSON data from/to R objects, 'jsonlite' contains functions to stream, validate, and prettify JSON data. The unit tests included with the package verify that all edge cases are encoded and decoded consistently for use with dynamic data in systems and applications.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14571301160&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15131985152&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 19:41:53 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;jsonlite&lt;/r:package&gt;
   &lt;r:version&gt;2.0.0&lt;/r:version&gt;
@@ -604,7 +681,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] qpdf 1.3.6&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Content-preserving transformations transformations of PDF files such as split, combine, and compress. This package interfaces directly to the 'qpdf' C++ library &amp;lt;https://qpdf.sourceforge.io/&amp;gt; and does not require any command line utilities. Note that 'qpdf' does not read actual content from PDF files: to extract text and data you need the 'pdftools' package.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978170&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15131281278&lt;/link&gt;
   &lt;pubDate&gt;Sun, 06 Apr 2025 19:41:18 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;qpdf&lt;/r:package&gt;
   &lt;r:version&gt;1.3.6&lt;/r:version&gt;
@@ -616,7 +693,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[r-dbi] RMySQL 0.11.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Legacy 'DBI' interface to 'MySQL' / 'MariaDB' based on old code ported from S-PLUS. A modern 'MySQL' client written in 'C++' is available from the 'RMariaDB' package.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-dbi/actions/runs/14641845993&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/r-dbi/actions/runs/15371481911&lt;/link&gt;
   &lt;pubDate&gt;Tue, 01 Apr 2025 13:02:20 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;RMySQL&lt;/r:package&gt;
   &lt;r:version&gt;0.11.1&lt;/r:version&gt;
@@ -628,7 +705,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] opencv 0.5.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Exposes some of the available 'OpenCV' &amp;lt;https://opencv.org/&amp;gt; algorithms, such as a QR code scanner, and edge, body or face detection. These can either be applied to analyze static images, or to filter live video footage from a camera device.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821977608&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412241376&lt;/link&gt;
   &lt;pubDate&gt;Mon, 31 Mar 2025 11:09:45 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;opencv&lt;/r:package&gt;
   &lt;r:version&gt;0.5.1&lt;/r:version&gt;
@@ -640,7 +717,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] ssh 0.9.4&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Connect to a remote server over SSH to transfer files via SCP, setup a secure tunnel, or run a command or script on the host while streaming stdout and stderr directly to the client.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978595&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412270335&lt;/link&gt;
   &lt;pubDate&gt;Wed, 26 Mar 2025 22:23:33 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;ssh&lt;/r:package&gt;
   &lt;r:version&gt;0.9.4&lt;/r:version&gt;
@@ -656,74 +733,10 @@ jeroen.r-universe.dev
   &lt;/r:article&gt;
 &lt;/item&gt;
 &lt;item&gt;
-  &lt;title&gt;[ropensci] gert 2.1.5&lt;/title&gt;
-  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Simple git client for R based on 'libgit2' &amp;lt;https://libgit2.org&amp;gt; with support for SSH and HTTPS remotes. All functions in 'gert' use basic R data types (such as vectors and data-frames) for their arguments and return values. User credentials are shared with command line 'git' through the git-credential store and ssh keys stored on disk or ssh-agent.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821976743&lt;/link&gt;
-  &lt;pubDate&gt;Mon, 24 Mar 2025 23:35:13 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;gert&lt;/r:package&gt;
-  &lt;r:version&gt;2.1.5&lt;/r:version&gt;
-  &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/r-lib/gert&lt;/r:upstream&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;gert.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;gert.html&lt;/r:filename&gt;
-    &lt;r:title&gt;gert&lt;/r:title&gt;
-    &lt;r:created&gt;2020-05-26 22:26:27&lt;/r:created&gt;
-    &lt;r:modified&gt;2023-08-07 12:18:11&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-&lt;/item&gt;
-&lt;item&gt;
-  &lt;title&gt;[jeroen] V8 6.0.3&lt;/title&gt;
-  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;An R interface to V8 &amp;lt;https://v8.dev&amp;gt;: Google's open source JavaScript and WebAssembly engine. This package can be compiled either with V8 version 6 and up or NodeJS when built as a shared library.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14641818382&lt;/link&gt;
-  &lt;pubDate&gt;Sun, 23 Mar 2025 18:46:55 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;V8&lt;/r:package&gt;
-  &lt;r:version&gt;6.0.3&lt;/r:version&gt;
-  &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://jeroen.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/jeroen/v8&lt;/r:upstream&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;v8_intro.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;v8_intro.html&lt;/r:filename&gt;
-    &lt;r:title&gt;Introduction to V8 for R&lt;/r:title&gt;
-    &lt;r:created&gt;2015-01-09 04:21:51&lt;/r:created&gt;
-    &lt;r:modified&gt;2023-08-24 14:47:17&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;npm.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;npm.html&lt;/r:filename&gt;
-    &lt;r:title&gt;Using NPM packages in V8&lt;/r:title&gt;
-    &lt;r:created&gt;2015-01-09 07:47:49&lt;/r:created&gt;
-    &lt;r:modified&gt;2023-01-21 22:06:20&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-&lt;/item&gt;
-&lt;item&gt;
-  &lt;title&gt;[ropensci] magick 2.8.6&lt;/title&gt;
-  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Bindings to 'ImageMagick': the most comprehensive open-source image processing library available. Supports many common formats (png, jpeg, tiff, pdf, etc) and manipulations (rotate, scale, crop, trim, flip, blur, etc). All operations are vectorized via the Magick++ STL meaning they operate either on a single frame or a series of frames for working with layers, collages, or animation. In RStudio images are automatically previewed when printed to the console, resulting in an interactive editing environment. The latest version of the package includes a native graphics device for creating in-memory graphics or drawing onto images using pixel coordinates.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821977428&lt;/link&gt;
-  &lt;pubDate&gt;Sun, 23 Mar 2025 14:26:49 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;magick&lt;/r:package&gt;
-  &lt;r:version&gt;2.8.6&lt;/r:version&gt;
-  &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://ropensci.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/ropensci/magick&lt;/r:upstream&gt;
-  &lt;r:article&gt;
-    &lt;r:source&gt;intro.Rmd&lt;/r:source&gt;
-    &lt;r:filename&gt;intro.html&lt;/r:filename&gt;
-    &lt;r:title&gt;The magick package: Advanced Image-Processing in R&lt;/r:title&gt;
-    &lt;r:created&gt;2016-08-23 22:05:16&lt;/r:created&gt;
-    &lt;r:modified&gt;2024-03-08 09:55:01&lt;/r:modified&gt;
-  &lt;/r:article&gt;
-&lt;/item&gt;
-&lt;item&gt;
   &lt;title&gt;[ropensci] rsvg 2.6.2&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Renders vector-based svg images into high-quality custom-size bitmap arrays using 'librsvg2'. The resulting bitmap can be written to e.g. png, jpeg or webp format. In addition, the package can convert images directly to various formats such as pdf or postscript.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978381&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412262865&lt;/link&gt;
   &lt;pubDate&gt;Sun, 23 Mar 2025 13:57:55 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;rsvg&lt;/r:package&gt;
   &lt;r:version&gt;2.6.2&lt;/r:version&gt;
@@ -742,7 +755,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] tesseract 5.2.3&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to 'Tesseract': a powerful optical character recognition (OCR) engine that supports over 100 languages. The engine is highly configurable in order to tune the detection algorithms and obtain the best possible results.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978649&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15553028855&lt;/link&gt;
   &lt;pubDate&gt;Sun, 23 Mar 2025 13:55:20 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;tesseract&lt;/r:package&gt;
   &lt;r:version&gt;5.2.3&lt;/r:version&gt;
@@ -758,22 +771,10 @@ jeroen.r-universe.dev
   &lt;/r:article&gt;
 &lt;/item&gt;
 &lt;item&gt;
-  &lt;title&gt;[r-rust] gifski 1.32.0-2&lt;/title&gt;
-  &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
-  &lt;description&gt;Multi-threaded GIF encoder written in Rust: &amp;lt;https://gif.ski/&amp;gt;. Converts images to GIF animations using pngquant's efficient cross-frame palettes and temporal dithering with thousands of colors per frame.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-rust/actions/runs/14568439645&lt;/link&gt;
-  &lt;pubDate&gt;Sat, 22 Mar 2025 21:04:39 GMT&lt;/pubDate&gt;
-  &lt;r:package&gt;gifski&lt;/r:package&gt;
-  &lt;r:version&gt;1.32.0-2&lt;/r:version&gt;
-  &lt;r:status&gt;success&lt;/r:status&gt;
-  &lt;r:repository&gt;https://r-rust.r-universe.dev&lt;/r:repository&gt;
-  &lt;r:upstream&gt;https://github.com/r-rust/gifski&lt;/r:upstream&gt;
-&lt;/item&gt;
-&lt;item&gt;
   &lt;title&gt;[r-lib] xml2 1.3.8&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to 'libxml2' for working with XML data using a simple, consistent interface based on 'XPath' expressions. Also supports XML schema validation; for 'XSLT' transformations see the 'xslt' package.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/14821845242&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/15408605756&lt;/link&gt;
   &lt;pubDate&gt;Thu, 13 Mar 2025 19:24:32 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;xml2&lt;/r:package&gt;
   &lt;r:version&gt;1.3.8&lt;/r:version&gt;
@@ -792,7 +793,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] pdftools 3.5.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Utilities based on 'libpoppler' &amp;lt;https://poppler.freedesktop.org&amp;gt; for extracting text, fonts, attachments and metadata from a PDF file. Also supports high quality rendering of PDF documents into PNG, JPEG, TIFF format, or into raw bitmap vectors for further processing in R.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821977828&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15552906515&lt;/link&gt;
   &lt;pubDate&gt;Mon, 03 Mar 2025 13:48:13 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;pdftools&lt;/r:package&gt;
   &lt;r:version&gt;3.5.0&lt;/r:version&gt;
@@ -804,7 +805,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] xslt 1.5.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;An extension for the 'xml2' package to transform XML documents by applying an 'xslt' style-sheet.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821979031&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15516151023&lt;/link&gt;
   &lt;pubDate&gt;Thu, 27 Feb 2025 17:20:20 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;xslt&lt;/r:package&gt;
   &lt;r:version&gt;1.5.1&lt;/r:version&gt;
@@ -816,7 +817,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] protolite 2.4.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Pure C++ implementations for reading and writing several common data formats based on Google protocol-buffers. Currently supports 'rexp.proto' for serialized R objects, 'geobuf.proto' for binary geojson, and 'mvt.proto' for vector tiles. This package uses the auto-generated C++ code by protobuf-compiler, hence the entire serialization is optimized at compile time. The 'RProtoBuf' package on the other hand uses the protobuf runtime library to provide a general- purpose toolkit for reading and writing arbitrary protocol-buffer data in R.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14641615339&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15434824224&lt;/link&gt;
   &lt;pubDate&gt;Sat, 08 Feb 2025 14:23:21 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;protolite&lt;/r:package&gt;
   &lt;r:version&gt;2.4.0&lt;/r:version&gt;
@@ -828,7 +829,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] universe 1.0.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Utilities to interact with the R-universe platform. Includes functions to manage local package repositories, as well as API wrappers for retrieving data and metadata about packages in r-universe.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14727595097&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15318021150&lt;/link&gt;
   &lt;pubDate&gt;Fri, 07 Feb 2025 09:08:49 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;universe&lt;/r:package&gt;
   &lt;r:version&gt;1.0.0&lt;/r:version&gt;
@@ -847,7 +848,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] maketools 1.3.2&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Helper functions that interface with the system utilities to learn about the local build environment. Lets you explore 'make' rules to test the local configuration, or query 'pkg-config' to find compiler flags and libs needed for building packages with external dependencies. Also contains tools to analyze which libraries that a installed R package linked to by inspecting output from 'ldd' in combination with information from your distribution package manager, e.g. 'rpm' or 'dpkg'.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14683925748&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15247863310&lt;/link&gt;
   &lt;pubDate&gt;Sat, 25 Jan 2025 12:23:22 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;maketools&lt;/r:package&gt;
   &lt;r:version&gt;1.3.2&lt;/r:version&gt;
@@ -866,7 +867,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] prismjs 2.1.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Prism &amp;lt;https://prismjs.com/&amp;gt; is a lightweight, extensible syntax highlighter, built with modern web standards in mind. This package provides server-side rendering in R using 'V8' such that no JavaScript library is required in the resulting HTML documents. Over 400 languages are supported.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14727516232&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15317838630&lt;/link&gt;
   &lt;pubDate&gt;Tue, 07 Jan 2025 11:44:56 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;prismjs&lt;/r:package&gt;
   &lt;r:version&gt;2.1.0&lt;/r:version&gt;
@@ -878,7 +879,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] rzmq 0.9.15&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Interface to the 'ZeroMQ' lightweight messaging kernel (see &amp;lt;https://zeromq.org/&amp;gt; for more information).&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978423&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412259250&lt;/link&gt;
   &lt;pubDate&gt;Mon, 16 Dec 2024 14:48:22 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;rzmq&lt;/r:package&gt;
   &lt;r:version&gt;0.9.15&lt;/r:version&gt;
@@ -890,7 +891,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] jqr 1.4.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Client for 'jq', a 'JSON' processor (&amp;lt;https://jqlang.github.io/jq/&amp;gt;), written in C. 'jq' allows the following with 'JSON' data: index into, parse, do calculations, cut up and filter, change key names and values, perform conditionals and comparisons, and more.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821977240&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412230102&lt;/link&gt;
   &lt;pubDate&gt;Sat, 14 Dec 2024 23:26:27 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;jqr&lt;/r:package&gt;
   &lt;r:version&gt;1.4.0&lt;/r:version&gt;
@@ -902,7 +903,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] webp 1.3.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Lossless webp images are 26% smaller in size compared to PNG. Lossy webp images are 25-34% smaller in size compared to JPEG. This package reads and writes webp images into a 3 (rgb) or 4 (rgba) channel bitmap array using conventions from the 'jpeg' and 'png' packages.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14820856481&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15398841851&lt;/link&gt;
   &lt;pubDate&gt;Sat, 14 Dec 2024 23:03:32 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;webp&lt;/r:package&gt;
   &lt;r:version&gt;1.3.0&lt;/r:version&gt;
@@ -914,7 +915,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] sodium 1.4.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to 'libsodium' &amp;lt;https://doc.libsodium.org/&amp;gt;: a modern, easy-to-use software library for encryption, decryption, signatures, password hashing and more. Sodium uses curve25519, a state-of-the-art Diffie-Hellman function by Daniel Bernstein, which has become very popular after it was discovered that the NSA had backdoored Dual EC DRBG.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978487&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412266692&lt;/link&gt;
   &lt;pubDate&gt;Sat, 14 Dec 2024 22:49:20 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;sodium&lt;/r:package&gt;
   &lt;r:version&gt;1.4.0&lt;/r:version&gt;
@@ -940,7 +941,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] unrtf 1.4.7&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Wraps the 'unrtf' utility &amp;lt;https://www.gnu.org/software/unrtf/&amp;gt; to extract text from RTF files. Supports document conversion to HTML, LaTeX or plain text. Output in HTML is recommended because 'unrtf' has limited support for converting between character encodings.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821978926&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15516166906&lt;/link&gt;
   &lt;pubDate&gt;Sat, 26 Oct 2024 11:46:50 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;unrtf&lt;/r:package&gt;
   &lt;r:version&gt;1.4.7&lt;/r:version&gt;
@@ -952,7 +953,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] bcrypt 1.2.0&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to the 'blowfish' password hashing algorithm &amp;lt;https://www.openbsd.org/papers/bcrypt-paper.pdf&amp;gt; derived from the 'OpenBSD' implementation.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14692554375&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15459378377&lt;/link&gt;
   &lt;pubDate&gt;Fri, 04 Oct 2024 21:21:15 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;bcrypt&lt;/r:package&gt;
   &lt;r:version&gt;1.2.0&lt;/r:version&gt;
@@ -964,7 +965,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[r-lib] credentials 2.0.2&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Setup and retrieve HTTPS and SSH credentials for use with 'git' and other services. For HTTPS remotes the package interfaces the 'git-credential' utility which 'git' uses to store HTTP usernames and passwords. For SSH remotes we provide convenient functions to find or generate appropriate SSH keys. The package both helps the user to setup a local git installation, and also provides a back-end for git/ssh client libraries to authenticate with existing user credentials.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/14691662213&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/15269713424&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:19:01 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;credentials&lt;/r:package&gt;
   &lt;r:version&gt;2.0.2&lt;/r:version&gt;
@@ -983,7 +984,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] fluidsynth 1.0.2&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to 'libfluidsynth' to parse and synthesize MIDI files. It can read MIDI into a data frame, play it on the local audio device, or convert into an audio file.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821976620&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15553025169&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:58 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;fluidsynth&lt;/r:package&gt;
   &lt;r:version&gt;1.0.2&lt;/r:version&gt;
@@ -995,7 +996,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[r-lib] ghapps 1.1.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;'GitHub' apps provide a powerful way to manage fine grained programmatic access to specific 'git' repositories, without having to create dummy users, and which are safer than a personal access token for automated tasks. This package extends the 'gh' package to let you authenticate and interact with 'GitHub' &amp;lt;https://docs.github.com/en/rest/overview&amp;gt; in 'R' as an app.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/14691546393&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/15201775592&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:52 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;ghapps&lt;/r:package&gt;
   &lt;r:version&gt;1.1.1&lt;/r:version&gt;
@@ -1007,7 +1008,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[opencpu] opencpu 2.2.14&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;A system for embedded scientific computing and reproducible research with R. The OpenCPU server exposes a simple but powerful HTTP api for RPC and data interchange with R. This provides a reliable and scalable foundation for statistical services or building R web applications. The OpenCPU server runs either as a single-user development server within the interactive R session, or as a multi-user Linux stack based on Apache2. The entire system is fully open source and permissively licensed. The OpenCPU website has detailed documentation and example apps.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/opencpu/actions/runs/14691528247&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/opencpu/actions/runs/15434470278&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:46 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;opencpu&lt;/r:package&gt;
   &lt;r:version&gt;2.2.14&lt;/r:version&gt;
@@ -1026,7 +1027,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] sys 3.4.3&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Drop-in replacements for the base system2() function with fine control and consistent behavior across platforms. Supports clean interruption, timeout, background tasks, and streaming STDIN / STDOUT / STDERR over binary or text connections. Arguments on Windows automatically get encoded and quoted to work on different locales.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14530572275&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15432659273&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:44 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;sys&lt;/r:package&gt;
   &lt;r:version&gt;3.4.3&lt;/r:version&gt;
@@ -1038,7 +1039,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] unix 1.5.9&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to system utilities found in most Unix systems such as POSIX functions which are not part of the Standard C Library.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14642923480&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15384512787&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:42 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;unix&lt;/r:package&gt;
   &lt;r:version&gt;1.5.9&lt;/r:version&gt;
@@ -1050,7 +1051,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] webutils 1.2.2&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Parses http request data in application/json, multipart/form-data, or application/x-www-form-urlencoded format. Includes example of hosting and parsing html form data in R using either 'httpuv' or 'Rhttpd'.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14807226650&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15435174340&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:39 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;webutils&lt;/r:package&gt;
   &lt;r:version&gt;1.2.2&lt;/r:version&gt;
@@ -1062,7 +1063,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[r-lib] askpass 1.2.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Cross-platform utilities for prompting the user for credentials or a passphrase, for example to authenticate with a server or read a protected key. Includes native programs for MacOS and Windows, hence no 'tcltk' is required. Password entry can be invoked in two different ways: directly from R via the askpass() function, or indirectly as password-entry back-end for 'ssh-agent' or 'git-credential' via the SSH_ASKPASS and GIT_ASKPASS environment variables. Thereby the user can be prompted for credentials or a passphrase if needed when R calls out to git or ssh.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/14821843642&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/15549710431&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:37 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;askpass&lt;/r:package&gt;
   &lt;r:version&gt;1.2.1&lt;/r:version&gt;
@@ -1074,7 +1075,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] badgen 1.0.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to 'badgen' &amp;lt;https://www.npmjs.com/package/badgen&amp;gt; to generate beautiful 'svg' badges in R without internet access. Images can be converted to 'png' using the 'rsvg' package as shown in examples.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14691632802&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15504584347&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:35 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;badgen&lt;/r:package&gt;
   &lt;r:version&gt;1.0.1&lt;/r:version&gt;
@@ -1086,7 +1087,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[jeroen] RAppArmor 3.2.5&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Bindings to kernel methods for enforcing security restrictions. AppArmor can apply mandatory access control (MAC) policies on a given task (process) via security profiles with detailed ACL definitions. In addition this package implements bindings for setting process resource limits (rlimit), uid, gid, affinity and priority. The high level R function 'eval.secure' builds on these methods to perform dynamic sandboxing: it evaluates a single R expression within a temporary fork which acts as a sandbox by enforcing fine grained restrictions without affecting the main R process. A portable version of this function is now available in the 'unix' package.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/14642916064&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/jeroen/actions/runs/15103307533&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:13 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;RAppArmor&lt;/r:package&gt;
   &lt;r:version&gt;3.2.5&lt;/r:version&gt;
@@ -1105,7 +1106,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] cld3 1.6.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Google's Compact Language Detector 3 is a neural network model for language identification and the successor of 'cld2' (available from CRAN). The algorithm is still experimental and takes a novel approach to language detection with different properties and outcomes. It can be useful to combine this with the Bayesian classifier results from 'cld2'. See &amp;lt;https://github.com/google/cld3#readme&amp;gt; for more information.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14821975968&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15412212970&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:18:02 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;cld3&lt;/r:package&gt;
   &lt;r:version&gt;1.6.1&lt;/r:version&gt;
@@ -1117,7 +1118,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[r-lib] jose 1.2.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Read and write JSON Web Keys (JWK, rfc7517), generate and verify JSON Web Signatures (JWS, rfc7515) and encode/decode JSON Web Tokens (JWT, rfc7519) &amp;lt;https://datatracker.ietf.org/wg/jose/documents/&amp;gt;. These standards provide modern signing and encryption formats that are natively supported by browsers via the JavaScript WebCryptoAPI &amp;lt;https://www.w3.org/TR/WebCryptoAPI/#jose&amp;gt;, and used by services like OAuth 2.0, LetsEncrypt, and Github Apps.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/14821076570&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/r-lib/actions/runs/15124791431&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:17:59 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;jose&lt;/r:package&gt;
   &lt;r:version&gt;1.2.1&lt;/r:version&gt;
@@ -1143,7 +1144,7 @@ jeroen.r-universe.dev
   &lt;title&gt;[ropensci] spelling 2.3.1&lt;/title&gt;
   &lt;author&gt;jeroenooms@gmail.com (Jeroen Ooms)&lt;/author&gt;
   &lt;description&gt;Spell checking common document formats including latex, markdown, manual pages, and description files. Includes utilities to automate checking of documentation and vignettes as a unit test during 'R CMD check'. Both British and American English are supported out of the box and other languages can be added. In addition, packages may define a 'wordlist' to allow custom terminology without having to abuse punctuation.&lt;/description&gt;
-  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/14727604590&lt;/link&gt;
+  &lt;link&gt;https://github.com/r-universe/ropensci/actions/runs/15317974390&lt;/link&gt;
   &lt;pubDate&gt;Thu, 03 Oct 2024 18:17:48 GMT&lt;/pubDate&gt;
   &lt;r:package&gt;spelling&lt;/r:package&gt;
   &lt;r:version&gt;2.3.1&lt;/r:version&gt;
