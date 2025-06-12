@@ -242,3 +242,8 @@ Refer to https://r-lib.r-universe.dev/badges for examples of badges and informat
 
 Feel free to add a link to your universe from your other online profile (website, social media, GitHub profile README, etc.).
 You can use a rocket icon as icon.
+
+## Removing/deleting an universe
+
+To remove/delete an universe, delete the GitHub repository called `<yourname>.r-universe.dev` from your GitHub account.
+The packages and GitHub integration will automatically get removed within the next R-universe builds.
