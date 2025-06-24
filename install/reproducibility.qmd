@@ -54,3 +54,72 @@ prefix <- ifelse (.Platform$OS.type == "windows", "file:///", "file://")
 repos <- paste0(prefix, normalizePath(snapshot, "/"))
 install.packages(c("V8", "mongolite"), repos = repos)
 ```
+
+## Mirroring a universe {#mirror}
+
+As an alternative to snapshots, one can mirror a universe with [Rclone](https://rclone.org/).
+
+### Configuration
+
+[Rclone](https://rclone.org/) can bypass the R-universe zip archive API and incrementally download the individual files from a universe.
+After [installing Rclone](https://rclone.org/install/), use a terminal command to configure [Rclone](https://rclone.org/) to use the R-universe [S3](https://rclone.org/s3/) API:
+
+```bash
+rclone config create r-universe s3 \
+  list_version=2 force_path_style=false \
+  endpoint=https://r-universe.dev provider=Other
+```
+
+Then, register an individual universe as an [Rclone remote](https://rclone.org/remote_setup/).
+For example, let's configure <https://maelle.r-universe.dev>.
+We run an `rclone config` command that chooses `maelle` as the universe and `maelle-universe` as the alias that future [Rclone](https://rclone.org/) commands will use:
+
+```bash
+rclone config create maelle-universe alias remote=r-universe:maelle
+```
+
+`rclone config show` should now show the following contents:^[Rclone configuration is stored in an `rclone.conf` text file located at the path returned by `rclone config file`.]
+
+```
+[r-universe]
+type = s3
+list_version = 2
+force_path_style = false
+endpoint = https://r-universe.dev
+provider = Other
+
+[maelle-universe]
+type = alias
+remote = r-universe:maelle
+```
+
+### Local downloads
+
+After configuration, [Rclone](https://rclone.org/) can download from the universe you configured.
+The following [`rclone copy`](https://rclone.org/commands/rclone_copy/) command downloads all the package files from <https://maelle.r-universe.dev> to a local folder called `local_foldder_name`:
+
+```bash
+rclone copy maelle-universe: local_folder_name \
+  --ignore-size --progress \
+  --checkers 8 --transfers 8
+```
+
+The full contents are available:
+
+```r
+fs::dir_tree("local_folder_name", recurse = FALSE)
+#> local_folder_name
+#> ├── bin
+#> └── src
+```
+
+```r
+fs::dir_tree("local_folder_name/src", recurse = TRUE)
+#> local_folder_name/src
+#> └── contrib
+#>     ├── PACKAGES
+#>     ├── PACKAGES.gz
+#>     ├── cransays_0.0.0.9000.tar.gz
+#>     ├── glitter_0.2.999.tar.gz
+#>     └── roblog_0.1.0.tar.gz
+```
