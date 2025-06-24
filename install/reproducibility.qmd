@@ -100,8 +100,7 @@ The following [`rclone copy`](https://rclone.org/commands/rclone_copy/) command 
 
 ```bash
 rclone copy maelle-universe: local_folder_name \
-  --ignore-size --progress \
-  --checkers 8 --transfers 8
+  --ignore-size --progress --checkers 8 --transfers 8
 ```
 
 The full contents are available:
@@ -123,3 +122,32 @@ fs::dir_tree("local_folder_name/src", recurse = TRUE)
 #>     ├── glitter_0.2.999.tar.gz
 #>     └── roblog_0.1.0.tar.gz
 ```
+
+### Remote mirroring
+
+You may wish to mirror a universe remotely on, say, an [Amazon S3](https://aws.amazon.com/s3) bucket or a [CloudFlare R2](https://www.cloudflare.com/developer-platform/products/r2/)^[Cloudflare has its own Rclone documentation at <https://developers.cloudflare.com/r2/examples/rclone/>.] bucket.
+For [CloudFlare R2](https://www.cloudflare.com/developer-platform/products/r2/), you will need to give [Rclone](https://rclone.org/) the credentials of the bucket.
+
+```bash
+rclone config create cloudflare-remote s3 \
+  provider=Cloudflare \
+  access_key_id=YOUR_CLOUDFLARE_ACCESS_KEY_ID \
+  secret_access_key=YOUR_CLOUDFLARE_SECRET_ACCESS_KEY \
+  endpoint=https://YOUR_CLOUDFLARE_ACCOUNT_ID.r2.cloudflarestorage.com \
+  acl=private \
+  no_check_bucket=true
+```
+
+Then, you can copy files directly from the universe to a bucket:^[To upload to a specific prefix inside a bucket, you can replace `cloudflare-remote:YOUR_BUCKET_NAME` with `cloudflare-remote:YOUR_BUCKET_NAME/YOUR_PREFIX`]
+
+```bash
+rclone copy maelle-universe: cloudflare-remote:YOUR_BUCKET_NAME \
+  --ignore-size --progress --checkers 8 --transfers 8
+```
+
+### Partial uploads
+
+To only upload part of a universe, you can supply [Rclone filtering](https://rclone.org/filtering/) commands.
+If you do, it is recommended to also manually edit the `PACKAGES` and `PACKAGES.gz` files in `bin/` and `src/contrib`.
+`PACKAGES` is written in [Debian Control Format](https://www.debian.org/doc/debian-policy/ch-controlfields.html) (DCF), and `PACKAGES.gz` is a [`gzip`](https://www.gzip.org/) archive of `PACKAGES`.
+The [`read.dcf()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/dcf.html) and [`write.dcf()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/dcf.html) functions in base R read and write DCF files, and [`R.utils::gzip()`](https://henrikbengtsson.github.io/R.utils/reference/compressFile.html) creates [`gzip`](https://www.gzip.org/) archives.
