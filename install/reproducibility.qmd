@@ -57,7 +57,7 @@ install.packages(c("V8", "mongolite"), repos = repos)
 
 ## Mirroring a universe {#mirror}
 
-As an alternative to snapshots, one can mirror a universe with [Rclone](https://rclone.org/).
+As an alternative to snapshots, you can use [Rclone](https://rclone.org/) to mirror a universe.
 
 ### Configuration
 
@@ -96,7 +96,7 @@ remote = r-universe:maelle
 ### Local downloads
 
 After configuration, [Rclone](https://rclone.org/) can download from the universe you configured.
-The following [`rclone copy`](https://rclone.org/commands/rclone_copy/) command downloads all the package files from <https://maelle.r-universe.dev> to a local folder called `local_foldder_name`:
+The following [`rclone copy`](https://rclone.org/commands/rclone_copy/) command downloads all the package files from <https://maelle.r-universe.dev> to a local folder called `local_folder_name`, accelerating the process with up to 8 parallel checkers and 8 parallel file transfers:^[See <https://rclone.org/docs/> and <https://rclone.org/commands/rclone_copy/> for documentation on the command line arguments.]
 
 ```bash
 rclone copy maelle-universe: local_folder_name \
@@ -144,6 +144,10 @@ Then, you can copy files directly from the universe to a bucket:^[To upload to a
 rclone copy maelle-universe: cloudflare-remote:YOUR_BUCKET_NAME \
   --ignore-size --progress --checkers 8 --transfers 8
 ```
+
+This command downloads each package file locally from <https://maelle.r-universe.dev> and uploads it to the bucket.
+But although packages go through your local computer in transit, at no point are all packages stored locally on disk.
+This makes it feasible to mirror large universes, which is why [R-multiverse](https://r-multiverse.org) uses this pattern to [create production snapshots](https://github.com/r-multiverse/staging/blob/main/.github/workflows/snapshot.yaml).
 
 ### Partial uploads
 
