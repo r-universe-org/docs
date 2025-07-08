@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.14">
+<meta name="generator" content="quarto-1.8.15">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8f1af79587c2686b78fe4e1fbadd71ab.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc68601a05ab6ae055d8fbc512858b1e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e312f9d47aaf37bdfe19b3f8292c6322.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e7285f3ebe25549b445c72016f53f0e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -135,7 +135,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">R-Universe Documentation</a> 
         <div class="sidebar-tools-main">
@@ -396,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="registry-file" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="registry-file"><span class="header-section-number">11.3</span> Populating the packages.json registry file</h2>
 <p>In order to publish content on R-universe, you need to create a registry file called <a href="https://github.com/maelle/maelle.r-universe.dev/blob/main/packages.json">packages.json</a>, which lists the Git urls containing the R packages you want to include in your universe. The file is formatted as a JSON array with required fields <code>package</code> and <code>url</code> for each entry, for example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"package"</span><span class="fu">:</span> <span class="st">"curl"</span><span class="fu">,</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"url"</span><span class="fu">:</span> <span class="st">"https://github.com/jeroen/curl"</span></span>
@@ -410,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"url"</span><span class="fu">:</span> <span class="st">"https://github.com/markvanderloo/stringdist"</span><span class="fu">,</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"subdir"</span><span class="fu">:</span> <span class="st">"pkg"</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="special-case-of-cran-packages" class="level3" data-number="11.3.1">
 <h3 data-number="11.3.1" class="anchored" data-anchor-id="special-case-of-cran-packages"><span class="header-section-number">11.3.1</span> Special case of CRAN packages</h3>
 <p>When browsing the <a href="https://r-universe.dev/">R-universe homepage</a> you may notice that some major universes that contain many CRAN packages do not have a <code>packages.json</code> registry: When the R-universe app is installed on a GitHub account that does not have a proper packages.json file, the build system automatically starts adding all packages from CRAN which are owned by that particular GitHub account. Ownership is determined by the presence of a link to a GitHub repository in the <code>URL</code> or <code>BugReports</code> field of a CRAN package. Our scraper scans all CRAN packages for GitHub links on a daily basis and stores results in the <a href="https://github.com/r-universe-org/cran-to-git">cran-to-git</a> database.</p>
@@ -424,7 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="11.3.2" class="anchored" data-anchor-id="tracking-custom-branches-or-releases"><span class="header-section-number">11.3.2</span> Tracking custom branches or releases</h3>
 <p>By default, R-universe tracks and builds the default branch for each package Git repository, for instance <code>master</code> or <code>main</code>. It is possible to customize which Git branch or tag to track by adding a <code>branch</code> field to the registry.</p>
 <p>The <code>branch</code> field can take the name of any Git reference (either a branch or a tag). You can also set it to a special value <code>"*release"</code> which will automatically lookup the most recent GitHub release, using <a href="https://cran.r-project.org/web/packages/remotes/vignettes/dependencies.html">the same syntax</a> as in remotes. For example:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"package"</span> <span class="fu">:</span> <span class="st">"somepackage"</span><span class="fu">,</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"url"</span> <span class="fu">:</span> <span class="st">"https://github.com/jeroen/somepackage"</span><span class="fu">,</span></span>
@@ -435,19 +437,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"url"</span><span class="fu">:</span> <span class="st">"https://github.com/jeroen/jose"</span><span class="fu">,</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"branch"</span> <span class="fu">:</span> <span class="st">"*release"</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you want to use the default Git branch, it is safest to omit the <code>branch</code> field. This way everything will keep working, even if the default branch gets another name at some point in the future.</p>
 </section>
 <section id="hand-written-or-programmatically-created" class="level3" data-number="11.3.3">
 <h3 data-number="11.3.3" class="anchored" data-anchor-id="hand-written-or-programmatically-created"><span class="header-section-number">11.3.3</span> Hand-written or programmatically created</h3>
 <p>You can either hand-write this <code>packages.json</code> file, or programmatically create it using the tools of your choice. For example you can generate it in R from a data frame using <a href="https://jeroen.r-universe.dev/jsonlite">jsonlite</a>:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">package =</span> <span class="fu">c</span>(<span class="st">"curl"</span>, <span class="st">"pdftools"</span>, <span class="st">"stringdist"</span>),</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">url =</span> <span class="fu">c</span>(<span class="st">"https://github.com/jeroen/curl"</span>, <span class="st">"https://github.com/ropensci/pdftools"</span>, </span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"https://github.com/markvanderloo/stringdist"</span>),</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">subdir =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">"pkg"</span>)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>jsonlite<span class="sc">::</span><span class="fu">write_json</span>(df, <span class="st">'packages.json'</span>, <span class="at">pretty =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>jsonlite<span class="sc">::</span><span class="fu">write_json</span>(df, <span class="st">'packages.json'</span>, <span class="at">pretty =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The <code>url</code> value <strong>must be a public Git url</strong>. This is important; our build servers literally call <code>git clone ${url}</code> on each of the entries. The <code>package</code> field must match the name of the R package from the DESCRIPTION file under that url. If the R package does not live in the root of the Git repository, you also need to set the <code>subdir</code> field to the path of the R package root directory.</p>
 <p>When creating a new universe, start by adding no more than a few packages. You can easily add more packages later by updating your <code>packages.json</code> file.</p>
 <p>To publish your registry, create a Git repository called <code>&lt;yourname&gt;.r-universe.dev</code> on your GitHub account and push your <code>packages.json</code> file. See for example: <a href="https://github.com/maelle/maelle.r-universe.dev" class="uri">https://github.com/maelle/maelle.r-universe.dev</a>.</p>
@@ -455,7 +457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="custom-metadata" class="level3" data-number="11.3.4">
 <h3 data-number="11.3.4" class="anchored" data-anchor-id="custom-metadata"><span class="header-section-number">11.3.4</span> Custom metadata</h3>
 <p>It is possible to add custom metadata by using the <code>metadata</code> field in each package entries <code>packages.json</code> for example see the <a href="https://github.com/ropensci/roregistry/blob/gh-pages/packages.json">rOpenSci package registry</a>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"package"</span><span class="fu">:</span> <span class="st">"ijtiff"</span><span class="fu">,</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"url"</span><span class="fu">:</span> <span class="st">"https://github.com/ropensci/ijtiff"</span><span class="fu">,</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"branch"</span><span class="fu">:</span> <span class="st">"master"</span><span class="fu">,</span></span>
@@ -468,11 +470,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"url"</span><span class="fu">:</span> <span class="st">"https://github.com/ropensci/software-review/issues/164"</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="er">,</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="er">,</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The data becomes available in the <a href="../browse/api.html">API</a> under the <code>_metadata</code> key, for example <a href="https://ropensci.r-universe.dev/api/packages/ijtiff">ijtiff</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ijtiff <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_one_package</span>(<span class="st">"ropensci"</span>, <span class="st">"ijtiff"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ijtiff[[<span class="st">"_metadata"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ijtiff <span class="ot">&lt;-</span> universe<span class="sc">::</span><span class="fu">universe_one_package</span>(<span class="st">"ropensci"</span>, <span class="st">"ijtiff"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ijtiff[[<span class="st">"_metadata"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$review
 $review$id
@@ -493,6 +495,10 @@ $review$url
 </div>
 <p>For some cases we can also expose some metadata in the WebUI. If the metadata contains <code>review</code> data then is <a href="https://github.com/r-universe-org/frontend/blob/3ecaaa787d37776d84bd5f3cad5110d4adb2c793/views/pkginfo.pug#L127-L135">shown</a> on <a href="../browse/packages.html">package pages</a>: example of <a href="https://ropensci.r-universe.dev/ijtiff">ijtiff package page</a>.</p>
 <p>If useful we could conditionally display other sorts of meta information, <a href="https://github.com/r-universe-org/help/discussions">get in touch</a>.</p>
+<section id="updating-the-custom-metadata" class="level4" data-number="11.3.4.1">
+<h4 data-number="11.3.4.1" class="anchored" data-anchor-id="updating-the-custom-metadata"><span class="header-section-number">11.3.4.1</span> Updating the custom metadata</h4>
+<p>Please note that the metadata is picked up during the build. So if you updated the metadata, you need to trigger a build of the package by doing a commit (or wait for the package to get automatically rebuilt every 30 days)</p>
+</section>
 </section>
 </section>
 <section id="appinstall" class="level2" data-number="11.4">
@@ -514,24 +520,24 @@ $review$url
 <section id="document-install" class="level2" data-number="11.6">
 <h2 data-number="11.6" class="anchored" data-anchor-id="document-install"><span class="header-section-number">11.6</span> Adding badges and user instructions</h2>
 <p>Once your packages have appeared on the dashboard, try installing them in R using the instructions from the dashboard page, for example:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable this universe</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enable this universe</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">maelle =</span> <span class="st">'https://maelle.r-universe.dev'</span>,</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">CRAN =</span> <span class="st">'https://cloud.r-project.org'</span>))</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Install some packages</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tinkr'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tinkr'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Copy these instructions to your package <code>README.md</code> files to assist users.</p>
 <section id="badge-showing-the-number-of-the-deployed-version" class="level3" data-number="11.6.1">
 <h3 data-number="11.6.1" class="anchored" data-anchor-id="badge-showing-the-number-of-the-deployed-version"><span class="header-section-number">11.6.1</span> Badge showing the number of the deployed version</h3>
 <p>You can also add an R-universe badge to indicate the deployed version.</p>
 <p>The badge API is simply <code>/badges/&lt;package&gt;</code> which will yield an SVG image that can directly be embedded into your markdown files, showing the deployed version for the given package:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![r-universe version](https://r-lib.r-universe.dev/cpp11/badges/version)</span><span class="co">](https://r-lib.r-universe.dev/cpp11)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![r-universe version](https://r-lib.r-universe.dev/cpp11/badges/version)</span><span class="co">](https://r-lib.r-universe.dev/cpp11)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="badge-showing-the-status-of-the-latest-check" class="level3" data-number="11.6.2">
 <h3 data-number="11.6.2" class="anchored" data-anchor-id="badge-showing-the-status-of-the-latest-check"><span class="header-section-number">11.6.2</span> Badge showing the status of the latest check</h3>
 <p>Alternatively, or as a complement, you can add an R-universe badge to indicate the check status.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![r-universe status](https://r-lib.r-universe.dev/cpp11/badges/checks)</span><span class="co">](https://r-lib.r-universe.dev/cpp11)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![r-universe status](https://r-lib.r-universe.dev/cpp11/badges/checks)</span><span class="co">](https://r-lib.r-universe.dev/cpp11)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The current implementation includes status for building vignettes and check results for R-release and R-devel on Windows, macOS and Linux. It shows the “worst result” of those checks, similar to what GitHub Action check badges do: if there is 1 “error”, 1 “warning and 5 ok, the badge shows”error”.</p>
 <p>The check status ignores R-oldrel and platforms where we only build binaries but do not check (webassembly), to avoid false positives.</p>
 </section>
