@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#search-in-an-universe" id="toc-search-in-an-universe" class="nav-link" data-scroll-target="#search-in-an-universe"><span class="header-section-number">5.2.1</span> Search in an universe</a></li>
   </ul></li>
-  <li><a href="#api-global-search" id="toc-api-global-search" class="nav-link" data-scroll-target="#api-global-search"><span class="header-section-number">5.3</span> Search all universes</a></li>
+  <li><a href="#search-all-universes" id="toc-search-all-universes" class="nav-link" data-scroll-target="#search-all-universes"><span class="header-section-number">5.3</span> Search all universes</a></li>
   <li><a href="#database-dump-all-universes" id="toc-database-dump-all-universes" class="nav-link" data-scroll-target="#database-dump-all-universes"><span class="header-section-number">5.4</span> Database dump (all universes)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -652,6 +652,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <section id="api-pkg" class="level3" data-number="5.1.4">
 <h3 data-number="5.1.4" class="anchored" data-anchor-id="api-pkg"><span class="header-section-number">5.1.4</span> Information on a single package in an universe</h3>
 <p>URL: <code>https://&lt;username&gt;.r-universe.dev/api/packages/&lt;package&gt;</code></p>
+<p>Fields that start with an underscore <code>_</code>, like <code>_topics</code>, are not present in the <code>DESCRIPTION</code> file. Note that some fields that do <strong>not</strong> start with an underscore (the fields <code>Repository</code>, <code>RemoteUrl</code>, <code>RemoteRef</code> and <code>RemoteSha</code>) get automatically inserted in the DESCRIPTION file by our build system. These same fields would be added automatically if you install a package using for instance <code>install_github()</code>. The main purpose is that for instance the renv package will know where to find the source for the package, if it needs to pin an exact version.</p>
 <p>Example using <code>{httr2}</code>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>v8 <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="st">"https://jeroen.r-universe.dev/api/packages/V8"</span>) <span class="sc">|&gt;</span></span>
@@ -882,8 +883,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </div>
 </section>
 </section>
-<section id="api-global-search" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="api-global-search"><span class="header-section-number">5.3</span> Search all universes</h2>
+<section id="search-all-universes" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="search-all-universes"><span class="header-section-number">5.3</span> Search all universes</h2>
 <p>URL: <code>https://r-universe.dev/api/search</code> Parameters:</p>
 <ul>
 <li>q: the query string. You can use the <a href="../browse/search.html">advanced fields</a>.</li>
