@@ -32,7 +32,7 @@ The search bar includes a drop-down button for accessing advanced search fields:
 
 To use a logical OR, add a space between search terms. [Example](https://r-universe.dev/search?q=jeroen%20curl).
 
-To use a logical AND, use double quotes for each search ter. [Example](https://r-universe.dev/search?q=%22jeroen%22%20%22curl%22).
+To use a logical AND, use double quotes for each search term. [Example](https://r-universe.dev/search?q=%22jeroen%22%20%22curl%22).
 
 To use a logical NOT: prefix search terms with -. [Example](https://r-universe.dev/search?q=jeroen%20-curl%20-json).
 
