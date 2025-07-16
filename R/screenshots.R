@@ -41,11 +41,8 @@ screenshot_search <- function(query, screen_width) {
   p <- b$Page$loadEventFired(wait_ = FALSE) # Get the promise for the loadEventFired
   b$Page$navigate(sprintf("https://r-universe.dev/search/?q=%s", query))
   b$wait_for(p)
-  filename <- if (query == "jeroen curl") {
-    "jeroen-or-curl"
-  } else {
-    snakecase::to_lower_camel_case(query)
-  }
+  filename <- snakecase::to_lower_camel_case(query)
+
   screenshot(
     b,
     sprintf("search-%s.png", filename)
@@ -55,10 +52,7 @@ purrr::walk(
   c(
     '"missing-data"',
     "author:jeroen json",
-    "exports:toJSON",
-    "jeroen curl",
-    '"jeroen" "curl"',
-    "jeroen -curl -json"
+    "exports:toJSON"
   ),
   screenshot_search,
   screen_width = screen_width

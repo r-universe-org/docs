@@ -30,17 +30,11 @@ The search bar includes a drop-down button for accessing advanced search fields:
 
 ![Search results for 'exports:toJSON'](../img/search-exportsToJson.png){group="search" fig-alt="Search results for 'exports:tojson'"}
 
-To use a logical OR, add a space between search terms. 
+To use a logical OR, add a space between search terms. [Example](https://r-universe.dev/search?q=jeroen%20curl).
 
-![Search results for 'jeroen curl'](../img/search-jeroen-or-curl.png){group="search" fig-alt="Search results for 'jeroen curl'"}
+To use a logical AND, use double quotes for each search ter. [Example](https://r-universe.dev/search?q=%22jeroen%22%20%22curl%22).
 
-To use a logical AND, use double quotes for each search term: 
-
-![Search results for '"jeroen" "curl"'](../img/search-jeroenCurl.png){group="search" fig-alt="Search results for '"jeroen" "curl"'"}
-
-To use a logical NOT: prefix search terms with -: 
-
-![Search results for 'jeroen -curl -json'](../img/search-jeroenCurlJson.png){group="search" fig-alt="Search results for 'jeroen -curl -json'"}
+To use a logical NOT: prefix search terms with -. [Example](https://r-universe.dev/search?q=jeroen%20-curl%20-json).
 
 
 ## How is the package-rank score calculated? {#rank}
