@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.15">
+<meta name="generator" content="quarto-1.8.17">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,10 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc68601a05ab6ae055d8fbc512858b1e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c2d8198b7f72dec16de60f0cb3fab69f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e7285f3ebe25549b445c72016f53f0e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-2efabba006cb980f248209a542757797.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#search-in-an-universe" id="toc-search-in-an-universe" class="nav-link" data-scroll-target="#search-in-an-universe"><span class="header-section-number">5.2.1</span> Search in an universe</a></li>
   </ul></li>
-  <li><a href="#search-all-universes" id="toc-search-all-universes" class="nav-link" data-scroll-target="#search-all-universes"><span class="header-section-number">5.3</span> Search all universes</a></li>
+  <li><a href="#api-global-search" id="toc-api-global-search" class="nav-link" data-scroll-target="#api-global-search"><span class="header-section-number">5.3</span> Search all universes</a></li>
   <li><a href="#database-dump-all-universes" id="toc-database-dump-all-universes" class="nav-link" data-scroll-target="#database-dump-all-universes"><span class="header-section-number">5.4</span> Database dump (all universes)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -375,8 +375,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(universes, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
- $ universes  :List of 10233
- $ maintainers:List of 10017</code></pre>
+ $ universes  :List of 10265
+ $ maintainers:List of 10033</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -384,19 +384,19 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 [1] "09dohkim"
 
 [[2]]
-[1] "16eagle"
+[1] "16cile"
 
 [[3]]
-[1] "1802515849"
+[1] "16eagle"
 
 [[4]]
-[1] "1vbutkus"
+[1] "1802515849"
 
 [[5]]
-[1] "2005m"
+[1] "1vbutkus"
 
 [[6]]
-[1] "20k-p"</code></pre>
+[1] "2005m"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"maintainers"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -428,8 +428,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>universe<span class="sc">::</span><span class="fu">everyone</span>(<span class="at">type =</span> <span class="st">"universes"</span>) <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "09dohkim"   "16eagle"    "1802515849" "1vbutkus"   "2005m"     
-[6] "20k-p"     </code></pre>
+<pre><code>[1] "09dohkim"   "16cile"     "16eagle"    "1802515849" "1vbutkus"  
+[6] "2005m"     </code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>universe<span class="sc">::</span><span class="fu">everyone</span>(<span class="at">type =</span> <span class="st">"maintainers"</span>) <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -496,73 +496,77 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 66
- $ Package         : chr "brotli"
- $ Type            : chr "Package"
- $ Title           : chr "A Compression Format Optimized for the Web"
- $ Version         : chr "1.3.2"
- $ Authors@R       : chr "c(\nperson(\"Jeroen\", \"Ooms\", ,\"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \""| __truncated__
- $ Description     : chr "A lossless compressed data format that uses a combination\nof the LZ77 algorithm and Huffman coding\n&lt;https://w"| __truncated__
- $ License         : chr "MIT + file LICENSE"
- $ URL             : chr "https://jeroen.r-universe.dev/brotli"
- $ BugReports      : chr "https://github.com/jeroen/brotli/issues"
- $ VignetteBuilder : chr "knitr, R.rsp"
- $ RoxygenNote     : chr "6.0.1"
- $ Language        : chr "en-US"
- $ Repository      : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl       : chr "https://github.com/jeroen/brotli"
- $ RemoteRef       : chr "HEAD"
- $ RemoteSha       : chr "ff9007292b32da4a2dd8f50e0ca2397d6fdb248f"
- $ NeedsCompilation: chr "yes"
- $ Packaged        :List of 2
- $ Author          : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nGoogle, Inc [aut, cph] (Brotli C++ library)"
- $ Maintainer      : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum          : chr "e7199dbafb0ce9947eb10c12639b7470"
- $ _user           : chr "jeroen"
- $ _type           : chr "src"
- $ _file           : chr "brotli_1.3.2.tar.gz"
- $ _fileid         : chr "b6074cd670226b63fd3627abdcbe9da08cec1a0b41ea7db3473d1115e0e2cb31"
- $ _filesize       : int 890434
- $ _sha256         : chr "b6074cd670226b63fd3627abdcbe9da08cec1a0b41ea7db3473d1115e0e2cb31"
- $ _created        : chr "2025-07-02T20:26:46.000Z"
- $ _published      : chr "2025-07-02T20:31:37.021Z"
- $ _distro         : chr "noble"
- $ _jobs           :List of 14
- $ _buildurl       : chr "https://github.com/r-universe/jeroen/actions/runs/16035043732"
- $ _status         : chr "success"
- $ _host           : chr "GitHub-Actions"
- $ _upstream       : chr "https://github.com/jeroen/brotli"
- $ _commit         :List of 5
- $ _maintainer     :List of 7
- $ _registered     : logi TRUE
- $ _dependencies   :List of 6
- $ _owner          : chr "jeroen"
- $ _selfowned      : logi TRUE
- $ _usedby         : int 5
- $ _updates        :List of 5
- $ _tags           : list()
- $ _stars          : int 2
- $ _contributors   :List of 1
- $ _userbio        :List of 4
- $ _downloads      :List of 2
- $ _devurl         : chr "https://github.com/jeroen/brotli"
- $ _searchresults  : int 17
- $ _rbuild         : chr "4.5.1"
- $ _assets         :List of 11
- $ _homeurl        : chr "https://github.com/jeroen/brotli"
- $ _realowner      : chr "jeroen"
- $ _cranurl        : logi TRUE
- $ _releases       :List of 12
- $ _exports        :List of 2
- $ _help           :List of 1
- $ _readme         : chr "https://github.com/jeroen/brotli/raw/HEAD/README.md"
- $ _rundeps        : list()
- $ _vignettes      :List of 2
- $ _score          : num 6.57
- $ _indexed        : logi TRUE
- $ _nocasepkg      : chr "brotli"
- $ _universes      :List of 1
- $ _binaries       :List of 13</code></pre>
+<pre><code>List of 70
+ $ Package           : chr "webp"
+ $ Type              : chr "Package"
+ $ Title             : chr "A New Format for Lossless and Lossy Image Compression"
+ $ Version           : chr "1.3.0"
+ $ Authors@R         : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID ="| __truncated__
+ $ Description       : chr "Lossless webp images are 26% smaller in size compared to\nPNG. Lossy webp images are 25-34% smaller in size com"| __truncated__
+ $ License           : chr "MIT + file LICENSE"
+ $ URL               : chr "https://jeroen.r-universe.dev/webp"
+ $ BugReports        : chr "https://github.com/jeroen/webp/issues"
+ $ SystemRequirements: chr "libwebp"
+ $ Encoding          : chr "UTF-8"
+ $ RoxygenNote       : chr "7.1.1"
+ $ Language          : chr "en-GB"
+ $ Config/pak/sysreqs: chr "libwebp-dev"
+ $ Repository        : chr "https://jeroen.r-universe.dev"
+ $ RemoteUrl         : chr "https://github.com/jeroen/webp"
+ $ RemoteRef         : chr "HEAD"
+ $ RemoteSha         : chr "86bca38efc1c7eba9483fe54067340f1bd39df2f"
+ $ NeedsCompilation  : chr "yes"
+ $ Packaged          :List of 2
+ $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;)"
+ $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ MD5sum            : chr "8f93e49e7be2e39b47560f7e9944b4fc"
+ $ _user             : chr "jeroen"
+ $ _type             : chr "src"
+ $ _file             : chr "webp_1.3.0.tar.gz"
+ $ _fileid           : chr "d0cb78b2c575de015f3406a2ee47a85f3cfbd2ceee3f09ff634c5f729f6f2ef2"
+ $ _filesize         : int 92723
+ $ _sha256           : chr "d0cb78b2c575de015f3406a2ee47a85f3cfbd2ceee3f09ff634c5f729f6f2ef2"
+ $ _created          : chr "2025-07-14T08:34:23.000Z"
+ $ _published        : chr "2025-07-14T08:37:30.205Z"
+ $ _distro           : chr "noble"
+ $ _jobs             :List of 14
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/16261996288"
+ $ _status           : chr "success"
+ $ _host             : chr "GitHub-Actions"
+ $ _upstream         : chr "https://github.com/jeroen/webp"
+ $ _commit           :List of 5
+ $ _maintainer       :List of 7
+ $ _registered       : logi TRUE
+ $ _dependencies     :List of 2
+ $ _owner            : chr "jeroen"
+ $ _selfowned        : logi TRUE
+ $ _usedby           : int 4
+ $ _updates          :List of 5
+ $ _tags             : list()
+ $ _stars            : int 15
+ $ _contributors     :List of 3
+ $ _userbio          :List of 4
+ $ _downloads        :List of 2
+ $ _devurl           : chr "https://github.com/jeroen/webp"
+ $ _searchresults    : int 13
+ $ _topics           :List of 1
+ $ _rbuild           : chr "4.5.1"
+ $ _assets           :List of 11
+ $ _homeurl          : chr "https://github.com/jeroen/webp"
+ $ _realowner        : chr "jeroen"
+ $ _cranurl          : logi TRUE
+ $ _releases         :List of 8
+ $ _exports          :List of 2
+ $ _help             :List of 1
+ $ _pkglogo          : chr "https://github.com/jeroen/webp/raw/HEAD/man/figures/logo.png"
+ $ _readme           : chr "https://github.com/jeroen/webp/raw/HEAD/README.md"
+ $ _rundeps          : list()
+ $ _sysdeps          :List of 1
+ $ _score            : num 6.96
+ $ _indexed          : logi TRUE
+ $ _nocasepkg        : chr "webp"
+ $ _universes        :List of 1
+ $ _binaries         :List of 13</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -571,73 +575,77 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 66
- $ Package         : chr "brotli"
- $ Type            : chr "Package"
- $ Title           : chr "A Compression Format Optimized for the Web"
- $ Version         : chr "1.3.2"
- $ Authors@R       : chr "c(\nperson(\"Jeroen\", \"Ooms\", ,\"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\"),\ncomment = c(ORCID = \""| __truncated__
- $ Description     : chr "A lossless compressed data format that uses a combination\nof the LZ77 algorithm and Huffman coding\n&lt;https://w"| __truncated__
- $ License         : chr "MIT + file LICENSE"
- $ URL             : chr "https://jeroen.r-universe.dev/brotli"
- $ BugReports      : chr "https://github.com/jeroen/brotli/issues"
- $ VignetteBuilder : chr "knitr, R.rsp"
- $ RoxygenNote     : chr "6.0.1"
- $ Language        : chr "en-US"
- $ Repository      : chr "https://jeroen.r-universe.dev"
- $ RemoteUrl       : chr "https://github.com/jeroen/brotli"
- $ RemoteRef       : chr "HEAD"
- $ RemoteSha       : chr "ff9007292b32da4a2dd8f50e0ca2397d6fdb248f"
- $ NeedsCompilation: chr "yes"
- $ Packaged        :List of 2
- $ Author          : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nGoogle, Inc [aut, cph] (Brotli C++ library)"
- $ Maintainer      : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum          : chr "e7199dbafb0ce9947eb10c12639b7470"
- $ _user           : chr "jeroen"
- $ _type           : chr "src"
- $ _file           : chr "brotli_1.3.2.tar.gz"
- $ _fileid         : chr "b6074cd670226b63fd3627abdcbe9da08cec1a0b41ea7db3473d1115e0e2cb31"
- $ _filesize       : int 890434
- $ _sha256         : chr "b6074cd670226b63fd3627abdcbe9da08cec1a0b41ea7db3473d1115e0e2cb31"
- $ _created        : chr "2025-07-02T20:26:46.000Z"
- $ _published      : chr "2025-07-02T20:31:37.021Z"
- $ _distro         : chr "noble"
- $ _jobs           :List of 14
- $ _buildurl       : chr "https://github.com/r-universe/jeroen/actions/runs/16035043732"
- $ _status         : chr "success"
- $ _host           : chr "GitHub-Actions"
- $ _upstream       : chr "https://github.com/jeroen/brotli"
- $ _commit         :List of 5
- $ _maintainer     :List of 7
- $ _registered     : logi TRUE
- $ _dependencies   :List of 6
- $ _owner          : chr "jeroen"
- $ _selfowned      : logi TRUE
- $ _usedby         : int 5
- $ _updates        :List of 5
- $ _tags           : list()
- $ _stars          : int 2
- $ _contributors   :List of 1
- $ _userbio        :List of 4
- $ _downloads      :List of 2
- $ _devurl         : chr "https://github.com/jeroen/brotli"
- $ _searchresults  : int 17
- $ _rbuild         : chr "4.5.1"
- $ _assets         :List of 11
- $ _homeurl        : chr "https://github.com/jeroen/brotli"
- $ _realowner      : chr "jeroen"
- $ _cranurl        : logi TRUE
- $ _releases       :List of 12
- $ _exports        :List of 2
- $ _help           :List of 1
- $ _readme         : chr "https://github.com/jeroen/brotli/raw/HEAD/README.md"
- $ _rundeps        : list()
- $ _vignettes      :List of 2
- $ _score          : num 6.57
- $ _indexed        : logi TRUE
- $ _nocasepkg      : chr "brotli"
- $ _universes      :List of 1
- $ _binaries       :List of 13</code></pre>
+<pre><code>List of 70
+ $ Package           : chr "webp"
+ $ Type              : chr "Package"
+ $ Title             : chr "A New Format for Lossless and Lossy Image Compression"
+ $ Version           : chr "1.3.0"
+ $ Authors@R         : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID ="| __truncated__
+ $ Description       : chr "Lossless webp images are 26% smaller in size compared to\nPNG. Lossy webp images are 25-34% smaller in size com"| __truncated__
+ $ License           : chr "MIT + file LICENSE"
+ $ URL               : chr "https://jeroen.r-universe.dev/webp"
+ $ BugReports        : chr "https://github.com/jeroen/webp/issues"
+ $ SystemRequirements: chr "libwebp"
+ $ Encoding          : chr "UTF-8"
+ $ RoxygenNote       : chr "7.1.1"
+ $ Language          : chr "en-GB"
+ $ Config/pak/sysreqs: chr "libwebp-dev"
+ $ Repository        : chr "https://jeroen.r-universe.dev"
+ $ RemoteUrl         : chr "https://github.com/jeroen/webp"
+ $ RemoteRef         : chr "HEAD"
+ $ RemoteSha         : chr "86bca38efc1c7eba9483fe54067340f1bd39df2f"
+ $ NeedsCompilation  : chr "yes"
+ $ Packaged          :List of 2
+ $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;)"
+ $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ MD5sum            : chr "8f93e49e7be2e39b47560f7e9944b4fc"
+ $ _user             : chr "jeroen"
+ $ _type             : chr "src"
+ $ _file             : chr "webp_1.3.0.tar.gz"
+ $ _fileid           : chr "d0cb78b2c575de015f3406a2ee47a85f3cfbd2ceee3f09ff634c5f729f6f2ef2"
+ $ _filesize         : int 92723
+ $ _sha256           : chr "d0cb78b2c575de015f3406a2ee47a85f3cfbd2ceee3f09ff634c5f729f6f2ef2"
+ $ _created          : chr "2025-07-14T08:34:23.000Z"
+ $ _published        : chr "2025-07-14T08:37:30.205Z"
+ $ _distro           : chr "noble"
+ $ _jobs             :List of 14
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/16261996288"
+ $ _status           : chr "success"
+ $ _host             : chr "GitHub-Actions"
+ $ _upstream         : chr "https://github.com/jeroen/webp"
+ $ _commit           :List of 5
+ $ _maintainer       :List of 7
+ $ _registered       : logi TRUE
+ $ _dependencies     :List of 2
+ $ _owner            : chr "jeroen"
+ $ _selfowned        : logi TRUE
+ $ _usedby           : int 4
+ $ _updates          :List of 5
+ $ _tags             : list()
+ $ _stars            : int 15
+ $ _contributors     :List of 3
+ $ _userbio          :List of 4
+ $ _downloads        :List of 2
+ $ _devurl           : chr "https://github.com/jeroen/webp"
+ $ _searchresults    : int 13
+ $ _topics           :List of 1
+ $ _rbuild           : chr "4.5.1"
+ $ _assets           :List of 11
+ $ _homeurl          : chr "https://github.com/jeroen/webp"
+ $ _realowner        : chr "jeroen"
+ $ _cranurl          : logi TRUE
+ $ _releases         :List of 8
+ $ _exports          :List of 2
+ $ _help             :List of 1
+ $ _pkglogo          : chr "https://github.com/jeroen/webp/raw/HEAD/man/figures/logo.png"
+ $ _readme           : chr "https://github.com/jeroen/webp/raw/HEAD/README.md"
+ $ _rundeps          : list()
+ $ _sysdeps          :List of 1
+ $ _score            : num 6.96
+ $ _indexed          : logi TRUE
+ $ _nocasepkg        : chr "webp"
+ $ _universes        :List of 1
+ $ _binaries         :List of 13</code></pre>
 </div>
 </div>
 </section>
@@ -874,8 +882,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </div>
 </section>
 </section>
-<section id="search-all-universes" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="search-all-universes"><span class="header-section-number">5.3</span> Search all universes</h2>
+<section id="api-global-search" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="api-global-search"><span class="header-section-number">5.3</span> Search all universes</h2>
 <p>URL: <code>https://r-universe.dev/api/search</code> Parameters:</p>
 <ul>
 <li>q: the query string. You can use the <a href="../browse/search.html">advanced fields</a>.</li>
@@ -904,14 +912,14 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "685f940e84059a8313d25e60"
+ $ _id           : chr "686f6338b39e817cdb32ff73"
  $ Package       : chr "weatherOz"
  $ Title         : chr "An API Client for Australian Weather and Climate Data Resources"
  $ Description   : chr "Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints pro"| __truncated__
  $ _user         : chr "ropensci"
  $ _usedby       : int 0
  $ _searchresults: int 38
- $ _score        : num 8.32
+ $ _score        : num 8.29
  $ _uuid         : int 1200269
  $ maintainer    :List of 6
   ..$ name   : chr "Rodrigo Pires"
@@ -943,7 +951,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "rainfall"
   ..$ : chr "weather-api"
  $ match         : num 170
- $ rank          : num 1417</code></pre>
+ $ rank          : num 1413</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -961,14 +969,14 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "685f940e84059a8313d25e60"
+ $ _id           : chr "686f6338b39e817cdb32ff73"
  $ Package       : chr "weatherOz"
  $ Title         : chr "An API Client for Australian Weather and Climate Data Resources"
  $ Description   : chr "Provides automated downloading, parsing and formatting of\nweather data for Australia through API endpoints pro"| __truncated__
  $ _user         : chr "ropensci"
  $ _usedby       : int 0
  $ _searchresults: int 38
- $ _score        : num 8.32
+ $ _score        : num 8.29
  $ _uuid         : int 1200269
  $ maintainer    :List of 6
   ..$ name   : chr "Rodrigo Pires"
@@ -1000,7 +1008,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "rainfall"
   ..$ : chr "weather-api"
  $ match         : num 170
- $ rank          : num 1417</code></pre>
+ $ rank          : num 1413</code></pre>
 </div>
 </div>
 <p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>

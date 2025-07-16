@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.15">
+<meta name="generator" content="quarto-1.8.17">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-cc68601a05ab6ae055d8fbc512858b1e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c2d8198b7f72dec16de60f0cb3fab69f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e7285f3ebe25549b445c72016f53f0e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-2efabba006cb980f248209a542757797.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -314,14 +314,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>You can search for packages via <a href="https://r-universe.dev/search/" class="uri">https://r-universe.dev/search/</a> using keywords or author names.<br>
-To search for an exact phrase like “weather data,” use <strong>double quotes</strong> instead of single quotes.<br>
-The search bar includes a drop-down button for accessing advanced search fields.</p>
+You can use the <a href="api.html#api-global-search">API</a> to do the same search.</p>
+<p>To search for an exact phrase like “weather data”, that can include spaces or other characters, use <strong>double quotes</strong> instead of single quotes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../img/search.png" class="lightbox" data-gallery="search" title="Search landing page"><img src="../img/search.png" class="img-fluid figure-img" alt="Search landing page, with a search box"></a></p>
 <figcaption>Search landing page</figcaption>
 </figure>
 </div>
+<p>The search bar includes a drop-down button for accessing advanced search fields:</p>
+<ul>
+<li>Package</li>
+<li>Owner</li>
+<li>Author</li>
+<li>Contributor</li>
+<li>Topic</li>
+<li>Needs</li>
+<li>Exports</li>
+<li>Data</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../img/search-advanced.png" class="lightbox" data-gallery="search" title="Search landing page, advanced fields"><img src="../img/search-advanced.png" class="img-fluid figure-img" alt="Search landing page, displaying advanced search fields like author and keywords"></a></p>
@@ -344,6 +355,22 @@ The search bar includes a drop-down button for accessing advanced search fields.
 <figure class="figure">
 <p><a href="../img/search-exportsToJson.png" class="lightbox" data-gallery="search" title="Search results for ‘exports:toJSON’"><img src="../img/search-exportsToJson.png" class="img-fluid figure-img" alt="Search results for 'exports:tojson'"></a></p>
 <figcaption>Search results for ‘exports:toJSON’</figcaption>
+</figure>
+</div>
+<p>To use a logical OR, add a space between search terms.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/search-jeroen-or-curl.png" class="lightbox" data-gallery="search" title="Search results for ‘jeroen curl’"><img src="../img/search-jeroen-or-curl.png" class="img-fluid figure-img" alt="Search results for 'jeroen curl'"></a></p>
+<figcaption>Search results for ‘jeroen curl’</figcaption>
+</figure>
+</div>
+<p>To use a logical AND, use double quotes for each search term:</p>
+<p><img src="../img/search-jeroenCurl.png" class="img-fluid" alt="Search results for ‘“jeroen” “curl”’">{group=“search” fig-alt=“Search results for ‘“jeroen” “curl”’”}</p>
+<p>To use a logical NOT: prefix search terms with -:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../img/search-jeroenCurlJson.png" class="lightbox" data-gallery="search" title="Search results for ‘jeroen -curl -json’"><img src="../img/search-jeroenCurlJson.png" class="img-fluid figure-img" alt="Search results for 'jeroen -curl -json'"></a></p>
+<figcaption>Search results for ‘jeroen -curl -json’</figcaption>
 </figure>
 </div>
 <section id="rank" class="level2" data-number="2.1">
