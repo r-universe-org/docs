@@ -3,10 +3,24 @@ title: "Search for packages"
 ---
 
 You can search for packages via <https://r-universe.dev/search/> using keywords or author names.  
-To search for an exact phrase like "weather data," use **double quotes** instead of single quotes.  
-The search bar includes a drop-down button for accessing advanced search fields. 
+You can use the [API](#api-global-search) to do the same search.
+
+To search for an exact phrase like "weather data", that can include spaces or other characters, use **double quotes** instead of single quotes.  
+
 
 ![Search landing page](../img/search.png){group="search" fig-alt="Search landing page, with a search box"}
+
+The search bar includes a drop-down button for accessing advanced search fields:
+
+- Package
+- Owner
+- Author
+- Contributor
+- Topic
+- Needs
+- Exports
+- Data
+
 
 ![Search landing page, advanced fields](../img/search-advanced.png){group="search" fig-alt="Search landing page, displaying advanced search fields like author and keywords"}
 
@@ -15,6 +29,13 @@ The search bar includes a drop-down button for accessing advanced search fields.
 ![Search results for 'author:jeroen json'](../img/search-authorJeroenJson.png){group="search" fig-alt="Search results for 'author:jeroen json'"}
 
 ![Search results for 'exports:toJSON'](../img/search-exportsToJson.png){group="search" fig-alt="Search results for 'exports:tojson'"}
+
+To use a logical OR, add a space between search terms. [Example](https://r-universe.dev/search?q=jeroen%20curl).
+
+To use a logical AND, use double quotes for each search term. [Example](https://r-universe.dev/search?q=%22jeroen%22%20%22curl%22).
+
+To use a logical NOT: prefix search terms with -. [Example](https://r-universe.dev/search?q=jeroen%20-curl%20-json).
+
 
 ## How is the package-rank score calculated? {#rank}
 

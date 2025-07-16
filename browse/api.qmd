@@ -163,7 +163,7 @@ deps$total
 ```
 
 
-## Search all universes
+## Search all universes {#api-global-search}
 
 URL: `https://r-universe.dev/api/search`
 Parameters:
