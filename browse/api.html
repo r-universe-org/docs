@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#search-in-an-universe" id="toc-search-in-an-universe" class="nav-link" data-scroll-target="#search-in-an-universe"><span class="header-section-number">5.2.1</span> Search in an universe</a></li>
   </ul></li>
-  <li><a href="#search-all-universes" id="toc-search-all-universes" class="nav-link" data-scroll-target="#search-all-universes"><span class="header-section-number">5.3</span> Search all universes</a></li>
+  <li><a href="#api-global-search" id="toc-api-global-search" class="nav-link" data-scroll-target="#api-global-search"><span class="header-section-number">5.3</span> Search all universes</a></li>
   <li><a href="#database-dump-all-universes" id="toc-database-dump-all-universes" class="nav-link" data-scroll-target="#database-dump-all-universes"><span class="header-section-number">5.4</span> Database dump (all universes)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -376,7 +376,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
  $ universes  :List of 10265
- $ maintainers:List of 10033</code></pre>
+ $ maintainers:List of 10031</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -883,8 +883,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 </div>
 </section>
 </section>
-<section id="search-all-universes" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="search-all-universes"><span class="header-section-number">5.3</span> Search all universes</h2>
+<section id="api-global-search" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="api-global-search"><span class="header-section-number">5.3</span> Search all universes</h2>
 <p>URL: <code>https://r-universe.dev/api/search</code> Parameters:</p>
 <ul>
 <li>q: the query string. You can use the <a href="../browse/search.html">advanced fields</a>.</li>

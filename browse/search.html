@@ -314,14 +314,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>You can search for packages via <a href="https://r-universe.dev/search/" class="uri">https://r-universe.dev/search/</a> using keywords or author names.<br>
-To search for an exact phrase like “weather data,” use <strong>double quotes</strong> instead of single quotes.<br>
-The search bar includes a drop-down button for accessing advanced search fields.</p>
+You can use the <a href="api.html#api-global-search">API</a> to do the same search.</p>
+<p>To search for an exact phrase like “weather data”, that can include spaces or other characters, use <strong>double quotes</strong> instead of single quotes.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../img/search.png" class="lightbox" data-gallery="search" title="Search landing page"><img src="../img/search.png" class="img-fluid figure-img" alt="Search landing page, with a search box"></a></p>
 <figcaption>Search landing page</figcaption>
 </figure>
 </div>
+<p>The search bar includes a drop-down button for accessing advanced search fields:</p>
+<ul>
+<li>Package</li>
+<li>Owner</li>
+<li>Author</li>
+<li>Contributor</li>
+<li>Topic</li>
+<li>Needs</li>
+<li>Exports</li>
+<li>Data</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="../img/search-advanced.png" class="lightbox" data-gallery="search" title="Search landing page, advanced fields"><img src="../img/search-advanced.png" class="img-fluid figure-img" alt="Search landing page, displaying advanced search fields like author and keywords"></a></p>
@@ -346,6 +357,9 @@ The search bar includes a drop-down button for accessing advanced search fields.
 <figcaption>Search results for ‘exports:toJSON’</figcaption>
 </figure>
 </div>
+<p>To use a logical OR, add a space between search terms. <a href="https://r-universe.dev/search?q=jeroen%20curl">Example</a>.</p>
+<p>To use a logical AND, use double quotes for each search ter. <a href="https://r-universe.dev/search?q=%22jeroen%22%20%22curl%22">Example</a>.</p>
+<p>To use a logical NOT: prefix search terms with -. <a href="https://r-universe.dev/search?q=jeroen%20-curl%20-json">Example</a>.</p>
 <section id="rank" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="rank"><span class="header-section-number">2.1</span> How is the package-rank score calculated?</h2>
 <p>The rank of a package in search results is based on its <a href="https://github.com/r-universe-org/cranlike-server/blob/master/src/db.js#L63-L93">match</a> with the search queries, and on its popularity/quality.</p>
