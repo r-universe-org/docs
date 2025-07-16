@@ -59,7 +59,8 @@ Example using `{universe}`:
 ```{r}
 packages <- universe::universe_ls("jeroen")
 str(packages)
-```
+``
+`
    
 ### Information of all packages in an universe  
 
@@ -103,7 +104,8 @@ v8 <- httr2::request("https://jeroen.r-universe.dev/api/packages/V8") |>
   httr2::resp_body_json()
 
 str(v8, max.level = 1)
-```
+`
+``
    
 Example using `{universe}`:
 
@@ -158,7 +160,7 @@ deps$total
 ```
 
 
-## Search all universes
+## Search all universes {#api-global-search}
 
 URL: `https://r-universe.dev/api/search`
 Parameters:
