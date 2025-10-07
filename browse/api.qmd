@@ -95,7 +95,7 @@ str(packages[[1]], max.level = 1)
 URL: `https://<username>.r-universe.dev/api/packages/<package>`
 
 Fields that start with an underscore `_`, like `_topics`, are not present in the `DESCRIPTION` file.
-Note that some fields that do **not** start with an underscore (the fields `Date/Publication, `Repository`, `RemoteUrl`, `RemoteRef` and `RemoteSha`) get automatically inserted in the DESCRIPTION file by our build system. 
+Note that some fields that do **not** start with an underscore (the fields `Date/Publication`, `Repository`, `RemoteUrl`, `RemoteRef` and `RemoteSha`) get automatically inserted in the DESCRIPTION file by our build system. 
 These same fields would be added automatically if you install a package using for instance `install_github()`. 
 The main purpose is that for instance the renv package will know where to find the source for the package, if it needs to pin an exact version.
 
