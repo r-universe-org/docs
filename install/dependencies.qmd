@@ -2,6 +2,32 @@
 title: "Using dependencies from R-universe"
 ---
 
+## CRAN-like repository URLs
+
+R-universe provides CRAN-like repository URLs for each universe.
+For example, the following functions work:
+
+```r
+# All the packages in the tidyverse universe
+available.packages(repos = "https://tidyverse.r-universe.dev")
+
+# Installs dplyr and its dependencies from the tidyverse universe,
+# and its dependencies does not exist in the tidyverse universe are installed from CRAN
+install.packages("dplyr", repos = c("https://tidyverse.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+If you want to install only specific packages from the universe, and install the other packages from CRAN,
+you can specify the repository for only the package you want to install from the universe as follows:
+
+```r
+# Package specific repository for dplyr
+available.packages(repos = "https://tidyverse.r-universe.dev/dplyr")
+
+# Installs dplyr from the tidyverse universe,
+# and its dependencies are installed from CRAN
+install.packages("dplyr", repos = c("https://tidyverse.r-universe.dev/dplyr", "https://cloud.r-project.org"))
+```
+
 ## Can a CRAN package take on a dependency from R-universe?
 
 Yes! It has to be an optional dependency (`Suggests`) and you need to
