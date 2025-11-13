@@ -4,7 +4,9 @@ title: "Reproducibility"
 
 ## Does R-universe archive old versions of packages? How does it work with renv?
 
-R-universe does not archive old versions of packages, but it **tracks the upstream git URL and commit ID** in the R package description. This allows tools like `renv` to restore packages in environments that were installed from R-universe. For more details, see this tech note: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).  
+R-universe does not archive old versions of packages, but it **tracks the upstream git URL and commit ID** in the R package description.
+This allows tools like `renv` to restore packages in environments that were installed from R-universe.
+For more details, see this tech note: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).  
 
 You can also **archive fixed versions of a universe** for production or reproducibility, using what we call [repository snapshots](#snapshots).  
 
@@ -59,8 +61,8 @@ install.packages(c("V8", "mongolite"), repos = repos)
 
 R-universe also exposes a partial [S3-compatible API](https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html) that you can use to list, download, or mirror package files. 
 
-In R, you can use the [{paws}](https://paws-r-sdk.github.io/) package to access the S3 API. Note that it requires setting the
-`s3_virtual_address` configuration option to `TRUE` and anonymous credentials:
+In R, you can use the [{paws}](https://paws-r-sdk.github.io/) package to access the S3 API.
+Note that this requires using the _virtual addressing_ scheme, where `r-universe.dev` is the endpoint and the universe name is the bucket.
 
 ```r
 library(paws)
@@ -70,20 +72,23 @@ client <- paws::s3(
     s3_virtual_address = TRUE
   ),
   credentials = list(anonymous = TRUE),
-  region = "any_value_here_works"
+  # A region is required for API compatibility, but is not used
+  region = "us-east-1" 
 )
 all_files <- client$list_objects_v2(Bucket = "jeroen")
 sapply(all_files$Contents, \(x) x$Key) |> 
   head()
 client$download_file(
-  Bucket = "jeroen",
-  Key = "src/contrib/RAppArmor_3.2.5.tar.gz",
+  # Bucket is the universe name
+  Bucket = "jeroen",  
+  # Key is the path to the file
+  Key = "src/contrib/RAppArmor_3.2.5.tar.gz", 
   Filename = "RAppArmor_3.2.5.tar.gz"
 )
 
 ```
 
-Other tools for accessing S3-compatible APIs can also be used, such as {s3fs} or {aws.s3} in R. In the command line, the AWS CLI or [Rclone](https://rclone.org/) (see below) can be used.
+Outside of R, tools such as the AWS CLI or [Rclone](https://rclone.org/) (see below) can be used to access the S3 API.
 
 
 ### Example: Mirroring a universe with Rclone {#mirror}
@@ -155,7 +160,7 @@ fs::dir_tree("local_folder_name/src", recurse = TRUE)
 
 ### Remote mirroring
 
-You may wish to mirror a universe remotely on, say, an [Amazon S3](https://aws.amazon.com/s3) bucket or a [CloudFlare R2](https://www.cloudflare.com/developer-platform/products/r2/)^[Cloudflare has its own Rclone documentation at <https://developers.cloudflare.com/r2/examples/rclone/>.] bucket.
+You may wish to mirror a universe remotely on, say, an [Amazon S3](https://aws.amazon.com/s3) bucket or a [CloudFlare R2](https://www.cloudflare.com/developer-platform/products/r2/)^[Cloudflare has [its own Rclone documentation](https://developers.cloudflare.com/r2/examples/rclone/).] bucket.
 For [CloudFlare R2](https://www.cloudflare.com/developer-platform/products/r2/), you will need to give [Rclone](https://rclone.org/) the credentials of the bucket.
 
 ```bash
