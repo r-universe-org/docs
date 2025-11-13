@@ -55,14 +55,44 @@ repos <- paste0(prefix, normalizePath(snapshot, "/"))
 install.packages(c("V8", "mongolite"), repos = repos)
 ```
 
-## Mirroring a universe {#mirror}
+### Using the S3 API {#s3}
 
-As an alternative to snapshots, you can use [Rclone](https://rclone.org/) to mirror a universe.
+R-universe also exposes a partial [S3-compatible API](https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html) that you can use to list, download, or mirror package files. 
 
-### Configuration
+In R, you can use the [{paws}](https://paws-r-sdk.github.io/) package to access the S3 API. Note that it requires setting the
+`s3_virtual_address` configuration option to `TRUE` and anonymous credentials:
 
-[Rclone](https://rclone.org/) can bypass the R-universe zip archive API and incrementally download the individual files from a universe.
-After [installing Rclone](https://rclone.org/install/), use a terminal command to configure [Rclone](https://rclone.org/) to use the R-universe [S3](https://rclone.org/s3/) API:
+```r
+library(paws)
+client <- paws::s3(
+  config = list(
+    endpoint = "https://r-universe.dev",
+    s3_virtual_address = TRUE
+  ),
+  credentials = list(anonymous = TRUE),
+  region = "any_value_here_works"
+)
+all_files <- client$list_objects_v2(Bucket = "jeroen")
+sapply(all_files$Contents, \(x) x$Key) |> 
+  head()
+client$download_file(
+  Bucket = "jeroen",
+  Key = "src/contrib/RAppArmor_3.2.5.tar.gz",
+  Filename = "RAppArmor_3.2.5.tar.gz"
+)
+
+```
+
+Other tools for accessing S3-compatible APIs can also be used, such as {s3fs} or {aws.s3} in R. In the command line, the AWS CLI or [Rclone](https://rclone.org/) (see below) can be used.
+
+
+### Example: Mirroring a universe with Rclone {#mirror}
+
+[R-Multiverse](https://r-multiverse.org/) uses [Rclone](https://rclone.org/) to efficiently mirror a universe, incrementally downloading only the files that have changed since the last mirror.
+
+#### Configuration
+
+After [installing Rclone](https://rclone.org/install/), use a terminal command to configure Rclone for R-Universe:
 
 ```bash
 rclone config create r-universe s3 \
@@ -93,9 +123,9 @@ type = alias
 remote = r-universe:maelle
 ```
 
-### Local downloads
+#### Local downloads
 
-After configuration, [Rclone](https://rclone.org/) can download from the universe you configured.
+After configuration, Rclone can download from the universe you configured.
 The following [`rclone copy`](https://rclone.org/commands/rclone_copy/) command downloads all the package files from <https://maelle.r-universe.dev> to a local folder called `local_folder_name`, accelerating the process with up to 8 parallel checkers and 8 parallel file transfers:^[See <https://rclone.org/docs/> and <https://rclone.org/commands/rclone_copy/> for documentation on the command line arguments.]
 
 ```bash
@@ -149,7 +179,7 @@ This command downloads each package file locally from <https://maelle.r-universe
 But although packages go through your local computer in transit, at no point are all packages stored locally on disk.
 This makes it feasible to mirror large universes, which is why [R-multiverse](https://r-multiverse.org) uses this pattern to [create production snapshots](https://github.com/r-multiverse/staging/blob/main/.github/workflows/snapshot.yaml).
 
-### Partial uploads
+##### Partial uploads
 
 To only upload part of a universe, you can supply [Rclone filtering](https://rclone.org/filtering/) commands.
 If you do, it is recommended to also manually edit the `PACKAGES` and `PACKAGES.gz` files in `bin/` and `src/contrib`.
