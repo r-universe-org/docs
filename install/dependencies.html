@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.3">
+<meta name="generator" content="quarto-1.9.11">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6172778a27b0bfa6b3b3f65992e46a92.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-a5dfee7ccc7f20503a6465e15a2cff9c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-c0ad540d5f96e48d241ceeeadfe4e991.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -132,9 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">R-Universe Documentation</a> 
         <div class="sidebar-tools-main">
@@ -316,8 +314,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#can-a-cran-package-take-on-a-dependency-from-r-universe" id="toc-can-a-cran-package-take-on-a-dependency-from-r-universe" class="nav-link active" data-scroll-target="#can-a-cran-package-take-on-a-dependency-from-r-universe"><span class="header-section-number">9.1</span> Can a CRAN package take on a dependency from R-universe?</a></li>
-  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.2</span> How to use a universe on regular continous integration?</a></li>
+  <li><a href="#cran-like-repository-urls" id="toc-cran-like-repository-urls" class="nav-link active" data-scroll-target="#cran-like-repository-urls"><span class="header-section-number">9.1</span> CRAN-like repository URLs</a></li>
+  <li><a href="#can-a-cran-package-take-on-a-dependency-from-r-universe" id="toc-can-a-cran-package-take-on-a-dependency-from-r-universe" class="nav-link" data-scroll-target="#can-a-cran-package-take-on-a-dependency-from-r-universe"><span class="header-section-number">9.2</span> Can a CRAN package take on a dependency from R-universe?</a></li>
+  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.3</span> How to use a universe on regular continous integration?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/dependencies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -343,8 +342,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="can-a-cran-package-take-on-a-dependency-from-r-universe" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="can-a-cran-package-take-on-a-dependency-from-r-universe"><span class="header-section-number">9.1</span> Can a CRAN package take on a dependency from R-universe?</h2>
+<section id="cran-like-repository-urls" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="cran-like-repository-urls"><span class="header-section-number">9.1</span> CRAN-like repository URLs</h2>
+<p>R-universe provides CRAN-like repository URLs for each universe. For example, the following functions work:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># All the packages in the tidyverse universe</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">available.packages</span>(<span class="at">repos =</span> <span class="st">"https://tidyverse.r-universe.dev"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installs dplyr and its dependencies from the tidyverse universe,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># and its dependencies does not exist in the tidyverse universe are installed from CRAN</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://tidyverse.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If you want to install only specific packages from the universe, and install the other packages from CRAN, you can specify the repository for only the package you want to install from the universe as follows:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Package specific repository for dplyr</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">available.packages</span>(<span class="at">repos =</span> <span class="st">"https://tidyverse.r-universe.dev/dplyr"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installs dplyr from the tidyverse universe,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># and its dependencies are installed from CRAN</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://tidyverse.r-universe.dev/dplyr"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="can-a-cran-package-take-on-a-dependency-from-r-universe" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="can-a-cran-package-take-on-a-dependency-from-r-universe"><span class="header-section-number">9.2</span> Can a CRAN package take on a dependency from R-universe?</h2>
 <p>Yes! It has to be an optional dependency (<code>Suggests</code>) and you need to</p>
 <ul>
 <li><p>List the R-universe in the <code>Additional_repositories</code> field in <code>DESCRIPTION</code>. <a href="https://github.com/search?q=org%3Acran+path%3ADESCRIPTION+additional_repositories%3A+r-universe.dev&amp;type=code">Examples of CRAN packages doing so</a>. The field will <em>not</em> ensure installation of the package. Its sole purpose is allowing CRAN to check the package is indeed available in that other repository.</p></li>
@@ -355,14 +371,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Within the code, for instance:</li>
 </ul></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span>(<span class="fu">require</span>(<span class="st">"targets"</span>))) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stop</span>(<span class="st">"You can install targets with install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span>(<span class="fu">require</span>(<span class="st">"targets"</span>))) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stop</span>(<span class="st">"You can install targets with install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org'))"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>or a solution that will automatically prompt the user to install the missing package:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rlang<span class="sc">::</span><span class="fu">check_installed</span>(<span class="st">"targets"</span>, <span class="at">action =</span> <span class="cf">function</span>(...) <span class="fu">install.packages</span>(<span class="st">'targets'</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://ropensci.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rlang<span class="sc">::</span><span class="fu">check_installed</span>(<span class="st">"targets"</span>, <span class="at">action =</span> <span class="cf">function</span>(...) <span class="fu">install.packages</span>(<span class="st">'targets'</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://ropensci.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.2</span> How to use a universe on regular continous integration?</h2>
+<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.3</span> How to use a universe on regular continous integration?</h2>
 <p>If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs"><code>extra-repositories</code> field of the <code>r-lib/actions</code> setup-r action</a>.</p>
 
 
