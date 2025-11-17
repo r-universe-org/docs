@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#how-to-install-linux-binary-packages" id="toc-how-to-install-linux-binary-packages" class="nav-link active" data-scroll-target="#how-to-install-linux-binary-packages"><span class="header-section-number">7.1</span> How to install Linux binary packages?</a></li>
+  <li><a href="#binaries-linux" id="toc-binaries-linux" class="nav-link active" data-scroll-target="#binaries-linux"><span class="header-section-number">7.1</span> How to install Linux binary packages?</a></li>
   <li><a href="#binaries-for-packages-with-compiled-code" id="toc-binaries-for-packages-with-compiled-code" class="nav-link" data-scroll-target="#binaries-for-packages-with-compiled-code"><span class="header-section-number">7.2</span> Binaries for packages with compiled code</a></li>
   <li><a href="#how-to-use-webassembly-binaries" id="toc-how-to-use-webassembly-binaries" class="nav-link" data-scroll-target="#how-to-use-webassembly-binaries"><span class="header-section-number">7.3</span> How to use WebAssembly Binaries</a></li>
   </ul>
@@ -342,8 +342,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="how-to-install-linux-binary-packages" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="how-to-install-linux-binary-packages"><span class="header-section-number">7.1</span> How to install Linux binary packages?</h2>
+<section id="binaries-linux" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="binaries-linux"><span class="header-section-number">7.1</span> How to install Linux binary packages?</h2>
 <p>R-universe builds and checks Linux binaries for one Linux distribution: <code>ubuntu:latest</code> (currently ubuntu 24.04 aka “noble”). This is the most widely used Linux distribution and also the platform used by the R-universe build system itself, as configured in the <a href="https://github.com/r-universe-org/base-image">base-image</a>.</p>
 <p>On Linux, R-universe builds and checks Linux binaries for R-devel and R-release, for both on x86_64 and arm64 systems. The repositories use the following URL pattern:</p>
 <pre><code>https://${owner}.r-universe.dev/bin/linux/${distro}-${arch}/${rversion}/</code></pre>
