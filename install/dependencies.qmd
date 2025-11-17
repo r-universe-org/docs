@@ -28,6 +28,18 @@ available.packages(repos = "https://tidyverse.r-universe.dev/dplyr")
 install.packages("dplyr", repos = c("https://tidyverse.r-universe.dev/dplyr", "https://cloud.r-project.org"))
 ```
 
+To install binary versions, append `bin/linux/...` to the URL.
+See [Linux binaries](#binaries-linux) for details.
+Combine with Posit Package Manager repositories for binaries for CRAN versions.
+
+```r
+# All tidyverse binaries on Ubuntu Noble for ARM for R 4.5:
+install.packages("dplyr", repos = "https://tidyverse.r-universe.dev/bin/linux/noble-arm64/4.5")
+
+# Only dplyr on Ubuntu Noble for ARM for R 4.5:
+install.packages("dplyr", repos = "https://tidyverse.r-universe.dev/dplyr/bin/linux/noble-arm64/4.5")
+```
+
 ## Can a CRAN package take on a dependency from R-universe?
 
 Yes! It has to be an optional dependency (`Suggests`) and you need to

@@ -2,7 +2,7 @@
 title: "Binaries"
 ---
 
-## How to install Linux binary packages?
+## How to install Linux binary packages? {#binaries-linux}
 
 R-universe builds and checks Linux binaries for one Linux distribution: `ubuntu:latest` (currently ubuntu 24.04 aka "noble"). This is the most widely used Linux distribution and also the platform used by the R-universe build system itself, as configured in the [base-image](https://github.com/r-universe-org/base-image).
 
