@@ -18,12 +18,12 @@ This documentation uses `https://jeroen.r-universe.dev` as an example, but you c
 
 ### List of all universes
 
-URL: `https://r-universe.dev/stats/everyone`
+URL: `https://r-universe.dev/api/everyone`
 
 Example using `{httr2}`:
 
 ```{r}
-universes <- httr2::request("https://r-universe.dev/stats/everyone") |>
+universes <- httr2::request("https://r-universe.dev/api/everyone") |>
   httr2::req_user_agent("R-universe docs") |>
   httr2::req_perform() |>
   httr2::resp_body_json()
