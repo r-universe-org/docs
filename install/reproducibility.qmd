@@ -4,7 +4,9 @@ title: "Reproducibility"
 
 ## Does R-universe archive old versions of packages? How does it work with renv?
 
-R-universe does not archive old versions of packages, but it **tracks the upstream git URL and commit ID** in the R package description. This allows tools like `renv` to restore packages in environments that were installed from R-universe. For more details, see this tech note: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).  
+R-universe does not archive old versions of packages, but it **tracks the upstream git URL and commit ID** in the R package description.
+This allows tools like `renv` to restore packages in environments that were installed from R-universe.
+For more details, see this tech note: [How renv restores packages from r-universe for reproducibility or production](https://ropensci.org/blog/2022/01/06/runiverse-renv/).  
 
 You can also **archive fixed versions of a universe** for production or reproducibility, using what we call [repository snapshots](#snapshots).  
 
@@ -54,3 +56,137 @@ prefix <- ifelse (.Platform$OS.type == "windows", "file:///", "file://")
 repos <- paste0(prefix, normalizePath(snapshot, "/"))
 install.packages(c("V8", "mongolite"), repos = repos)
 ```
+
+### Using the S3 API {#s3}
+
+R-universe also exposes a partial [S3-compatible API](https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html) that you can use to list, download, or mirror package files. 
+
+In R, you can use the [{paws}](https://paws-r-sdk.github.io/) package to access the S3 API.
+Note that this requires using the _virtual addressing_ scheme, where `r-universe.dev` is the endpoint and the universe name is the bucket.
+
+```r
+library(paws)
+client <- paws::s3(
+  config = list(
+    endpoint = "https://r-universe.dev",
+    s3_virtual_address = TRUE
+  ),
+  credentials = list(anonymous = TRUE),
+  # A region is required for API compatibility, but is not used
+  region = "us-east-1" 
+)
+all_files <- client$list_objects_v2(Bucket = "jeroen")
+sapply(all_files$Contents, \(x) x$Key) |> 
+  head()
+client$download_file(
+  # Bucket is the universe name
+  Bucket = "jeroen",  
+  # Key is the path to the file
+  Key = "src/contrib/RAppArmor_3.2.5.tar.gz", 
+  Filename = "RAppArmor_3.2.5.tar.gz"
+)
+
+```
+
+Outside of R, tools such as the AWS CLI or [Rclone](https://rclone.org/) (see below) can be used to access the S3 API.
+
+
+### Example: Mirroring a universe with Rclone {#mirror}
+
+[R-Multiverse](https://r-multiverse.org/) uses [Rclone](https://rclone.org/) to efficiently mirror a universe, incrementally downloading only the files that have changed since the last mirror.
+
+#### Configuration
+
+After [installing Rclone](https://rclone.org/install/), use a terminal command to configure Rclone for R-Universe:
+
+```bash
+rclone config create r-universe s3 \
+  list_version=2 force_path_style=false \
+  endpoint=https://r-universe.dev provider=Other
+```
+
+Then, register an individual universe as an [Rclone remote](https://rclone.org/remote_setup/).
+For example, let's configure <https://maelle.r-universe.dev>.
+We run an `rclone config` command that chooses `maelle` as the universe and `maelle-universe` as the alias that future [Rclone](https://rclone.org/) commands will use:
+
+```bash
+rclone config create maelle-universe alias remote=r-universe:maelle
+```
+
+`rclone config show` should now show the following contents:^[Rclone configuration is stored in an `rclone.conf` text file located at the path returned by `rclone config file`.]
+
+```
+[r-universe]
+type = s3
+list_version = 2
+force_path_style = false
+endpoint = https://r-universe.dev
+provider = Other
+
+[maelle-universe]
+type = alias
+remote = r-universe:maelle
+```
+
+#### Local downloads
+
+After configuration, Rclone can download from the universe you configured.
+The following [`rclone copy`](https://rclone.org/commands/rclone_copy/) command downloads all the package files from <https://maelle.r-universe.dev> to a local folder called `local_folder_name`, accelerating the process with up to 8 parallel checkers and 8 parallel file transfers:^[See <https://rclone.org/docs/> and <https://rclone.org/commands/rclone_copy/> for documentation on the command line arguments.]
+
+```bash
+rclone copy maelle-universe: local_folder_name \
+  --ignore-size --progress --checkers 8 --transfers 8
+```
+
+The full contents are available:
+
+```r
+fs::dir_tree("local_folder_name", recurse = FALSE)
+#> local_folder_name
+#> ├── bin
+#> └── src
+```
+
+```r
+fs::dir_tree("local_folder_name/src", recurse = TRUE)
+#> local_folder_name/src
+#> └── contrib
+#>     ├── PACKAGES
+#>     ├── PACKAGES.gz
+#>     ├── cransays_0.0.0.9000.tar.gz
+#>     ├── glitter_0.2.999.tar.gz
+#>     └── roblog_0.1.0.tar.gz
+```
+
+### Remote mirroring
+
+You may wish to mirror a universe remotely on, say, an [Amazon S3](https://aws.amazon.com/s3) bucket or a [CloudFlare R2](https://www.cloudflare.com/developer-platform/products/r2/)^[Cloudflare has [its own Rclone documentation](https://developers.cloudflare.com/r2/examples/rclone/).] bucket.
+For [CloudFlare R2](https://www.cloudflare.com/developer-platform/products/r2/), you will need to give [Rclone](https://rclone.org/) the credentials of the bucket.
+
+```bash
+rclone config create cloudflare-remote s3 \
+  provider=Cloudflare \
+  access_key_id=YOUR_CLOUDFLARE_ACCESS_KEY_ID \
+  secret_access_key=YOUR_CLOUDFLARE_SECRET_ACCESS_KEY \
+  endpoint=https://YOUR_CLOUDFLARE_ACCOUNT_ID.r2.cloudflarestorage.com \
+  acl=private \
+  no_check_bucket=true
+```
+
+Then, you can copy files directly from the universe to a bucket:^[To upload to a specific prefix inside a bucket, you can replace `cloudflare-remote:YOUR_BUCKET_NAME` with `cloudflare-remote:YOUR_BUCKET_NAME/YOUR_PREFIX`]
+
+```bash
+rclone copy maelle-universe: cloudflare-remote:YOUR_BUCKET_NAME \
+  --ignore-size --progress --checkers 8 --transfers 8
+```
+
+This command downloads each package file locally from <https://maelle.r-universe.dev> and uploads it to the bucket.
+But although packages go through your local computer in transit, at no point are all packages stored locally on disk.
+This makes it feasible to mirror large universes, which is why [R-multiverse](https://r-multiverse.org) uses this pattern to [create production snapshots](https://github.com/r-multiverse/staging/blob/main/.github/workflows/snapshot.yaml).
+
+##### Partial uploads
+
+To only upload part of a universe, you can supply [Rclone filtering](https://rclone.org/filtering/) commands.
+If you do, it is recommended to also manually edit the `PACKAGES` and `PACKAGES.gz` files in `bin/` and `src/contrib`.
+`PACKAGES` is written in [Debian Control Format](https://www.debian.org/doc/debian-policy/ch-controlfields.html) (DCF), and `PACKAGES.gz` is a [`gzip`](https://www.gzip.org/) archive of `PACKAGES`.
+The [`read.dcf()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/dcf.html) and [`write.dcf()`](https://stat.ethz.ch/R-manual/R-devel/library/base/html/dcf.html) functions in base R read and write DCF files, and [`R.utils::gzip()`](https://henrikbengtsson.github.io/R.utils/reference/compressFile.html) creates [`gzip`](https://www.gzip.org/) archives.
