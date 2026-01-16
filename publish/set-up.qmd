@@ -216,6 +216,13 @@ The badge API is simply `/badges/<package>` which will yield an SVG image that c
 ```md
 [![r-universe version](https://r-lib.r-universe.dev/cpp11/badges/version)](https://r-lib.r-universe.dev/cpp11)
 ```
+
+To add this badge, you can also use the [`usethis::use_r_universe_badge()`](https://usethis.r-lib.org/reference/badges.html) function:
+
+```r
+usethis::use_r_universe_badge("r-lib/cpp11")
+```
+
 ### Badge showing the status of the latest check
 
 Alternatively, or as a complement, you can add an R-universe badge to indicate the check status.
