@@ -320,6 +320,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#what-is-a-snapshot-of-an-universe" id="toc-what-is-a-snapshot-of-an-universe" class="nav-link" data-scroll-target="#what-is-a-snapshot-of-an-universe"><span class="header-section-number">8.2.1</span> What is a snapshot of an universe?</a></li>
   <li><a href="#downloading-repository-snapshots" id="toc-downloading-repository-snapshots" class="nav-link" data-scroll-target="#downloading-repository-snapshots"><span class="header-section-number">8.2.2</span> Downloading repository snapshots</a></li>
   <li><a href="#using-snapshots" id="toc-using-snapshots" class="nav-link" data-scroll-target="#using-snapshots"><span class="header-section-number">8.2.3</span> Using snapshots</a></li>
+  <li><a href="#s3" id="toc-s3" class="nav-link" data-scroll-target="#s3"><span class="header-section-number">8.2.4</span> Using the S3 API</a></li>
+  <li><a href="#mirror" id="toc-mirror" class="nav-link" data-scroll-target="#mirror"><span class="header-section-number">8.2.5</span> Example: Mirroring a universe with Rclone</a></li>
+  <li><a href="#remote-mirroring" id="toc-remote-mirroring" class="nav-link" data-scroll-target="#remote-mirroring"><span class="header-section-number">8.2.6</span> Remote mirroring</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/reproducibility.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -383,9 +386,106 @@ You can use this snapshot to mirror the CRAN-like repository on your own servers
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>prefix <span class="ot">&lt;-</span> <span class="fu">ifelse</span> (.Platform<span class="sc">$</span>OS.type <span class="sc">==</span> <span class="st">"windows"</span>, <span class="st">"file:///"</span>, <span class="st">"file://"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>repos <span class="ot">&lt;-</span> <span class="fu">paste0</span>(prefix, <span class="fu">normalizePath</span>(snapshot, <span class="st">"/"</span>))</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"V8"</span>, <span class="st">"mongolite"</span>), <span class="at">repos =</span> repos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="s3" class="level3" data-number="8.2.4">
+<h3 data-number="8.2.4" class="anchored" data-anchor-id="s3"><span class="header-section-number">8.2.4</span> Using the S3 API</h3>
+<p>R-universe also exposes a partial <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/Type_API_Reference.html">S3-compatible API</a> that you can use to list, download, or mirror package files.</p>
+<p>In R, you can use the <a href="https://paws-r-sdk.github.io/">{paws}</a> package to access the S3 API. Note that this requires using the <em>virtual addressing</em> scheme, where <code>r-universe.dev</code> is the endpoint and the universe name is the bucket.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(paws)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>client <span class="ot">&lt;-</span> paws<span class="sc">::</span><span class="fu">s3</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">config =</span> <span class="fu">list</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">endpoint =</span> <span class="st">"https://r-universe.dev"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">s3_virtual_address =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">credentials =</span> <span class="fu">list</span>(<span class="at">anonymous =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># A region is required for API compatibility, but is not used</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">region =</span> <span class="st">"us-east-1"</span> </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>all_files <span class="ot">&lt;-</span> client<span class="sc">$</span><span class="fu">list_objects_v2</span>(<span class="at">Bucket =</span> <span class="st">"jeroen"</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(all_files<span class="sc">$</span>Contents, \(x) x<span class="sc">$</span>Key) <span class="sc">|&gt;</span> </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>client<span class="sc">$</span><span class="fu">download_file</span>(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Bucket is the universe name</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">Bucket =</span> <span class="st">"jeroen"</span>,  </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Key is the path to the file</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">Key =</span> <span class="st">"src/contrib/RAppArmor_3.2.5.tar.gz"</span>, </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">Filename =</span> <span class="st">"RAppArmor_3.2.5.tar.gz"</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Outside of R, tools such as the AWS CLI or <a href="https://rclone.org/">Rclone</a> (see below) can be used to access the S3 API.</p>
+</section>
+<section id="mirror" class="level3" data-number="8.2.5">
+<h3 data-number="8.2.5" class="anchored" data-anchor-id="mirror"><span class="header-section-number">8.2.5</span> Example: Mirroring a universe with Rclone</h3>
+<p><a href="https://r-multiverse.org/">R-Multiverse</a> uses <a href="https://rclone.org/">Rclone</a> to efficiently mirror a universe, incrementally downloading only the files that have changed since the last mirror.</p>
+<section id="configuration" class="level4" data-number="8.2.5.1">
+<h4 data-number="8.2.5.1" class="anchored" data-anchor-id="configuration"><span class="header-section-number">8.2.5.1</span> Configuration</h4>
+<p>After <a href="https://rclone.org/install/">installing Rclone</a>, use a terminal command to configure Rclone for R-Universe:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rclone</span> config create r-universe s3 <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  list_version=2 force_path_style=false <span class="dt">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  endpoint=https://r-universe.dev provider=Other</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then, register an individual universe as an <a href="https://rclone.org/remote_setup/">Rclone remote</a>. For example, let’s configure <a href="https://maelle.r-universe.dev" class="uri">https://maelle.r-universe.dev</a>. We run an <code>rclone config</code> command that chooses <code>maelle</code> as the universe and <code>maelle-universe</code> as the alias that future <a href="https://rclone.org/">Rclone</a> commands will use:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rclone</span> config create maelle-universe alias remote=r-universe:maelle</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>rclone config show</code> should now show the following contents:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<pre><code>[r-universe]
+type = s3
+list_version = 2
+force_path_style = false
+endpoint = https://r-universe.dev
+provider = Other
+
+[maelle-universe]
+type = alias
+remote = r-universe:maelle</code></pre>
+</section>
+<section id="local-downloads" class="level4" data-number="8.2.5.2">
+<h4 data-number="8.2.5.2" class="anchored" data-anchor-id="local-downloads"><span class="header-section-number">8.2.5.2</span> Local downloads</h4>
+<p>After configuration, Rclone can download from the universe you configured. The following <a href="https://rclone.org/commands/rclone_copy/"><code>rclone copy</code></a> command downloads all the package files from <a href="https://maelle.r-universe.dev" class="uri">https://maelle.r-universe.dev</a> to a local folder called <code>local_folder_name</code>, accelerating the process with up to 8 parallel checkers and 8 parallel file transfers:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rclone</span> copy maelle-universe: local_folder_name <span class="dt">\</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--ignore-size</span> <span class="at">--progress</span> <span class="at">--checkers</span> 8 <span class="at">--transfers</span> 8</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The full contents are available:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"local_folder_name"</span>, <span class="at">recurse =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; local_folder_name</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ├── bin</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; └── src</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(<span class="st">"local_folder_name/src"</span>, <span class="at">recurse =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; local_folder_name/src</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; └── contrib</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     ├── PACKAGES</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     ├── PACKAGES.gz</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     ├── cransays_0.0.0.9000.tar.gz</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     ├── glitter_0.2.999.tar.gz</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     └── roblog_0.1.0.tar.gz</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="remote-mirroring" class="level3" data-number="8.2.6">
+<h3 data-number="8.2.6" class="anchored" data-anchor-id="remote-mirroring"><span class="header-section-number">8.2.6</span> Remote mirroring</h3>
+<p>You may wish to mirror a universe remotely on, say, an <a href="https://aws.amazon.com/s3">Amazon S3</a> bucket or a <a href="https://www.cloudflare.com/developer-platform/products/r2/">CloudFlare R2</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> bucket. For <a href="https://www.cloudflare.com/developer-platform/products/r2/">CloudFlare R2</a>, you will need to give <a href="https://rclone.org/">Rclone</a> the credentials of the bucket.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rclone</span> config create cloudflare-remote s3 <span class="dt">\</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  provider=Cloudflare <span class="dt">\</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  access_key_id=YOUR_CLOUDFLARE_ACCESS_KEY_ID <span class="dt">\</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  secret_access_key=YOUR_CLOUDFLARE_SECRET_ACCESS_KEY <span class="dt">\</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  endpoint=https://YOUR_CLOUDFLARE_ACCOUNT_ID.r2.cloudflarestorage.com <span class="dt">\</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  acl=private <span class="dt">\</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  no_check_bucket=true</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then, you can copy files directly from the universe to a bucket:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rclone</span> copy maelle-universe: cloudflare-remote:YOUR_BUCKET_NAME <span class="dt">\</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--ignore-size</span> <span class="at">--progress</span> <span class="at">--checkers</span> 8 <span class="at">--transfers</span> 8</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command downloads each package file locally from <a href="https://maelle.r-universe.dev" class="uri">https://maelle.r-universe.dev</a> and uploads it to the bucket. But although packages go through your local computer in transit, at no point are all packages stored locally on disk. This makes it feasible to mirror large universes, which is why <a href="https://r-multiverse.org">R-multiverse</a> uses this pattern to <a href="https://github.com/r-multiverse/staging/blob/main/.github/workflows/snapshot.yaml">create production snapshots</a>.</p>
+<section id="partial-uploads" class="level5" data-number="8.2.6.0.1">
+<h5 data-number="8.2.6.0.1" class="anchored" data-anchor-id="partial-uploads"><span class="header-section-number">8.2.6.0.1</span> Partial uploads</h5>
+<p>To only upload part of a universe, you can supply <a href="https://rclone.org/filtering/">Rclone filtering</a> commands. If you do, it is recommended to also manually edit the <code>PACKAGES</code> and <code>PACKAGES.gz</code> files in <code>bin/</code> and <code>src/contrib</code>. <code>PACKAGES</code> is written in <a href="https://www.debian.org/doc/debian-policy/ch-controlfields.html">Debian Control Format</a> (DCF), and <code>PACKAGES.gz</code> is a <a href="https://www.gzip.org/"><code>gzip</code></a> archive of <code>PACKAGES</code>. The <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/dcf.html"><code>read.dcf()</code></a> and <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/dcf.html"><code>write.dcf()</code></a> functions in base R read and write DCF files, and <a href="https://henrikbengtsson.github.io/R.utils/reference/compressFile.html"><code>R.utils::gzip()</code></a> creates <a href="https://www.gzip.org/"><code>gzip</code></a> archives.</p>
 
 
 </section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Rclone configuration is stored in an <code>rclone.conf</code> text file located at the path returned by <code>rclone config file</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>See <a href="https://rclone.org/docs/" class="uri">https://rclone.org/docs/</a> and <a href="https://rclone.org/commands/rclone_copy/" class="uri">https://rclone.org/commands/rclone_copy/</a> for documentation on the command line arguments.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Cloudflare has <a href="https://developers.cloudflare.com/r2/examples/rclone/">its own Rclone documentation</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>To upload to a specific prefix inside a bucket, you can replace <code>cloudflare-remote:YOUR_BUCKET_NAME</code> with <code>cloudflare-remote:YOUR_BUCKET_NAME/YOUR_PREFIX</code><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
