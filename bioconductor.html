@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>15&nbsp; Relation to other networks – R-Universe Documentation</title>
+<title>18&nbsp; Biocondcutor and R-universe – R-Universe Documentation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,28 +23,65 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../infra/governance.html" rel="next">
-<link href="../publish/terms.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-73db7b5a953198da8f17fc5313e632aa.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-afb80974d091e602bad9cb779fdcc3c3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./infra/contribute.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-73db7b5a953198da8f17fc5313e632aa.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-afb80974d091e602bad9cb779fdcc3c3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -86,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/other-networks.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bioconductor.html">Extra</a></li><li class="breadcrumb-item"><a href="./bioconductor.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Biocondcutor and R-universe</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -101,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">R-Universe Documentation</a> 
+      <a href="./">R-Universe Documentation</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/r-universe-org/hitchhikers-guide" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -121,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
@@ -136,37 +173,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/get-started.html" class="sidebar-item-text sidebar-link">
+  <a href="./browse/get-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">A catalogue of R packages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/search.html" class="sidebar-item-text sidebar-link">
+  <a href="./browse/search.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Search for packages</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/universes.html" class="sidebar-item-text sidebar-link">
+  <a href="./browse/universes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Browsing work from a maintainer or organization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/packages.html" class="sidebar-item-text sidebar-link">
+  <a href="./browse/packages.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Individual package information</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/api.html" class="sidebar-item-text sidebar-link">
+  <a href="./browse/api.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../browse/rss-feeds.html" class="sidebar-item-text sidebar-link">
+  <a href="./browse/rss-feeds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">RSS feeds of package updates</span></span></a>
   </div>
 </li>
@@ -183,19 +220,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../install/binaries.html" class="sidebar-item-text sidebar-link">
+  <a href="./install/binaries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Binaries</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../install/reproducibility.html" class="sidebar-item-text sidebar-link">
+  <a href="./install/reproducibility.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Reproducibility</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../install/dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="./install/dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using dependencies from R-universe</span></span></a>
   </div>
 </li>
@@ -212,37 +249,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
+  <a href="./publish/get-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Why publish on R-universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/set-up.html" class="sidebar-item-text sidebar-link">
+  <a href="./publish/set-up.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Set up your own universe</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/metadata.html" class="sidebar-item-text sidebar-link">
+  <a href="./publish/metadata.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Make your package easier to discover: Control the metadata / SEO</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link">
+  <a href="./publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/terms.html" class="sidebar-item-text sidebar-link">
+  <a href="./publish/terms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../publish/other-networks.html" class="sidebar-item-text sidebar-link active">
+  <a href="./publish/other-networks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></span></a>
   </div>
 </li>
@@ -259,13 +296,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../infra/governance.html" class="sidebar-item-text sidebar-link">
+  <a href="./infra/governance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">R-universe governance</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../infra/contribute.html" class="sidebar-item-text sidebar-link">
+  <a href="./infra/contribute.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Contribute</span></span></a>
   </div>
 </li>
@@ -282,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bioconductor.html" class="sidebar-item-text sidebar-link">
+  <a href="./bioconductor.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Biocondcutor and R-universe</span></span></a>
   </div>
 </li>
@@ -298,19 +335,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#relation-to-other-networks" id="toc-relation-to-other-networks" class="nav-link active" data-scroll-target="#relation-to-other-networks"><span class="header-section-number">15.1</span> Relation to other networks</a></li>
-  <li><a href="#can-we-use-r-universe-to-host-older-versions-of-cran-packages" id="toc-can-we-use-r-universe-to-host-older-versions-of-cran-packages" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-older-versions-of-cran-packages"><span class="header-section-number">15.2</span> Can we use R-universe to host older versions of CRAN packages?</a></li>
-  <li><a href="#newer-than-cran" id="toc-newer-than-cran" class="nav-link" data-scroll-target="#newer-than-cran"><span class="header-section-number">15.3</span> Can we use R-universe to host newer versions of CRAN packages?</a></li>
-  <li><a href="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package" id="toc-can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="nav-link" data-scroll-target="#can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">15.4</span> Can we use R-universe to host a fork of a CRAN package?</a></li>
+  <li><a href="#package-status-information" id="toc-package-status-information" class="nav-link active" data-scroll-target="#package-status-information"><span class="header-section-number">18.1</span> Package status information</a></li>
+  <li><a href="#check-results" id="toc-check-results" class="nav-link" data-scroll-target="#check-results"><span class="header-section-number">18.2</span> Check results</a></li>
+  <li><a href="#on-r-version-compatibility" id="toc-on-r-version-compatibility" class="nav-link" data-scroll-target="#on-r-version-compatibility"><span class="header-section-number">18.3</span> On R version compatibility</a></li>
+  <li><a href="#debugging-the-ci" id="toc-debugging-the-ci" class="nav-link" data-scroll-target="#debugging-the-ci"><span class="header-section-number">18.4</span> Debugging the CI</a></li>
+  <li><a href="#questions-and-suggestions" id="toc-questions-and-suggestions" class="nav-link" data-scroll-target="#questions-and-suggestions"><span class="header-section-number">18.5</span> Questions and suggestions</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/other-networks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/bioconductor.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/other-networks.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./bioconductor.html">Extra</a></li><li class="breadcrumb-item"><a href="./bioconductor.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Biocondcutor and R-universe</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Relation to other networks</span></h1>
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Biocondcutor and R-universe</span></h1>
 </div>
 
 
@@ -327,32 +365,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="relation-to-other-networks" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="relation-to-other-networks"><span class="header-section-number">15.1</span> Relation to other networks</h2>
-<p>Packages on R-universe may also exist on other networks, such as CRAN or Bioconductor.</p>
-<p>It’s important to note that CRAN is not intended to be the sole CRAN-style package repository, as <a href="https://static.sched.com/hosted_files/userconf2024/41/user2024_CRAN.pdf#page=8">explained by CRAN co-founder Kurt Hornik in his useR! 2024 keynote</a>.</p>
-</section>
-<section id="can-we-use-r-universe-to-host-older-versions-of-cran-packages" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-older-versions-of-cran-packages"><span class="header-section-number">15.2</span> Can we use R-universe to host older versions of CRAN packages?</h2>
-<p>While hosting older versions of CRAN packages on R-universe is technically possible, it may not work as intended.</p>
+<p>Over the past year, R-universe has been collaborating with Bioconductor to gradually modernize parts of its infrastructure, while accommodating the project’s scale, governance, and established workflows.</p>
+<p>The goal is to offload much of the building and checking work to a common infrastructure on R-universe, and synchronize the binaries and results back to Bioconductor. Package maintainers and curators can use the R-universe dashboard and APIs to monitor package health and identify problems.</p>
+<p>This page has some information specifically for Bioconductor users on the current ideas and how you can get started with R-universe.</p>
+<section id="package-status-information" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="package-status-information"><span class="header-section-number">18.1</span> Package status information</h2>
+<p>We currently operate two dedicated R-universe instances for both Bioconductor branches:</p>
 <ul>
-<li>R’s <code>install.packages()</code> and <code>update.packages()</code> functions will always install the latest version of a package available across all configured repositories.<br>
-</li>
-<li>As a result, the older version hosted on R-universe might be automatically updated to the latest CRAN version on the user’s machine.</li>
+<li><strong>Bioc devel</strong>: <a href="https://bioc.r-universe.dev" class="uri">https://bioc.r-universe.dev</a></li>
+<li><strong>Bioc release</strong>: <a href="https://bioc-release.r-universe.dev" class="uri">https://bioc-release.r-universe.dev</a></li>
 </ul>
+<p>These universes integrate directly with Bioconductor’s existing Git infrastructure and provide continuous builds for packages in both branches. The binaries and check results as shown on R-universe eventually get mirrored and published on Bioconductor.</p>
+<p>Information about each package is available on <code>https://bioc.r-universe.dev/{pkgname}</code>, for example <a href="https://bioc.r-universe.dev/DESeq2" class="uri">https://bioc.r-universe.dev/DESeq2</a> shown below:</p>
+<p><a href="./img/bioc-pkg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./img/bioc-pkg.png" class="img-fluid" alt="Homepage of Biocondcutor package"></a></p>
+<p>If this is the first time you visit R-universe, we recommend clicking the “Website Tour” button which will walk you through the most important information in 1 or 2 minutes.</p>
 </section>
-<section id="newer-than-cran" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="newer-than-cran"><span class="header-section-number">15.3</span> Can we use R-universe to host newer versions of CRAN packages?</h2>
-<p>Yes, you can use R-universe to distribute the development version of your package between CRAN releases. It is one of the intended use cases for R-universe.</p>
+<section id="check-results" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="check-results"><span class="header-section-number">18.2</span> Check results</h2>
+<p>Package maintainers may mostly be interested in the check table, which shows the install and check results on different platforms. The <code>Result</code> column links to the GitHub “run” which shows detailed information about the builds, though it requires you are logged in with a GitHub account (which we very much recommend).</p>
+<p>The <code>File</code> column on the other hand links to a zip file which contains the install/check/test logs for each platform, and can be downloaded without a GitHub account.</p>
+<p><a href="./img/bioc-checktable.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./img/bioc-checktable.png" class="img-fluid" alt="Table with check results of a Biocondcutor package"></a></p>
+<p>One thing you may notice, is that R-universe builds and checks R packages on multiple versions of R, as is common practice on CRAN and most other package repositories. This is different from what Bioconductor users may be used to, but there are good reasons, see the section below.</p>
+<p>It is also possible to link directly to this check table, e.g.&nbsp;<a href="https://bioc.r-universe.dev/DESeq2#checktable" class="uri">https://bioc.r-universe.dev/DESeq2#checktable</a>.</p>
 </section>
-<section id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="can-we-use-r-universe-to-host-a-fork-of-a-cran-package"><span class="header-section-number">15.4</span> Can we use R-universe to host a fork of a CRAN package?</h2>
-<p>Hosting a fork of a CRAN package on R-universe is possible but generally not recommended.</p>
-<ul>
-<li>The CRAN version of the package may overwrite your fork when the user runs <code>install.packages()</code> or <code>update.packages()</code>.<br>
-</li>
-<li>Additionally, other packages depending on the original CRAN package may not be compatible with your fork, leading to potential issues.</li>
-</ul>
+<section id="on-r-version-compatibility" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="on-r-version-compatibility"><span class="header-section-number">18.3</span> On R version compatibility</h2>
+<p>Bioconductor traditionally assumes a specific version of R for each version of the package. However we still recommend <strong>not</strong> put unnecessary version constraints like <code>R &gt; 4.6</code> in your package DESCRIPTION file, and instead try to make the package work at least with the <code>release</code> and <code>devel</code> version of R.</p>
+<p>Doing so will smoothen the transition because many pieces of the build infrastructure use the current R <code>release</code> version to render components or calculate metrics to get thing published. If your package uses newly introduced R API’s from R-devel, we recommend adding a <a href="https://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Some-backports">backport as explained in WRE</a> to make it also work with r-release. Feel free to reach out if you could use some help with this!</p>
+<p>In addition to easing the build process, avoiding unnecessary R version restrictions can make your work more useful to the greater R community, as packages from other repositories could depend on your package, but without limiting their users to a given version of R.</p>
+</section>
+<section id="debugging-the-ci" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="debugging-the-ci"><span class="header-section-number">18.4</span> Debugging the CI</h2>
+<p>If you develop your package on GitHub, it is possible to the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to <a href="https://r-universe.dev" class="uri">https://r-universe.dev</a>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Test R-universe</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> R-universe testing</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-universe-org/workflows/.github/workflows/build.yml@v3</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">universe</span><span class="kw">:</span><span class="at"> bioc</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Simply create a file <code>.github/workflows/r-universe.yml</code> in your git repository and copy the content above. See this <a href="https://ropensci.org/blog/2026/01/03/r-universe-workflows/">blog post</a> for more details.</p>
+</section>
+<section id="questions-and-suggestions" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="questions-and-suggestions"><span class="header-section-number">18.5</span> Questions and suggestions</h2>
+<p>For questions, suggestions, and bug reports, please use our <a href="https://github.com/r-universe-org/help/issues">issue tracker</a> or <a href="https://github.com/orgs/r-universe-org/discussions">discussion forum</a>.</p>
 
 
 </section>
@@ -760,19 +821,48 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../publish/terms.html" class="pagination-link" aria-label="Package publishing rules">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Package publishing rules</span></span>
+      <a href="./infra/contribute.html" class="pagination-link" aria-label="Contribute">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Contribute</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../infra/governance.html" class="pagination-link" aria-label="R-universe governance">
-        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">R-universe governance</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/bioconductor.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/publish/other-networks.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>
