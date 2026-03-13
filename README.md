@@ -2,4 +2,8 @@
 
 See our [GSOD 2024 project description](https://github.com/r-universe-org/gsod-2024/wiki/GSOD-2024-proposal:-Documenting-R-software-publication-with-R%E2%80%90universe).
 
-This book is built using [Quarto](https://quarto.org/).
+This book is built using [Quarto](https://quarto.org/). To test is locally use:
+
+```sh
+quarto preview
+```

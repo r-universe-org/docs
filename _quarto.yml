@@ -35,6 +35,9 @@ book:
       chapters:
         - infra/governance.qmd
         - infra/contribute.qmd
+    - part: Extra
+      chapters:
+        - bioconductor.qmd
 lightbox: true
 format:
   html:
@@ -42,6 +45,3 @@ format:
     toc: true
     include-in-header: "matomo.html"
     from: markdown+autolink_bare_uris
-
-
-
