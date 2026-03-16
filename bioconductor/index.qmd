@@ -20,7 +20,7 @@ These universes integrate directly with Bioconductor’s existing Git infrastruc
 
 Information about each package is available on `https://bioc.r-universe.dev/{pkgname}`, for example https://bioc.r-universe.dev/DESeq2 shown below:
 
-![](./img/bioc-pkg.png){fig-alt="Homepage of Bioconductor package"}
+![](../img/bioc-pkg.png){fig-alt="Homepage of Bioconductor package"}
 
 If this is the first time you visit R-universe, we recommend clicking the "Website Tour" button which will walk you through the most important information in 1 or 2 minutes.
 
@@ -30,7 +30,7 @@ Package maintainers may mostly be interested in the check table, which shows the
 
 The `File` column on the other hand links to a zip file which contains the install/check/test logs for each platform, and can be downloaded without a GitHub account. 
 
-![](./img/bioc-checktable.png){fig-alt="Table with check results of a Bioconductor package"}
+![](../img/bioc-checktable.png){fig-alt="Table with check results of a Bioconductor package"}
 
 
 One thing you may notice, is that R-universe builds and checks R packages on multiple versions of R, as is common practice on CRAN and most other package repositories. This is different from what Bioconductor users may be used to, but there are good reasons, see the section below.

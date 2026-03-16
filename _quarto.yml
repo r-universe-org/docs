@@ -37,7 +37,7 @@ book:
         - infra/contribute.qmd
     - part: Extra
       chapters:
-        - bioconductor.qmd
+        - bioconductor/index.qmd
 lightbox: true
 format:
   html:
