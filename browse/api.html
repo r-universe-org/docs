@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.35">
+<meta name="generator" content="quarto-1.10.3">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,10 +76,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e44360b8a8db1e130c7792fece1c8032.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-afb80974d091e602bad9cb779fdcc3c3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b53939183b575c7e10ab5b523f5eec3d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -392,8 +392,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(universes, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
- $ universes  :List of 10751
- $ maintainers:List of 10445</code></pre>
+ $ universes  :List of 10899
+ $ maintainers:List of 10588</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -512,78 +512,81 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 71
- $ Package           : chr "protolite"
+<pre><code>List of 74
+ $ Package           : chr "curl"
  $ Type              : chr "Package"
- $ Title             : chr "Highly Optimized Protocol Buffer Serializers"
- $ Authors@R         : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID ="| __truncated__
- $ Description       : chr "Pure C++ implementations for reading and writing several\ncommon data formats based on Google protocol-buffers."| __truncated__
- $ Version           : chr "2.4.0"
+ $ Title             : chr "A Modern and Flexible Web Client for R"
+ $ Version           : chr "7.0.1"
+ $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
+ $ Description       : chr "Bindings to 'libcurl' &lt;https://curl.se/libcurl/&gt; for\nperforming fully configurable HTTP/FTP requests where res"| __truncated__
  $ License           : chr "MIT + file LICENSE"
- $ URL               : chr "https://github.com/jeroen/protolite\nhttps://jeroen.r-universe.dev/protolite"
- $ BugReports        : chr "https://github.com/jeroen/protolite/issues"
- $ SystemRequirements: chr "libprotobuf and protobuf-compiler"
- $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
+ $ SystemRequirements: chr "libcurl (&gt;= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)"
+ $ URL               : chr "https://jeroen.r-universe.dev/curl"
+ $ BugReports        : chr "https://github.com/jeroen/curl/issues"
+ $ VignetteBuilder   : chr "knitr"
+ $ RoxygenNote       : chr "7.3.2"
  $ Encoding          : chr "UTF-8"
  $ Language          : chr "en-US"
- $ RoxygenNote       : chr "7.2.1"
- $ Config/pak/sysreqs: chr "libprotobuf-dev protobuf-compiler libprotoc-dev"
+ $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
+ $ Config/pak/sysreqs: chr "libssl-dev"
  $ Repository        : chr "https://jeroen.r-universe.dev"
- $ Date/Publication  : chr "2026-03-10 11:35:53 UTC"
- $ RemoteUrl         : chr "https://github.com/jeroen/protolite"
+ $ Date/Publication  : chr "2026-04-18 20:30:40 UTC"
+ $ RemoteUrl         : chr "https://github.com/jeroen/curl"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "bda4b9fd7a180fe6e1812827b6b48ddcc2f1ef20"
+ $ RemoteSha         : chr "caf7e88941ba0882fb2ffc237a600c148a66e624"
  $ NeedsCompilation  : chr "yes"
  $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;)"
+ $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "66af9b0d4150993b2fb3f99f9509826f"
+ $ MD5sum            : chr "604a2fbfda8cb205413c4785148d6a6d"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "protolite_2.4.0.tar.gz"
- $ _fileid           : chr "5319255ee1e8323301f219b60bbabee28676b53b903fb72668fc366cd48bbac8"
- $ _filesize         : int 109252
- $ _sha256           : chr "5319255ee1e8323301f219b60bbabee28676b53b903fb72668fc366cd48bbac8"
- $ _created          : chr "2026-03-10T11:46:04.000Z"
- $ _published        : chr "2026-03-10T18:10:57.633Z"
+ $ _file             : chr "curl_7.0.1.tar.gz"
+ $ _fileid           : chr "88d92be31e91dcf547c180f3c7036a5257670bba7f99468df5cfbaa2c2e7d121"
+ $ _filesize         : int 337605
+ $ _sha256           : chr "88d92be31e91dcf547c180f3c7036a5257670bba7f99468df5cfbaa2c2e7d121"
+ $ _created          : chr "2026-04-18T20:36:27.000Z"
+ $ _published        : chr "2026-04-18T23:42:59.487Z"
  $ _distro           : chr "noble"
  $ _jobs             :List of 13
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/22900795352"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/24613328135"
  $ _status           : chr "success"
  $ _host             : chr "GitHub-Actions"
- $ _upstream         : chr "https://github.com/jeroen/protolite"
+ $ _upstream         : chr "https://github.com/jeroen/curl"
  $ _commit           :List of 5
  $ _maintainer       :List of 7
  $ _registered       : logi TRUE
- $ _dependencies     :List of 7
+ $ _dependencies     :List of 9
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 21
- $ _updates          :List of 1
- $ _tags             : list()
- $ _stars            : int 49
- $ _contributors     :List of 2
+ $ _usedby           : int 5833
+ $ _updates          :List of 16
+ $ _tags             :List of 4
+ $ _stars            : int 231
+ $ _contributors     :List of 22
  $ _userbio          :List of 4
  $ _downloads        :List of 2
- $ _devurl           : chr "https://github.com/jeroen/protolite"
- $ _searchresults    : int 29
- $ _topics           :List of 2
- $ _rbuild           : chr "4.5.2"
+ $ _mentions         : int 21
+ $ _devurl           : chr "https://github.com/jeroen/curl"
+ $ _searchresults    : int 3984
+ $ _topics           :List of 1
+ $ _rbuild           : chr "4.5.3"
  $ _assets           :List of 11
- $ _homeurl          : chr "https://github.com/jeroen/protolite"
+ $ _homeurl          : chr "https://github.com/jeroen/curl"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 18
- $ _exports          :List of 7
- $ _help             :List of 3
- $ _readme           : chr "https://github.com/jeroen/protolite/raw/HEAD/README.md"
- $ _rundeps          :List of 2
- $ _sysdeps          :List of 3
- $ _score            : num 7.44
+ $ _releases         :List of 56
+ $ _exports          :List of 44
+ $ _help             :List of 19
+ $ _readme           : chr "https://github.com/jeroen/curl/raw/HEAD/README.md"
+ $ _rundeps          : list()
+ $ _sysdeps          :List of 1
+ $ _vignettes        :List of 2
+ $ _score            : num 19.8
  $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "protolite"
+ $ _nocasepkg        : chr "curl"
  $ _universes        :List of 1
- $ _binaries         :List of 11</code></pre>
+ $ _binaries         :List of 12</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -592,78 +595,81 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a list of packages</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 71
- $ Package           : chr "protolite"
+<pre><code>List of 74
+ $ Package           : chr "curl"
  $ Type              : chr "Package"
- $ Title             : chr "Highly Optimized Protocol Buffer Serializers"
- $ Authors@R         : chr "person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORCID ="| __truncated__
- $ Description       : chr "Pure C++ implementations for reading and writing several\ncommon data formats based on Google protocol-buffers."| __truncated__
- $ Version           : chr "2.4.0"
+ $ Title             : chr "A Modern and Flexible Web Client for R"
+ $ Version           : chr "7.0.1"
+ $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
+ $ Description       : chr "Bindings to 'libcurl' &lt;https://curl.se/libcurl/&gt; for\nperforming fully configurable HTTP/FTP requests where res"| __truncated__
  $ License           : chr "MIT + file LICENSE"
- $ URL               : chr "https://github.com/jeroen/protolite\nhttps://jeroen.r-universe.dev/protolite"
- $ BugReports        : chr "https://github.com/jeroen/protolite/issues"
- $ SystemRequirements: chr "libprotobuf and protobuf-compiler"
- $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
+ $ SystemRequirements: chr "libcurl (&gt;= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)"
+ $ URL               : chr "https://jeroen.r-universe.dev/curl"
+ $ BugReports        : chr "https://github.com/jeroen/curl/issues"
+ $ VignetteBuilder   : chr "knitr"
+ $ RoxygenNote       : chr "7.3.2"
  $ Encoding          : chr "UTF-8"
  $ Language          : chr "en-US"
- $ RoxygenNote       : chr "7.2.1"
- $ Config/pak/sysreqs: chr "libprotobuf-dev protobuf-compiler libprotoc-dev"
+ $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
+ $ Config/pak/sysreqs: chr "libssl-dev"
  $ Repository        : chr "https://jeroen.r-universe.dev"
- $ Date/Publication  : chr "2026-03-10 11:35:53 UTC"
- $ RemoteUrl         : chr "https://github.com/jeroen/protolite"
+ $ Date/Publication  : chr "2026-04-18 20:30:40 UTC"
+ $ RemoteUrl         : chr "https://github.com/jeroen/curl"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "bda4b9fd7a180fe6e1812827b6b48ddcc2f1ef20"
+ $ RemoteSha         : chr "caf7e88941ba0882fb2ffc237a600c148a66e624"
  $ NeedsCompilation  : chr "yes"
  $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;)"
+ $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "66af9b0d4150993b2fb3f99f9509826f"
+ $ MD5sum            : chr "604a2fbfda8cb205413c4785148d6a6d"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "protolite_2.4.0.tar.gz"
- $ _fileid           : chr "5319255ee1e8323301f219b60bbabee28676b53b903fb72668fc366cd48bbac8"
- $ _filesize         : int 109252
- $ _sha256           : chr "5319255ee1e8323301f219b60bbabee28676b53b903fb72668fc366cd48bbac8"
- $ _created          : chr "2026-03-10T11:46:04.000Z"
- $ _published        : chr "2026-03-10T18:10:57.633Z"
+ $ _file             : chr "curl_7.0.1.tar.gz"
+ $ _fileid           : chr "88d92be31e91dcf547c180f3c7036a5257670bba7f99468df5cfbaa2c2e7d121"
+ $ _filesize         : int 337605
+ $ _sha256           : chr "88d92be31e91dcf547c180f3c7036a5257670bba7f99468df5cfbaa2c2e7d121"
+ $ _created          : chr "2026-04-18T20:36:27.000Z"
+ $ _published        : chr "2026-04-18T23:42:59.487Z"
  $ _distro           : chr "noble"
  $ _jobs             :List of 13
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/22900795352"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/24613328135"
  $ _status           : chr "success"
  $ _host             : chr "GitHub-Actions"
- $ _upstream         : chr "https://github.com/jeroen/protolite"
+ $ _upstream         : chr "https://github.com/jeroen/curl"
  $ _commit           :List of 5
  $ _maintainer       :List of 7
  $ _registered       : logi TRUE
- $ _dependencies     :List of 7
+ $ _dependencies     :List of 9
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 21
- $ _updates          :List of 1
- $ _tags             : list()
- $ _stars            : int 49
- $ _contributors     :List of 2
+ $ _usedby           : int 5833
+ $ _updates          :List of 16
+ $ _tags             :List of 4
+ $ _stars            : int 231
+ $ _contributors     :List of 22
  $ _userbio          :List of 4
  $ _downloads        :List of 2
- $ _devurl           : chr "https://github.com/jeroen/protolite"
- $ _searchresults    : int 29
- $ _topics           :List of 2
- $ _rbuild           : chr "4.5.2"
+ $ _mentions         : int 21
+ $ _devurl           : chr "https://github.com/jeroen/curl"
+ $ _searchresults    : int 3984
+ $ _topics           :List of 1
+ $ _rbuild           : chr "4.5.3"
  $ _assets           :List of 11
- $ _homeurl          : chr "https://github.com/jeroen/protolite"
+ $ _homeurl          : chr "https://github.com/jeroen/curl"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 18
- $ _exports          :List of 7
- $ _help             :List of 3
- $ _readme           : chr "https://github.com/jeroen/protolite/raw/HEAD/README.md"
- $ _rundeps          :List of 2
- $ _sysdeps          :List of 3
- $ _score            : num 7.44
+ $ _releases         :List of 56
+ $ _exports          :List of 44
+ $ _help             :List of 19
+ $ _readme           : chr "https://github.com/jeroen/curl/raw/HEAD/README.md"
+ $ _rundeps          : list()
+ $ _sysdeps          :List of 1
+ $ _vignettes        :List of 2
+ $ _score            : num 19.8
  $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "protolite"
+ $ _nocasepkg        : chr "curl"
  $ _universes        :List of 1
- $ _binaries         :List of 11</code></pre>
+ $ _binaries         :List of 12</code></pre>
 </div>
 </div>
 </section>
@@ -681,11 +687,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(v8, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 76
- $ _id               : chr "699be8095fcc687c95223421"
+ $ _id               : chr "69e4ba1dc5259ad4cd98ba50"
  $ Package           : chr "V8"
  $ Type              : chr "Package"
  $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
- $ Version           : chr "8.0.1"
+ $ Version           : chr "8.2.0"
  $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
  $ Description       : chr "An R interface to V8 &lt;https://v8.dev&gt;: Google's open\nsource JavaScript and WebAssembly engine. This package ca"| __truncated__
  $ License           : chr "MIT + file LICENSE"
@@ -701,25 +707,25 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Biarch            : chr "true"
  $ Config/pak/sysreqs: chr "libnode-dev"
  $ Repository        : chr "https://jeroen.r-universe.dev"
- $ Date/Publication  : chr "2026-01-28 22:52:22 UTC"
+ $ Date/Publication  : chr "2026-04-13 23:16:33 UTC"
  $ RemoteUrl         : chr "https://github.com/jeroen/v8"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "7806ac4fd2015791663b891a5a198d85ade78879"
+ $ RemoteSha         : chr "b042c34d9cab4084a7d193928cda4ffaa1fb8ede"
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nGeorge Stagg [ctb] (ORCID: &lt;https://o"| __truncated__
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "9229dfbe4ab858fbbb11cb432dc3c63c"
+ $ MD5sum            : chr "d5ab6d46e7f05a009dea0ab342540d6e"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "V8_8.0.1.tar.gz"
- $ _fileid           : chr "b856fe3f4fde126cfd0c3c74c93a1bc7ccc49ca4c8fb3f431c34260666c4c782"
- $ _filesize         : int 200795
- $ _sha256           : chr "b856fe3f4fde126cfd0c3c74c93a1bc7ccc49ca4c8fb3f431c34260666c4c782"
- $ _created          : chr "2026-02-23T05:22:08.000Z"
- $ _published        : chr "2026-02-23T05:39:21.981Z"
+ $ _file             : chr "V8_8.2.0.tar.gz"
+ $ _fileid           : chr "46181f9c7db63a92f7fc32d4777269db628640bf2b0c910fc826ba01585fe919"
+ $ _filesize         : int 201430
+ $ _sha256           : chr "46181f9c7db63a92f7fc32d4777269db628640bf2b0c910fc826ba01585fe919"
+ $ _created          : chr "2026-04-19T10:56:56.000Z"
+ $ _published        : chr "2026-04-19T11:18:53.755Z"
  $ _distro           : chr "noble"
  $ _jobs             :List of 13
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/22293898287"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/24627388680"
  $ _status           : chr "success"
  $ _host             : chr "GitHub-Actions"
  $ _upstream         : chr "https://github.com/jeroen/v8"
@@ -729,8 +735,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 411
- $ _updates          :List of 18
+ $ _usedby           : int 425
+ $ _updates          :List of 17
  $ _tags             :List of 2
  $ _topics           :List of 4
  $ _stars            : int 207
@@ -739,20 +745,20 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 2
  $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 604
- $ _rbuild           : chr "4.5.2"
+ $ _searchresults    : int 612
+ $ _rbuild           : chr "4.5.3"
  $ _assets           :List of 11
  $ _homeurl          : chr "https://github.com/jeroen/v8"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 59
+ $ _releases         :List of 60
  $ _exports          :List of 6
  $ _help             :List of 3
  $ _readme           : chr "https://github.com/jeroen/v8/raw/HEAD/README.md"
  $ _rundeps          :List of 3
  $ _sysdeps          :List of 1
  $ _vignettes        :List of 2
- $ _score            : num 16.4
+ $ _score            : num 16.2
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "v8"
  $ _universes        :List of 1
@@ -766,11 +772,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(V8, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 76
- $ _id               : chr "699be8095fcc687c95223421"
+ $ _id               : chr "69e4ba1dc5259ad4cd98ba50"
  $ Package           : chr "V8"
  $ Type              : chr "Package"
  $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
- $ Version           : chr "8.0.1"
+ $ Version           : chr "8.2.0"
  $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
  $ Description       : chr "An R interface to V8 &lt;https://v8.dev&gt;: Google's open\nsource JavaScript and WebAssembly engine. This package ca"| __truncated__
  $ License           : chr "MIT + file LICENSE"
@@ -786,25 +792,25 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Biarch            : chr "true"
  $ Config/pak/sysreqs: chr "libnode-dev"
  $ Repository        : chr "https://jeroen.r-universe.dev"
- $ Date/Publication  : chr "2026-01-28 22:52:22 UTC"
+ $ Date/Publication  : chr "2026-04-13 23:16:33 UTC"
  $ RemoteUrl         : chr "https://github.com/jeroen/v8"
  $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "7806ac4fd2015791663b891a5a198d85ade78879"
+ $ RemoteSha         : chr "b042c34d9cab4084a7d193928cda4ffaa1fb8ede"
  $ Packaged          :List of 2
  $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nGeorge Stagg [ctb] (ORCID: &lt;https://o"| __truncated__
  $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ MD5sum            : chr "9229dfbe4ab858fbbb11cb432dc3c63c"
+ $ MD5sum            : chr "d5ab6d46e7f05a009dea0ab342540d6e"
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
- $ _file             : chr "V8_8.0.1.tar.gz"
- $ _fileid           : chr "b856fe3f4fde126cfd0c3c74c93a1bc7ccc49ca4c8fb3f431c34260666c4c782"
- $ _filesize         : int 200795
- $ _sha256           : chr "b856fe3f4fde126cfd0c3c74c93a1bc7ccc49ca4c8fb3f431c34260666c4c782"
- $ _created          : chr "2026-02-23T05:22:08.000Z"
- $ _published        : chr "2026-02-23T05:39:21.981Z"
+ $ _file             : chr "V8_8.2.0.tar.gz"
+ $ _fileid           : chr "46181f9c7db63a92f7fc32d4777269db628640bf2b0c910fc826ba01585fe919"
+ $ _filesize         : int 201430
+ $ _sha256           : chr "46181f9c7db63a92f7fc32d4777269db628640bf2b0c910fc826ba01585fe919"
+ $ _created          : chr "2026-04-19T10:56:56.000Z"
+ $ _published        : chr "2026-04-19T11:18:53.755Z"
  $ _distro           : chr "noble"
  $ _jobs             :List of 13
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/22293898287"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/24627388680"
  $ _status           : chr "success"
  $ _host             : chr "GitHub-Actions"
  $ _upstream         : chr "https://github.com/jeroen/v8"
@@ -814,8 +820,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 411
- $ _updates          :List of 18
+ $ _usedby           : int 425
+ $ _updates          :List of 17
  $ _tags             :List of 2
  $ _topics           :List of 4
  $ _stars            : int 207
@@ -824,20 +830,20 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 2
  $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 604
- $ _rbuild           : chr "4.5.2"
+ $ _searchresults    : int 612
+ $ _rbuild           : chr "4.5.3"
  $ _assets           :List of 11
  $ _homeurl          : chr "https://github.com/jeroen/v8"
  $ _realowner        : chr "jeroen"
  $ _cranurl          : logi TRUE
- $ _releases         :List of 59
+ $ _releases         :List of 60
  $ _exports          :List of 6
  $ _help             :List of 3
  $ _readme           : chr "https://github.com/jeroen/v8/raw/HEAD/README.md"
  $ _rundeps          :List of 3
  $ _sysdeps          :List of 1
  $ _vignettes        :List of 2
- $ _score            : num 16.4
+ $ _score            : num 16.2
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "v8"
  $ _universes        :List of 1
@@ -874,15 +880,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 43
+ $ results:List of 45
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 43</code></pre>
+ $ total  : int 45</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 43</code></pre>
+<pre><code>[1] 45</code></pre>
 </div>
 </div>
 <p>Using <code>{universe}</code>:</p>
@@ -892,15 +898,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 43
+ $ results:List of 45
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 43</code></pre>
+ $ total  : int 45</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 43</code></pre>
+<pre><code>[1] 45</code></pre>
 </div>
 </div>
 </section>
@@ -926,23 +932,23 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 86
+ $ results:List of 88
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 86</code></pre>
+ $ total  : int 88</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "697b3ecd6b353547d51db442"
+ $ _id           : chr "69e326afc5259ad4cd95da3f"
  $ Package       : chr "PEcAn.data.atmosphere"
  $ Title         : chr "PEcAn Functions Used for Managing Climate Driver Data"
  $ Description   : chr "The Predictive Ecosystem Carbon Analyzer (PEcAn) is a\nscientific workflow management tool that is designed to\"| __truncated__
  $ _user         : chr "pecanproject"
  $ _usedby       : int 14
- $ _searchresults: int 71
- $ _score        : num 11.7
+ $ _searchresults: int 72
+ $ _score        : num 11.8
  $ _uuid         : int 2879854
  $ maintainer    :List of 5
   ..$ name    : chr "David LeBauer"
@@ -950,8 +956,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ login   : chr "dlebauer"
   ..$ linkedin: chr "in/dlebauer"
   ..$ uuid    : int 464871
- $ updated       : int 1769680354
- $ stars         : int 226
+ $ updated       : int 1776486707
+ $ stars         : int 234
  $ topics        :List of 13
   ..$ : chr "climate-data"
   ..$ : chr "data-standardization"
@@ -967,7 +973,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "pecan"
   ..$ : chr "plants"
  $ match         : num 126
- $ rank          : num 1476</code></pre>
+ $ rank          : num 1493</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -976,23 +982,23 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 86
+ $ results:List of 88
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 86</code></pre>
+ $ total  : int 88</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "697b3ecd6b353547d51db442"
+ $ _id           : chr "69e326afc5259ad4cd95da3f"
  $ Package       : chr "PEcAn.data.atmosphere"
  $ Title         : chr "PEcAn Functions Used for Managing Climate Driver Data"
  $ Description   : chr "The Predictive Ecosystem Carbon Analyzer (PEcAn) is a\nscientific workflow management tool that is designed to\"| __truncated__
  $ _user         : chr "pecanproject"
  $ _usedby       : int 14
- $ _searchresults: int 71
- $ _score        : num 11.7
+ $ _searchresults: int 72
+ $ _score        : num 11.8
  $ _uuid         : int 2879854
  $ maintainer    :List of 5
   ..$ name    : chr "David LeBauer"
@@ -1000,8 +1006,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ login   : chr "dlebauer"
   ..$ linkedin: chr "in/dlebauer"
   ..$ uuid    : int 464871
- $ updated       : int 1769680354
- $ stars         : int 226
+ $ updated       : int 1776486707
+ $ stars         : int 234
  $ topics        :List of 13
   ..$ : chr "climate-data"
   ..$ : chr "data-standardization"
@@ -1017,7 +1023,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "pecan"
   ..$ : chr "plants"
  $ match         : num 126
- $ rank          : num 1476</code></pre>
+ $ rank          : num 1493</code></pre>
 </div>
 </div>
 <p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>
