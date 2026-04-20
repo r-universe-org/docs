@@ -65,6 +65,6 @@ or a solution that will automatically prompt the user to install the missing pac
 rlang::check_installed("targets", action = function(...) install.packages('targets', repos = c('https://ropensci.r-universe.dev', 'https://cloud.r-project.org')))
 ```
 
-## How to use a universe on regular continous integration?
+## How to use a universe on regular continuous integration?
 
 If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the [`extra-repositories` field of the `r-lib/actions` setup-r action](https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs).
