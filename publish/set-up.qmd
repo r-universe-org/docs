@@ -126,7 +126,7 @@ To publish your registry, create a Git repository called `<yourname>.r-universe.
 
 ### Custom metadata
 
-It is possible to add custom metadata by using the `metadata` field in each package entries `packages.json` for example see the [rOpenSci package registry](https://github.com/ropensci/roregistry/blob/gh-pages/packages.json):
+It is possible to add custom metadata by using the `metadata` field in each package entry of `packages.json` for example see the [rOpenSci package registry](https://github.com/ropensci/roregistry/blob/gh-pages/packages.json):
 
 ```json
   {
