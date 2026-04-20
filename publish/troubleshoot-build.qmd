@@ -65,7 +65,7 @@ It builds and deploys R packages from Git into personal CRAN-like repositories.
 
 The universe owner is responsible for setting policies and ensuring quality control.  
 
-## How to use a universe on regular continous integration?
+## How to use a universe on regular continuous integration?
 
 If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the [`extra-repositories` field of the `r-lib/actions` setup-r action](https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs).
 
