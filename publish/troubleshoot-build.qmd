@@ -71,7 +71,7 @@ If you want to test a package against versions of other packages that are in a u
 
 ## How to test the R-universe build workflow from your own GitHub repository
 
-To trouble-shoot why your package cannot be built by R-universe, you can use the same GitHub Actions workflow.
+To troubleshoot why your package cannot be built by R-universe, you can use the same GitHub Actions workflow.
 This is only possible on GitHub.
 
 The instructions on [r-universe-org/workflows](https://github.com/r-universe-org/workflows) explain how it works: 
