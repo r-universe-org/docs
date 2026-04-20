@@ -98,7 +98,7 @@ The root domain `https://cran.dev/{package}` redirects to the primary homepage f
   - https://cran.dev/Matrix
   - https://cran.dev/ggplot2
 
-The subdomain `https://docs.cran.dev/{package}` redirects to package manual page:
+The subdomain `https://docs.cran.dev/{package}` redirects to the package manual page:
 
   - https://docs.cran.dev/targets
   - https://docs.cran.dev/MASS
