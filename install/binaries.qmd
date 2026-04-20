@@ -33,7 +33,7 @@ Also see how this is done automatically in the [base image Rprofile](https://git
 
 ## Binaries for packages with compiled code
 
-In information on packages provided by the [API](#api-pkg), the `arch` field to the `binaries` field only if there is compiled code in the package. 
+In information on packages provided by the [API](#api-pkg), the `arch` field is added to the `binaries` field only if there is compiled code in the package. 
 Packages without compiled code are identical on all architectures.
 
 On MacOS and Linux we only build a separate x86_64 and arm64 version for packages with compiled code, otherwise the same binary is used for both.
