@@ -153,7 +153,7 @@ ijtiff[["_metadata"]]
 ```
 
 For some cases we can also expose some metadata in the WebUI. 
-If the metadata contains `review` data then is [shown](https://github.com/r-universe-org/frontend/blob/3ecaaa787d37776d84bd5f3cad5110d4adb2c793/views/pkginfo.pug#L127-L135) on [package pages](/browse/packages.html): example of [ijtiff package page](https://ropensci.r-universe.dev/ijtiff).
+If the metadata contains `review` data then it is [shown](https://github.com/r-universe-org/frontend/blob/3ecaaa787d37776d84bd5f3cad5110d4adb2c793/views/pkginfo.pug#L127-L135) on [package pages](/browse/packages.html): example of [ijtiff package page](https://ropensci.r-universe.dev/ijtiff).
 
 If useful we could conditionally display other sorts of meta information, [get in touch](https://github.com/r-universe-org/help/discussions).
 
