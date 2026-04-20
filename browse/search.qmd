@@ -45,7 +45,7 @@ The exact algorithm for calculating popularity/quality is a work-in-progress and
 At the time of writing it includes:
 
  - Number of dependents (that is to say, recursive reverse dependencies);
- - Number of stars on Github;
+ - Number of stars on GitHub;
  - Number of unique contributors;
  - Commit activity over the last year;
  - Downloads per month from CRAN or Bioconductor mirrors;
