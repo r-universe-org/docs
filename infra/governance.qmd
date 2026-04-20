@@ -10,7 +10,7 @@ rOpenSci is a non-profit initiative that supports open and reproducible science 
 rOpenSci builds a welcoming and diverse community. 
 rOpenSci curates a blog, coworking events, community calls.
 
-R-universe development is lead by [Jeroen Ooms](https://github.com/jeroen/).
+R-universe development is led by [Jeroen Ooms](https://github.com/jeroen/).
 
 ## Funding {#funding}
 
