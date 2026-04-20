@@ -25,7 +25,7 @@ Are you...
 
 - An R user that just wants to search something or retrieve information;
 - A package developer;
-- A universe developer (aka r-multiverse /pharmaverse /biocondctor or similar people); 
+- A universe developer (aka r-multiverse /pharmaverse /bioconductor or similar people); 
 - Someone willing to contribute to r-universe to improve the infrastructure or documentation?
 
 This documentation should help. 
