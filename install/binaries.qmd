@@ -12,7 +12,7 @@ On Linux, R-universe builds and checks Linux binaries for R-devel and R-release,
 https://${owner}.r-universe.dev/bin/linux/${distro}-${arch}/${rversion}/
 ```
 
-There is no need to set a custom user agent. To install these binaries on Linux, add the corresponding repository to your `repos`. You can use the `cran.r-universe.dev` instead of a regular CRAN mirror in order to get binaries for all the CRAN dependencies as well. Below is an example function that you can put in e.g. your `~/.Rprofile` file to set the `option(repos)` :
+There is no need to set a custom user agent. To install these binaries on Linux, add the corresponding repository to your `repos`. You can use the `cran.r-universe.dev` instead of a regular CRAN mirror in order to get binaries for all the CRAN dependencies as well. Below is an example function that you can put in e.g. your `~/.Rprofile` file to set the `options(repos)` :
 
 ```r
 linux_binary_repo <- function(universe){
