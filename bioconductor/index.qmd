@@ -50,7 +50,7 @@ In addition to easing the build process, avoiding unnecessary R version restrict
 
 ## Debugging the CI
 
-If you develop your package on GitHub, it is possible to the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to https://r-universe.dev.
+If you develop your package on GitHub, it is possible to run the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to https://r-universe.dev.
 
 
 ```yaml
