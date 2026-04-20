@@ -1,5 +1,5 @@
 ---
-title: "Trouble shoot package builds"
+title: "Troubleshoot package builds"
 ---
 
 ## How often is data updated? {#data-updates}
