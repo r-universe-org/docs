@@ -41,7 +41,7 @@ It is also possible to link directly to this check table, e.g. https://bioc.r-un
 
 ## On R version compatibility
 
-Bioconductor traditionally assumes a specific version of R for each version of the package. However we still recommend __not__ put unnecessary version constraints like `R > 4.6` in your package DESCRIPTION file, and instead try to make the package work at least with the `release` and `devel` version of R.
+Bioconductor traditionally assumes a specific version of R for each version of the package. However we still recommend __not__ to put unnecessary version constraints like `R > 4.6` in your package DESCRIPTION file, and instead try to make the package work at least with the `release` and `devel` version of R.
 
 Doing so will smoothen the transition because many pieces of the build infrastructure use the current R `release` version to render components or calculate metrics to get thing published. If your package uses newly introduced R API's from R-devel, we recommend adding a [backport as explained in WRE](https://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Some-backports) to make it also work with r-release. Feel free to reach out if you could use some help with this!
 
