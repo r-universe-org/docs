@@ -232,7 +232,7 @@ Alternatively, or as a complement, you can add an R-universe badge to indicate t
 ```
 
 The current implementation includes status for building vignettes and check results for R-release and R-devel on Windows, macOS and Linux.
-It shows the "worst result" of those checks, similar to what GitHub Action check badges do: if there is 1 "error", 1 "warning and 5 ok, the badge shows "error".
+It shows the "worst result" of those checks, similar to what GitHub Action check badges do: if there is 1 "error", 1 "warning" and 5 ok, the badge shows "error".
 
 The check status ignores R-oldrel and platforms where we only build binaries but do not check (webassembly), to avoid false positives.
 
