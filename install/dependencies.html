@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Troubleshoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -335,7 +335,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#cran-like-repository-urls" id="toc-cran-like-repository-urls" class="nav-link active" data-scroll-target="#cran-like-repository-urls"><span class="header-section-number">9.1</span> CRAN-like repository URLs</a></li>
   <li><a href="#can-a-cran-package-take-on-a-dependency-from-r-universe" id="toc-can-a-cran-package-take-on-a-dependency-from-r-universe" class="nav-link" data-scroll-target="#can-a-cran-package-take-on-a-dependency-from-r-universe"><span class="header-section-number">9.2</span> Can a CRAN package take on a dependency from R-universe?</a></li>
-  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.3</span> How to use a universe on regular continous integration?</a></li>
+  <li><a href="#how-to-use-a-universe-on-regular-continuous-integration" id="toc-how-to-use-a-universe-on-regular-continuous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continuous-integration"><span class="header-section-number">9.3</span> How to use a universe on regular continuous integration?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/install/dependencies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -368,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">available.packages</span>(<span class="at">repos =</span> <span class="st">"https://tidyverse.r-universe.dev"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Installs dplyr and its dependencies from the tidyverse universe,</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># and its dependencies does not exist in the tidyverse universe are installed from CRAN</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># and dependencies that do not exist in the tidyverse universe are installed from CRAN</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://tidyverse.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you want to install only specific packages from the universe, and install the other packages from CRAN, you can specify the repository for only the package you want to install from the universe as follows:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Package specific repository for dplyr</span></span>
@@ -402,8 +402,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>or a solution that will automatically prompt the user to install the missing package:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rlang<span class="sc">::</span><span class="fu">check_installed</span>(<span class="st">"targets"</span>, <span class="at">action =</span> <span class="cf">function</span>(...) <span class="fu">install.packages</span>(<span class="st">'targets'</span>, <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">'https://ropensci.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">9.3</span> How to use a universe on regular continous integration?</h2>
+<section id="how-to-use-a-universe-on-regular-continuous-integration" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continuous-integration"><span class="header-section-number">9.3</span> How to use a universe on regular continuous integration?</h2>
 <p>If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs"><code>extra-repositories</code> field of the <code>r-lib/actions</code> setup-r action</a>.</p>
 
 

@@ -269,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Troubleshoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -473,7 +473,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="custom-metadata" class="level3" data-number="11.3.4">
 <h3 data-number="11.3.4" class="anchored" data-anchor-id="custom-metadata"><span class="header-section-number">11.3.4</span> Custom metadata</h3>
-<p>It is possible to add custom metadata by using the <code>metadata</code> field in each package entries <code>packages.json</code> for example see the <a href="https://github.com/ropensci/roregistry/blob/gh-pages/packages.json">rOpenSci package registry</a>:</p>
+<p>It is possible to add custom metadata by using the <code>metadata</code> field in each package entry of <code>packages.json</code> for example see the <a href="https://github.com/ropensci/roregistry/blob/gh-pages/packages.json">rOpenSci package registry</a>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">{</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"package"</span><span class="fu">:</span> <span class="st">"ijtiff"</span><span class="fu">,</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"url"</span><span class="fu">:</span> <span class="st">"https://github.com/ropensci/ijtiff"</span><span class="fu">,</span></span>
@@ -514,7 +514,7 @@ $ropensci_category
 [1] "image-processing"</code></pre>
 </div>
 </div>
-<p>For some cases we can also expose some metadata in the WebUI. If the metadata contains <code>review</code> data then is <a href="https://github.com/r-universe-org/frontend/blob/3ecaaa787d37776d84bd5f3cad5110d4adb2c793/views/pkginfo.pug#L127-L135">shown</a> on <a href="../browse/packages.html">package pages</a>: example of <a href="https://ropensci.r-universe.dev/ijtiff">ijtiff package page</a>.</p>
+<p>For some cases we can also expose some metadata in the WebUI. If the metadata contains <code>review</code> data then it is <a href="https://github.com/r-universe-org/frontend/blob/3ecaaa787d37776d84bd5f3cad5110d4adb2c793/views/pkginfo.pug#L127-L135">shown</a> on <a href="../browse/packages.html">package pages</a>: example of <a href="https://ropensci.r-universe.dev/ijtiff">ijtiff package page</a>.</p>
 <p>If useful we could conditionally display other sorts of meta information, <a href="https://github.com/r-universe-org/help/discussions">get in touch</a>.</p>
 <section id="updating-the-custom-metadata" class="level4" data-number="11.3.4.1">
 <h4 data-number="11.3.4.1" class="anchored" data-anchor-id="updating-the-custom-metadata"><span class="header-section-number">11.3.4.1</span> Updating the custom metadata</h4>
@@ -561,7 +561,7 @@ $ropensci_category
 <h3 data-number="11.6.2" class="anchored" data-anchor-id="badge-showing-the-status-of-the-latest-check"><span class="header-section-number">11.6.2</span> Badge showing the status of the latest check</h3>
 <p>Alternatively, or as a complement, you can add an R-universe badge to indicate the check status.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![r-universe status](https://r-lib.r-universe.dev/cpp11/badges/checks)</span><span class="co">](https://r-lib.r-universe.dev/cpp11)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The current implementation includes status for building vignettes and check results for R-release and R-devel on Windows, macOS and Linux. It shows the “worst result” of those checks, similar to what GitHub Action check badges do: if there is 1 “error”, 1 “warning and 5 ok, the badge shows”error”.</p>
+<p>The current implementation includes status for building vignettes and check results for R-release and R-devel on Windows, macOS and Linux. It shows the “worst result” of those checks, similar to what GitHub Action check badges do: if there is 1 “error”, 1 “warning” and 5 ok, the badge shows “error”.</p>
 <p>The check status ignores R-oldrel and platforms where we only build binaries but do not check (webassembly), to avoid false positives.</p>
 </section>
 <section id="badges-for-the-universe" class="level3" data-number="11.6.3">

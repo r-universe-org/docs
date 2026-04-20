@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Trouble shoot package builds – R-Universe Documentation</title>
+<title>13&nbsp; Troubleshoot package builds – R-Universe Documentation</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -121,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Troubleshoot package builds</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -266,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Troubleshoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -340,7 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#third-party-reqs" id="toc-third-party-reqs" class="nav-link" data-scroll-target="#third-party-reqs"><span class="header-section-number">13.5</span> How to request additional third-party system requirements?</a></li>
   <li><a href="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" id="toc-how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render" class="nav-link" data-scroll-target="#how-to-publish-vignettesarticles-requiring-custom-softwaretokens-to-render"><span class="header-section-number">13.6</span> How to publish vignettes/articles requiring custom software/tokens to render?</a></li>
   <li><a href="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" id="toc-are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria" class="nav-link" data-scroll-target="#are-packages-on-r-universe-required-to-pass-cmd-check-or-meet-other-criteria"><span class="header-section-number">13.7</span> Are packages on R-universe required to pass CMD check or meet other criteria?</a></li>
-  <li><a href="#how-to-use-a-universe-on-regular-continous-integration" id="toc-how-to-use-a-universe-on-regular-continous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.8</span> How to use a universe on regular continous integration?</a></li>
+  <li><a href="#how-to-use-a-universe-on-regular-continuous-integration" id="toc-how-to-use-a-universe-on-regular-continuous-integration" class="nav-link" data-scroll-target="#how-to-use-a-universe-on-regular-continuous-integration"><span class="header-section-number">13.8</span> How to use a universe on regular continuous integration?</a></li>
   <li><a href="#how-to-test-the-r-universe-build-workflow-from-your-own-github-repository" id="toc-how-to-test-the-r-universe-build-workflow-from-your-own-github-repository" class="nav-link" data-scroll-target="#how-to-test-the-r-universe-build-workflow-from-your-own-github-repository"><span class="header-section-number">13.9</span> How to test the R-universe build workflow from your own GitHub repository</a></li>
   <li><a href="#how-to-know-whether-tests-are-run-on-r-universe" id="toc-how-to-know-whether-tests-are-run-on-r-universe" class="nav-link" data-scroll-target="#how-to-know-whether-tests-are-run-on-r-universe"><span class="header-section-number">13.10</span> How to know whether tests are run on R-universe?</a></li>
   <li><a href="#how-to-handle-the-transfer-of-a-repository-to-another-github-owner" id="toc-how-to-handle-the-transfer-of-a-repository-to-another-github-owner" class="nav-link" data-scroll-target="#how-to-handle-the-transfer-of-a-repository-to-another-github-owner"><span class="header-section-number">13.11</span> How to handle the transfer of a repository to another GitHub owner?</a></li>
@@ -350,9 +350,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../publish/get-started.html">Publish</a></li><li class="breadcrumb-item"><a href="../publish/troubleshoot-build.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Troubleshoot package builds</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Troubleshoot package builds</span></h1>
 </div>
 
 
@@ -434,13 +434,13 @@ Follow the guide: <a href="https://ropensci.org/blog/2019/12/08/precompute-vigne
 <p>No, R-universe is an open publishing system. It builds and deploys R packages from Git into personal CRAN-like repositories.</p>
 <p>The universe owner is responsible for setting policies and ensuring quality control.</p>
 </section>
-<section id="how-to-use-a-universe-on-regular-continous-integration" class="level2" data-number="13.8">
-<h2 data-number="13.8" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continous-integration"><span class="header-section-number">13.8</span> How to use a universe on regular continous integration?</h2>
+<section id="how-to-use-a-universe-on-regular-continuous-integration" class="level2" data-number="13.8">
+<h2 data-number="13.8" class="anchored" data-anchor-id="how-to-use-a-universe-on-regular-continuous-integration"><span class="header-section-number">13.8</span> How to use a universe on regular continuous integration?</h2>
 <p>If you want to test a package against versions of other packages that are in a universe, on GitHub Actions you can use the <a href="https://github.com/r-lib/actions/tree/v2-branch/setup-r#inputs"><code>extra-repositories</code> field of the <code>r-lib/actions</code> setup-r action</a>.</p>
 </section>
 <section id="how-to-test-the-r-universe-build-workflow-from-your-own-github-repository" class="level2" data-number="13.9">
 <h2 data-number="13.9" class="anchored" data-anchor-id="how-to-test-the-r-universe-build-workflow-from-your-own-github-repository"><span class="header-section-number">13.9</span> How to test the R-universe build workflow from your own GitHub repository</h2>
-<p>To trouble-shoot why your package cannot be built by R-universe, you can use the same GitHub Actions workflow. This is only possible on GitHub.</p>
+<p>To troubleshoot why your package cannot be built by R-universe, you can use the same GitHub Actions workflow. This is only possible on GitHub.</p>
 <p>The instructions on <a href="https://github.com/r-universe-org/workflows">r-universe-org/workflows</a> explain how it works: create a file <code>/.github/workflows/r-universe-test.yml</code> in your R package Git repository with the following config:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Test R-universe</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>

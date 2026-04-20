@@ -268,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/troubleshoot-build.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Trouble shoot package builds</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Troubleshoot package builds</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -390,13 +390,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="on-r-version-compatibility" class="level2" data-number="18.3">
 <h2 data-number="18.3" class="anchored" data-anchor-id="on-r-version-compatibility"><span class="header-section-number">18.3</span> On R version compatibility</h2>
-<p>Bioconductor traditionally assumes a specific version of R for each version of the package. However we still recommend <strong>not</strong> put unnecessary version constraints like <code>R &gt; 4.6</code> in your package DESCRIPTION file, and instead try to make the package work at least with the <code>release</code> and <code>devel</code> version of R.</p>
-<p>Doing so will smoothen the transition because many pieces of the build infrastructure use the current R <code>release</code> version to render components or calculate metrics to get thing published. If your package uses newly introduced R API’s from R-devel, we recommend adding a <a href="https://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Some-backports">backport as explained in WRE</a> to make it also work with r-release. Feel free to reach out if you could use some help with this!</p>
+<p>Bioconductor traditionally assumes a specific version of R for each version of the package. However we still recommend <strong>not</strong> to put unnecessary version constraints like <code>R &gt; 4.6</code> in your package DESCRIPTION file, and instead try to make the package work at least with the <code>release</code> and <code>devel</code> version of R.</p>
+<p>Doing so will smoothen the transition because many pieces of the build infrastructure use the current R <code>release</code> version to render components or calculate metrics to get things published. If your package uses newly introduced R API’s from R-devel, we recommend adding a <a href="https://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Some-backports">backport as explained in WRE</a> to make it also work with r-release. Feel free to reach out if you could use some help with this!</p>
 <p>In addition to easing the build process, avoiding unnecessary R version restrictions can make your work more useful to the greater R community, as packages from other repositories could depend on your package, but without limiting their users to a given version of R.</p>
 </section>
 <section id="debugging-the-ci" class="level2" data-number="18.4">
 <h2 data-number="18.4" class="anchored" data-anchor-id="debugging-the-ci"><span class="header-section-number">18.4</span> Debugging the CI</h2>
-<p>If you develop your package on GitHub, it is possible to the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to <a href="https://r-universe.dev" class="uri">https://r-universe.dev</a>.</p>
+<p>If you develop your package on GitHub, it is possible to run the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to <a href="https://r-universe.dev" class="uri">https://r-universe.dev</a>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Test R-universe</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
