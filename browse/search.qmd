@@ -57,13 +57,6 @@ We plan to keep updating the algorithm as R-universe matures and better data bec
 
 As a package maintainer, you can [optimize your package's metadata](#keywords) and work on [improving its rank](#better-rank).
 
-## Why is a package sometimes listed twice?
-
-If a source package fails to build (which means something is very wrong) then you see a red “build failure” message.
-If there was a previous successful build, it is kept there as well for users to install.
-You can explore [scores and metrics for all packages](https://r-universe.dev/packages).  
-The algorithm will evolve as R-universe matures and better data becomes available.
-
 ## Which packages get included in search? {#deduplication}
 
 In R-universe, a given R package can appear in multiple registries.
