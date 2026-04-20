@@ -88,7 +88,7 @@ These link to the respective chapters in the html reference manual, which provid
 ### cran.dev shortlinks
 
 On R-universe you can find package repositories from many different organizations and maintainers.
-But sometimes you just want to lookup a particular CRAN package, without knowing the developer.
+But sometimes you just want to look up a particular CRAN package, without knowing the developer.
 The cran.dev shortlink service lets you navigate or link directly to the R-universe homepage and docs of any established CRAN package.
 
 
