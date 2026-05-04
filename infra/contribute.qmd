@@ -4,6 +4,16 @@ title: "Contribute"
 
 R-universe is developed in the open on [GitHub](https://github.com/r-universe-org).
 
+## Website
+
+The R-universe website is not a static website.
+All pages and cranlike indexes are generated on request from a database.
+
+R-universe runs on self hosted server in NYC, but all traffic is routed via [Cloudflare CDN](https://www.cloudflare.com/application-services/products/cdn/).
+Cloudflare features include CDN level caching.
+When multiple users (anywhere) request the same file or page within 60s, the request is serviced directly from the cloudflare cache, and never hits the backend server.
+[More details](https://jeroen.github.io/technotes2024/).
+
 ## Runner images
 
 On Linux we use a [docker image](https://github.com/r-universe-org/base-image/blob/master/Dockerfile) for all the building, where we can add/remove tools. 
