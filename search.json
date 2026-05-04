@@ -817,7 +817,18 @@
     "href": "infra/contribute.html",
     "title": "17  Contribute",
     "section": "",
-    "text": "17.1 Runner images\nR-universe is developed in the open on GitHub.\nOn Linux we use a docker image for all the building, where we can add/remove tools.\nOn Mac and Windows we rely on the runner images provided by GitHub Actions\nOn top of the Mac and Windows image we use https://github.com/r-universe-org/actions to install some extra tooling specifically for R. In the case of MacOS we install the bundle of system libraries provided by CRAN from https://mac.r-project.org/bin/darwin23/arm64/ and some other tools.",
+    "text": "17.1 Website\nR-universe is developed in the open on GitHub.\nThe R-universe website is not a static website. All pages and cranlike indexes are generated on request from a database.\nR-universe runs on self hosted server in NYC, but all traffic is routed via Cloudflare CDN. Cloudflare features include CDN level caching. When multiple users (anywhere) request the same file or page within 60s, the request is serviced directly from the cloudflare cache, and never hits the backend server. More details.",
+    "crumbs": [
+      "Infrastructure",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Contribute</span>"
+    ]
+  },
+  {
+    "objectID": "infra/contribute.html#runner-images",
+    "href": "infra/contribute.html#runner-images",
+    "title": "17  Contribute",
+    "section": "17.2 Runner images",
+    "text": "17.2 Runner images\nOn Linux we use a docker image for all the building, where we can add/remove tools.\nOn Mac and Windows we rely on the runner images provided by GitHub Actions\nOn top of the Mac and Windows image we use https://github.com/r-universe-org/actions to install some extra tooling specifically for R. In the case of MacOS we install the bundle of system libraries provided by CRAN from https://mac.r-project.org/bin/darwin23/arm64/ and some other tools.",
     "crumbs": [
       "Infrastructure",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Contribute</span>"
@@ -827,8 +838,8 @@
     "objectID": "infra/contribute.html#rtools",
     "href": "infra/contribute.html#rtools",
     "title": "17  Contribute",
-    "section": "17.2 Rtools",
-    "text": "17.2 Rtools\nWe use the version of Rtools that is preinstalled by GitHub Actions, which is generally the latest CRAN version.",
+    "section": "17.3 Rtools",
+    "text": "17.3 Rtools\nWe use the version of Rtools that is preinstalled by GitHub Actions, which is generally the latest CRAN version.",
     "crumbs": [
       "Infrastructure",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Contribute</span>"
