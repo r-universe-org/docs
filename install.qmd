@@ -1,0 +1,5 @@
+# Install packages
+
+R-universe simplifies the installation of packages by providing binaries.
+In this part, we also document how to depend on a package from R-universe in your package,
+and how to increase the reproducibility of your computational work through using snapshots from R-universe.
