@@ -293,16 +293,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#website" id="toc-website" class="nav-link active" data-scroll-target="#website"><span class="header-section-number">17.1</span> Website</a></li>
-  <li><a href="#runner-images" id="toc-runner-images" class="nav-link" data-scroll-target="#runner-images"><span class="header-section-number">17.2</span> Runner images</a></li>
-  <li><a href="#rtools" id="toc-rtools" class="nav-link" data-scroll-target="#rtools"><span class="header-section-number">17.3</span> Rtools</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/infra/contribute.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -327,23 +319,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>R-universe is developed in the open on <a href="https://github.com/r-universe-org">GitHub</a>.</p>
-<section id="website" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="website"><span class="header-section-number">17.1</span> Website</h2>
-<p>The R-universe website is not a static website. All pages and cranlike indexes are generated on request from a database.</p>
-<p>R-universe runs on self hosted server in NYC, but all traffic is routed via <a href="https://www.cloudflare.com/application-services/products/cdn/">Cloudflare CDN</a>. Cloudflare features include CDN level caching. When multiple users (anywhere) request the same file or page within 60s, the request is serviced directly from the cloudflare cache, and never hits the backend server. <a href="https://jeroen.github.io/technotes2024/">More details</a>.</p>
-</section>
-<section id="runner-images" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="runner-images"><span class="header-section-number">17.2</span> Runner images</h2>
-<p>On Linux we use a <a href="https://github.com/r-universe-org/base-image/blob/master/Dockerfile">docker image</a> for all the building, where we can add/remove tools.</p>
-<p>On Mac and Windows we rely on the <a href="https://github.com/actions/runner-images">runner images provided by GitHub Actions</a></p>
-<p>On top of the Mac and Windows image we use <a href="https://github.com/r-universe-org/actions" class="uri">https://github.com/r-universe-org/actions</a> to install some extra tooling specifically for R. In the case of MacOS we install the bundle of system libraries provided by CRAN from <a href="https://mac.r-project.org/bin/darwin23/arm64/" class="uri">https://mac.r-project.org/bin/darwin23/arm64/</a> and some other tools.</p>
-</section>
-<section id="rtools" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="rtools"><span class="header-section-number">17.3</span> Rtools</h2>
-<p>We use the version of Rtools that is preinstalled by GitHub Actions, which is generally the latest CRAN version.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -763,4 +740,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/infra/contribute.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/infra/contribute.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
