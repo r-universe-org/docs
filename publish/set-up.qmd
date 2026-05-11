@@ -162,6 +162,13 @@ If useful we could conditionally display other sorts of meta information, [get i
 Please note that the metadata is picked up during the build.
 So if you updated the metadata, you need to trigger a build of the package by doing a commit (or wait for the package to get automatically rebuilt every 30 days)
 
+### One user, several registry files?
+
+You **cannot** manage several R-universes from one single GitHub account or organization.
+If you want to have, say, a development and a production R-universes, you need to manage them from two GitHub organizations.
+
+Also check out [R-multiverse](https://r-multiverse.org/) (and other networks such as CRAN or Bioconductor) that could be the way for you to publish your packages for production.
+
 ## Installing the GitHub app {#appinstall}
 
 Once you pushed your `packages.json` file to your new `universe` repository on GitHub, the next step is to install the [R-universe GitHub app](https://github.com/apps/r-universe/installations/new) on your account.
