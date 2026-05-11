@@ -348,7 +348,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tracking-custom-branches-or-releases" id="toc-tracking-custom-branches-or-releases" class="nav-link" data-scroll-target="#tracking-custom-branches-or-releases"><span class="header-section-number">11.3.2</span> Tracking custom branches or releases</a></li>
   <li><a href="#hand-written-or-programmatically-created" id="toc-hand-written-or-programmatically-created" class="nav-link" data-scroll-target="#hand-written-or-programmatically-created"><span class="header-section-number">11.3.3</span> Hand-written or programmatically created</a></li>
   <li><a href="#custom-metadata" id="toc-custom-metadata" class="nav-link" data-scroll-target="#custom-metadata"><span class="header-section-number">11.3.4</span> Custom metadata</a></li>
-  <li><a href="#one-user-several-registry-files" id="toc-one-user-several-registry-files" class="nav-link" data-scroll-target="#one-user-several-registry-files"><span class="header-section-number">11.3.5</span> One user, several registry files?</a></li>
   </ul></li>
   <li><a href="#appinstall" id="toc-appinstall" class="nav-link" data-scroll-target="#appinstall"><span class="header-section-number">11.4</span> Installing the GitHub app</a></li>
   <li><a href="#wait-first-build" id="toc-wait-first-build" class="nav-link" data-scroll-target="#wait-first-build"><span class="header-section-number">11.5</span> Waiting for the first build</a></li>
@@ -521,11 +520,6 @@ $ropensci_category
 <h4 data-number="11.3.4.1" class="anchored" data-anchor-id="updating-the-custom-metadata"><span class="header-section-number">11.3.4.1</span> Updating the custom metadata</h4>
 <p>Please note that the metadata is picked up during the build. So if you updated the metadata, you need to trigger a build of the package by doing a commit (or wait for the package to get automatically rebuilt every 30 days)</p>
 </section>
-</section>
-<section id="one-user-several-registry-files" class="level3" data-number="11.3.5">
-<h3 data-number="11.3.5" class="anchored" data-anchor-id="one-user-several-registry-files"><span class="header-section-number">11.3.5</span> One user, several registry files?</h3>
-<p>You <strong>cannot</strong> manage several R-universes from one single GitHub account or organization. If you want to have, say, a development and a production R-universes, you need to manage them from two GitHub organizations.</p>
-<p>Also check out <a href="https://r-multiverse.org/">R-multiverse</a> (and other networks such as CRAN or Bioconductor) that could be the way for you to publish your packages for production.</p>
 </section>
 </section>
 <section id="appinstall" class="level2" data-number="11.4">
