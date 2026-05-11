@@ -168,14 +168,23 @@ This gives you some indication on how active the project is, and who are involve
 
 ## Social media cards
 
-When posting about your package on social media, you can get a pretty social media card featuring important information on the package such as its maintainer, its [keywords](#keywords), its URL, its version, its number of stars, etc.
+When posting about your package or universe on social media, you can get a pretty social media card featuring important information on respectively:
+
+- the package such as its maintainer, its [keywords](#keywords), its URL, its version, its number of stars, etc.
 
 ![](https://ropensci.r-universe.dev/targets/card.png){fig-alt=""}
 
+- the universe such as its number of packages and contributors, etc.
+
+![](https://ropensci.r-universe.dev/card.png){fig-alt=""}
+
+
 Here's how to display the card as preview on a social media post:
 
-- Either simply use the package's URL in your social media post, for instance `https://ropensci.r-universe.dev/targets/`. Indeed, the head of the page source has the metadata field `<meta property="og:image" content="https://ropensci.r-universe.dev/targets/card.png">`: therefore, the image is automatically used by all major social media platforms as the “preview” when you post a link to your package homepage.
+- Either simply use the package's or R-universe URL in your social media post, for instance `https://ropensci.r-universe.dev/targets/`. Indeed, the head of the page source has the metadata field `<meta property="og:image" content="https://ropensci.r-universe.dev/targets/card.png">`: therefore, the image is automatically used by all major social media platforms as the “preview” when you post a link to your package homepage.
 
-- Or download and use the card at either `/{package}/card.png` or `/{package}/card.svg`, for instance `https://ropensci.r-universe.dev/targets/card.png` (PNG format) or `https://ropensci.r-universe.dev/targets/card.svg` (SVG format).
+- Or download and use the card:
+    - for a package at either `/{package}/card.png` or `/{package}/card.svg`, for instance `https://ropensci.r-universe.dev/targets/card.png` (PNG format) or `https://ropensci.r-universe.dev/targets/card.svg` (SVG format).
+    - for a universe at either `/card.png` or `/card.svg`, for instance `https://ropensci.r-universe.dev/card.png` (PNG format) or `https://ropensci.r-universe.dev/card.svg` (SVG format).
 
 These images have the recommended size for social media preview images.
