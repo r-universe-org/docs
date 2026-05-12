@@ -162,6 +162,12 @@ If useful we could conditionally display other sorts of meta information, [get i
 Please note that the metadata is picked up during the build.
 So if you updated the metadata, you need to trigger a build of the package by doing a commit (or wait for the package to get automatically rebuilt every 30 days)
 
+### Can a user have multiple universes or multiple versions of a package?
+
+No, not like that. A universe is a CRAN-like repository, which can only contain one version of each package. And each GitHub user has a single universe. 
+
+If you really want to publish e.g. a development and a production R-universes, you need to manage them from two GitHub organizations. However the more common way is to use publish release versions of your package to a common production universe such as [R-multiverse](https://r-multiverse.org/), or other networks such as CRAN or Bioconductor.
+
 ## Installing the GitHub app {#appinstall}
 
 Once you pushed your `packages.json` file to your new `universe` repository on GitHub, the next step is to install the [R-universe GitHub app](https://github.com/apps/r-universe/installations/new) on your account.
