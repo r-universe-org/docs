@@ -1,0 +1,4 @@
+# Browse R-universe
+
+You can use R-universe to search for packages, as well as to learn more about a package or a whole organization.
+You can also obtain this information programmatically by the R-universe APIs, and the RSS feeds.

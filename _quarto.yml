@@ -10,7 +10,7 @@ book:
   repo-actions: [edit, issue]
   chapters:
     - index.qmd
-    - part: Browse
+    - part: browse.qmd
       chapters:
         - browse/get-started.qmd
         - browse/search.qmd
@@ -18,12 +18,12 @@ book:
         - browse/packages.qmd
         - browse/api.qmd
         - browse/rss-feeds.qmd
-    - part: Install
+    - part: install.qmd
       chapters:
         - install/binaries.qmd
         - install/reproducibility.qmd
         - install/dependencies.qmd
-    - part: Publish
+    - part: publish.qmd
       chapters:
         - publish/get-started.qmd
         - publish/set-up.qmd
@@ -31,11 +31,11 @@ book:
         - publish/troubleshoot-build.qmd
         - publish/terms.qmd
         - publish/other-networks.qmd
-    - part: Infrastructure
+    - part: infrastructure.qmd
       chapters:
         - infra/governance.qmd
         - infra/contribute.qmd
-    - part: Extra
+    - part: extra.qmd
       chapters:
         - bioconductor/index.qmd
 lightbox: true
