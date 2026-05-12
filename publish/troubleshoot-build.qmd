@@ -74,8 +74,8 @@ If you want to test a package against versions of other packages that are in a u
 To troubleshoot why your package cannot be built by R-universe, you can use the same GitHub Actions workflow.
 This is only possible on GitHub.
 
-The instructions on [r-universe-org/workflows](https://github.com/r-universe-org/workflows) explain how it works: 
-create a file `/.github/workflows/r-universe-test.yml` in your R package Git repository with the following config:
+The instructions on [r-universe-org/workflows](https://github.com/r-universe-org/workflows) explain how it works.
+You need to get a file `/.github/workflows/r-universe-test.yml` in your R package Git repository with the following config:
 
 ```yaml
 name: Test R-universe
@@ -91,6 +91,8 @@ jobs:
     with:
       universe: ${{ github.repository_owner }}
 ```
+
+You can either create the file manually or by calling the [`universe::use_universe_action()`](https://docs.ropensci.org/universe/reference/use_universe_action.html) function in the [universe R package](https://docs.ropensci.org/universe).
 
 The workflow will use the fully automated R-universe setup to build and check the package on a range of R versions on Linux, Windows, and MacOS configurations very similar to CRAN.
 
