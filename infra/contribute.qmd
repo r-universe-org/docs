@@ -3,3 +3,33 @@ title: "Contribute"
 ---
 
 R-universe is developed in the open on [GitHub](https://github.com/r-universe-org).
+
+## Website
+
+The R-universe website is not a static website.
+All pages and cranlike indexes are generated on request from a database.
+
+R-universe runs on self hosted server in NYC, but all traffic is routed via [Cloudflare CDN](https://www.cloudflare.com/application-services/products/cdn/).
+Cloudflare features include CDN level caching.
+When multiple users (anywhere) request the same file or page within 60s, the request is serviced directly from the cloudflare cache, and never hits the backend server.
+[More details](https://jeroen.github.io/technotes2024/).
+
+## Runner images
+
+On Linux we use a [docker image](https://github.com/r-universe-org/base-image/blob/master/Dockerfile) for all the building, where we can add/remove tools. 
+
+On Mac and Windows we rely on the [runner images provided by GitHub Actions](https://github.com/actions/runner-images)
+
+On top of the Mac and Windows image we use https://github.com/r-universe-org/actions to install some extra tooling specifically for R. 
+In the case of MacOS we install the bundle of system libraries provided by CRAN from https://mac.r-project.org/bin/darwin23/arm64/ and some other tools. 
+
+## Rtools
+
+We use the version of Rtools that is preinstalled by GitHub Actions, which is generally the latest CRAN version. 
+
+
+
+
+
+
+ 
