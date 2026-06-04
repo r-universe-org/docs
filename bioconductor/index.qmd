@@ -66,6 +66,7 @@ jobs:
     uses: r-universe-org/workflows/.github/workflows/build.yml@v3
     with:
       universe: bioc
+      organization: bioconductor # for BiocCheck checks
 ```
 
 Simply create a file `.github/workflows/r-universe.yml` in your git repository and copy the content above. See this [blog post](https://ropensci.org/blog/2026/01/03/r-universe-workflows/) for more details.
