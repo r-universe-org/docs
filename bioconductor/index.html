@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.8">
+<meta name="generator" content="quarto-1.10.11">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,10 +75,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b856dee10e21950d696b022d144bb914.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5947b73a06bce04bf1d622ae23e1ec5b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-571bcf8efca1925a71147e6ce6b0e494.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-bea1e4c73bb214a3fa890491b7992eb3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -337,9 +337,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#package-status-information" id="toc-package-status-information" class="nav-link active" data-scroll-target="#package-status-information"><span class="header-section-number">18.1</span> Package status information</a></li>
   <li><a href="#check-results" id="toc-check-results" class="nav-link" data-scroll-target="#check-results"><span class="header-section-number">18.2</span> Check results</a></li>
-  <li><a href="#on-r-version-compatibility" id="toc-on-r-version-compatibility" class="nav-link" data-scroll-target="#on-r-version-compatibility"><span class="header-section-number">18.3</span> On R version compatibility</a></li>
-  <li><a href="#debugging-the-ci" id="toc-debugging-the-ci" class="nav-link" data-scroll-target="#debugging-the-ci"><span class="header-section-number">18.4</span> Debugging the CI</a></li>
-  <li><a href="#questions-and-suggestions" id="toc-questions-and-suggestions" class="nav-link" data-scroll-target="#questions-and-suggestions"><span class="header-section-number">18.5</span> Questions and suggestions</a></li>
+  <li><a href="#the-bioconductor-package-registry" id="toc-the-bioconductor-package-registry" class="nav-link" data-scroll-target="#the-bioconductor-package-registry"><span class="header-section-number">18.3</span> The bioconductor package registry</a></li>
+  <li><a href="#on-r-version-compatibility" id="toc-on-r-version-compatibility" class="nav-link" data-scroll-target="#on-r-version-compatibility"><span class="header-section-number">18.4</span> On R version compatibility</a></li>
+  <li><a href="#debugging-the-ci" id="toc-debugging-the-ci" class="nav-link" data-scroll-target="#debugging-the-ci"><span class="header-section-number">18.5</span> Debugging the CI</a></li>
+  <li><a href="#questions-and-suggestions" id="toc-questions-and-suggestions" class="nav-link" data-scroll-target="#questions-and-suggestions"><span class="header-section-number">18.6</span> Questions and suggestions</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/bioconductor/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -388,32 +389,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>One thing you may notice, is that R-universe builds and checks R packages on multiple versions of R, as is common practice on CRAN and most other package repositories. This is different from what Bioconductor users may be used to, but there are good reasons, see the section below.</p>
 <p>It is also possible to link directly to this check table, e.g.&nbsp;<a href="https://bioc.r-universe.dev/DESeq2#checktable" class="uri">https://bioc.r-universe.dev/DESeq2#checktable</a>.</p>
 </section>
-<section id="on-r-version-compatibility" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="on-r-version-compatibility"><span class="header-section-number">18.3</span> On R version compatibility</h2>
+<section id="the-bioconductor-package-registry" class="level2" data-number="18.3">
+<h2 data-number="18.3" class="anchored" data-anchor-id="the-bioconductor-package-registry"><span class="header-section-number">18.3</span> The bioconductor package registry</h2>
+<p>Unlike other universes, the registry (list of packages) for <code>bioc</code> and <code>bioc-release</code> universes is derived automatically from the upstream <code>packages.json</code> files published by bioconductor. This is implemented in the functions <code>metabioc_devel_registry</code> and <code>metabioc_release_registry</code> in our sync package. You can run it yourself to see the output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pak::pak("r-universe-org/sync")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sync<span class="sc">:::</span><span class="fu">metabioc_devel_registry</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sync<span class="sc">:::</span><span class="fu">metabioc_release_registry</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The source code is not complicted, you can find it here: <a href="https://github.com/r-universe-org/sync/blob/master/R/monorepos.R#L913-L941" class="uri">https://github.com/r-universe-org/sync/blob/master/R/monorepos.R#L913-L941</a>.</p>
+<p>Basically the way R-universe works is that the GitHub actions runs the following every hour:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sync<span class="sc">::</span><span class="fu">sync_from_registry</span>(<span class="st">'https://github.com/r-universe/bioc'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sync<span class="sc">::</span><span class="fu">sync_from_registry</span>(<span class="st">'https://github.com/r-universe/bioc-release'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>And this uses the above functions to check for changes in <code>packages.json</code> and subsequently check for updates in any of the package git repositories.</p>
+</section>
+<section id="on-r-version-compatibility" class="level2" data-number="18.4">
+<h2 data-number="18.4" class="anchored" data-anchor-id="on-r-version-compatibility"><span class="header-section-number">18.4</span> On R version compatibility</h2>
 <p>Bioconductor traditionally assumes a specific version of R for each version of the package. However we still recommend <strong>not</strong> to put unnecessary version constraints like <code>R &gt; 4.6</code> in your package DESCRIPTION file, and instead try to make the package work at least with the <code>release</code> and <code>devel</code> version of R.</p>
 <p>Doing so will smoothen the transition because many pieces of the build infrastructure use the current R <code>release</code> version to render components or calculate metrics to get things published. If your package uses newly introduced R API’s from R-devel, we recommend adding a <a href="https://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Some-backports">backport as explained in WRE</a> to make it also work with r-release. Feel free to reach out if you could use some help with this!</p>
 <p>In addition to easing the build process, avoiding unnecessary R version restrictions can make your work more useful to the greater R community, as packages from other repositories could depend on your package, but without limiting their users to a given version of R.</p>
 </section>
-<section id="debugging-the-ci" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="debugging-the-ci"><span class="header-section-number">18.4</span> Debugging the CI</h2>
+<section id="debugging-the-ci" class="level2" data-number="18.5">
+<h2 data-number="18.5" class="anchored" data-anchor-id="debugging-the-ci"><span class="header-section-number">18.5</span> Debugging the CI</h2>
 <p>If you develop your package on GitHub, it is possible to run the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to <a href="https://r-universe.dev" class="uri">https://r-universe.dev</a>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Test R-universe</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> R-universe testing</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-universe-org/workflows/.github/workflows/build.yml@v3</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">universe</span><span class="kw">:</span><span class="at"> bioc</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">organization</span><span class="kw">:</span><span class="at"> bioconductor</span><span class="co"> # for BiocCheck checks</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Test R-universe</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> R-universe testing</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> r-universe-org/workflows/.github/workflows/build.yml@v3</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">universe</span><span class="kw">:</span><span class="at"> bioc</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">organization</span><span class="kw">:</span><span class="at"> bioconductor</span><span class="co"> # for BiocCheck checks</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Simply create a file <code>.github/workflows/r-universe.yml</code> in your git repository and copy the content above. See this <a href="https://ropensci.org/blog/2026/01/03/r-universe-workflows/">blog post</a> for more details.</p>
 </section>
-<section id="questions-and-suggestions" class="level2" data-number="18.5">
-<h2 data-number="18.5" class="anchored" data-anchor-id="questions-and-suggestions"><span class="header-section-number">18.5</span> Questions and suggestions</h2>
+<section id="questions-and-suggestions" class="level2" data-number="18.6">
+<h2 data-number="18.6" class="anchored" data-anchor-id="questions-and-suggestions"><span class="header-section-number">18.6</span> Questions and suggestions</h2>
 <p>For questions, suggestions, and bug reports, please use our <a href="https://github.com/r-universe-org/help/issues">issue tracker</a> or <a href="https://github.com/orgs/r-universe-org/discussions">discussion forum</a>.</p>
 
 
