@@ -38,6 +38,28 @@ One thing you may notice, is that R-universe builds and checks R packages on mul
 It is also possible to link directly to this check table, e.g. https://bioc.r-universe.dev/DESeq2#checktable.
 
 
+## The bioconductor package registry
+
+Unlike other universes, the registry (list of packages) for `bioc` and `bioc-release` universes is derived automatically from the upstream `packages.json` files published by bioconductor. This is implemented in the functions `metabioc_devel_registry` and `metabioc_release_registry` in our sync package. You can run it yourself to see the output:
+
+
+```r
+# pak::pak("r-universe-org/sync")
+sync:::metabioc_devel_registry()
+sync:::metabioc_release_registry()
+```
+
+The source code is not complicted, you can find it here: https://github.com/r-universe-org/sync/blob/master/R/monorepos.R#L913-L941. 
+
+Basically the way R-universe works is that the GitHub actions runs the following every hour:
+
+```r
+sync::sync_from_registry('https://github.com/r-universe/bioc')
+sync::sync_from_registry('https://github.com/r-universe/bioc-release')
+```
+
+And this uses the above functions to check for changes in `packages.json` and subsequently check for updates in any of the package git repositories.
+
 
 ## On R version compatibility
 
@@ -70,6 +92,8 @@ jobs:
 ```
 
 Simply create a file `.github/workflows/r-universe.yml` in your git repository and copy the content above. See this [blog post](https://ropensci.org/blog/2026/01/03/r-universe-workflows/) for more details.
+
+
 
 ## Questions and suggestions
 
