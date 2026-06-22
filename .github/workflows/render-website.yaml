@@ -42,7 +42,7 @@ jobs:
           git checkout $(git describe --tags $(git rev-list --tags --max-count=1))
           sudo make install
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
 
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
@@ -60,7 +60,7 @@ jobs:
 
       - name: Restore lychee cache
         id: restore-cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: .lycheecache
           key: cache-lychee-${{ github.sha }}
@@ -68,7 +68,7 @@ jobs:
 
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2
         with:
           fail: false
           args: "docs --exclude-loopback --insecure --exclude-mail --exclude-path docs/site_libs --cache --max-cache-age 1d"
@@ -80,13 +80,13 @@ jobs:
         with:
           path: ./lychee/out.md
 
-      - uses: mshick/add-pr-comment@v2
+      - uses: mshick/add-pr-comment@v3
         if: failure()
         with:
           message: ${{ steps.lychee-output.outputs.content }}
 
       - name: Save lychee cache
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         if: success()
         with:
           path: .lycheecache
@@ -103,7 +103,7 @@ jobs:
       - name: Deploy to Netlify
         if: contains(env.isExtPR, 'false')
         id: netlify-deploy
-        uses: nwtgck/actions-netlify@v2.0
+        uses: nwtgck/actions-netlify@v4
         with:
           publish-dir: './docs'
           production-branch: main
