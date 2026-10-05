@@ -962,11 +962,11 @@
     ]
   },
   {
-    "objectID": "bioconductor/index.html#debugging-the-ci",
-    "href": "bioconductor/index.html#debugging-the-ci",
+    "objectID": "bioconductor/index.html#testing-the-build-in-your-own-ci",
+    "href": "bioconductor/index.html#testing-the-build-in-your-own-ci",
     "title": "18  Bioconductor and R-universe",
-    "section": "18.5 Debugging the CI",
-    "text": "18.5 Debugging the CI\nIf you develop your package on GitHub, it is possible to run the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to https://r-universe.dev.\nname: Test R-universe\n\non:\n  push:\n  pull_request:\n\njobs:\n  build:\n    name: R-universe testing\n    uses: r-universe-org/workflows/.github/workflows/build.yml@v3\n    with:\n      universe: bioc\n      organization: bioconductor # for BiocCheck checks\nSimply create a file .github/workflows/r-universe.yml in your git repository and copy the content above. See this blog post for more details.",
+    "section": "18.5 Testing the build in your own CI",
+    "text": "18.5 Testing the build in your own CI\nIf you develop your package on GitHub, it is possible to run the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to https://r-universe.dev.\nname: Test R-universe\n\non:\n  push:\n  pull_request:\n\njobs:\n  build:\n    name: R-universe testing\n    uses: r-universe-org/workflows/.github/workflows/build.yml@v3\n    with:\n      universe: bioc\n      organization: bioconductor # for BiocCheck checks\nSimply create a file .github/workflows/r-universe.yml in your git repository and copy the content above. See this blog post for more details.",
     "crumbs": [
       "Extra topics",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Bioconductor and R-universe</span>"
