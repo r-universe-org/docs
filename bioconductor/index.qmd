@@ -16,6 +16,13 @@ We currently operate two dedicated R-universe instances for both Bioconductor br
  - __Bioc devel__: https://bioc.r-universe.dev
  - __Bioc release__: https://bioc-release.r-universe.dev
 
+The manifest and package sources for these universes tracked here:
+
+ - __Bioc devel__: https://github.com/r-universe/bioc
+ - __Bioc release__: https://github.com/r-universe/bioc-release
+
+These universes contain the packages from `software`, `workflows` and `data/experiment` packages as listed in the official bioconductor [manifest](https://github.com/bioc/manifest) repository.
+
 These universes integrate directly with Bioconductor’s existing Git infrastructure and provide continuous builds for packages in both branches. The binaries and check results as shown on R-universe eventually get mirrored and published on Bioconductor.
 
 Information about each package is available on `https://bioc.r-universe.dev/{pkgname}`, for example https://bioc.r-universe.dev/DESeq2 shown below:
@@ -32,34 +39,24 @@ The `File` column on the other hand links to a zip file which contains the insta
 
 ![](../img/bioc-checktable.png){fig-alt="Table with check results of a Bioconductor package"}
 
-
 One thing you may notice, is that R-universe builds and checks R packages on multiple versions of R, as is common practice on CRAN and most other package repositories. This is different from what Bioconductor users may be used to, but there are good reasons, see the section below.
 
 It is also possible to link directly to this check table, e.g. https://bioc.r-universe.dev/DESeq2#checktable.
 
+Note that data packages (e.g. packages in `data/experiment`) are treated slightly differently in R-universe. These packages have a higher limit on the filesize of the source package (1GB instead of 100MB) however they do not get built and checked across all platforms.
 
 ## The bioconductor package registry
 
-Unlike other universes, the registry (list of packages) for `bioc` and `bioc-release` universes is derived automatically from the upstream `packages.json` files published by bioconductor. This is implemented in the functions `metabioc_devel_registry` and `metabioc_release_registry` in our sync package. You can run it yourself to see the output:
+Unlike other universes, the registry (list of packages) for `bioc` and `bioc-release` universes is derived automatically from the upstream [manifest](https://github.com/bioc/manifest) published by bioconductor. This is implemented in the functions [bioc_manifest_packages](https://github.com/r-universe-org/sync/blob/master/R/monorepos.R#L946-L964) in our sync package.
 
-
-```r
-# pak::pak("r-universe-org/sync")
-sync:::metabioc_devel_registry()
-sync:::metabioc_release_registry()
-```
-
-The source code is not complicted, you can find it here: https://github.com/r-universe-org/sync/blob/master/R/monorepos.R#L913-L941. 
-
-Basically the way R-universe works is that the GitHub actions runs the following every hour:
+The way R-universe works is that the GitHub actions runs the following every hour:
 
 ```r
 sync::sync_from_registry('https://github.com/r-universe/bioc')
 sync::sync_from_registry('https://github.com/r-universe/bioc-release')
 ```
 
-And this uses the above functions to check for changes in `packages.json` and subsequently check for updates in any of the package git repositories.
-
+And this uses the above functions to check for updates in `manifest` and subsequently check for updates in any of the package git repositories.
 
 ## On R version compatibility
 
@@ -70,7 +67,7 @@ Doing so will smoothen the transition because many pieces of the build infrastru
 In addition to easing the build process, avoiding unnecessary R version restrictions can make your work more useful to the greater R community, as packages from other repositories could depend on your package, but without limiting their users to a given version of R.
 
 
-## Debugging the CI
+## Testing the build in your own CI
 
 If you develop your package on GitHub, it is possible to run the exact same workflow from your own GitHub repository. This allows you to test or debug the build and check process on your R package, exactly as it will happen on R-universe, but without actually deploying to https://r-universe.dev.
 
