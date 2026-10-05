@@ -2,98 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://docs.r-universe.dev/index.html</loc>
-    <lastmod>2026-10-05T11:47:38.424Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/browse.html</loc>
-    <lastmod>2026-10-05T11:47:38.382Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.953Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/browse/get-started.html</loc>
-    <lastmod>2026-10-05T11:47:38.383Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.954Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/browse/search.html</loc>
-    <lastmod>2026-10-05T11:47:38.383Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.954Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/browse/universes.html</loc>
-    <lastmod>2026-10-05T11:47:38.383Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.954Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/browse/packages.html</loc>
-    <lastmod>2026-10-05T11:47:38.383Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.954Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/browse/api.html</loc>
-    <lastmod>2026-10-05T11:47:38.382Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.954Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/browse/rss-feeds.html</loc>
-    <lastmod>2026-10-05T11:47:38.383Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.954Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/install.html</loc>
-    <lastmod>2026-10-05T11:47:38.425Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/install/binaries.html</loc>
-    <lastmod>2026-10-05T11:47:38.425Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/install/reproducibility.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/install/dependencies.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/publish.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/publish/get-started.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/publish/set-up.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.988Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/publish/metadata.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.988Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/publish/troubleshoot-build.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.988Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/publish/terms.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.988Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/publish/other-networks.html</loc>
-    <lastmod>2026-10-05T11:47:38.426Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.988Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/infrastructure.html</loc>
-    <lastmod>2026-10-05T11:47:38.425Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/infra/governance.html</loc>
-    <lastmod>2026-10-05T11:47:38.425Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/infra/contribute.html</loc>
-    <lastmod>2026-10-05T11:47:38.425Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.987Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/extra.html</loc>
-    <lastmod>2026-10-05T11:47:38.383Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.954Z</lastmod>
   </url>
   <url>
     <loc>https://docs.r-universe.dev/bioconductor/index.html</loc>
-    <lastmod>2026-10-05T11:47:38.382Z</lastmod>
+    <lastmod>2026-10-05T12:01:52.953Z</lastmod>
   </url>
 </urlset>
