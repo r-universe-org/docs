@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.16">
+<meta name="generator" content="quarto-1.11.5">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -76,10 +79,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2051dbbaa7ae7a279e016470f480e120.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3b9ea68436acb9022c2fbce6dbb58b06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-df88f0a9d51529686d2389ec357fe0b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-911c115fd7ca3efea027eab731414213.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,17 +115,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse.html">Browse R-universe</a></li><li class="breadcrumb-item"><a href="../browse/api.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse.html">Browse R-universe</a></li><li class="breadcrumb-item"><a href="../browse/api.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -133,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">R-Universe Documentation</a> 
@@ -163,12 +166,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../browse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Browse R-universe</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Browse R-universe</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section: Browse R-universe">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../browse/get-started.html" class="sidebar-item-text sidebar-link">
@@ -210,12 +213,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../install.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Install packages</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Install packages</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section: Install packages">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../install/binaries.html" class="sidebar-item-text sidebar-link">
@@ -239,12 +242,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../publish.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Publish packages</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Publish packages</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section: Publish packages">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../publish/get-started.html" class="sidebar-item-text sidebar-link">
@@ -286,12 +289,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../infrastructure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Contribute to R-universe!</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-4-label">Contribute to R-universe!</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section: Contribute to R-universe!">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../infra/governance.html" class="sidebar-item-text sidebar-link">
@@ -309,12 +312,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../extra.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extra topics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+ <span class="menu-text" id="quarto-sidebar-section-5-label">Extra topics</span></a>
+            <button type="button" class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-controls="quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section: Extra topics">
+              <i class="bi bi-chevron-right ms-2" aria-hidden="true"></i>
+            </button> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../bioconductor/index.html" class="sidebar-item-text sidebar-link">
@@ -329,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
@@ -350,9 +353,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="toc-actions"><ul><li><a href="https://github.com/r-universe-org/hitchhikers-guide/edit/main/browse/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/r-universe-org/hitchhikers-guide/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse.html">Browse R-universe</a></li><li class="breadcrumb-item"><a href="../browse/api.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../browse.html">Browse R-universe</a></li><li class="breadcrumb-item"><a href="../browse/api.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Programmatic access (APIs)</span></h1>
 </div>
@@ -392,8 +395,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(universes, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
- $ universes  :List of 11240
- $ maintainers:List of 10904</code></pre>
+ $ universes  :List of 11666
+ $ maintainers:List of 11363</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -513,80 +516,80 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 74
- $ Package           : chr "curl"
- $ Type              : chr "Package"
- $ Title             : chr "A Modern and Flexible Web Client for R"
- $ Version           : chr "7.1.0"
- $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
- $ Description       : chr "Bindings to 'libcurl' &lt;https://curl.se/libcurl/&gt; for\nperforming fully configurable HTTP/FTP requests where res"| __truncated__
- $ License           : chr "MIT + file LICENSE"
- $ SystemRequirements: chr "libcurl (&gt;= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)"
- $ URL               : chr "https://jeroen.r-universe.dev/curl"
- $ BugReports        : chr "https://github.com/jeroen/curl/issues"
- $ VignetteBuilder   : chr "knitr"
- $ RoxygenNote       : chr "7.3.2"
- $ Encoding          : chr "UTF-8"
- $ Language          : chr "en-US"
- $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
- $ Config/pak/sysreqs: chr "libssl-dev"
- $ Repository        : chr "https://jeroen.r-universe.dev"
- $ Date/Publication  : chr "2026-07-21 11:51:31 UTC"
- $ RemoteUrl         : chr "https://github.com/jeroen/curl"
- $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "4092c366c27c8b64528b493be5e09fb6484a1172"
- $ NeedsCompilation  : chr "yes"
- $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
- $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ _user             : chr "jeroen"
- $ _type             : chr "src"
- $ _file             : chr "curl_7.1.0.tar.gz"
- $ _fileid           : chr "https://r2.ropensci.org/61d3892ec6b0bf3eebae30a1738e9e31c0b401c1d74bb5a19ea6eab8f968fd00"
- $ _filesize         : int 338609
- $ _sha256           : chr "61d3892ec6b0bf3eebae30a1738e9e31c0b401c1d74bb5a19ea6eab8f968fd00"
- $ _expires          : chr "2026-10-29T12:27:41.000Z"
- $ _created          : chr "2026-07-21T12:18:46.000Z"
- $ _published        : chr "2026-07-21T22:21:55.083Z"
- $ _jobs             :List of 13
- $ _host             : chr "GitHub-Actions"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/29829324297"
- $ _status           : chr "success"
- $ _upstream         : chr "https://github.com/jeroen/curl"
- $ _commit           :List of 5
- $ _maintainer       :List of 8
- $ _distro           : chr "resolute"
- $ _registered       : logi TRUE
- $ _dependencies     :List of 9
- $ _owner            : chr "jeroen"
- $ _selfowned        : logi TRUE
- $ _usedby           : int 6095
- $ _updates          :List of 11
- $ _tags             : list()
- $ _stars            : int 232
- $ _contributors     :List of 23
- $ _userbio          :List of 5
- $ _downloads        :List of 2
- $ _mentions         : int 21
- $ _devurl           : chr "https://github.com/jeroen/curl"
- $ _searchresults    : int 6336
- $ _topics           :List of 1
- $ _rbuild           : chr "4.6.1"
- $ _assets           :List of 12
- $ _homeurl          : chr "https://github.com/jeroen/curl"
- $ _realowner        : chr "jeroen"
- $ _cranurl          : logi TRUE
- $ _releases         :List of 57
- $ _exports          :List of 44
- $ _help             :List of 19
- $ _readme           : chr "https://github.com/jeroen/curl/raw/HEAD/README.md"
- $ _rundeps          : list()
- $ _sysdeps          :List of 1
- $ _vignettes        :List of 2
- $ _score            : num 20
- $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "curl"
- $ _universes        :List of 1
- $ _binaries         :List of 12</code></pre>
+ $ Package                : chr "curl"
+ $ Type                   : chr "Package"
+ $ Title                  : chr "A Modern and Flexible Web Client for R"
+ $ Version                : chr "8.1.0"
+ $ Authors@R              : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
+ $ Description            : chr "Bindings to 'libcurl' &lt;https://curl.se/libcurl/&gt; for\nperforming fully configurable HTTP/FTP requests where res"| __truncated__
+ $ License                : chr "MIT + file LICENSE"
+ $ SystemRequirements     : chr "libcurl (&gt;= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)"
+ $ URL                    : chr "https://jeroen.r-universe.dev/curl"
+ $ BugReports             : chr "https://github.com/jeroen/curl/issues"
+ $ VignetteBuilder        : chr "knitr"
+ $ Encoding               : chr "UTF-8"
+ $ Language               : chr "en-US"
+ $ Roxygen                : chr "list(load = \"installed\", markdown = TRUE)"
+ $ Config/roxygen2/version: chr "8.0.0"
+ $ Config/pak/sysreqs     : chr "libssl-dev"
+ $ Repository             : chr "https://jeroen.r-universe.dev"
+ $ Date/Publication       : chr "2026-10-04 18:26:37 UTC"
+ $ RemoteUrl              : chr "https://github.com/jeroen/curl"
+ $ RemoteRef              : chr "HEAD"
+ $ RemoteSha              : chr "e0eff09b0521db23c30bb7c9d0ca6d48be18ae3c"
+ $ NeedsCompilation       : chr "yes"
+ $ Packaged               :List of 2
+ $ Author                 : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
+ $ Maintainer             : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ _user                  : chr "jeroen"
+ $ _type                  : chr "src"
+ $ _file                  : chr "curl_8.1.0.tar.gz"
+ $ _fileid                : chr "https://r2.ropensci.org/de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
+ $ _filesize              : int 374744
+ $ _sha256                : chr "de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
+ $ _expires               : chr "2027-01-12T21:52:26.000Z"
+ $ _created               : chr "2026-10-04T21:43:34.000Z"
+ $ _published             : chr "2026-10-04T21:52:27.897Z"
+ $ _jobs                  :List of 15
+ $ _host                  : chr "GitHub-Actions"
+ $ _buildurl              : chr "https://github.com/r-universe/jeroen/actions/runs/37237053880"
+ $ _status                : chr "success"
+ $ _upstream              : chr "https://github.com/jeroen/curl"
+ $ _commit                :List of 5
+ $ _maintainer            :List of 8
+ $ _distro                : chr "resolute"
+ $ _registered            : logi TRUE
+ $ _dependencies          :List of 9
+ $ _owner                 : chr "jeroen"
+ $ _selfowned             : logi TRUE
+ $ _usedby                : int 6465
+ $ _updates               :List of 9
+ $ _tags                  : list()
+ $ _stars                 : int 234
+ $ _contributors          :List of 23
+ $ _userbio               :List of 5
+ $ _downloads             :List of 2
+ $ _mentions              : int 21
+ $ _devurl                : chr "https://github.com/jeroen/curl"
+ $ _searchresults         : int 6160
+ $ _topics                :List of 1
+ $ _rbuild                : chr "4.6.1"
+ $ _assets                :List of 12
+ $ _homeurl               : chr "https://github.com/jeroen/curl"
+ $ _realowner             : chr "jeroen"
+ $ _cranurl               : logi TRUE
+ $ _releases              :List of 58
+ $ _exports               :List of 149
+ $ _help                  :List of 19
+ $ _readme                : chr "https://github.com/jeroen/curl/raw/HEAD/README.md"
+ $ _rundeps               : list()
+ $ _sysdeps               :List of 1
+ $ _vignettes             :List of 2
+ $ _score                 : num 19.9
+ $ _indexed               : logi TRUE
+ $ _nocasepkg             : chr "curl"
+ $ _universes             :List of 1
+ $ _binaries              :List of 14</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -596,80 +599,80 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages[[<span class="dv">1</span>]], <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 74
- $ Package           : chr "curl"
- $ Type              : chr "Package"
- $ Title             : chr "A Modern and Flexible Web Client for R"
- $ Version           : chr "7.1.0"
- $ Authors@R         : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
- $ Description       : chr "Bindings to 'libcurl' &lt;https://curl.se/libcurl/&gt; for\nperforming fully configurable HTTP/FTP requests where res"| __truncated__
- $ License           : chr "MIT + file LICENSE"
- $ SystemRequirements: chr "libcurl (&gt;= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)"
- $ URL               : chr "https://jeroen.r-universe.dev/curl"
- $ BugReports        : chr "https://github.com/jeroen/curl/issues"
- $ VignetteBuilder   : chr "knitr"
- $ RoxygenNote       : chr "7.3.2"
- $ Encoding          : chr "UTF-8"
- $ Language          : chr "en-US"
- $ Roxygen           : chr "list(load = \"installed\", markdown = TRUE)"
- $ Config/pak/sysreqs: chr "libssl-dev"
- $ Repository        : chr "https://jeroen.r-universe.dev"
- $ Date/Publication  : chr "2026-07-21 11:51:31 UTC"
- $ RemoteUrl         : chr "https://github.com/jeroen/curl"
- $ RemoteRef         : chr "HEAD"
- $ RemoteSha         : chr "4092c366c27c8b64528b493be5e09fb6484a1172"
- $ NeedsCompilation  : chr "yes"
- $ Packaged          :List of 2
- $ Author            : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
- $ Maintainer        : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
- $ _user             : chr "jeroen"
- $ _type             : chr "src"
- $ _file             : chr "curl_7.1.0.tar.gz"
- $ _fileid           : chr "https://r2.ropensci.org/61d3892ec6b0bf3eebae30a1738e9e31c0b401c1d74bb5a19ea6eab8f968fd00"
- $ _filesize         : int 338609
- $ _sha256           : chr "61d3892ec6b0bf3eebae30a1738e9e31c0b401c1d74bb5a19ea6eab8f968fd00"
- $ _expires          : chr "2026-10-29T12:27:41.000Z"
- $ _created          : chr "2026-07-21T12:18:46.000Z"
- $ _published        : chr "2026-07-21T22:21:55.083Z"
- $ _jobs             :List of 13
- $ _host             : chr "GitHub-Actions"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/29829324297"
- $ _status           : chr "success"
- $ _upstream         : chr "https://github.com/jeroen/curl"
- $ _commit           :List of 5
- $ _maintainer       :List of 8
- $ _distro           : chr "resolute"
- $ _registered       : logi TRUE
- $ _dependencies     :List of 9
- $ _owner            : chr "jeroen"
- $ _selfowned        : logi TRUE
- $ _usedby           : int 6095
- $ _updates          :List of 11
- $ _tags             : list()
- $ _stars            : int 232
- $ _contributors     :List of 23
- $ _userbio          :List of 5
- $ _downloads        :List of 2
- $ _mentions         : int 21
- $ _devurl           : chr "https://github.com/jeroen/curl"
- $ _searchresults    : int 6336
- $ _topics           :List of 1
- $ _rbuild           : chr "4.6.1"
- $ _assets           :List of 12
- $ _homeurl          : chr "https://github.com/jeroen/curl"
- $ _realowner        : chr "jeroen"
- $ _cranurl          : logi TRUE
- $ _releases         :List of 57
- $ _exports          :List of 44
- $ _help             :List of 19
- $ _readme           : chr "https://github.com/jeroen/curl/raw/HEAD/README.md"
- $ _rundeps          : list()
- $ _sysdeps          :List of 1
- $ _vignettes        :List of 2
- $ _score            : num 20
- $ _indexed          : logi TRUE
- $ _nocasepkg        : chr "curl"
- $ _universes        :List of 1
- $ _binaries         :List of 12</code></pre>
+ $ Package                : chr "curl"
+ $ Type                   : chr "Package"
+ $ Title                  : chr "A Modern and Flexible Web Client for R"
+ $ Version                : chr "8.1.0"
+ $ Authors@R              : chr "c(\nperson(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\",\ncomment = c(ORC"| __truncated__
+ $ Description            : chr "Bindings to 'libcurl' &lt;https://curl.se/libcurl/&gt; for\nperforming fully configurable HTTP/FTP requests where res"| __truncated__
+ $ License                : chr "MIT + file LICENSE"
+ $ SystemRequirements     : chr "libcurl (&gt;= 7.73): libcurl-devel (rpm) or\nlibcurl4-openssl-dev (deb)"
+ $ URL                    : chr "https://jeroen.r-universe.dev/curl"
+ $ BugReports             : chr "https://github.com/jeroen/curl/issues"
+ $ VignetteBuilder        : chr "knitr"
+ $ Encoding               : chr "UTF-8"
+ $ Language               : chr "en-US"
+ $ Roxygen                : chr "list(load = \"installed\", markdown = TRUE)"
+ $ Config/roxygen2/version: chr "8.0.0"
+ $ Config/pak/sysreqs     : chr "libssl-dev"
+ $ Repository             : chr "https://jeroen.r-universe.dev"
+ $ Date/Publication       : chr "2026-10-04 18:26:37 UTC"
+ $ RemoteUrl              : chr "https://github.com/jeroen/curl"
+ $ RemoteRef              : chr "HEAD"
+ $ RemoteSha              : chr "e0eff09b0521db23c30bb7c9d0ca6d48be18ae3c"
+ $ NeedsCompilation       : chr "yes"
+ $ Packaged               :List of 2
+ $ Author                 : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
+ $ Maintainer             : chr "Jeroen Ooms &lt;jeroenooms@gmail.com&gt;"
+ $ _user                  : chr "jeroen"
+ $ _type                  : chr "src"
+ $ _file                  : chr "curl_8.1.0.tar.gz"
+ $ _fileid                : chr "https://r2.ropensci.org/de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
+ $ _filesize              : int 374744
+ $ _sha256                : chr "de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
+ $ _expires               : chr "2027-01-12T21:52:26.000Z"
+ $ _created               : chr "2026-10-04T21:43:34.000Z"
+ $ _published             : chr "2026-10-04T21:52:27.897Z"
+ $ _jobs                  :List of 15
+ $ _host                  : chr "GitHub-Actions"
+ $ _buildurl              : chr "https://github.com/r-universe/jeroen/actions/runs/37237053880"
+ $ _status                : chr "success"
+ $ _upstream              : chr "https://github.com/jeroen/curl"
+ $ _commit                :List of 5
+ $ _maintainer            :List of 8
+ $ _distro                : chr "resolute"
+ $ _registered            : logi TRUE
+ $ _dependencies          :List of 9
+ $ _owner                 : chr "jeroen"
+ $ _selfowned             : logi TRUE
+ $ _usedby                : int 6465
+ $ _updates               :List of 9
+ $ _tags                  : list()
+ $ _stars                 : int 234
+ $ _contributors          :List of 23
+ $ _userbio               :List of 5
+ $ _downloads             :List of 2
+ $ _mentions              : int 21
+ $ _devurl                : chr "https://github.com/jeroen/curl"
+ $ _searchresults         : int 6160
+ $ _topics                :List of 1
+ $ _rbuild                : chr "4.6.1"
+ $ _assets                :List of 12
+ $ _homeurl               : chr "https://github.com/jeroen/curl"
+ $ _realowner             : chr "jeroen"
+ $ _cranurl               : logi TRUE
+ $ _releases              :List of 58
+ $ _exports               :List of 149
+ $ _help                  :List of 19
+ $ _readme                : chr "https://github.com/jeroen/curl/raw/HEAD/README.md"
+ $ _rundeps               : list()
+ $ _sysdeps               :List of 1
+ $ _vignettes             :List of 2
+ $ _score                 : num 19.9
+ $ _indexed               : logi TRUE
+ $ _nocasepkg             : chr "curl"
+ $ _universes             :List of 1
+ $ _binaries              :List of 14</code></pre>
 </div>
 </div>
 </section>
@@ -687,7 +690,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(v8, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 77
- $ _id               : chr "6a443d58c375b2cc78b76838"
+ $ _id               : chr "6abaa86d99f7aa8c6aa423be"
  $ Package           : chr "V8"
  $ Type              : chr "Package"
  $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
@@ -717,15 +720,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
  $ _file             : chr "V8_8.2.0.tar.gz"
- $ _fileid           : chr "https://r2.ropensci.org/c12ede8f94133fab0019c40526c8011c731f0346d77033ab750f1451d587237f"
- $ _filesize         : int 202757
- $ _sha256           : chr "c12ede8f94133fab0019c40526c8011c731f0346d77033ab750f1451d587237f"
- $ _expires          : chr "2026-10-08T22:04:07.000Z"
- $ _created          : chr "2026-06-30T21:58:58.000Z"
- $ _published        : chr "2026-06-30T22:04:08.313Z"
- $ _jobs             :List of 13
+ $ _fileid           : chr "https://r2.ropensci.org/806953e2f92f4109c6a0311430b922fb845888be513922ded23c323757a9c4fb"
+ $ _filesize         : int 204762
+ $ _sha256           : chr "806953e2f92f4109c6a0311430b922fb845888be513922ded23c323757a9c4fb"
+ $ _expires          : chr "2027-01-06T17:48:27.000Z"
+ $ _created          : chr "2026-09-28T17:39:18.000Z"
+ $ _published        : chr "2026-09-28T17:48:29.285Z"
+ $ _jobs             :List of 15
  $ _host             : chr "GitHub-Actions"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/28478395196"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/36459202392"
  $ _status           : chr "success"
  $ _upstream         : chr "https://github.com/jeroen/v8"
  $ _commit           :List of 5
@@ -735,9 +738,9 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 445
- $ _updates          :List of 17
- $ _tags             :List of 1
+ $ _usedby           : int 469
+ $ _updates          :List of 10
+ $ _tags             : list()
  $ _topics           :List of 4
  $ _stars            : int 207
  $ _contributors     :List of 11
@@ -745,7 +748,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 2
  $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 616
+ $ _searchresults    : int 2
  $ _rbuild           : chr "4.6.1"
  $ _assets           :List of 12
  $ _homeurl          : chr "https://github.com/jeroen/v8"
@@ -759,11 +762,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _rundeps          :List of 3
  $ _sysdeps          :List of 1
  $ _vignettes        :List of 2
- $ _score            : num 16.5
+ $ _score            : num 14.2
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "v8"
  $ _universes        :List of 1
- $ _binaries         :List of 12</code></pre>
+ $ _binaries         :List of 14</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -773,7 +776,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(V8, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 77
- $ _id               : chr "6a443d58c375b2cc78b76838"
+ $ _id               : chr "6abaa86d99f7aa8c6aa423be"
  $ Package           : chr "V8"
  $ Type              : chr "Package"
  $ Title             : chr "Embedded JavaScript and WebAssembly Engine for R"
@@ -803,15 +806,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _user             : chr "jeroen"
  $ _type             : chr "src"
  $ _file             : chr "V8_8.2.0.tar.gz"
- $ _fileid           : chr "https://r2.ropensci.org/c12ede8f94133fab0019c40526c8011c731f0346d77033ab750f1451d587237f"
- $ _filesize         : int 202757
- $ _sha256           : chr "c12ede8f94133fab0019c40526c8011c731f0346d77033ab750f1451d587237f"
- $ _expires          : chr "2026-10-08T22:04:07.000Z"
- $ _created          : chr "2026-06-30T21:58:58.000Z"
- $ _published        : chr "2026-06-30T22:04:08.313Z"
- $ _jobs             :List of 13
+ $ _fileid           : chr "https://r2.ropensci.org/806953e2f92f4109c6a0311430b922fb845888be513922ded23c323757a9c4fb"
+ $ _filesize         : int 204762
+ $ _sha256           : chr "806953e2f92f4109c6a0311430b922fb845888be513922ded23c323757a9c4fb"
+ $ _expires          : chr "2027-01-06T17:48:27.000Z"
+ $ _created          : chr "2026-09-28T17:39:18.000Z"
+ $ _published        : chr "2026-09-28T17:48:29.285Z"
+ $ _jobs             :List of 15
  $ _host             : chr "GitHub-Actions"
- $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/28478395196"
+ $ _buildurl         : chr "https://github.com/r-universe/jeroen/actions/runs/36459202392"
  $ _status           : chr "success"
  $ _upstream         : chr "https://github.com/jeroen/v8"
  $ _commit           :List of 5
@@ -821,9 +824,9 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _dependencies     :List of 8
  $ _owner            : chr "jeroen"
  $ _selfowned        : logi TRUE
- $ _usedby           : int 445
- $ _updates          :List of 17
- $ _tags             :List of 1
+ $ _usedby           : int 469
+ $ _updates          :List of 10
+ $ _tags             : list()
  $ _topics           :List of 4
  $ _stars            : int 207
  $ _contributors     :List of 11
@@ -831,7 +834,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads        :List of 2
  $ _mentions         : int 2
  $ _devurl           : chr "https://github.com/jeroen/v8"
- $ _searchresults    : int 616
+ $ _searchresults    : int 2
  $ _rbuild           : chr "4.6.1"
  $ _assets           :List of 12
  $ _homeurl          : chr "https://github.com/jeroen/v8"
@@ -845,11 +848,11 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _rundeps          :List of 3
  $ _sysdeps          :List of 1
  $ _vignettes        :List of 2
- $ _score            : num 16.5
+ $ _score            : num 14.2
  $ _indexed          : logi TRUE
  $ _nocasepkg        : chr "v8"
  $ _universes        :List of 1
- $ _binaries         :List of 12</code></pre>
+ $ _binaries         :List of 14</code></pre>
 </div>
 </div>
 </section>
@@ -882,15 +885,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 48
+ $ results:List of 53
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 48</code></pre>
+ $ total  : int 53</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 48</code></pre>
+<pre><code>[1] 53</code></pre>
 </div>
 </div>
 <p>Using <code>{universe}</code>:</p>
@@ -900,15 +903,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 48
+ $ results:List of 53
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 48</code></pre>
+ $ total  : int 53</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 48</code></pre>
+<pre><code>[1] 53</code></pre>
 </div>
 </div>
 </section>
@@ -934,16 +937,16 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 93
+ $ results:List of 97
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 93</code></pre>
+ $ total  : int 97</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "6a5f33ac14e95619b75d579c"
+ $ _id           : chr "6abb956d99f7aa8c6aa465bb"
  $ Package       : chr "PEcAn.data.atmosphere"
  $ Title         : chr "PEcAn Functions Used for Managing Climate Driver Data"
  $ Description   : chr "The Predictive Ecosystem Carbon Analyzer (PEcAn) is a\nscientific workflow management tool that is designed to\"| __truncated__
@@ -959,8 +962,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ linkedin   : chr "in/dlebauer"
   ..$ description: chr ""
   ..$ uuid       : int 464871
- $ updated       : int 1784614963
- $ stars         : int 238
+ $ updated       : int 1790663784
+ $ stars         : int 246
  $ topics        :List of 13
   ..$ : chr "climate-data"
   ..$ : chr "data-standardization"
@@ -976,7 +979,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "pecan"
   ..$ : chr "plants"
  $ match         : num 126
- $ rank          : num 1502</code></pre>
+ $ rank          : num 1504</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -985,16 +988,16 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 93
+ $ results:List of 97
  $ query  :List of 1
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 93</code></pre>
+ $ total  : int 97</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "6a5f33ac14e95619b75d579c"
+ $ _id           : chr "6abb956d99f7aa8c6aa465bb"
  $ Package       : chr "PEcAn.data.atmosphere"
  $ Title         : chr "PEcAn Functions Used for Managing Climate Driver Data"
  $ Description   : chr "The Predictive Ecosystem Carbon Analyzer (PEcAn) is a\nscientific workflow management tool that is designed to\"| __truncated__
@@ -1010,8 +1013,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ linkedin   : chr "in/dlebauer"
   ..$ description: chr ""
   ..$ uuid       : int 464871
- $ updated       : int 1784614963
- $ stars         : int 238
+ $ updated       : int 1790663784
+ $ stars         : int 246
  $ topics        :List of 13
   ..$ : chr "climate-data"
   ..$ : chr "data-standardization"
@@ -1027,7 +1030,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "pecan"
   ..$ : chr "plants"
  $ match         : num 126
- $ rank          : num 1502</code></pre>
+ $ rank          : num 1504</code></pre>
 </div>
 </div>
 <p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>
@@ -1442,7 +1445,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
     }
   });
   </script>
-<nav class="page-navigation">
+<nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
       <a href="../browse/packages.html" class="pagination-link" aria-label="Individual package information">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Individual package information</span></span>
