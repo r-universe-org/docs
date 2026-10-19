@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.5">
+<meta name="generator" content="quarto-1.11.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,11 +75,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../browse/packages.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3b9ea68436acb9022c2fbce6dbb58b06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-35fc0813589bbfbfa0b8ec974497eeb2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-911c115fd7ca3efea027eab731414213.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -395,8 +396,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(universes, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 2
- $ universes  :List of 11666
- $ maintainers:List of 11363</code></pre>
+ $ universes  :List of 11766
+ $ maintainers:List of 11455</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(universes[[<span class="st">"universes"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -533,10 +534,10 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Config/roxygen2/version: chr "8.0.0"
  $ Config/pak/sysreqs     : chr "libssl-dev"
  $ Repository             : chr "https://jeroen.r-universe.dev"
- $ Date/Publication       : chr "2026-10-04 18:26:37 UTC"
+ $ Date/Publication       : chr "2026-10-14 09:47:48 UTC"
  $ RemoteUrl              : chr "https://github.com/jeroen/curl"
  $ RemoteRef              : chr "HEAD"
- $ RemoteSha              : chr "e0eff09b0521db23c30bb7c9d0ca6d48be18ae3c"
+ $ RemoteSha              : chr "d4f60d67d38166c900f8cd9cf658cfd28340a425"
  $ NeedsCompilation       : chr "yes"
  $ Packaged               :List of 2
  $ Author                 : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
@@ -544,16 +545,16 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _user                  : chr "jeroen"
  $ _type                  : chr "src"
  $ _file                  : chr "curl_8.1.0.tar.gz"
- $ _fileid                : chr "https://r2.ropensci.org/de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
- $ _filesize              : int 374744
- $ _sha256                : chr "de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
- $ _expires               : chr "2027-01-12T21:52:26.000Z"
- $ _created               : chr "2026-10-04T21:43:34.000Z"
- $ _published             : chr "2026-10-04T21:52:27.897Z"
- $ _jobs                  :List of 15
- $ _host                  : chr "GitHub-Actions"
- $ _buildurl              : chr "https://github.com/r-universe/jeroen/actions/runs/37237053880"
+ $ _fileid                : chr "https://r2.ropensci.org/8748a419bafa473cb4d55fe5a460384c43829aee3fd2b78e44318ee24aee5b8a"
+ $ _filesize              : int 374785
+ $ _sha256                : chr "8748a419bafa473cb4d55fe5a460384c43829aee3fd2b78e44318ee24aee5b8a"
+ $ _expires               : chr "2027-01-22T10:09:08.000Z"
+ $ _created               : chr "2026-10-14T09:51:25.000Z"
+ $ _published             : chr "2026-10-17T14:20:31.611Z"
+ $ _buildurl              : chr "https://github.com/r-universe/jeroen/actions/runs/38545032760"
  $ _status                : chr "success"
+ $ _host                  : chr "GitHub-Actions"
+ $ _jobs                  :List of 15
  $ _upstream              : chr "https://github.com/jeroen/curl"
  $ _commit                :List of 5
  $ _maintainer            :List of 8
@@ -562,8 +563,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _dependencies          :List of 9
  $ _owner                 : chr "jeroen"
  $ _selfowned             : logi TRUE
- $ _usedby                : int 6465
- $ _updates               :List of 9
+ $ _usedby                : int 6503
+ $ _updates               :List of 10
  $ _tags                  : list()
  $ _stars                 : int 234
  $ _contributors          :List of 23
@@ -571,7 +572,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads             :List of 2
  $ _mentions              : int 21
  $ _devurl                : chr "https://github.com/jeroen/curl"
- $ _searchresults         : int 6160
+ $ _searchresults         : int 5696
  $ _topics                :List of 1
  $ _rbuild                : chr "4.6.1"
  $ _assets                :List of 12
@@ -616,10 +617,10 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ Config/roxygen2/version: chr "8.0.0"
  $ Config/pak/sysreqs     : chr "libssl-dev"
  $ Repository             : chr "https://jeroen.r-universe.dev"
- $ Date/Publication       : chr "2026-10-04 18:26:37 UTC"
+ $ Date/Publication       : chr "2026-10-14 09:47:48 UTC"
  $ RemoteUrl              : chr "https://github.com/jeroen/curl"
  $ RemoteRef              : chr "HEAD"
- $ RemoteSha              : chr "e0eff09b0521db23c30bb7c9d0ca6d48be18ae3c"
+ $ RemoteSha              : chr "d4f60d67d38166c900f8cd9cf658cfd28340a425"
  $ NeedsCompilation       : chr "yes"
  $ Packaged               :List of 2
  $ Author                 : chr "Jeroen Ooms [aut, cre] (ORCID: &lt;https://orcid.org/0000-0002-4035-0289&gt;),\nHadley Wickham [ctb],\nPosit Software, PBC [cph]"
@@ -627,16 +628,16 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _user                  : chr "jeroen"
  $ _type                  : chr "src"
  $ _file                  : chr "curl_8.1.0.tar.gz"
- $ _fileid                : chr "https://r2.ropensci.org/de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
- $ _filesize              : int 374744
- $ _sha256                : chr "de7c7ce0ee373b345719aed4fc50bc7454f3d6c3a5c3d86ea82860642eac87ff"
- $ _expires               : chr "2027-01-12T21:52:26.000Z"
- $ _created               : chr "2026-10-04T21:43:34.000Z"
- $ _published             : chr "2026-10-04T21:52:27.897Z"
- $ _jobs                  :List of 15
- $ _host                  : chr "GitHub-Actions"
- $ _buildurl              : chr "https://github.com/r-universe/jeroen/actions/runs/37237053880"
+ $ _fileid                : chr "https://r2.ropensci.org/8748a419bafa473cb4d55fe5a460384c43829aee3fd2b78e44318ee24aee5b8a"
+ $ _filesize              : int 374785
+ $ _sha256                : chr "8748a419bafa473cb4d55fe5a460384c43829aee3fd2b78e44318ee24aee5b8a"
+ $ _expires               : chr "2027-01-22T10:09:08.000Z"
+ $ _created               : chr "2026-10-14T09:51:25.000Z"
+ $ _published             : chr "2026-10-17T14:20:31.611Z"
+ $ _buildurl              : chr "https://github.com/r-universe/jeroen/actions/runs/38545032760"
  $ _status                : chr "success"
+ $ _host                  : chr "GitHub-Actions"
+ $ _jobs                  :List of 15
  $ _upstream              : chr "https://github.com/jeroen/curl"
  $ _commit                :List of 5
  $ _maintainer            :List of 8
@@ -645,8 +646,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _dependencies          :List of 9
  $ _owner                 : chr "jeroen"
  $ _selfowned             : logi TRUE
- $ _usedby                : int 6465
- $ _updates               :List of 9
+ $ _usedby                : int 6503
+ $ _updates               :List of 10
  $ _tags                  : list()
  $ _stars                 : int 234
  $ _contributors          :List of 23
@@ -654,7 +655,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
  $ _downloads             :List of 2
  $ _mentions              : int 21
  $ _devurl                : chr "https://github.com/jeroen/curl"
- $ _searchresults         : int 6160
+ $ _searchresults         : int 5696
  $ _topics                :List of 1
  $ _rbuild                : chr "4.6.1"
  $ _assets                :List of 12
@@ -885,15 +886,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 53
+ $ results:List of 54
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 53</code></pre>
+ $ total  : int 54</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 53</code></pre>
+<pre><code>[1] 54</code></pre>
 </div>
 </div>
 <p>Using <code>{universe}</code>:</p>
@@ -903,15 +904,15 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(deps, <span class="at">max.level =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 5
- $ results:List of 53
+ $ results:List of 54
  $ query  :List of 2
  $ skip   : int 0
  $ limit  : int 100
- $ total  : int 53</code></pre>
+ $ total  : int 54</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>deps<span class="sc">$</span>total</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 53</code></pre>
+<pre><code>[1] 54</code></pre>
 </div>
 </div>
 </section>
@@ -946,7 +947,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "6abb956d99f7aa8c6aa465bb"
+ $ _id           : chr "6ad227447af56c173f1205ff"
  $ Package       : chr "PEcAn.data.atmosphere"
  $ Title         : chr "PEcAn Functions Used for Managing Climate Driver Data"
  $ Description   : chr "The Predictive Ecosystem Carbon Analyzer (PEcAn) is a\nscientific workflow management tool that is designed to\"| __truncated__
@@ -962,8 +963,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ linkedin   : chr "in/dlebauer"
   ..$ description: chr ""
   ..$ uuid       : int 464871
- $ updated       : int 1790663784
- $ stars         : int 246
+ $ updated       : int 1792138659
+ $ stars         : int 247
  $ topics        :List of 13
   ..$ : chr "climate-data"
   ..$ : chr "data-standardization"
@@ -978,8 +979,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "national-science-foundation"
   ..$ : chr "pecan"
   ..$ : chr "plants"
- $ match         : num 126
- $ rank          : num 1504</code></pre>
+ $ match         : num 160
+ $ rank          : num 1784</code></pre>
 </div>
 </div>
 <p>Example using <code>{universe}</code>:</p>
@@ -997,7 +998,7 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(packages<span class="sc">$</span>results[[<span class="dv">1</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 15
- $ _id           : chr "6abb956d99f7aa8c6aa465bb"
+ $ _id           : chr "6ad227447af56c173f1205ff"
  $ Package       : chr "PEcAn.data.atmosphere"
  $ Title         : chr "PEcAn Functions Used for Managing Climate Driver Data"
  $ Description   : chr "The Predictive Ecosystem Carbon Analyzer (PEcAn) is a\nscientific workflow management tool that is designed to\"| __truncated__
@@ -1013,8 +1014,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ linkedin   : chr "in/dlebauer"
   ..$ description: chr ""
   ..$ uuid       : int 464871
- $ updated       : int 1790663784
- $ stars         : int 246
+ $ updated       : int 1792138659
+ $ stars         : int 247
  $ topics        :List of 13
   ..$ : chr "climate-data"
   ..$ : chr "data-standardization"
@@ -1029,8 +1030,8 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
   ..$ : chr "national-science-foundation"
   ..$ : chr "pecan"
   ..$ : chr "plants"
- $ match         : num 126
- $ rank          : num 1504</code></pre>
+ $ match         : num 160
+ $ rank          : num 1784</code></pre>
 </div>
 </div>
 <p>Note that searching globally only returns “indexed” packages: if a package is included in several universes, it still shows up only once in search results because of our <a href="search.html#deduplication">deduplication efforts</a>.</p>
@@ -1444,6 +1445,9 @@ This documentation uses <code>https://jeroen.r-universe.dev</code> as an example
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 <nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
